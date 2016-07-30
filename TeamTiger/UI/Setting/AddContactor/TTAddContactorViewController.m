@@ -7,6 +7,7 @@
 //
 
 #import "TTAddContactorViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface TTAddContactorViewController ()
 
@@ -16,22 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"添加成员";
+    [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
