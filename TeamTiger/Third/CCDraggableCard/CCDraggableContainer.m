@@ -130,8 +130,6 @@
                 
                 NSLog(@"loaded %ld card", (long)self.loadedIndex);
             }
-        } else {
-            NSLog(@"Need load first Item");
         }
     } else {
         NSAssert(self.dataSource, @"CCDraggableContainerDataSource can't nil");
@@ -197,7 +195,7 @@
             } else if (widthRatio == 0) {
                 self.direction = CCDraggableDirectionDefault;
             }
-            [self.delegate draggableContainer:self draggableDirection:self.direction widthRatio:widthRatio heightRatio:heightRatio];
+//            [self.delegate draggableContainer:self draggableDirection:self.direction widthRatio:widthRatio heightRatio:heightRatio];
         }
     }
     
@@ -225,7 +223,7 @@
 
     if (!disappear) {
         if (self.dataSource && [self.dataSource respondsToSelector:@selector(numberOfIndexs)]) {
-            if (self.moving && self.loadedIndex < [self.dataSource numberOfIndexs]) {
+            if (self.moving /*&& self.loadedIndex < [self.dataSource numberOfIndexs]*/) {
                 UIView *lastView = [self.currentCards lastObject];
                 self.loadedIndex = lastView.tag;
                 [lastView removeFromSuperview];
