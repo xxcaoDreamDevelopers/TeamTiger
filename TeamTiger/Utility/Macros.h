@@ -48,4 +48,8 @@
 //从nib中加载cell
 #define LoadFromNib(nibName)  [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject]
 
+////最小线宽
+#define minLineWidth  (1.0 / [UIScreen mainScreen].scale)
+
+
 #endif /* Macros_h */

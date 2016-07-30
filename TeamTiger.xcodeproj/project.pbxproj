@@ -191,6 +191,7 @@
 		1D115F941D4BA043003DFBB1 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1D115F851D4BA043003DFBB1 /* IQKeyboardManager.bundle */; };
 		1D2E1AAB1D4C538B00C0CE0A /* TTAddContactorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E1AA91D4C538B00C0CE0A /* TTAddContactorViewController.m */; };
 		1D2E1AAC1D4C538B00C0CE0A /* TTAddContactorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E1AAA1D4C538B00C0CE0A /* TTAddContactorViewController.xib */; };
+		1D2E1C021D4C865D00C0CE0A /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2E1C011D4C865D00C0CE0A /* ContactTableViewCell.m */; };
 		1D55FD8F1D49A19900094112 /* TTSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D55FD8E1D49A19900094112 /* TTSettingViewController.xib */; };
 		1D55FD941D49AAA400094112 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55FD921D49AAA400094112 /* SettingCell.m */; };
 		1D55FD951D49AAA400094112 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D55FD931D49AAA400094112 /* SettingCell.xib */; };
@@ -631,6 +632,8 @@
 		1D2E1AA81D4C538B00C0CE0A /* TTAddContactorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddContactorViewController.h; sourceTree = "<group>"; };
 		1D2E1AA91D4C538B00C0CE0A /* TTAddContactorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddContactorViewController.m; sourceTree = "<group>"; };
 		1D2E1AAA1D4C538B00C0CE0A /* TTAddContactorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddContactorViewController.xib; sourceTree = "<group>"; };
+		1D2E1C001D4C865D00C0CE0A /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		1D2E1C011D4C865D00C0CE0A /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 		1D55FD8E1D49A19900094112 /* TTSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTSettingViewController.xib; sourceTree = "<group>"; };
 		1D55FD911D49AAA400094112 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
 		1D55FD921D49AAA400094112 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
@@ -1452,11 +1455,21 @@
 		1D2E1AA71D4C530500C0CE0A /* AddContactor */ = {
 			isa = PBXGroup;
 			children = (
+				1D2E1BFF1D4C865D00C0CE0A /* View */,
 				1D2E1AA81D4C538B00C0CE0A /* TTAddContactorViewController.h */,
 				1D2E1AA91D4C538B00C0CE0A /* TTAddContactorViewController.m */,
 				1D2E1AAA1D4C538B00C0CE0A /* TTAddContactorViewController.xib */,
 			);
 			path = AddContactor;
+			sourceTree = "<group>";
+		};
+		1D2E1BFF1D4C865D00C0CE0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D2E1C001D4C865D00C0CE0A /* ContactTableViewCell.h */,
+				1D2E1C011D4C865D00C0CE0A /* ContactTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1D55FD901D49AA8200094112 /* View */ = {
@@ -2062,6 +2075,7 @@
 				1D09CC741D3F29C900F85E9A /* UIScreen+YYAdd.m in Sources */,
 				1D09CCA21D3F29C900F85E9A /* YYFileHash.m in Sources */,
 				1D9580A21D3E207200FD0053 /* MJRefreshAutoFooter.m in Sources */,
+				1D2E1C021D4C865D00C0CE0A /* ContactTableViewCell.m in Sources */,
 				1D115F8E1D4BA043003DFBB1 /* IQTextView.m in Sources */,
 				1D09CC951D3F29C900F85E9A /* NSAttributedString+YYText.m in Sources */,
 				1D09CC7F1D3F29C900F85E9A /* MKAnnotationView+YYWebImage.m in Sources */,

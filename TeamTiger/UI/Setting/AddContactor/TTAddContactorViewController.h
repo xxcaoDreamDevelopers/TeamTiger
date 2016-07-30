@@ -8,6 +8,8 @@
 
 #import "TTBaseViewController.h"
 
-@interface TTAddContactorViewController : TTBaseViewController
+@interface TTAddContactorViewController : TTBaseViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *contactTable;
 
 @end
