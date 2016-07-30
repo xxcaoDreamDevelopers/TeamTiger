@@ -9,6 +9,7 @@
 #import "TTSettingViewController.h"
 #import "SettingCell.h"
 #import "IQKeyboardManager.h"
+#import "TTAddContactorViewController.h"
 @interface TTSettingViewController ()
 
 @end
@@ -66,7 +67,8 @@
                 break;
             }
             case ECellTypeAccessory:{
-                
+                TTAddContactorViewController *addContactVC = [[TTAddContactorViewController alloc] initWithNibName:@"TTAddContactorViewController" bundle:nil];
+                [self.navigationController pushViewController:addContactVC animated:YES];
                 break;
             }
             default:

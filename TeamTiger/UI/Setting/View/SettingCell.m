@@ -30,7 +30,6 @@
             self.textField.tintColor = [UIColor whiteColor];
             [self.textField setValue:[UIColor lightTextColor] forKeyPath:@"_placeholderLabel.textColor"];
             self.textField.font = [UIFont systemFontOfSize:15];
-            self.textField.delegate = self;
             break;
         }
         case ECellTypeTextView:{
@@ -55,7 +54,6 @@
                 make.top.mas_equalTo(self.contentView.mas_top).offset(22);
                 make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-20);
             }];
-            
             self.textView.placeholder = @"请输入描述";
             self.textView.maxLength = 200;//最大字数
             break;
@@ -81,7 +79,7 @@
             __weak __typeof(self)wself = self;
             self.tSwitch.changeHandler = ^(BOOL on){
                 if (wself.actionBlock) {
-                    wself.actionBlock(wself,ECellTypeSwitch,@(on));
+                    wself.actionBlock(wself, ECellTypeSwitch, @(on));
                 }
             };
             break;
@@ -135,13 +133,13 @@
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     if (self.actionBlock) {
-        self.actionBlock(self,ECellTypeTextField,textView.text);
+        self.actionBlock(self, ECellTypeTextField, textView.text);
     }
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     if (self.actionBlock) {
-        self.actionBlock(self,ECellTypeTextField,textField.text);
+        self.actionBlock(self, ECellTypeTextField, textField.text);
     }
 }
 
