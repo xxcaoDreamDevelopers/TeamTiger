@@ -120,7 +120,7 @@
     id label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerView"];
     if (!label) {
         label = [[UILabel alloc] init];
-        [label setFont:[UIFont systemFontOfSize:17.0f]];
+        [label setFont:[UIFont boldSystemFontOfSize:18.0f]];
         [label setTextColor:[UIColor colorWithRed:49.0/255 green:55.0/255 blue:64.0/255 alpha:1]];
         [label setBackgroundColor:[UIColor colorWithRed:20.0/255.0 green:25.0/255.0 blue:36.0/255.0 alpha:1.0]];
     }
