@@ -7,9 +7,8 @@
 //
 
 #import "ContactTableViewCell.h"
-
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#import "ContactModel.h"
+#import "UIButton+HYBHelperBlockKit.h"
 
 @implementation ContactTableViewCell
 
@@ -35,28 +34,53 @@
     //添加按钮
     [self.contentView addSubview:self.operationBtn];
     
-    UIImageView *line = [[UIImageView alloc] init];
-    [self.contentView addSubview:line];
-    line.backgroundColor = [UIColor whiteColor];
-    line.alpha = 0.3;
-    line.tag = 2016;
-    [line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(69);
-        make.right.equalTo(self.contentView.mas_right);
-        make.bottom.equalTo(self.contentView.mas_bottom);
-        make.height.mas_equalTo(minLineWidth);
-    }];
 }
 
-- (void)reloadCell:(id)obj {
+- (void)reloadCell:(id)obj IsLast:(BOOL)isLast {
     
+    UIView *v = [self viewWithTag:2016];
+    if (v && [v isKindOfClass:[UIImageView class]]) {
+        [v removeFromSuperview];
+    }
+    if (!isLast) {
+        UIImageView *line = [[UIImageView alloc] init];
+        [self.contentView addSubview:line];
+        line.backgroundColor = [UIColor whiteColor];
+        line.alpha = 0.3;
+        line.tag = 2016;
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(69);
+            make.right.equalTo(self.contentView.mas_right);
+            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.height.mas_equalTo(minLineWidth);
+        }];
+    }
+    
+    ContactModel *model = (ContactModel *)obj;
+    self.nameLabel.text = model.name;
+    self.emailLabel.text = model.email;
+    self.headImageView.image = [UIImage imageNamed:model.portrait];
+    
+    if (!model.email || model.email.length == 0) {
+        [_nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(kScreenWidth - 100.0);
+            make.left.equalTo(self.headImageView.mas_right).offset(15);
+            make.centerY.equalTo(self.contentView.mas_centerY);
+        }];
+    } else {
+        [_nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(kScreenWidth - 100.0);
+            make.left.equalTo(self.headImageView.mas_right).offset(15);
+            make.top.mas_equalTo(10.0);
+        }];
+    }
 }
 
 - (UIImageView *)headImageView{
     if (!_headImageView) {
         _headImageView = [[UIImageView alloc]init];
         [_headImageView setContentMode:UIViewContentModeScaleAspectFill];
-        _headImageView.backgroundColor = [UIColor redColor];
+        _headImageView.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:_headImageView];
         [_headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(15.0);
@@ -74,7 +98,6 @@
         _nameLabel = [[UILabel alloc]init];
         [_nameLabel setFont:[UIFont systemFontOfSize:16.0]];
         _nameLabel.textColor = [UIColor colorWithRed:54.0 / 255.0 green:82.0 / 255.0 blue:134.0 / 255.0 alpha:1.0];
-        _nameLabel.text = @"刘鹏鹏";
         _nameLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:_nameLabel];
         [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -91,7 +114,6 @@
         _emailLabel = [[UILabel alloc]init];
         [_emailLabel setFont:[UIFont systemFontOfSize:14.0]];
         _emailLabel.textColor = [UIColor colorWithRed:119.0/255.0 green:119.0/255.0 blue:129.0/255.0 alpha:1.0];
-        _emailLabel.text = @"cxcxcxcx@qq.com";
         _emailLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:_emailLabel];
         [_emailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -105,7 +127,15 @@
 
 - (UIButton *)operationBtn{
     if (!_operationBtn) {
-        _operationBtn=[[UIButton alloc]initWithFrame:CGRectMake(50.0, 5.0, kScreenWidth-60.0, 40.0)];
+        _operationBtn = [UIButton hyb_buttonWithImage:nil selectedImage:nil superView:self.contentView constraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self.contentView.mas_right).offset(-20);
+            make.width.mas_equalTo(64);
+            make.height.mas_equalTo(32);
+            make.centerY.equalTo(self.contentView.mas_centerY);
+        } touchUp:^(UIButton *sender) {
+            NSLog(@"click me");
+        }];
+        _operationBtn.backgroundColor = [UIColor redColor];
     }
     return _operationBtn;
 }

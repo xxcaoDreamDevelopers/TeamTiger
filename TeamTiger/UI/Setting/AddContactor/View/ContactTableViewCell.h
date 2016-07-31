@@ -16,6 +16,6 @@
 @property (nonatomic,strong) UIButton *operationBtn;//添加按钮
 
 
-- (void)reloadCell:(id)obj;
+- (void)reloadCell:(id)obj IsLast:(BOOL)isLast;
 
 @end
