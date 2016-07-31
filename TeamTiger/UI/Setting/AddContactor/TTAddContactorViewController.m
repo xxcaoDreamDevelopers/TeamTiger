@@ -11,6 +11,7 @@
 #import "ContactTableViewCell.h"
 #import "ContactModel.h"
 #import "MBProgressHUD.h"
+#import "UIColor+HYBHelperKitUIKit.h"
 
 @interface TTAddContactorViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
 
@@ -38,7 +39,7 @@
     //contact table
     [Common removeExtraCellLines:self.contactTable];
     UIView *bgView = [[UIView alloc] init];
-    bgView.backgroundColor = [UIColor colorWithRed:21/255.0f green:27/255.0f blue:39/255.0f alpha:1.0f];
+    bgView.backgroundColor = self.view.backgroundColor;
     self.contactTable.backgroundView = bgView;
     self.contactTable.tableHeaderView = self.searchBar;
     self.contactTable.sectionIndexBackgroundColor = [UIColor colorWithRed:21/255.0f green:27/255.0f blue:39/255.0f alpha:1.0f];
@@ -146,7 +147,7 @@
         _searchBar.searchBarStyle = UISearchBarStyleMinimal;
         _searchBar.tintColor = [UIColor whiteColor];
         
-        UIImage *searchBarBg = [self GetImageWithColor:[UIColor colorWithRed:31.0 / 255.0 green:33.0 / 255.0 blue:43.0 / 255.0 alpha:1.0] andHeight:32.0f];
+        UIImage *searchBarBg = [UIColor hyb_imageWithColor:[UIColor colorWithRed:31.0 / 255.0 green:33.0 / 255.0 blue:43.0 / 255.0 alpha:1.0] size:Size(1.0, 32.0)];
         [_searchBar setBackgroundImage:searchBarBg];
         [_searchBar setBackgroundColor:[UIColor colorWithRed:31.0 / 255.0 green:33.0 / 255.0 blue:43.0 / 255.0 alpha:1.0]];
         [_searchBar setSearchFieldBackgroundImage:searchBarBg forState:UIControlStateNormal];
@@ -167,7 +168,7 @@
         [_searchDisplayController setSearchResultsDelegate:self];
         [Common removeExtraCellLines:_searchDisplayController.searchResultsTableView];
         UIView *bgView = [[UIView alloc] init];
-        bgView.backgroundColor = [UIColor colorWithRed:21/255.0f green:27/255.0f blue:39/255.0f alpha:1.0f];
+        bgView.backgroundColor = self.view.backgroundColor;
         _searchDisplayController.searchResultsTableView.backgroundView = bgView;
         _searchDisplayController.searchResultsTableView.rowHeight = 60;
         _searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -272,29 +273,6 @@
     }
     [_searchResultArr removeAllObjects];
     [_searchResultArr addObjectsFromArray:tempResults];
-}
-
-#pragma -mark Other
-/**
- *  生成图片
- *
- *  @param color  图片颜色
- *  @param height 图片高度
- *
- *  @return 生成的图片
- */
-- (UIImage *)GetImageWithColor:(UIColor*)color andHeight:(CGFloat)height {
-    CGRect r= CGRectMake(0.0f, 0.0f, 1.0f, height);
-    UIGraphicsBeginImageContext(r.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, r);
-    
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return img;
 }
 
 @end
