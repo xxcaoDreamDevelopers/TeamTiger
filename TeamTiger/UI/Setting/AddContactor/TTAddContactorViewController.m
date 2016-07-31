@@ -13,6 +13,8 @@
 #import "MBProgressHUD.h"
 #import "UIColor+HYBHelperKitUIKit.h"
 
+#define KBGColor    [UIColor colorWithRed:21.0/255.0f green:27.0/255.0f blue:39.0/255.0f alpha:1.0f]
+
 @interface TTAddContactorViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
 
 @property (nonatomic,strong) UISearchBar *searchBar;//搜索框
@@ -39,10 +41,10 @@
     //contact table
     [Common removeExtraCellLines:self.contactTable];
     UIView *bgView = [[UIView alloc] init];
-    bgView.backgroundColor = self.view.backgroundColor;
+    bgView.backgroundColor = KBGColor;
     self.contactTable.backgroundView = bgView;
     self.contactTable.tableHeaderView = self.searchBar;
-    self.contactTable.sectionIndexBackgroundColor = [UIColor colorWithRed:21/255.0f green:27/255.0f blue:39/255.0f alpha:1.0f];
+    self.contactTable.sectionIndexBackgroundColor = KBGColor;
     self.contactTable.sectionIndexColor = [UIColor grayColor];
     
     //searchDisplayController
@@ -168,8 +170,9 @@
         [_searchDisplayController setSearchResultsDelegate:self];
         [Common removeExtraCellLines:_searchDisplayController.searchResultsTableView];
         UIView *bgView = [[UIView alloc] init];
-        bgView.backgroundColor = self.view.backgroundColor;
+        bgView.backgroundColor = KBGColor;
         _searchDisplayController.searchResultsTableView.backgroundView = bgView;
+        _searchDisplayController.searchResultsTableView.backgroundColor = KBGColor;
         _searchDisplayController.searchResultsTableView.rowHeight = 60;
         _searchDisplayController.searchResultsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         if (!self.searchResultArr) {
@@ -226,7 +229,7 @@
             break;
         }
     }
-    searchBar.showsCancelButton = YES;
+    [searchBar setShowsCancelButton:YES animated:YES];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
@@ -240,14 +243,15 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     //取消
     [searchBar resignFirstResponder];
-    searchBar.showsCancelButton = NO;
+    [searchBar setShowsCancelButton:NO animated:YES];
 }
 
 #pragma mark searchDisplayController delegate
-- (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView{
+- (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView {
     [Common removeExtraCellLines:tableView];
 }
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     [self filterContentForSearchText:searchString
                                scope:[self.searchBar scopeButtonTitles][self.searchBar.selectedScopeButtonIndex]];
     return YES;
@@ -271,8 +275,8 @@
             [tempResults addObject:[ContactModel customCopy:model]];
         }
     }
-    [_searchResultArr removeAllObjects];
-    [_searchResultArr addObjectsFromArray:tempResults];
+    [self.searchResultArr removeAllObjects];
+    [self.searchResultArr addObjectsFromArray:tempResults];
 }
 
 @end
