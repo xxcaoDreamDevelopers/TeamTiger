@@ -12,13 +12,16 @@
 #import "ContactModel.h"
 #import "MBProgressHUD.h"
 #import "UIColor+HYBHelperKitUIKit.h"
+#import "GDIIndexBar.h"
 
 #define KBGColor    [UIColor colorWithRed:21.0/255.0f green:27.0/255.0f blue:39.0/255.0f alpha:1.0f]
 
-@interface TTAddContactorViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
+@interface TTAddContactorViewController ()<UISearchBarDelegate,UISearchDisplayDelegate,GDIIndexBarDelegate>
 
 @property (nonatomic,strong) UISearchBar *searchBar;//搜索框
 @property (nonatomic,strong) UISearchDisplayController *searchDisplayController;//搜索VC
+@property (nonatomic,strong) GDIIndexBar *indexBar;//index bar
+
 
 @property (nonatomic,strong) NSArray *serverDataArr;//数据源
 @property (nonatomic,strong) NSArray *dataArr;//model化的数据源
@@ -44,8 +47,6 @@
     bgView.backgroundColor = KBGColor;
     self.contactTable.backgroundView = bgView;
     self.contactTable.tableHeaderView = self.searchBar;
-    self.contactTable.sectionIndexBackgroundColor = KBGColor;
-    self.contactTable.sectionIndexColor = [UIColor grayColor];
     
     //searchDisplayController
     [self searchDisplayController];
@@ -61,6 +62,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.contactTable reloadData];
+            [self indexBar];
         });
     });
 }
@@ -126,17 +128,23 @@
     return label;
 }
 
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-    if (tableView == self.contactTable) {
-        return self.sectionArr;
+#pragma marka - Index bar delegate
+- (NSUInteger)numberOfIndexesForIndexBar:(GDIIndexBar *)indexBar {
+    return self.sectionArr.count - 1;
+}
+
+- (NSString *)stringForIndex:(NSUInteger)index {
+    if (index + 1 < self.sectionArr.count) {
+        return self.sectionArr[index + 1];
     }
     return nil;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
-    return index - 1;
+- (void)indexBar:(GDIIndexBar *)indexBar didSelectIndex:(NSUInteger)index {
+    [self.contactTable scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index]
+                          atScrollPosition:UITableViewScrollPositionTop
+                                  animated:NO];
 }
-
 
 #pragma -mark Getter 
 - (UISearchBar *)searchBar {
@@ -214,6 +222,21 @@
         _dataArr = [ContactModel modelArrayFromDictionaryArray:self.serverDataArr];
     }
     return _dataArr;
+}
+
+- (GDIIndexBar *)indexBar {
+    if (!_indexBar) {
+        _indexBar = [[GDIIndexBar alloc] initWithTableView:self.contactTable];
+        _indexBar.delegate = self;
+        _indexBar.textColor = [UIColor grayColor];
+        _indexBar.textShadowColor = [UIColor colorWithWhite:0.f alpha:.5f];
+        _indexBar.textShadowOffset = UIOffsetMake(1, 1);
+        _indexBar.barBackgroundColor = KBGColor;
+        _indexBar.textSpacing = 12.f;
+        _indexBar.textFont = [UIFont fontWithName:@"Menlo-Bold" size:13.0f];
+        [self.view addSubview:_indexBar];
+    }
+    return _indexBar;
 }
 
 
