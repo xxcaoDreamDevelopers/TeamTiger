@@ -19,6 +19,7 @@
         model.name = dic[@"name"];
         model.email = dic[@"email"];
         model.isAdd = dic[@"isAdd"];
+        model.imageData = dic[@"imageData"];
         [tmpArrays addObject:model];
     }
     return tmpArrays;
@@ -102,6 +103,7 @@
     desModel.name = srcModel.name;
     desModel.email = srcModel.email;
     desModel.isAdd = srcModel.isAdd;
+    desModel.imageData = srcModel.imageData;
     return desModel;
 }
 

@@ -198,6 +198,8 @@
 		1D55FD981D49ABAC00094112 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55FD971D49ABAC00094112 /* Common.m */; };
 		1D59130D1D4DDE9E00A188A0 /* GDIIndexBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59130C1D4DDE9E00A188A0 /* GDIIndexBar.m */; };
 		1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF21D4EE72E007123EB /* CacheManager.m */; };
+		1D5D5FF61D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF51D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m */; };
+		1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5D5FF71D4EFADD007123EB /* AddressBook.framework */; };
 		1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408641D41BA47009E2E11 /* NetworkManager.m */; };
 		1D9408691D41BE2D009E2E11 /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408681D41BE2D009E2E11 /* MessageManager.m */; };
 		1D9580361D3E123800FD0053 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95802A1D3E123800FD0053 /* AFHTTPSessionManager.m */; };
@@ -666,6 +668,9 @@
 		1D59130C1D4DDE9E00A188A0 /* GDIIndexBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDIIndexBar.m; sourceTree = "<group>"; };
 		1D5D5FF11D4EE72E007123EB /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
 		1D5D5FF21D4EE72E007123EB /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
+		1D5D5FF41D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTAddContactorViewController+AddressBook.h"; sourceTree = "<group>"; };
+		1D5D5FF51D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTAddContactorViewController+AddressBook.m"; sourceTree = "<group>"; };
+		1D5D5FF71D4EFADD007123EB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		1D9408631D41BA47009E2E11 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		1D9408641D41BA47009E2E11 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		1D9408671D41BE2D009E2E11 /* MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
@@ -839,6 +844,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */,
 				1D09CCC11D3F2B0E00F85E9A /* libz.tbd in Frameworks */,
 				1D09CCBF1D3F2B0600F85E9A /* SystemConfiguration.framework in Frameworks */,
 				1D09CCBD1D3F2AFC00F85E9A /* MobileCoreServices.framework in Frameworks */,
@@ -1508,6 +1514,8 @@
 				1D2E1AA81D4C538B00C0CE0A /* TTAddContactorViewController.h */,
 				1D2E1AA91D4C538B00C0CE0A /* TTAddContactorViewController.m */,
 				1D2E1AAA1D4C538B00C0CE0A /* TTAddContactorViewController.xib */,
+				1D5D5FF41D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.h */,
+				1D5D5FF51D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m */,
 			);
 			path = AddContactor;
 			sourceTree = "<group>";
@@ -1748,6 +1756,7 @@
 		1D9580EE1D3E270400FD0053 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1D5D5FF71D4EFADD007123EB /* AddressBook.framework */,
 				1D09CCBA1D3F2AF300F85E9A /* Accelerate.framework */,
 				1D09CCB81D3F2AE800F85E9A /* AssetsLibrary.framework */,
 				1D09CCAC1D3F2AAF00F85E9A /* CoreFoundation.framework */,
@@ -2204,6 +2213,7 @@
 				1D09CC951D3F29C900F85E9A /* NSAttributedString+YYText.m in Sources */,
 				1D09CC7F1D3F29C900F85E9A /* MKAnnotationView+YYWebImage.m in Sources */,
 				1D115F8F1D4BA043003DFBB1 /* IQBarButtonItem.m in Sources */,
+				1D5D5FF61D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m in Sources */,
 				1D09CC771D3F29C900F85E9A /* UITextField+YYAdd.m in Sources */,
 				1D0EA2C61D45A82C00B47108 /* LCChainRequestAgent.m in Sources */,
 				1D9580B51D3E207200FD0053 /* UIView+MJExtension.m in Sources */,

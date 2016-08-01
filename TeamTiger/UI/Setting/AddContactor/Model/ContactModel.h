@@ -18,6 +18,8 @@
 
 @property(strong,nonatomic)NSNumber *isAdd;
 
+@property(strong,nonatomic)NSData *imageData;
+
 + (NSArray *)modelArrayFromDictionaryArray:(NSArray *)dArray;
 
 + (NSMutableArray *) getFriendListDataBy:(NSMutableArray *)array;

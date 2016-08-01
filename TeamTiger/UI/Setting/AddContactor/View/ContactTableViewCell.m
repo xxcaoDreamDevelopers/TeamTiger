@@ -59,7 +59,11 @@
     ContactModel *model = (ContactModel *)obj;
     self.nameLabel.text = model.name;
     self.emailLabel.text = model.email;
-    self.headImageView.image = [UIImage imageNamed:model.portrait];
+    if (![Common isEmptyString:model.portrait]) {
+        self.headImageView.image = [UIImage imageNamed:model.portrait];
+    } else {
+        self.headImageView.image = [UIImage imageWithData:model.imageData];
+    }
     
     if (!model.email || model.email.length == 0) {
         [_nameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -80,7 +84,7 @@
     if (!_headImageView) {
         _headImageView = [[UIImageView alloc]init];
         [_headImageView setContentMode:UIViewContentModeScaleAspectFill];
-        _headImageView.backgroundColor = [UIColor clearColor];
+        _headImageView.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:_headImageView];
         [_headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(15.0);

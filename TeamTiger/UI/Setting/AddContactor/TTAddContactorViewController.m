@@ -6,14 +6,15 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "TTAddContactorViewController.h"
-#import "IQKeyboardManager.h"
-#import "ContactTableViewCell.h"
-#import "ContactModel.h"
-#import "MBProgressHUD.h"
-#import "UIColor+HYBHelperKitUIKit.h"
-#import "GDIIndexBar.h"
 #import "CacheManager.h"
+#import "ContactModel.h"
+#import "ContactTableViewCell.h"
+#import "GDIIndexBar.h"
+#import "IQKeyboardManager.h"
+#import "MBProgressHUD.h"
+#import "TTAddContactorViewController.h"
+#import "TTAddContactorViewController+AddressBook.h"
+#import "UIColor+HYBHelperKitUIKit.h"
 
 #define KBGColor    [UIColor colorWithRed:21.0/255.0f green:27.0/255.0f blue:39.0/255.0f alpha:1.0f]
 
@@ -23,8 +24,6 @@
 @property (nonatomic,strong) UISearchDisplayController *searchDisplayController;//搜索VC
 @property (nonatomic,strong) GDIIndexBar *indexBar;//index bar
 
-
-@property (nonatomic,strong) NSArray *serverDataArr;//数据源
 @property (nonatomic,strong) NSArray *dataArr;//model化的数据源
 @property (nonatomic,strong) NSArray *rowArr;//每一个section里面的数据
 @property (nonatomic,strong) NSArray *sectionArr;//section数据
@@ -65,6 +64,8 @@
         hud.mode = MBProgressHUDModeIndeterminate;
         hud.label.text = @"正在加载...";
         hud.square = YES;
+        
+        [self dataArr];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.rowArr = [ContactModel getFriendListDataBy:self.dataArr.mutableCopy];
             self.sectionArr = [ContactModel getFriendListSectionBy:self.rowArr.mutableCopy];
@@ -203,35 +204,9 @@
     return _searchDisplayController;
 }
 
-- (NSArray *)serverDataArr {
-    if (!_serverDataArr) {
-        _serverDataArr = @[
-  @{@"portrait":@"1", @"name":@"1", @"email":@"sdsssfsfdf@qq.com", @"isAdd":@0},
-  @{@"portrait":@"2", @"name":@"花无缺", @"email":@"dfdfdfdf@163.com", @"isAdd":@0},
-  @{@"portrait":@"3", @"name":@"东方不败", @"email":@"", @"isAdd":@1},
-  @{@"portrait":@"4", @"name":@"任我行", @"email":@"ththththth@gmail.com", @"isAdd":@0},
-  @{@"portrait":@"5", @"name":@"逍遥王", @"email":@"", @"isAdd":@0},
-  @{@"portrait":@"6", @"name":@"阿离", @"email":@"ddbbgbgbgb@qq.com", @"isAdd":@0},
-  @{@"portrait":@"13",@"name":@"百草堂", @"email":@"ynynynyny@qq.com", @"isAdd":@0},
-  @{@"portrait":@"8", @"name":@"三味书屋", @"email":@"sdsssfsfdf@yahoo.com", @"isAdd":@0},
-  @{@"portrait":@"9", @"name":@"彩彩", @"email":@"", @"isAdd":@0},
-  @{@"portrait":@"10", @"name":@"陈晨", @"email":@"", @"isAdd":@0},
-  @{@"portrait":@"11", @"name":@"多多", @"email":@"vfvfbfbgnbhn@qq.com", @"isAdd":@1},
-  @{@"portrait":@"12", @"name":@"峨嵋山", @"email":@"werererere@126.com", @"isAdd":@0},
-  @{@"portrait":@"7", @"name":@"哥哥", @"email":@"fbgnhnynyny@souhu.com", @"isAdd":@0},
-  @{@"portrait":@"14", @"name":@"林俊杰", @"email":@"dvdvvfvfvf@qq.com", @"isAdd":@0},
-  @{@"portrait":@"15", @"name":@"足球", @"email":@"", @"isAdd":@1},
-  @{@"portrait":@"16", @"name":@"58赶集", @"email":@"", @"isAdd":@0},
-  @{@"portrait":@"17", @"name":@"搜房网", @"email":@"sdsssfsfdf@tencent.com", @"isAdd":@0},
-  @{@"portrait":@"18", @"name":@"欧弟王", @"email":@"", @"isAdd":@1}
-  ];
-    }
-    return _serverDataArr;
-}
-
-
 - (NSArray *)dataArr {
     if (!_dataArr) {
+        [self loadDataFromSource:EDataFromAddressBook];
         _dataArr = [ContactModel modelArrayFromDictionaryArray:self.serverDataArr];
     }
     return _dataArr;
@@ -245,7 +220,7 @@
         _indexBar.textShadowColor = [UIColor colorWithWhite:0.f alpha:.5f];
         _indexBar.textShadowOffset = UIOffsetMake(1, 1);
         _indexBar.barBackgroundColor = KBGColor;
-        _indexBar.textSpacing = 12.f;
+        _indexBar.textSpacing = 10.f;
         _indexBar.textFont = [UIFont fontWithName:@"Menlo-Bold" size:13.0f];
         [self.view addSubview:_indexBar];
     }

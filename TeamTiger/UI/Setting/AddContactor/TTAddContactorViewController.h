@@ -7,9 +7,20 @@
 //
 
 #import "TTBaseViewController.h"
+#import <AddressBook/AddressBook.h>
 
-@interface TTAddContactorViewController : TTBaseViewController<UITableViewDelegate,UITableViewDataSource>
+typedef enum : NSUInteger {
+    EDataFromAddressBook = 0,
+    EDataFromNetwork,
+    EDataFromOther,
+} EDataFromSource;
+
+@interface TTAddContactorViewController : TTBaseViewController<UITableViewDelegate,UITableViewDataSource> {
+    ABAddressBookRef addBook;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *contactTable;
+@property (nonatomic,strong) NSArray *serverDataArr;//数据源
 
 @end
+
