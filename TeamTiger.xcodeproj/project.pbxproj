@@ -300,6 +300,16 @@
 		1DF991CE1D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991C91D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m */; };
 		1DF991CF1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991CB1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m */; };
 		1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991D61D48ADD900E7D1B8 /* TTSettingViewController.m */; };
+		2DA3F21F1D4F4F46001D9976 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3F20C1D4F4F46001D9976 /* HomeViewController.m */; };
+		2DA3F2201D4F4F46001D9976 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3F20D1D4F4F46001D9976 /* HomeViewController.xib */; };
+		2DA3F2221D4F4F46001D9976 /* HomeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3F2121D4F4F46001D9976 /* HomeCellModel.m */; };
+		2DA3F2231D4F4F46001D9976 /* HomeDetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3F2141D4F4F46001D9976 /* HomeDetailCellModel.m */; };
+		2DA3F2241D4F4F46001D9976 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3F2171D4F4F46001D9976 /* HomeCell.m */; };
+		2DA3F2251D4F4F46001D9976 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3F2181D4F4F46001D9976 /* HomeCell.xib */; };
+		2DA3F2261D4F4F46001D9976 /* HomeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3F21A1D4F4F46001D9976 /* HomeDetailCell.m */; };
+		2DA3F2271D4F4F46001D9976 /* HomeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3F21B1D4F4F46001D9976 /* HomeDetailCell.xib */; };
+		2DA3F2281D4F4F46001D9976 /* HomeDetailCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3F21D1D4F4F46001D9976 /* HomeDetailCell1.m */; };
+		2DA3F2291D4F4F46001D9976 /* HomeDetailCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA3F21E1D4F4F46001D9976 /* HomeDetailCell1.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -850,6 +860,22 @@
 		1DF991CB1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYLaunchAnimation.m"; sourceTree = "<group>"; };
 		1DF991D51D48ADD900E7D1B8 /* TTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSettingViewController.h; sourceTree = "<group>"; };
 		1DF991D61D48ADD900E7D1B8 /* TTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSettingViewController.m; sourceTree = "<group>"; };
+		2DA3F20B1D4F4F46001D9976 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2DA3F20C1D4F4F46001D9976 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2DA3F20D1D4F4F46001D9976 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2DA3F2111D4F4F46001D9976 /* HomeCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellModel.h; sourceTree = "<group>"; };
+		2DA3F2121D4F4F46001D9976 /* HomeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellModel.m; sourceTree = "<group>"; };
+		2DA3F2131D4F4F46001D9976 /* HomeDetailCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCellModel.h; sourceTree = "<group>"; };
+		2DA3F2141D4F4F46001D9976 /* HomeDetailCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCellModel.m; sourceTree = "<group>"; };
+		2DA3F2161D4F4F46001D9976 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		2DA3F2171D4F4F46001D9976 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		2DA3F2181D4F4F46001D9976 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		2DA3F2191D4F4F46001D9976 /* HomeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell.h; sourceTree = "<group>"; };
+		2DA3F21A1D4F4F46001D9976 /* HomeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell.m; sourceTree = "<group>"; };
+		2DA3F21B1D4F4F46001D9976 /* HomeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell.xib; sourceTree = "<group>"; };
+		2DA3F21C1D4F4F46001D9976 /* HomeDetailCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell1.h; sourceTree = "<group>"; };
+		2DA3F21D1D4F4F46001D9976 /* HomeDetailCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell1.m; sourceTree = "<group>"; };
+		2DA3F21E1D4F4F46001D9976 /* HomeDetailCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell1.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1889,6 +1915,7 @@
 		1DA71B761D3DB618007483D2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2DA3F2091D4F4F46001D9976 /* Home */,
 				068E96561D4F499E0074229C /* Circle */,
 				1DF991D41D48ADB300E7D1B8 /* Setting */,
 				1DA71B8C1D3DCBE6007483D2 /* Base */,
@@ -2094,6 +2121,53 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		2DA3F2091D4F4F46001D9976 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3F20A1D4F4F46001D9976 /* Controllers */,
+				2DA3F2101D4F4F46001D9976 /* Models */,
+				2DA3F2151D4F4F46001D9976 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DA3F20A1D4F4F46001D9976 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3F20B1D4F4F46001D9976 /* HomeViewController.h */,
+				2DA3F20C1D4F4F46001D9976 /* HomeViewController.m */,
+				2DA3F20D1D4F4F46001D9976 /* HomeViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DA3F2101D4F4F46001D9976 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3F2111D4F4F46001D9976 /* HomeCellModel.h */,
+				2DA3F2121D4F4F46001D9976 /* HomeCellModel.m */,
+				2DA3F2131D4F4F46001D9976 /* HomeDetailCellModel.h */,
+				2DA3F2141D4F4F46001D9976 /* HomeDetailCellModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DA3F2151D4F4F46001D9976 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DA3F2161D4F4F46001D9976 /* HomeCell.h */,
+				2DA3F2171D4F4F46001D9976 /* HomeCell.m */,
+				2DA3F2181D4F4F46001D9976 /* HomeCell.xib */,
+				2DA3F2191D4F4F46001D9976 /* HomeDetailCell.h */,
+				2DA3F21A1D4F4F46001D9976 /* HomeDetailCell.m */,
+				2DA3F21B1D4F4F46001D9976 /* HomeDetailCell.xib */,
+				2DA3F21C1D4F4F46001D9976 /* HomeDetailCell1.h */,
+				2DA3F21D1D4F4F46001D9976 /* HomeDetailCell1.m */,
+				2DA3F21E1D4F4F46001D9976 /* HomeDetailCell1.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2167,9 +2241,12 @@
 				1DF0A1B81D4DB898002D91DB /* 4.png in Resources */,
 				1DA71B841D3DBA67007483D2 /* Assets.xcassets in Resources */,
 				1DF0A1AC1D4DB898002D91DB /* 1.png in Resources */,
+				2DA3F2271D4F4F46001D9976 /* HomeDetailCell.xib in Resources */,
 				0604B47C1D4C5A9B00EF1703 /* image_9.jpg in Resources */,
 				0604B4771D4C5A9B00EF1703 /* image_4.jpg in Resources */,
+				2DA3F2201D4F4F46001D9976 /* HomeViewController.xib in Resources */,
 				1DF0A1B51D4DB898002D91DB /* 18.png in Resources */,
+				2DA3F2251D4F4F46001D9976 /* HomeCell.xib in Resources */,
 				1DA71B821D3DBA67007483D2 /* LaunchScreen.storyboard in Resources */,
 				0604B4781D4C5A9B00EF1703 /* image_5.jpg in Resources */,
 				1DB5A5871D4B3F36009E6170 /* switchMask@2x.png in Resources */,
@@ -2181,6 +2258,7 @@
 				1DB5A58F1D4B3F36009E6170 /* round-switch-track-no-text@2x.png in Resources */,
 				1DB5A5911D4B3F36009E6170 /* square-switch-mask@2x.png in Resources */,
 				1DB5A5861D4B3F36009E6170 /* switchGreen@2x.png in Resources */,
+				2DA3F2291D4F4F46001D9976 /* HomeDetailCell1.xib in Resources */,
 				0604B47A1D4C5A9B00EF1703 /* image_7.jpg in Resources */,
 				0604B4751D4C5A9B00EF1703 /* image_2.jpg in Resources */,
 				0604B4741D4C5A9B00EF1703 /* image_1.jpg in Resources */,
@@ -2263,6 +2341,7 @@
 				1D9580D31D3E225200FD0053 /* MASConstraint.m in Sources */,
 				1D09CD551D3F59D500F85E9A /* MKAnnotationView+WebCache.m in Sources */,
 				1D115F8A1D4BA043003DFBB1 /* IQUIViewController+Additions.m in Sources */,
+				2DA3F2221D4F4F46001D9976 /* HomeCellModel.m in Sources */,
 				1D09CCA51D3F29C900F85E9A /* YYReachability.m in Sources */,
 				1D09CC8E1D3F29C900F85E9A /* YYTextEffectWindow.m in Sources */,
 				1D0EA2D31D45A8AE00B47108 /* TMMemoryCache.m in Sources */,
@@ -2283,6 +2362,7 @@
 				1DA71B921D3DCC9D007483D2 /* TTBaseNavigationController.m in Sources */,
 				1D95803B1D3E123800FD0053 /* AFURLSessionManager.m in Sources */,
 				1D09CD5D1D3F59D500F85E9A /* UIView+WebCacheOperation.m in Sources */,
+				2DA3F2281D4F4F46001D9976 /* HomeDetailCell1.m in Sources */,
 				1DB5A5711D4B3EF1009E6170 /* TTSwitch.m in Sources */,
 				1D115F921D4BA043003DFBB1 /* IQToolbar.m in Sources */,
 				1DB926181D46F4F4003676AC /* LCRequestAccessory.m in Sources */,
@@ -2301,6 +2381,7 @@
 				1D09CC5B1D3F29C900F85E9A /* NSArray+YYAdd.m in Sources */,
 				1D09CC631D3F29C900F85E9A /* NSObject+YYAdd.m in Sources */,
 				1D09CD241D3F550300F85E9A /* UIButton+HYBHelperBlockKit.m in Sources */,
+				2DA3F21F1D4F4F46001D9976 /* HomeViewController.m in Sources */,
 				1D09CD601D3F59D500F85E9A /* SDWebImageCompat.m in Sources */,
 				1D09CC711D3F29C900F85E9A /* UIFont+YYAdd.m in Sources */,
 				1D09CC941D3F29C900F85E9A /* YYTextSelectionView.m in Sources */,
@@ -2336,6 +2417,7 @@
 				1D9580371D3E123800FD0053 /* AFNetworkReachabilityManager.m in Sources */,
 				1D9580D51D3E225200FD0053 /* MASLayoutConstraint.m in Sources */,
 				1D9580AB1D3E207200FD0053 /* MJRefreshBackNormalFooter.m in Sources */,
+				2DA3F2231D4F4F46001D9976 /* HomeDetailCellModel.m in Sources */,
 				1D115F901D4BA043003DFBB1 /* IQPreviousNextView.m in Sources */,
 				068E96541D4F488C0074229C /* MMDrawerVisualState.m in Sources */,
 				1D09CD0D1D3F550300F85E9A /* HYBCommonKit.m in Sources */,
@@ -2394,6 +2476,7 @@
 				1D09CC961D3F29C900F85E9A /* NSParagraphStyle+YYText.m in Sources */,
 				1D09CCA31D3F29C900F85E9A /* YYGestureRecognizer.m in Sources */,
 				1D9580AA1D3E207200FD0053 /* MJRefreshBackGifFooter.m in Sources */,
+				2DA3F2261D4F4F46001D9976 /* HomeDetailCell.m in Sources */,
 				1D55FD981D49ABAC00094112 /* Common.m in Sources */,
 				1D09CC6E1D3F29C900F85E9A /* UIColor+YYAdd.m in Sources */,
 				1D09CC681D3F29C900F85E9A /* NSTimer+YYAdd.m in Sources */,
@@ -2433,6 +2516,7 @@
 				1D9580AE1D3E207200FD0053 /* MJRefreshNormalHeader.m in Sources */,
 				1D09CD1B1D3F550300F85E9A /* NSUserDefaults+HYBHelperKit.m in Sources */,
 				1D2E1AAB1D4C538B00C0CE0A /* TTAddContactorViewController.m in Sources */,
+				2DA3F2241D4F4F46001D9976 /* HomeCell.m in Sources */,
 				1D09CC621D3F29C900F85E9A /* NSNumber+YYAdd.m in Sources */,
 				1D09CC6B1D3F29C900F85E9A /* UIApplication+YYAdd.m in Sources */,
 				1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */,

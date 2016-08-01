@@ -89,6 +89,7 @@
 ////最小线宽
 #define minLineWidth  (1.0 / [UIScreen mainScreen].scale)
 
+typedef void(^ClickBlock)();
 
 //数据存储
 #define UserDefaultsGet(Key)           [[NSUserDefaults standardUserDefaults] objectForKey:Key]
