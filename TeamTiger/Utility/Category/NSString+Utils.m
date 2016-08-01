@@ -13,10 +13,10 @@
 //汉字的拼音
 - (NSString *)pinyin{
     NSMutableString *str = [self mutableCopy];
-    CFStringTransform(( CFMutableStringRef)str, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformMandarinLatin, NO);
     CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
     
-    return [str stringByReplacingOccurrencesOfString:@" " withString:@""];
+    return [[str stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
 }
 
 @end

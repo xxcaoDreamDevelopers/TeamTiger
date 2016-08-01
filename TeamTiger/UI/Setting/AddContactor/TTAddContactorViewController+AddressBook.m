@@ -54,8 +54,10 @@
             baseInfo[@"email"] = emailArr.firstObject;
         }
         baseInfo[@"isAdd"] = @1;
-        [mArray addObject:baseInfo];
         
+        if (![Common isEmptyString:lastName] || ![Common isEmptyString:firstName]) {
+            [mArray addObject:baseInfo];
+        }
         //release
         CFRelease(emails);
         
