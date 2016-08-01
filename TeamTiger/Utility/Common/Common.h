@@ -13,4 +13,7 @@
 //去除UITableView多余分割线
 + (void)removeExtraCellLines:(UITableView *)tableView;
 
+//字符串为空检查
++ (BOOL)isEmptyString:(NSString *)sourceStr;
+
 @end

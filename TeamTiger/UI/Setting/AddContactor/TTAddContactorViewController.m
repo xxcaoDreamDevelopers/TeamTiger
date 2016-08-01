@@ -13,7 +13,7 @@
 #import "MBProgressHUD.h"
 #import "UIColor+HYBHelperKitUIKit.h"
 #import "GDIIndexBar.h"
-#import "GlobalDefine.h"
+#import "CacheManager.h"
 
 #define KBGColor    [UIColor colorWithRed:21.0/255.0f green:27.0/255.0f blue:39.0/255.0f alpha:1.0f]
 
@@ -52,12 +52,11 @@
     //searchDisplayController
     [self searchDisplayController];
     
-    NSDate *now = [NSDate date];
-    if (gRowArray && gSectionArray &&
-        gLastDate &&
-        (now.timeIntervalSince1970 - gLastDate.timeIntervalSince1970 < gTimeInterval)) {
-        self.rowArr = [NSArray arrayWithArray:gRowArray];
-        self.sectionArr = [NSArray arrayWithArray:gSectionArray];
+    CacheManager *cacheManager = [CacheManager sharedInstance];
+    if ([cacheManager getObjectForKey:Row_Data_Cache_Key] &&
+        [cacheManager getObjectForKey:Section_Data_Cache_Key]) {
+        self.rowArr = [NSArray arrayWithArray:[cacheManager getObjectForKey:Row_Data_Cache_Key]];
+        self.sectionArr = [NSArray arrayWithArray:[cacheManager getObjectForKey:Section_Data_Cache_Key]];
         [self.contactTable reloadData];
         [self indexBar];
     } else {
@@ -70,9 +69,8 @@
             self.rowArr = [ContactModel getFriendListDataBy:self.dataArr.mutableCopy];
             self.sectionArr = [ContactModel getFriendListSectionBy:self.rowArr.mutableCopy];
             //save cache
-            gRowArray = [NSArray arrayWithArray:self.rowArr];
-            gSectionArray = [NSArray arrayWithArray:self.sectionArr];
-            gLastDate = [NSDate date];
+            [cacheManager setObject:self.rowArr ForKey:Row_Data_Cache_Key TimeOut:gCacheTimeInterval];
+            [cacheManager setObject:self.sectionArr ForKey:Section_Data_Cache_Key TimeOut:gCacheTimeInterval];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
                 [self.contactTable reloadData];

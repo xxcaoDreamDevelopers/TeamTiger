@@ -197,6 +197,7 @@
 		1D55FD951D49AAA400094112 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D55FD931D49AAA400094112 /* SettingCell.xib */; };
 		1D55FD981D49ABAC00094112 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D55FD971D49ABAC00094112 /* Common.m */; };
 		1D59130D1D4DDE9E00A188A0 /* GDIIndexBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59130C1D4DDE9E00A188A0 /* GDIIndexBar.m */; };
+		1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF21D4EE72E007123EB /* CacheManager.m */; };
 		1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408641D41BA47009E2E11 /* NetworkManager.m */; };
 		1D9408691D41BE2D009E2E11 /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408681D41BE2D009E2E11 /* MessageManager.m */; };
 		1D9580361D3E123800FD0053 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95802A1D3E123800FD0053 /* AFHTTPSessionManager.m */; };
@@ -663,6 +664,8 @@
 		1D55FD971D49ABAC00094112 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		1D59130B1D4DDE9E00A188A0 /* GDIIndexBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDIIndexBar.h; sourceTree = "<group>"; };
 		1D59130C1D4DDE9E00A188A0 /* GDIIndexBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDIIndexBar.m; sourceTree = "<group>"; };
+		1D5D5FF11D4EE72E007123EB /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		1D5D5FF21D4EE72E007123EB /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		1D9408631D41BA47009E2E11 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		1D9408641D41BA47009E2E11 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		1D9408671D41BE2D009E2E11 /* MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
@@ -1537,6 +1540,15 @@
 			path = GDIIndexBar;
 			sourceTree = "<group>";
 		};
+		1D5D5FF01D4EE703007123EB /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				1D5D5FF11D4EE72E007123EB /* CacheManager.h */,
+				1D5D5FF21D4EE72E007123EB /* CacheManager.m */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
 		1D9408621D41B9C0009E2E11 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1795,6 +1807,7 @@
 		1DA71B741D3DB618007483D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1D5D5FF01D4EE703007123EB /* CacheManager */,
 				1D9408661D41BE19009E2E11 /* MessageManager */,
 				1D9408621D41B9C0009E2E11 /* NetworkManager */,
 				1D9580DC1D3E23E100FD0053 /* SqliteManager */,
@@ -2199,6 +2212,7 @@
 				1D09CC661D3F29C900F85E9A /* NSString+YYAdd.m in Sources */,
 				1D09CC7A1D3F29C900F85E9A /* YYDiskCache.m in Sources */,
 				1D09CC931D3F29C900F85E9A /* YYTextMagnifier.m in Sources */,
+				1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */,
 				1D09CCA81D3F29C900F85E9A /* YYThreadSafeDictionary.m in Sources */,
 				1D09CC981D3F29C900F85E9A /* YYTextArchiver.m in Sources */,
 				1D9580A91D3E207200FD0053 /* MJRefreshAutoStateFooter.m in Sources */,
