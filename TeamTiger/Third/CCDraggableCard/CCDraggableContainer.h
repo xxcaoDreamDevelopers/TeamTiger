@@ -58,7 +58,6 @@
 
 @property (nonatomic) CCDraggableStyle     style;
 @property (nonatomic) CCDraggableDirection direction;
-
 @property (nonatomic) NSInteger loadedIndex;
 
 - (instancetype)initWithFrame:(CGRect)frame style:(CCDraggableStyle)style;
@@ -66,5 +65,5 @@
 - (void)reloadData;
 
 - (void)reloadDataWithLoadIndex:(NSInteger)loadIndex animated:(BOOL)animated;
-
+- (void)panGestureHandle:(UIPanGestureRecognizer *)gesture;
 @end

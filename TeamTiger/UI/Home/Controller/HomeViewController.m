@@ -22,6 +22,7 @@ CCDraggableContainerDelegate>
 @property (nonatomic, strong) NSMutableArray *dataSources;
 @property (nonatomic, assign) NSInteger lastSelectItem;
 @property (nonatomic, assign) BOOL isAutoScroll;
+@property (nonatomic, assign) CGPoint orignPoint;
 @end
 
 @implementation HomeViewController
@@ -54,8 +55,9 @@ CCDraggableContainerDelegate>
 //    }];
 //    btn.backgroundColor = [UIColor redColor];
     
-   
-    
+    // 添加清扫手势 全屏滑动
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureHandle:)];
+    [self.view addGestureRecognizer:pan];
     
     self.titles = @[@"所有项目",@"工作牛",@"易会",@"MPP",@"营配"];
     
@@ -105,7 +107,9 @@ CCDraggableContainerDelegate>
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)panGestureHandle:(UIPanGestureRecognizer *)gesture {
+    [self.container panGestureHandle:gesture];
+}
 #pragma mark - AKPickerViewDataSource
 
 - (NSUInteger)numberOfItemsInPickerView:(AKPickerView *)pickerView
@@ -180,8 +184,8 @@ CCDraggableContainerDelegate>
 
 - (CCDraggableContainer *)container {
     if (!_container) {
-//        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, (Screen_Height*0.5)/2, Screen_Width * 0.60, Screen_Height*0.5) style:CCDraggableStyleUpOverlay];
-        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 0, Screen_Width * 0.60, Screen_Height) style:CCDraggableStyleUpOverlay];
+        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, (Screen_Height*0.5)/2, Screen_Width * 0.60, Screen_Height*0.5) style:CCDraggableStyleUpOverlay];
+//        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 0, Screen_Width * 0.60, Screen_Height) style:CCDraggableStyleUpOverlay];
         _container.delegate = self;
         _container.dataSource = self;
         [_container reloadData];

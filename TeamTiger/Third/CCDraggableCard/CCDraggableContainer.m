@@ -80,10 +80,10 @@
             for (long int i = self.currentCards.count; i <  (self.moving ? preloadViewCont + 1: preloadViewCont); i++) {
                 
                 CCDraggableCardView *cardView = [self.dataSource draggableContainer:self viewForIndex:self.loadedIndex%indexs];
-//                cardView.frame = CGRectMake(kContainerEdage,
-//                                            kContainerEdage,
-//                                            self.frame.size.width  - kContainerEdage * 2, self.frame.size.height - kContainerEdage * 2);
-                cardView.frame = self.bounds;
+                cardView.frame = CGRectMake(kContainerEdage,
+                                            kContainerEdage,
+                                            self.frame.size.width  - kContainerEdage * 2, self.frame.size.height - kContainerEdage * 2);
+//                cardView.frame = self.bounds;
                 [cardView cc_layoutSubviews];
                 
                 if (self.loadedIndex >= kVisibleCount) {
@@ -165,11 +165,12 @@
     
     if (gesture.state == UIGestureRecognizerStateChanged) {
         
-        CCDraggableCardView *cardView = (CCDraggableCardView *)gesture.view;
+//        CCDraggableCardView *cardView = (CCDraggableCardView *)gesture.view;
+        CCDraggableCardView *cardView = (CCDraggableCardView *)[self.currentCards firstObject];
         CGPoint point = [gesture translationInView:self]; // translation: 平移 获取相对坐标原点的坐标
-        CGPoint movedPoint = CGPointMake(gesture.view.center.x + point.x, gesture.view.center.y /*+ point.y*/);
+        CGPoint movedPoint = CGPointMake(cardView.center.x + point.x, cardView.center.y /*+ point.y*/);
         cardView.center = movedPoint;
-        cardView.transform = CGAffineTransformRotate(cardView.originalTransform, (gesture.view.center.x - self.cardCenter.x) / self.cardCenter.x * (M_PI / 12));
+        cardView.transform = CGAffineTransformRotate(cardView.originalTransform, (cardView.center.x - self.cardCenter.x) / self.cardCenter.x * (M_PI / 12));
         [gesture setTranslation:CGPointZero inView:self]; // 设置坐标原点位上次的坐标
     
         if (self.delegate && [self.delegate respondsToSelector:@selector(draggableContainer:draggableDirection:widthRatio:heightRatio:)]) {
@@ -179,8 +180,8 @@
             //  ratio用来判断是否显示图片中的"Like"或"DisLike"状态, 用开发者限定多少比例显示或设置透明度
             //  ---------------------------------------------------------------------------------------------
 
-            float widthRatio = (gesture.view.center.x - self.cardCenter.x) / self.cardCenter.x;
-            float heightRatio = (gesture.view.center.y - self.cardCenter.y) / self.cardCenter.y;
+            float widthRatio = (cardView.center.x - self.cardCenter.x) / self.cardCenter.x;
+//            float heightRatio = (gesture.view.center.y - self.cardCenter.y) / self.cardCenter.y;
             
             // Moving
             [self judgeMovingState: widthRatio];
@@ -206,12 +207,15 @@
         //  --------------------
         //  随着滑动的方向消失或还原
         //  --------------------
-
-        float widthRatio = (gesture.view.center.x - self.cardCenter.x) / self.cardCenter.x;
-        float moveWidth  = (gesture.view.center.x  - self.cardCenter.x);
-        float moveHeight = (gesture.view.center.y - self.cardCenter.y);
-
-        [self finishedPanGesture:gesture.view direction:self.direction scale:(moveWidth / moveHeight) disappear:fabs(widthRatio) > kBoundaryRatio];
+//        float widthRatio = (gesture.view.center.x - self.cardCenter.x) / self.cardCenter.x;
+//        float moveWidth  = (gesture.view.center.x  - self.cardCenter.x);
+//        float moveHeight = (gesture.view.center.y - self.cardCenter.y);
+        
+        CCDraggableCardView *cardView = (CCDraggableCardView *)[self.currentCards firstObject];
+        float widthRatio = (cardView.center.x - self.cardCenter.x) / self.cardCenter.x;
+        float moveWidth  = (cardView.center.x  - self.cardCenter.x);
+        float moveHeight = (cardView.center.y - self.cardCenter.y);
+        [self finishedPanGesture:cardView direction:self.direction scale:(moveWidth / moveHeight) disappear:fabs(widthRatio) > kBoundaryRatio];
     }
 }
 
@@ -254,6 +258,10 @@
         self.moving = NO;
         [self resetVisibleCards];
     }
+}
+
+- (UIView *)firstView {
+    return self.currentCards.firstObject;
 }
 
 - (void)removeFormDirection:(CCDraggableDirection)direction {
@@ -387,6 +395,7 @@
         frame.size.width = frame.size.width + kCardEdage * i;
         frame.size.height = frame.size.height + kCardEdage * i * 0.5;
         cardView.frame = frame;
+        [cardView cc_layoutSubviews];
 //        cardView.transform = CGAffineTransformScale(CGAffineTransformIdentity, kFirstCardScale + i * 0.1, kFirstCardScale + i * 0.1);
         cardView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, -0.25 * i * (M_PI_2 / 4));
         cardView.alpha = (1 - 0.2 * i);
