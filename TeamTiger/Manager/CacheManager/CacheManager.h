@@ -13,7 +13,7 @@ typedef enum : NSUInteger {
 
 
 //全局超时时长
-static NSTimeInterval const gCacheTimeInterval = 1 * 60;
+static NSTimeInterval const gCacheTimeInterval = 3 * 60 * 60;//默认三小时
 
 //CacheKey
 static NSString *const Row_Data_Cache_Key = @"Row_Data_Cache_Key_String";

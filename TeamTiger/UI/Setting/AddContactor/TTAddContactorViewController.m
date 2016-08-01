@@ -68,13 +68,13 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.rowArr = [ContactModel getFriendListDataBy:self.dataArr.mutableCopy];
             self.sectionArr = [ContactModel getFriendListSectionBy:self.rowArr.mutableCopy];
-            //save cache
-            [cacheManager setObject:self.rowArr ForKey:Row_Data_Cache_Key TimeOut:gCacheTimeInterval];
-            [cacheManager setObject:self.sectionArr ForKey:Section_Data_Cache_Key TimeOut:gCacheTimeInterval];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [MBProgressHUD hideHUDForView:self.view animated:YES];
                 [self.contactTable reloadData];
                 [self indexBar];
+                //save cache
+                [cacheManager setObject:self.rowArr ForKey:Row_Data_Cache_Key TimeOut:gCacheTimeInterval];
+                [cacheManager setObject:self.sectionArr ForKey:Section_Data_Cache_Key TimeOut:gCacheTimeInterval];
             });
         });
     }
