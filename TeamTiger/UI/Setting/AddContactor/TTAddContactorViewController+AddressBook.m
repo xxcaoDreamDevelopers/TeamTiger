@@ -58,9 +58,6 @@
         
         //release
         CFRelease(emails);
-        CFRelease(ABRecordCopyValue(people, kABPersonFirstNameProperty));
-        CFRelease(ABRecordCopyValue(people, kABPersonLastNameProperty));
-        CFRelease(ABPersonCopyImageData(people));
         
     }
     return mArray;
