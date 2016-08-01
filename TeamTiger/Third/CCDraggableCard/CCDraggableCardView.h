@@ -13,7 +13,7 @@
 @interface CCDraggableCardView : UIView
 
 @property (nonatomic) CGAffineTransform originalTransform;
-
+@property (nonatomic, strong) UIView *conteneView;
 - (void)cc_layoutSubviews;
 
 @end

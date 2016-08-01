@@ -80,9 +80,10 @@
             for (long int i = self.currentCards.count; i <  (self.moving ? preloadViewCont + 1: preloadViewCont); i++) {
                 
                 CCDraggableCardView *cardView = [self.dataSource draggableContainer:self viewForIndex:self.loadedIndex%indexs];
-                cardView.frame = CGRectMake(kContainerEdage,
-                                            kContainerEdage,
-                                            self.frame.size.width  - kContainerEdage * 2, self.frame.size.height - kContainerEdage * 2);
+//                cardView.frame = CGRectMake(kContainerEdage,
+//                                            kContainerEdage,
+//                                            self.frame.size.width  - kContainerEdage * 2, self.frame.size.height - kContainerEdage * 2);
+                cardView.frame = self.bounds;
                 [cardView cc_layoutSubviews];
                 
                 if (self.loadedIndex >= kVisibleCount) {

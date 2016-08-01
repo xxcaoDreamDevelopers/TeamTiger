@@ -180,7 +180,8 @@ CCDraggableContainerDelegate>
 
 - (CCDraggableContainer *)container {
     if (!_container) {
-        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, (Screen_Height*0.5)/2, Screen_Width * 0.60, Screen_Height*0.5) style:CCDraggableStyleUpOverlay];
+//        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, (Screen_Height*0.5)/2, Screen_Width * 0.60, Screen_Height*0.5) style:CCDraggableStyleUpOverlay];
+        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 0, Screen_Width * 0.60, Screen_Height) style:CCDraggableStyleUpOverlay];
         _container.delegate = self;
         _container.dataSource = self;
         [_container reloadData];
