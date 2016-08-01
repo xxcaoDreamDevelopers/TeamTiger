@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactModel : NSObject
+@interface ContactModel : NSObject<NSCoding>
 
 @property(copy,nonatomic)NSString *portrait;
 

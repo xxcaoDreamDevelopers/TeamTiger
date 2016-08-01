@@ -107,4 +107,27 @@
     return desModel;
 }
 
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.portrait forKey:@"portrait"];
+    [aCoder encodeObject:self.email forKey:@"email"];
+    [aCoder encodeObject:self.isAdd forKey:@"isAdd"];
+    [aCoder encodeObject:self.imageData forKey:@"imageData"];
+}
+
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if(self){
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.portrait = [aDecoder decodeObjectForKey:@"portrait"];
+        self.email = [aDecoder decodeObjectForKey:@"email"];
+        self.isAdd = [aDecoder decodeObjectForKey:@"isAdd"];
+        self.imageData = [aDecoder decodeObjectForKey:@"imageData"];
+    }
+    return self;
+}
+
+
 @end

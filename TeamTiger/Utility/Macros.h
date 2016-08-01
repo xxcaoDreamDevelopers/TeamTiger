@@ -90,4 +90,9 @@
 #define minLineWidth  (1.0 / [UIScreen mainScreen].scale)
 
 
+//数据存储
+#define UserDefaultsGet(Key)           [[NSUserDefaults standardUserDefaults] objectForKey:Key]
+#define UserDefaultsSave(Value,Key)    {[[NSUserDefaults standardUserDefaults] setObject:Value forKey:Key]; [[NSUserDefaults standardUserDefaults] synchronize];}
+#define UserDefaultsRemove(Key)        {[[NSUserDefaults standardUserDefaults] removeObjectForKey:Key]; [[NSUserDefaults standardUserDefaults] synchronize];}
+
 #endif /* Macros_h */

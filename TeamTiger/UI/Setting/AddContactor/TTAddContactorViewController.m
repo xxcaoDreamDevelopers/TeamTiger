@@ -52,10 +52,11 @@
     [self searchDisplayController];
     
     CacheManager *cacheManager = [CacheManager sharedInstance];
-    if ([cacheManager getObjectForKey:Row_Data_Cache_Key] &&
-        [cacheManager getObjectForKey:Section_Data_Cache_Key]) {
-        self.rowArr = [NSArray arrayWithArray:[cacheManager getObjectForKey:Row_Data_Cache_Key]];
-        self.sectionArr = [NSArray arrayWithArray:[cacheManager getObjectForKey:Section_Data_Cache_Key]];
+    NSArray *tmpRowArray = [cacheManager getObjectForKey:Row_Data_Cache_Key];
+    NSArray *tmpSectionArray = [cacheManager getObjectForKey:Section_Data_Cache_Key];
+    if (tmpRowArray && tmpSectionArray) {
+        self.rowArr = [NSArray arrayWithArray:tmpRowArray];
+        self.sectionArr = [NSArray arrayWithArray:tmpSectionArray];
         [self.contactTable reloadData];
         [self indexBar];
     } else {
@@ -74,7 +75,16 @@
                 [self.contactTable reloadData];
                 [self indexBar];
                 //save cache
-                [cacheManager setObject:self.rowArr ForKey:Row_Data_Cache_Key TimeOut:gCacheTimeInterval];
+                NSMutableArray *mArray = [NSMutableArray array];
+                for (NSArray *array in self.rowArr) {
+                    NSMutableArray *subMArray = [NSMutableArray array];
+                    for (ContactModel *model in array) {
+                        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+                        [subMArray addObject:data];
+                    }
+                    [mArray addObject:subMArray];
+                }
+                [cacheManager setObject:mArray ForKey:Row_Data_Cache_Key TimeOut:gCacheTimeInterval];
                 [cacheManager setObject:self.sectionArr ForKey:Section_Data_Cache_Key TimeOut:gCacheTimeInterval];
             });
         });
