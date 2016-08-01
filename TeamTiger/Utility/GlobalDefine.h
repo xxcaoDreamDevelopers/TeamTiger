@@ -9,5 +9,9 @@
 #ifndef GlobalDefine_h
 #define GlobalDefine_h
 
+NSArray *gRowArray;
+NSArray *gSectionArray;
+
+NSDate *gLastDate;
 
 #endif /* GlobalDefine_h */

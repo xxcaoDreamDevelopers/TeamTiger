@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "UIColor+HYBHelperKitUIKit.h"
 #import "GDIIndexBar.h"
+#import "GlobalDefine.h"
 
 #define KBGColor    [UIColor colorWithRed:21.0/255.0f green:27.0/255.0f blue:39.0/255.0f alpha:1.0f]
 
@@ -51,20 +52,34 @@
     //searchDisplayController
     [self searchDisplayController];
     
-    //data source
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.label.text = @"正在加载...";
-    hud.square = YES;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        self.rowArr = [ContactModel getFriendListDataBy:self.dataArr.mutableCopy];
-        self.sectionArr = [ContactModel getFriendListSectionBy:self.rowArr.mutableCopy];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            [self.contactTable reloadData];
-            [self indexBar];
+    NSDate *now = [NSDate date];
+    if (gRowArray && gSectionArray &&
+        gLastDate &&
+        (now.timeIntervalSince1970 - gLastDate.timeIntervalSince1970 < gTimeInterval)) {
+        self.rowArr = [NSArray arrayWithArray:gRowArray];
+        self.sectionArr = [NSArray arrayWithArray:gSectionArray];
+        [self.contactTable reloadData];
+        [self indexBar];
+    } else {
+        //data source
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeIndeterminate;
+        hud.label.text = @"正在加载...";
+        hud.square = YES;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            self.rowArr = [ContactModel getFriendListDataBy:self.dataArr.mutableCopy];
+            self.sectionArr = [ContactModel getFriendListSectionBy:self.rowArr.mutableCopy];
+            //save cache
+            gRowArray = [NSArray arrayWithArray:self.rowArr];
+            gSectionArray = [NSArray arrayWithArray:self.sectionArr];
+            gLastDate = [NSDate date];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [self.contactTable reloadData];
+                [self indexBar];
+            });
         });
-    });
+    }
 }
 
 #pragma -mark UITableView DataSource 
