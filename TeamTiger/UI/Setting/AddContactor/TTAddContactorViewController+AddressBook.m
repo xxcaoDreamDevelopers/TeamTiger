@@ -28,7 +28,7 @@
         NSMutableArray *emailArr = [[NSMutableArray alloc]init];
         //获取当前联系人的邮箱 注意是数组
         ABMultiValueRef emails = ABRecordCopyValue(people, kABPersonEmailProperty);
-        for (NSInteger j=0; j<ABMultiValueGetCount(emails); j++) {
+        for (NSInteger j = 0; j < ABMultiValueGetCount(emails); j++) {
             [emailArr addObject:(__bridge NSString *)(ABMultiValueCopyValueAtIndex(emails, j))];
         }
 
@@ -55,6 +55,13 @@
         }
         baseInfo[@"isAdd"] = @1;
         [mArray addObject:baseInfo];
+        
+        //release
+        CFRelease(emails);
+        CFRelease(ABRecordCopyValue(people, kABPersonFirstNameProperty));
+        CFRelease(ABRecordCopyValue(people, kABPersonLastNameProperty));
+        CFRelease(ABPersonCopyImageData(people));
+        
     }
     return mArray;
 }
