@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
+#import "CirclesViewController.h"
 #import "UIImage+TYLaunchImage.h"
 #import "UIView+TYLaunchAnimation.h"
 #import "TYLaunchFadeScaleAnimation.h"
@@ -26,7 +26,7 @@
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
     [self initialMethods];
-    HomeViewController *homeVc = [[HomeViewController alloc] init];
+    CirclesViewController *homeVc = [[CirclesViewController alloc] init];
     TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:homeVc];
     self.window.rootViewController = rootNavi;
     [self.window makeKeyAndVisible];

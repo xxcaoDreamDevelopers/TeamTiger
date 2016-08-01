@@ -6,7 +6,7 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "CirclesViewController.h"
 #import "NetworkManager.h"
 #import "UIButton+HYBHelperBlockKit.h"
 #import "TTSettingViewController.h"
@@ -14,7 +14,7 @@
 #import "CCDraggableContainer.h"
 #import "CustomCardView.h"
 
-@interface HomeViewController ()<AKPickerViewDataSource, AKPickerViewDelegate,CCDraggableContainerDataSource,
+@interface CirclesViewController ()<AKPickerViewDataSource, AKPickerViewDelegate,CCDraggableContainerDataSource,
 CCDraggableContainerDelegate>
 @property (nonatomic, strong) AKPickerView *pickerView;
 @property (nonatomic, strong) NSArray *titles;
@@ -25,7 +25,7 @@ CCDraggableContainerDelegate>
 @property (nonatomic, assign) CGPoint orignPoint;
 @end
 
-@implementation HomeViewController
+@implementation CirclesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

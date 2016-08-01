@@ -9,6 +9,44 @@
 #ifndef Macros_h
 #define Macros_h
 
+//检测是否retina屏
+#define isRetina   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 960.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//检测iPad是否retina屏
+#define isRetina_iPad  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1536, 2048), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(2048, 1536), [[UIScreen mainScreen] currentMode].size)) : NO)
+//检测是否iPhone4
+#define isIPhone4    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 960.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//检测是否iPhone5
+#define isIPhone5    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 1136.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//检测是否iPhone6
+#define isIPhone6    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750.0, 1334.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+//检测是否iPhone6P
+#define isIPhone6P    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242.0, 2208.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+//检测是否4寸屏
+#define is35inch    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 960.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define is40inch    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 1136.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define is47inch    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750.0, 1334.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define is55inch    ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242.0, 2208.0), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//检测是否iOS7
+#define iOS7       (CurrentSystemVersion_Double >= 7.0)
+//检测是否 iOS8
+#define iOS8       (CurrentSystemVersion_Double >= 8.0)
+//检测是否iPad
+#define isiPad      (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//检测是否iPod或者iPhone
+#define isiPhone    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
 //View相关
 #define Point(Xpos, Ypos)                  CGPointMake(Xpos, Ypos)
 #define Size(Width, Height)                CGSizeMake(Width, Height)

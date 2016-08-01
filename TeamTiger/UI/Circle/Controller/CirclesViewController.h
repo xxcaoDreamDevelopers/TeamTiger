@@ -8,7 +8,7 @@
 
 #import "TTBaseViewController.h"
 
-@interface HomeViewController : TTBaseViewController
+@interface CirclesViewController : TTBaseViewController
 
 
 @end

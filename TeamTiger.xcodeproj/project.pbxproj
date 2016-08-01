@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0604B4591D4C5A4900EF1703 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4541D4C5A4900EF1703 /* HomeViewController.m */; };
-		0604B45A1D4C5A4900EF1703 /* CustomCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4581D4C5A4900EF1703 /* CustomCardView.m */; };
 		0604B4641D4C5A5B00EF1703 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B45D1D4C5A5B00EF1703 /* AKPickerView.m */; };
 		0604B4651D4C5A5B00EF1703 /* CCDraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4601D4C5A5B00EF1703 /* CCDraggableCardView.m */; };
 		0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4631D4C5A5B00EF1703 /* CCDraggableContainer.m */; };
@@ -23,6 +21,12 @@
 		0604B47B1D4C5A9B00EF1703 /* image_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0604B4701D4C5A9B00EF1703 /* image_8.jpg */; };
 		0604B47C1D4C5A9B00EF1703 /* image_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0604B4711D4C5A9B00EF1703 /* image_9.jpg */; };
 		0604B47D1D4C5A9B00EF1703 /* upshadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0604B4721D4C5A9B00EF1703 /* upshadow.png */; };
+		068E96521D4F488C0074229C /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E964A1D4F488C0074229C /* MMDrawerBarButtonItem.m */; };
+		068E96531D4F488C0074229C /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E964D1D4F488C0074229C /* MMDrawerController.m */; };
+		068E96541D4F488C0074229C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E964F1D4F488C0074229C /* MMDrawerVisualState.m */; };
+		068E96551D4F488C0074229C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E96511D4F488C0074229C /* UIViewController+MMDrawerController.m */; };
+		068E965E1D4F499E0074229C /* CirclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E96591D4F499E0074229C /* CirclesViewController.m */; };
+		068E965F1D4F499E0074229C /* CustomCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E965D1D4F499E0074229C /* CustomCardView.m */; };
 		1D09CC5B1D3F29C900F85E9A /* NSArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBAE1D3F29C900F85E9A /* NSArray+YYAdd.m */; };
 		1D09CC5C1D3F29C900F85E9A /* NSBundle+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBB01D3F29C900F85E9A /* NSBundle+YYAdd.m */; };
 		1D09CC5D1D3F29C900F85E9A /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBB21D3F29C900F85E9A /* NSData+YYAdd.m */; };
@@ -299,10 +303,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0604B4531D4C5A4900EF1703 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		0604B4541D4C5A4900EF1703 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		0604B4571D4C5A4900EF1703 /* CustomCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardView.h; sourceTree = "<group>"; };
-		0604B4581D4C5A4900EF1703 /* CustomCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardView.m; sourceTree = "<group>"; };
 		0604B45C1D4C5A5B00EF1703 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		0604B45D1D4C5A5B00EF1703 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		0604B45F1D4C5A5B00EF1703 /* CCDraggableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDraggableCardView.h; sourceTree = "<group>"; };
@@ -321,6 +321,19 @@
 		0604B4701D4C5A9B00EF1703 /* image_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_8.jpg; sourceTree = "<group>"; };
 		0604B4711D4C5A9B00EF1703 /* image_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_9.jpg; sourceTree = "<group>"; };
 		0604B4721D4C5A9B00EF1703 /* upshadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upshadow.png; sourceTree = "<group>"; };
+		068E96491D4F488C0074229C /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		068E964A1D4F488C0074229C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		068E964B1D4F488C0074229C /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		068E964C1D4F488C0074229C /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		068E964D1D4F488C0074229C /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		068E964E1D4F488C0074229C /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		068E964F1D4F488C0074229C /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		068E96501D4F488C0074229C /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		068E96511D4F488C0074229C /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		068E96581D4F499E0074229C /* CirclesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesViewController.h; sourceTree = "<group>"; };
+		068E96591D4F499E0074229C /* CirclesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesViewController.m; sourceTree = "<group>"; };
+		068E965C1D4F499E0074229C /* CustomCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardView.h; sourceTree = "<group>"; };
+		068E965D1D4F499E0074229C /* CustomCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardView.m; sourceTree = "<group>"; };
 		1D09CBAD1D3F29C900F85E9A /* NSArray+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YYAdd.h"; sourceTree = "<group>"; };
 		1D09CBAE1D3F29C900F85E9A /* NSArray+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YYAdd.m"; sourceTree = "<group>"; };
 		1D09CBAF1D3F29C900F85E9A /* NSBundle+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YYAdd.h"; sourceTree = "<group>"; };
@@ -864,31 +877,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0604B4521D4C5A4900EF1703 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0604B4531D4C5A4900EF1703 /* HomeViewController.h */,
-				0604B4541D4C5A4900EF1703 /* HomeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		0604B4551D4C5A4900EF1703 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0604B4561D4C5A4900EF1703 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0604B4571D4C5A4900EF1703 /* CustomCardView.h */,
-				0604B4581D4C5A4900EF1703 /* CustomCardView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		0604B45B1D4C5A5B00EF1703 /* AKPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +914,57 @@
 				0604B4721D4C5A9B00EF1703 /* upshadow.png */,
 			);
 			path = testImg;
+			sourceTree = "<group>";
+		};
+		068E96481D4F488C0074229C /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				068E96491D4F488C0074229C /* MMDrawerBarButtonItem.h */,
+				068E964A1D4F488C0074229C /* MMDrawerBarButtonItem.m */,
+				068E964B1D4F488C0074229C /* MMDrawerController+Subclass.h */,
+				068E964C1D4F488C0074229C /* MMDrawerController.h */,
+				068E964D1D4F488C0074229C /* MMDrawerController.m */,
+				068E964E1D4F488C0074229C /* MMDrawerVisualState.h */,
+				068E964F1D4F488C0074229C /* MMDrawerVisualState.m */,
+				068E96501D4F488C0074229C /* UIViewController+MMDrawerController.h */,
+				068E96511D4F488C0074229C /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		068E96561D4F499E0074229C /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				068E96571D4F499E0074229C /* Controller */,
+				068E965A1D4F499E0074229C /* Model */,
+				068E965B1D4F499E0074229C /* View */,
+			);
+			path = Circle;
+			sourceTree = "<group>";
+		};
+		068E96571D4F499E0074229C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				068E96581D4F499E0074229C /* CirclesViewController.h */,
+				068E96591D4F499E0074229C /* CirclesViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		068E965A1D4F499E0074229C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		068E965B1D4F499E0074229C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				068E965C1D4F499E0074229C /* CustomCardView.h */,
+				068E965D1D4F499E0074229C /* CustomCardView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1D09CBAA1D3F29C900F85E9A /* YYKit */ = {
@@ -1827,6 +1866,7 @@
 		1DA71B751D3DB618007483D2 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				068E96481D4F488C0074229C /* MMDrawerController */,
 				1D59130A1D4DDE9E00A188A0 /* GDIIndexBar */,
 				0604B45B1D4C5A5B00EF1703 /* AKPickerView */,
 				0604B45E1D4C5A5B00EF1703 /* CCDraggableCard */,
@@ -1849,8 +1889,8 @@
 		1DA71B761D3DB618007483D2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				068E96561D4F499E0074229C /* Circle */,
 				1DF991D41D48ADB300E7D1B8 /* Setting */,
-				1DF991D01D4898A800E7D1B8 /* Home */,
 				1DA71B8C1D3DCBE6007483D2 /* Base */,
 			);
 			path = UI;
@@ -2042,16 +2082,6 @@
 			path = TYLaunchAnimation;
 			sourceTree = "<group>";
 		};
-		1DF991D01D4898A800E7D1B8 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				0604B4521D4C5A4900EF1703 /* Controller */,
-				0604B4551D4C5A4900EF1703 /* Model */,
-				0604B4561D4C5A4900EF1703 /* View */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		1DF991D41D48ADB300E7D1B8 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -2196,6 +2226,7 @@
 				1D115F891D4BA043003DFBB1 /* IQUIView+Hierarchy.m in Sources */,
 				1D09CD271D3F550300F85E9A /* UIView+HYBHelperBlockKit.m in Sources */,
 				1D9580A71D3E207200FD0053 /* MJRefreshAutoGifFooter.m in Sources */,
+				068E965F1D4F499E0074229C /* CustomCardView.m in Sources */,
 				1D9580AC1D3E207200FD0053 /* MJRefreshBackStateFooter.m in Sources */,
 				1D09CC7B1D3F29C900F85E9A /* YYKVStorage.m in Sources */,
 				1D09CD261D3F550300F85E9A /* UIGestureRecognizer+HYBHelperBlockKit.m in Sources */,
@@ -2278,6 +2309,7 @@
 				1D95803A1D3E123800FD0053 /* AFURLResponseSerialization.m in Sources */,
 				1D9580D61D3E225200FD0053 /* MASViewAttribute.m in Sources */,
 				1D09CD5E1D3F59D500F85E9A /* SDWebImageDownloader.m in Sources */,
+				068E96551D4F488C0074229C /* UIViewController+MMDrawerController.m in Sources */,
 				1D9408691D41BE2D009E2E11 /* MessageManager.m in Sources */,
 				1D09CCAB1D3F29C900F85E9A /* YYWeakProxy.m in Sources */,
 				1D09CD0F1D3F550300F85E9A /* HYBHelperKitBaseURLController.m in Sources */,
@@ -2299,11 +2331,13 @@
 				1D09CD131D3F550300F85E9A /* NSDictionary+HYBHelperKit.m in Sources */,
 				1D09CC9F1D3F29C900F85E9A /* YYTextView.m in Sources */,
 				1D09CC5F1D3F29C900F85E9A /* NSDictionary+YYAdd.m in Sources */,
+				068E96531D4F488C0074229C /* MMDrawerController.m in Sources */,
 				1D9580DB1D3E225200FD0053 /* ViewController+MASAdditions.m in Sources */,
 				1D9580371D3E123800FD0053 /* AFNetworkReachabilityManager.m in Sources */,
 				1D9580D51D3E225200FD0053 /* MASLayoutConstraint.m in Sources */,
 				1D9580AB1D3E207200FD0053 /* MJRefreshBackNormalFooter.m in Sources */,
 				1D115F901D4BA043003DFBB1 /* IQPreviousNextView.m in Sources */,
+				068E96541D4F488C0074229C /* MMDrawerVisualState.m in Sources */,
 				1D09CD0D1D3F550300F85E9A /* HYBCommonKit.m in Sources */,
 				1D09CD0E1D3F550300F85E9A /* HYBHelperKitBaseController.m in Sources */,
 				0604B4651D4C5A5B00EF1703 /* CCDraggableCardView.m in Sources */,
@@ -2351,7 +2385,6 @@
 				1D9580A81D3E207200FD0053 /* MJRefreshAutoNormalFooter.m in Sources */,
 				1DF991CE1D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m in Sources */,
 				1D09CD581D3F59D500F85E9A /* UIImage+GIF.m in Sources */,
-				0604B45A1D4C5A4900EF1703 /* CustomCardView.m in Sources */,
 				1D09CD2C1D3F550300F85E9A /* UIView+HYBHelperKitUIKit.m in Sources */,
 				1D09CC6C1D3F29C900F85E9A /* UIBarButtonItem+YYAdd.m in Sources */,
 				1D09CD1D1D3F550300F85E9A /* UIImageView+HYBMasonryKit.m in Sources */,
@@ -2369,6 +2402,7 @@
 				1DA71B851D3DBA67007483D2 /* main.m in Sources */,
 				1D09CCA01D3F29C900F85E9A /* YYAsyncLayer.m in Sources */,
 				1D0EA2C51D45A82C00B47108 /* LCChainRequest.m in Sources */,
+				068E965E1D4F499E0074229C /* CirclesViewController.m in Sources */,
 				1DA71B8F1D3DCC3D007483D2 /* TTBaseViewController.m in Sources */,
 				1D9580AF1D3E207200FD0053 /* MJRefreshStateHeader.m in Sources */,
 				1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */,
@@ -2390,6 +2424,7 @@
 				1D0EA2D11D45A8AE00B47108 /* TMCache.m in Sources */,
 				1D115F871D4BA043003DFBB1 /* IQUIScrollView+Additions.m in Sources */,
 				1D9580D81D3E225200FD0053 /* NSArray+MASAdditions.m in Sources */,
+				068E96521D4F488C0074229C /* MMDrawerBarButtonItem.m in Sources */,
 				1D9580721D3E1ADD00FD0053 /* MBProgressHUD.m in Sources */,
 				1D09CC851D3F29C900F85E9A /* YYImageCache.m in Sources */,
 				1D09CD171D3F550300F85E9A /* NSNumber+HYBHelperKit.m in Sources */,
@@ -2406,7 +2441,6 @@
 				1D0EA2C71D45A82C00B47108 /* LCNetworkAgent.m in Sources */,
 				1D09CD101D3F550300F85E9A /* HYBHelperKitTestEntranceController.m in Sources */,
 				1D9580A41D3E207200FD0053 /* MJRefreshComponent.m in Sources */,
-				0604B4591D4C5A4900EF1703 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
