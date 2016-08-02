@@ -18,6 +18,5 @@
 @property (strong, nonatomic) UIImageView *image2;
 @property (strong, nonatomic) UIImageView *image3;
 
-@property (strong, nonatomic) NSMutableArray *dataArr;
 
 @end

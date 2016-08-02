@@ -88,10 +88,10 @@
         weakCell.isFirst = !weakCell.isFirst;
         if (weakCell.isFirst) {
             weakCell.tableView.hidden = NO;
-            [weakCell.moreBtn setImage:kImage(@"xia") forState:UIControlStateNormal];
+            [weakCell.moreBtn setImage:kImage(@"shang") forState:UIControlStateNormal];
         }else {
             weakCell.tableView.hidden = YES;
-            [weakCell.moreBtn setImage:kImage(@"shang") forState:UIControlStateNormal];
+            [weakCell.moreBtn setImage:kImage(@"xia") forState:UIControlStateNormal];
         }
     };
     [cell configureCellWithModel:self.dataSource[indexPath.row]];

@@ -109,7 +109,7 @@
                             <constraint firstItem="hCZ-YT-9QQ" firstAttribute="top" secondItem="Ia3-5f-dsk" secondAttribute="bottom" constant="5" id="zcT-Xi-cj5"/>
                         </constraints>
                     </view>
-                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6se-Kj-4jt">
+                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6se-Kj-4jt">
                         <rect key="frame" x="10" y="250" width="359" height="129"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
@@ -126,7 +126,7 @@
                                     <constraint firstAttribute="height" constant="20" id="CWj-Z7-V0X"/>
                                     <constraint firstAttribute="width" constant="40" id="ph7-hL-yrZ"/>
                                 </constraints>
-                                <state key="normal" image="shang"/>
+                                <state key="normal" image="xia"/>
                                 <connections>
                                     <action selector="handleMoreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nXA-E5-lgC"/>
                                 </connections>
@@ -184,7 +184,7 @@
         <image name="leixing" width="16" height="16"/>
         <image name="pinglun" width="64" height="64"/>
         <image name="placeImage" width="129" height="128"/>
-        <image name="shang" width="32" height="32"/>
         <image name="touxiang" width="32" height="32"/>
+        <image name="xia" width="32" height="32"/>
     </resources>
 </document>

@@ -9,6 +9,7 @@
 #ifndef Macros_h
 #define Macros_h
 
+#define kImage(imageName)      [UIImage imageNamed:imageName]
 //检测是否retina屏
 #define isRetina   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 960.0), [[UIScreen mainScreen] currentMode].size) : NO)
 

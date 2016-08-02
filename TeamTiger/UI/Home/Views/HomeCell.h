@@ -11,11 +11,6 @@
 
 
 
-typedef NS_ENUM(NSInteger, TypeCell) {
-    TypeCellImage = 0,
-    TypeCellTitle
-};
-
 @interface HomeCell : UITableViewCell <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLB;
@@ -28,7 +23,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 @property (weak, nonatomic) IBOutlet UIButton *moreBtn;
 @property (copy, nonatomic) ClickBlock clickBlock;
 @property (assign, nonatomic) BOOL isFirst;
-@property (assign, nonatomic) TypeCell typeCell;
+@property (assign, nonatomic) BOOL isOpen;
 
 - (void)configureCellWithModel:(HomeCellModel *)model;
 

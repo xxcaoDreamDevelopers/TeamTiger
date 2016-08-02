@@ -21,4 +21,14 @@
     // Configure the view for the selected state
 }
 
+- (void)configureCellWithModel:(HomeDetailCellModel *)model {
+    self.timeLB.text = model.time;
+    self.firstNameLB.text = model.firstName;
+    self.secondeNameLB.text = model.secondName;
+    self.desLB.text = model.des;
+    self.image1.image = kImage(model.firstImage);
+    self.image2.image = kImage(model.secondImage);
+    
+}
+
 @end

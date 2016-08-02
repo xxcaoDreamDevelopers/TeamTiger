@@ -1,14 +1,14 @@
 //
-//  HomeDetailCell1.m
+//  HomeDetailCell2.m
 //  TeamTiger
 //
-//  Created by Dale on 16/8/1.
+//  Created by Dale on 16/8/2.
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "HomeDetailCell1.h"
+#import "HomeDetailCell2.h"
 
-@implementation HomeDetailCell1
+@implementation HomeDetailCell2
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -23,14 +23,7 @@
 
 - (void)configureCellWithModel:(HomeDetailCellModel *)model {
     self.timeLB.text = model.time;
-    self.firstNameLB.text = model.firstName;
-    self.secondNameLB.text = model.secondName;
-    self.descipitionLB.text = model.des;
-}
-- (IBAction)handleBtnAction:(UIButton *)sender {
-    if (self.clickMoreBtn) {
-        self.clickMoreBtn();
-    }
+    self.nameLB.text = model.firstName;
 }
 
 @end
