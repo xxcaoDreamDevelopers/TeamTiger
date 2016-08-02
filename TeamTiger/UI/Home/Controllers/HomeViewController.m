@@ -10,6 +10,7 @@
 #import "HomeCell.h"
 #import "HomeCellModel.h"
 #import "TTSettingViewController.h"
+#import "DiscussViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -32,7 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.title = @"工作牛";
+    self.title = @"工作牛";
     [self configureNavigationItem];
     [Common removeExtraCellLines:self.tableView];
 
@@ -56,7 +57,8 @@
 }
 
 - (void)handleLeftBtnAction {
-    
+    DiscussViewController *discussVC = [[DiscussViewController alloc] init];
+    [self.navigationController pushViewController:discussVC animated:YES];
 }
 
 - (void)handleRightBtnAction {
