@@ -81,7 +81,6 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
-                <outlet property="line2" destination="z77-Cp-znr" id="uds-pW-eiD"/>
                 <outlet property="nameLB" destination="Uky-cC-hPU" id="S28-JU-0Xs"/>
                 <outlet property="timeLB" destination="CK2-MS-R0G" id="80W-Zd-d57"/>
             </connections>

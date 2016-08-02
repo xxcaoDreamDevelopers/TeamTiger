@@ -109,7 +109,7 @@
                             <constraint firstItem="hCZ-YT-9QQ" firstAttribute="top" secondItem="Ia3-5f-dsk" secondAttribute="bottom" constant="5" id="zcT-Xi-cj5"/>
                         </constraints>
                     </view>
-                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6se-Kj-4jt">
+                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6se-Kj-4jt">
                         <rect key="frame" x="10" y="250" width="359" height="129"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
@@ -177,7 +177,7 @@
                 <outlet property="tableView" destination="6se-Kj-4jt" id="3pe-UB-rru"/>
                 <outlet property="typeLB" destination="o6i-yn-xwD" id="yFR-Pg-Z2d"/>
             </connections>
-            <point key="canvasLocation" x="612.5" y="288.5"/>
+            <point key="canvasLocation" x="240.5" y="258.5"/>
         </tableViewCell>
     </objects>
     <resources>

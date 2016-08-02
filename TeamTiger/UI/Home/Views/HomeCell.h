@@ -22,8 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *moreBtn;
 @property (copy, nonatomic) ClickBlock clickBlock;
-@property (assign, nonatomic) BOOL isFirst;
 @property (assign, nonatomic) BOOL isOpen;
+@property (assign, nonatomic) BOOL isFirst;
 
 - (void)configureCellWithModel:(HomeCellModel *)model;
 

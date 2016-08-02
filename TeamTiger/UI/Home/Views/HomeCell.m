@@ -103,13 +103,13 @@
         if (self.isOpen) {
             cell.moreBtn.hidden = YES;
         }
+        if (indexPath.row == self.dataSource.count - 1) {
+            cell.lineView2.hidden = YES;
+        }
         [cell configureCellWithModel:model];
         return cell;
     }else if (model.typeCell == TypeCellTime){
         HomeDetailCell2 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier2" forIndexPath:indexPath];
-        if (indexPath.row == self.dataSource.count - 1) {
-            cell.line2.hidden = YES;
-        }
         [cell configureCellWithModel:model];
         return cell;
     }

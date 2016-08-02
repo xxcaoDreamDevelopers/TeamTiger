@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *secondNameLB;
 @property (weak, nonatomic) IBOutlet UILabel *descipitionLB;
 @property (weak, nonatomic) IBOutlet UIButton *moreBtn;
+@property (weak, nonatomic) IBOutlet UIView *lineView2;
 @property (copy, nonatomic) ClickBlock clickMoreBtn;
 
 - (void)configureCellWithModel:(HomeDetailCellModel *)model;

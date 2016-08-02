@@ -12,10 +12,14 @@
 #import "TTSettingViewController.h"
 #import "DiscussViewController.h"
 
-@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>{
+    CGFloat _height;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataSource;
+@property (assign, nonatomic) BOOL isFirst;
+
 @end
 
 @implementation HomeViewController
@@ -78,7 +82,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"cellIdentifier";
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -102,7 +105,8 @@
 
 #pragma mark UITableViewDelegate 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 600;
+        return 650;
+    
 }
 
 @end
