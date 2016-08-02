@@ -12,13 +12,12 @@
 #import "TTSettingViewController.h"
 #import "DiscussViewController.h"
 
-@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>{
-    CGFloat _height;
-}
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataSource;
 @property (assign, nonatomic) BOOL isFirst;
+@property (assign, nonatomic) CGFloat height;
 
 @end
 
@@ -40,7 +39,7 @@
     self.title = @"工作牛";
     [self configureNavigationItem];
     [Common removeExtraCellLines:self.tableView];
-
+    
 }
 
 - (void)configureNavigationItem {
@@ -94,6 +93,7 @@
         if (weakCell.isFirst) {
             weakCell.tableView.hidden = NO;
             [weakCell.moreBtn setImage:kImage(@"shang") forState:UIControlStateNormal];
+            self.height = weakCell.tableView.contentSize.height;
         }else {
             weakCell.tableView.hidden = YES;
             [weakCell.moreBtn setImage:kImage(@"xia") forState:UIControlStateNormal];
@@ -103,9 +103,9 @@
     return cell;
 }
 
-#pragma mark UITableViewDelegate 
+#pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-        return 650;
+    return 650;
     
 }
 
