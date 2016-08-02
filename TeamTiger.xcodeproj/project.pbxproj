@@ -27,6 +27,8 @@
 		068E96551D4F488C0074229C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E96511D4F488C0074229C /* UIViewController+MMDrawerController.m */; };
 		068E965E1D4F499E0074229C /* CirclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E96591D4F499E0074229C /* CirclesViewController.m */; };
 		068E965F1D4F499E0074229C /* CustomCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E965D1D4F499E0074229C /* CustomCardView.m */; };
+		06E026621D50439D00B9743B /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E026611D50439D00B9743B /* UserInfoView.m */; };
+		06E026641D50440300B9743B /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E026631D50440300B9743B /* UserInfoView.xib */; };
 		1D09CC5B1D3F29C900F85E9A /* NSArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBAE1D3F29C900F85E9A /* NSArray+YYAdd.m */; };
 		1D09CC5C1D3F29C900F85E9A /* NSBundle+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBB01D3F29C900F85E9A /* NSBundle+YYAdd.m */; };
 		1D09CC5D1D3F29C900F85E9A /* NSData+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBB21D3F29C900F85E9A /* NSData+YYAdd.m */; };
@@ -344,6 +346,9 @@
 		068E96591D4F499E0074229C /* CirclesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesViewController.m; sourceTree = "<group>"; };
 		068E965C1D4F499E0074229C /* CustomCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardView.h; sourceTree = "<group>"; };
 		068E965D1D4F499E0074229C /* CustomCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardView.m; sourceTree = "<group>"; };
+		06E026601D50439D00B9743B /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
+		06E026611D50439D00B9743B /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		06E026631D50440300B9743B /* UserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
 		1D09CBAD1D3F29C900F85E9A /* NSArray+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YYAdd.h"; sourceTree = "<group>"; };
 		1D09CBAE1D3F29C900F85E9A /* NSArray+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YYAdd.m"; sourceTree = "<group>"; };
 		1D09CBAF1D3F29C900F85E9A /* NSBundle+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YYAdd.h"; sourceTree = "<group>"; };
@@ -989,6 +994,9 @@
 			children = (
 				068E965C1D4F499E0074229C /* CustomCardView.h */,
 				068E965D1D4F499E0074229C /* CustomCardView.m */,
+				06E026601D50439D00B9743B /* UserInfoView.h */,
+				06E026611D50439D00B9743B /* UserInfoView.m */,
+				06E026631D50440300B9743B /* UserInfoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2199,7 +2207,7 @@
 				TargetAttributes = {
 					1DA71B591D3DB5A1007483D2 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = FAT69R69RF;
+						DevelopmentTeam = 9WUQR88DQL;
 					};
 				};
 			};
@@ -2267,6 +2275,7 @@
 				1DF0A1B11D4DB898002D91DB /* 14.png in Resources */,
 				1DF0A1BD1D4DB898002D91DB /* 9.png in Resources */,
 				1DF0A1B31D4DB898002D91DB /* 16.png in Resources */,
+				06E026641D50440300B9743B /* UserInfoView.xib in Resources */,
 				1DB5A58A1D4B3F36009E6170 /* switchToggleHigh@2x.png in Resources */,
 				1DF0A1AE1D4DB898002D91DB /* 11.png in Resources */,
 				1DB5A5951D4B3F36009E6170 /* square-switch-track@2x.png in Resources */,
@@ -2514,6 +2523,7 @@
 				1D09CC9C1D3F29C900F85E9A /* YYTextRunDelegate.m in Sources */,
 				1D115F861D4BA043003DFBB1 /* IQNSArray+Sort.m in Sources */,
 				1D9580AE1D3E207200FD0053 /* MJRefreshNormalHeader.m in Sources */,
+				06E026621D50439D00B9743B /* UserInfoView.m in Sources */,
 				1D09CD1B1D3F550300F85E9A /* NSUserDefaults+HYBHelperKit.m in Sources */,
 				1D2E1AAB1D4C538B00C0CE0A /* TTAddContactorViewController.m in Sources */,
 				2DA3F2241D4F4F46001D9976 /* HomeCell.m in Sources */,
@@ -2636,7 +2646,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -2654,7 +2664,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

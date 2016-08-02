@@ -13,7 +13,9 @@
 #import "TYLaunchFadeScaleAnimation.h"
 #import "TTBaseNavigationController.h"
 #import "IQKeyboardManager.h"
-
+#import "HomeViewController.h"
+#import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
 @interface AppDelegate ()
 
 @end
@@ -26,10 +28,10 @@
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
     [self initialMethods];
-    CirclesViewController *homeVc = [[CirclesViewController alloc] init];
-    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:homeVc];
-    self.window.rootViewController = rootNavi;
-    [self.window makeKeyAndVisible];
+    [self initHomeVC];
+//    CirclesViewController *homeVc = [[CirclesViewController alloc] init];
+//    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:homeVc];
+
     //launch image
     UIImageView *screenImageView = [[UIImageView alloc] initWithImage:[UIImage ty_getLaunchImage]];
     [screenImageView showInWindowWithAnimation:[TYLaunchFadeScaleAnimation fadeScaleAnimation]
@@ -63,6 +65,49 @@
 }
 
 #pragma -mark initial methods
+- (void)initHomeVC {
+    
+    CirclesViewController *circleVC = [[CirclesViewController alloc] init];
+    
+//    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    
+    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:[circleVC.homeVCs firstObject]];
+
+    
+    
+    MMDrawerController *drawerController = [[MMDrawerController alloc]
+                                            initWithCenterViewController:rootNavi
+                                            leftDrawerViewController:circleVC
+                                            rightDrawerViewController:nil];
+    [drawerController setShowsShadow:YES];
+    [drawerController setRestorationIdentifier:@"MMDrawer"];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
+    [drawerController setMaximumLeftDrawerWidth:Screen_Width-30];
+//    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+    
+    //自定义手势
+    [drawerController setGestureShouldRecognizeTouchBlock:^BOOL(MMDrawerController *drawerController, UIGestureRecognizer *gesture, UITouch *touch) {
+        BOOL shouldRecognizeTouch = NO;
+        if(drawerController.openSide == MMDrawerSideNone &&
+           [gesture isKindOfClass:[UIPanGestureRecognizer class]]){
+//            UINavigationController *nav = (UINavigationController *)drawerController.centerViewController;
+            //判断哪个控制器可以滑到抽屉
+            shouldRecognizeTouch = YES;
+//            if([nav.topViewController isKindOfClass:[RootViewController class]]
+//               )
+//            {
+//                shouldRecognizeTouch = YES;//返回yes表示可以滑动到左右侧抽屉
+//            }
+        }
+        return shouldRecognizeTouch;
+    }];
+    
+    self.window.rootViewController = drawerController;
+    [self.window makeKeyAndVisible];
+}
+
 - (void)initialMethods {
     //DataBase
     [SQLITEMANAGER setDataBasePath:SYSTEM];

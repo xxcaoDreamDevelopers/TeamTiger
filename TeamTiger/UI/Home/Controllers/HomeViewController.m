@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"工作牛";
+//    self.title = @"工作牛";
     [self configureNavigationItem];
     [Common removeExtraCellLines:self.tableView];
 

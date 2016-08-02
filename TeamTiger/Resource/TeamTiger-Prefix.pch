@@ -19,5 +19,5 @@
 #import "Masonry.h"
 #import "Macros.h"
 #import "Common.h"
-
+#import "HYBHelperKit.h"
 #endif /* TeamTiger_Prefix_pch */

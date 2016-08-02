@@ -10,6 +10,7 @@
 
 @interface CirclesViewController : TTBaseViewController
 
+@property (nonatomic, strong) NSMutableArray *homeVCs;
 
 @end
 

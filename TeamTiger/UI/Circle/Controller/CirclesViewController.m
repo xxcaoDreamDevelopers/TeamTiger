@@ -13,10 +13,18 @@
 #import "AKPickerView.h"
 #import "CCDraggableContainer.h"
 #import "CustomCardView.h"
+#import "UIViewController+MMDrawerController.h"
+#import "HomeViewController.h"
+#import "UserInfoView.h"
 
 @interface CirclesViewController ()<AKPickerViewDataSource, AKPickerViewDelegate,CCDraggableContainerDataSource,
 CCDraggableContainerDelegate>
 @property (nonatomic, strong) AKPickerView *pickerView;
+@property (nonatomic, strong) UserInfoView *userInfoView;
+@property (nonatomic, strong) UIImageView *headImgV;
+@property (nonatomic, strong) UILabel *offerLab;
+@property (nonatomic, strong) UILabel *nameLab;
+@property (nonatomic, strong) UIButton *addCircleBtn;
 @property (nonatomic, strong) NSArray *titles;
 @property (nonatomic, strong) CCDraggableContainer *container;
 @property (nonatomic, strong) NSMutableArray *dataSources;
@@ -26,6 +34,32 @@ CCDraggableContainerDelegate>
 @end
 
 @implementation CirclesViewController
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self initData];
+    }
+    return self;
+}
+
+- (void)initData {
+    self.titles = @[@"所有项目",@"工作牛",@"易会",@"MPP",@"营配"];
+    
+    self.dataSources = [NSMutableArray array];
+    
+    for (int i = 0; i < self.titles.count; i++) {
+        NSDictionary *dict = @{@"image" : [NSString stringWithFormat:@"image_%d.jpg",i + 1],
+                               @"title" : [NSString stringWithFormat:@"Page %d",i + 1]};
+        [self.dataSources addObject:dict];
+    }
+    
+    self.homeVCs = [NSMutableArray array];
+    for (NSString *title in self.titles) {
+        HomeViewController *homeVC = [[HomeViewController alloc] init];
+        homeVC.title = title;
+        [self.homeVCs addObject:homeVC];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,29 +93,38 @@ CCDraggableContainerDelegate>
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureHandle:)];
     [self.view addGestureRecognizer:pan];
     
-    self.titles = @[@"所有项目",@"工作牛",@"易会",@"MPP",@"营配"];
-    
-    self.dataSources = [NSMutableArray array];
-    
-    for (int i = 0; i < self.titles.count; i++) {
-        NSDictionary *dict = @{@"image" : [NSString stringWithFormat:@"image_%d.jpg",i + 1],
-                               @"title" : [NSString stringWithFormat:@"Page %d",i + 1]};
-        [self.dataSources addObject:dict];
-    }
     [self.view addSubview:self.container];
+    
+    [self.view addSubview:self.userInfoView];
     
     [self.view addSubview:self.pickerView];
     
+    [self.view addSubview:self.addCircleBtn];
     [self layoutSubviews];
 }
 
 -(void)layoutSubviews{
     WeakSelf;
+    
+    [self.userInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(wself.view);
+        make.top.equalTo(wself.view).offset(44);
+        make.width.mas_equalTo(150);
+        make.height.mas_equalTo(60);
+    }];
+    
     [self.pickerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(wself.view);
-        make.top.equalTo(wself.view);
-        make.bottom.equalTo(wself.view);
+        make.top.equalTo(wself.userInfoView.mas_bottom);
+        make.bottom.equalTo(wself.view).offset(-100);
         make.width.mas_equalTo(Screen_Width * 0.2);
+    }];
+    
+    [self.addCircleBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(wself.view);
+        make.top.equalTo(wself.pickerView.mas_bottom);
+        make.width.mas_equalTo(Screen_Width * 0.2);
+        make.height.mas_equalTo(100);
     }];
     
 //    [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -136,6 +179,14 @@ CCDraggableContainerDelegate>
 	return [UIImage imageNamed:self.titles[item]];
  }
  */
+-(void)addCircleAction:(UIButton *)button{
+    UINavigationController *nav = (UINavigationController *)self.mm_drawerController.centerViewController;
+    TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
+    [nav pushViewController:settingVC animated:NO];
+    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+        
+    }];
+}
 
 #pragma mark - AKPickerViewDelegate
 
@@ -164,6 +215,48 @@ CCDraggableContainerDelegate>
 }
 
 #pragma mark - getter and setter
+-(UIButton *)addCircleBtn{
+    if (!_addCircleBtn) {
+        _addCircleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_addCircleBtn setImage:[UIImage imageNamed:@"circle-add"] forState:UIControlStateNormal];
+//        [_addCircleBtn setBackgroundImage:[UIImage imageNamed:@"group-detail-createmeetingIcon"] forState:UIControlStateNormal];
+//        [_addCircleBtn setBackgroundImage:[UIImage imageNamed:@"group-detail-createmeetingIcon"] forState:UIControlStateHighlighted];
+        [_addCircleBtn addTarget:self action:@selector(addCircleAction:) forControlEvents:UIControlEventTouchUpInside];
+        _addCircleBtn.backgroundColor = [UIColor clearColor];
+    }
+    return _addCircleBtn;
+}
+
+//- (UILabel *)offerLab {
+//    if (!_offerLab) {
+//        _offerLab = [[UILabel alloc] init];
+//        _offerLab.textAlignment = NSTextAlignmentCenter;
+//        _offerLab.text = @"网络不给力，图片下载失败";
+//        _offerLab.font = [UIFont boldSystemFontOfSize:20];
+//        _offerLab.textColor = [UIColor whiteColor];
+//        _offerLab.backgroundColor = [UIColor clearColor];
+//    }
+//    return _offerLab;
+//}
+//
+//- (UIImageView *)headImgV {
+//    if (!_headImgV) {
+//        _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+//        _headImgV.layer.masksToBounds = YES;
+//        _headImgV.layer.cornerRadius = _headImgV.hyb_height * 0.5;
+//        _headImgV.backgroundColor = [UIColor clearColor];
+//        _headImgV.image = kImageForHead;
+//    }
+//    return _headImgV;
+//}
+
+- (UserInfoView *)userInfoView {
+    if (!_userInfoView) {
+        _userInfoView = [UserInfoView userInfoView];
+    }
+    return _userInfoView;
+}
+
 - (AKPickerView *)pickerView {
     if (!_pickerView) {
         _pickerView = [[AKPickerView alloc] initWithFrame:CGRectZero];
@@ -237,8 +330,14 @@ CCDraggableContainerDelegate>
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer cardView:(CCDraggableCardView *)cardView didSelectIndex:(NSInteger)didSelectIndex {
     
     NSLog(@"点击了Tag为%ld的Card", (long)didSelectIndex);
-        TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
-        [self.navigationController pushViewController:settingVC animated:YES];
+//        TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
+//        [self.navigationController pushViewController:settingVC animated:YES];
+    UINavigationController *nav = (UINavigationController *)self.mm_drawerController.centerViewController;
+//    HomeViewController *homeVC = (HomeViewController *)nav.topViewController;
+    [nav pushViewController:self.homeVCs[didSelectIndex] animated:NO];
+    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer finishedDraggableLastCard:(BOOL)finishedDraggableLastCard {
