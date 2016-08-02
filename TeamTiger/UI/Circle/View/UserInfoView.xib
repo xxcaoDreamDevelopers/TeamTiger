@@ -11,13 +11,6 @@
             <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-1T-QB7">
-                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="60" id="Aes-Nv-vvv"/>
-                        <constraint firstAttribute="height" constant="60" id="ld8-eK-Iv8"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐小旭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRA-FF-Imv">
                     <rect key="frame" x="73" y="8" width="69" height="21"/>
                     <constraints>
@@ -38,14 +31,21 @@
                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-1T-QB7">
+                    <rect key="frame" x="15" y="5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Aes-Nv-vvv"/>
+                        <constraint firstAttribute="height" constant="50" id="ld8-eK-Iv8"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="LRA-FF-Imv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="028-ug-h1o"/>
-                <constraint firstItem="xkD-aF-J5T" firstAttribute="leading" secondItem="Ccp-1T-QB7" secondAttribute="trailing" constant="19" id="ATh-fb-Pby"/>
-                <constraint firstItem="Ccp-1T-QB7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Lwj-cE-PCK"/>
+                <constraint firstItem="xkD-aF-J5T" firstAttribute="leading" secondItem="Ccp-1T-QB7" secondAttribute="trailing" constant="14" id="ATh-fb-Pby"/>
+                <constraint firstItem="Ccp-1T-QB7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Lwj-cE-PCK"/>
                 <constraint firstAttribute="trailing" secondItem="LRA-FF-Imv" secondAttribute="trailing" constant="8" id="W1I-Hp-XBr"/>
-                <constraint firstItem="Ccp-1T-QB7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jOX-t1-RPL"/>
+                <constraint firstItem="Ccp-1T-QB7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="jOX-t1-RPL"/>
                 <constraint firstItem="xkD-aF-J5T" firstAttribute="top" secondItem="LRA-FF-Imv" secondAttribute="bottom" constant="2" id="pFV-1G-SeV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
