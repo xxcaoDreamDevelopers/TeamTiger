@@ -16,6 +16,8 @@
 #import "HomeViewController.h"
 #import "MMDrawerController.h"
 #import "MMDrawerVisualState.h"
+#import "TTTabBarViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -69,14 +71,23 @@
     
     CirclesViewController *circleVC = [[CirclesViewController alloc] init];
     
-//    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    NSMutableArray *homeVCs = [NSMutableArray array];
+    for (NSString *title in circleVC.titles) {
+        HomeViewController *homeVC = [[HomeViewController alloc] init];
+        homeVC.title = title;
+        [homeVCs addObject:homeVC];
+    }
     
-    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:[circleVC.homeVCs firstObject]];
-
+    TTTabBarViewController *mainTab = [[TTTabBarViewController alloc] initWithChildViewControllers:homeVCs];
+    
+    //    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    
+    //    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:[circleVC.homeVCs firstObject]];
+    
     
     
     MMDrawerController *drawerController = [[MMDrawerController alloc]
-                                            initWithCenterViewController:rootNavi
+                                            initWithCenterViewController:mainTab
                                             leftDrawerViewController:circleVC
                                             rightDrawerViewController:nil];
     [drawerController setShowsShadow:YES];
@@ -85,21 +96,21 @@
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
     [drawerController setMaximumLeftDrawerWidth:Screen_Width-30];
-//    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+    //    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
     
     //自定义手势
     [drawerController setGestureShouldRecognizeTouchBlock:^BOOL(MMDrawerController *drawerController, UIGestureRecognizer *gesture, UITouch *touch) {
         BOOL shouldRecognizeTouch = NO;
         if(drawerController.openSide == MMDrawerSideNone &&
            [gesture isKindOfClass:[UIPanGestureRecognizer class]]){
-//            UINavigationController *nav = (UINavigationController *)drawerController.centerViewController;
+            TTTabBarViewController *mainTab = (TTTabBarViewController *)drawerController.centerViewController;
+            UINavigationController *nav = (UINavigationController *)mainTab.selectedViewController;
             //判断哪个控制器可以滑到抽屉
-            shouldRecognizeTouch = YES;
-//            if([nav.topViewController isKindOfClass:[RootViewController class]]
-//               )
-//            {
-//                shouldRecognizeTouch = YES;//返回yes表示可以滑动到左右侧抽屉
-//            }
+            if([nav.topViewController isKindOfClass:[HomeViewController class]]
+               )
+            {
+                shouldRecognizeTouch = YES;//返回yes表示可以滑动到左右侧抽屉
+            }
         }
         return shouldRecognizeTouch;
     }];

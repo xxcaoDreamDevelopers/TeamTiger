@@ -12,10 +12,12 @@
 #import "TTSettingViewController.h"
 #import "AKPickerView.h"
 #import "CCDraggableContainer.h"
+#import "CCDraggableConfig.h"
 #import "CustomCardView.h"
 #import "UIViewController+MMDrawerController.h"
 #import "HomeViewController.h"
 #import "UserInfoView.h"
+#import "TTTabBarViewController.h"
 
 @interface CirclesViewController ()<AKPickerViewDataSource, AKPickerViewDelegate,CCDraggableContainerDataSource,
 CCDraggableContainerDelegate>
@@ -25,7 +27,7 @@ CCDraggableContainerDelegate>
 @property (nonatomic, strong) UILabel *offerLab;
 @property (nonatomic, strong) UILabel *nameLab;
 @property (nonatomic, strong) UIButton *addCircleBtn;
-@property (nonatomic, strong) NSArray *titles;
+
 @property (nonatomic, strong) CCDraggableContainer *container;
 @property (nonatomic, strong) NSMutableArray *dataSources;
 @property (nonatomic, assign) NSInteger lastSelectItem;
@@ -53,41 +55,41 @@ CCDraggableContainerDelegate>
         [self.dataSources addObject:dict];
     }
     
-    self.homeVCs = [NSMutableArray array];
-    for (NSString *title in self.titles) {
-        HomeViewController *homeVC = [[HomeViewController alloc] init];
-        homeVC.title = title;
-        [self.homeVCs addObject:homeVC];
-    }
+    //    self.homeVCs = [NSMutableArray array];
+    //    for (NSString *title in self.titles) {
+    //        HomeViewController *homeVC = [[HomeViewController alloc] init];
+    //        homeVC.title = title;
+    //        [self.homeVCs addObject:homeVC];
+    //    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    //配置网络
-//    [NetworkManager configerNetworking];
-//    
-//    Api1 *api1 = [[Api1 alloc] init];
-//    api1.cacheInvalidTime = 60;//需要缓存
-//    api1.requestArgument = @{@"lat":@"34.345",@"lng":@"113.678"};
-//    LCRequestAccessory *accessary = [[LCRequestAccessory alloc] initWithShowVC:self];
-//    [api1 addAccessory:accessary];
-//    [api1 startWithBlockSuccess:^(__kindof LCBaseRequest *request) {
-//        NSLog(@"%@",request.responseJSONObject);
-//    } failure:^(__kindof LCBaseRequest *request, NSError *error) {
-//        NSLog(@"%@",error.description);
-//    }];
-        
+    //    //配置网络
+    //    [NetworkManager configerNetworking];
     //
-//    UIButton *btn = [UIButton hyb_buttonWithTitle:@"TEST" superView:self.view constraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(self.view.mas_centerX);
-//        make.centerY.mas_equalTo(self.view.mas_centerY);
-//        make.width.mas_equalTo(100);
-//        make.height.mas_equalTo(100);
-//    } touchUp:^(UIButton *sender) {
-//        TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
-//        [self.navigationController pushViewController:settingVC animated:YES];
-//    }];
-//    btn.backgroundColor = [UIColor redColor];
+    //    Api1 *api1 = [[Api1 alloc] init];
+    //    api1.cacheInvalidTime = 60;//需要缓存
+    //    api1.requestArgument = @{@"lat":@"34.345",@"lng":@"113.678"};
+    //    LCRequestAccessory *accessary = [[LCRequestAccessory alloc] initWithShowVC:self];
+    //    [api1 addAccessory:accessary];
+    //    [api1 startWithBlockSuccess:^(__kindof LCBaseRequest *request) {
+    //        NSLog(@"%@",request.responseJSONObject);
+    //    } failure:^(__kindof LCBaseRequest *request, NSError *error) {
+    //        NSLog(@"%@",error.description);
+    //    }];
+    
+    //
+    //    UIButton *btn = [UIButton hyb_buttonWithTitle:@"TEST" superView:self.view constraints:^(MASConstraintMaker *make) {
+    //        make.centerX.mas_equalTo(self.view.mas_centerX);
+    //        make.centerY.mas_equalTo(self.view.mas_centerY);
+    //        make.width.mas_equalTo(100);
+    //        make.height.mas_equalTo(100);
+    //    } touchUp:^(UIButton *sender) {
+    //        TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
+    //        [self.navigationController pushViewController:settingVC animated:YES];
+    //    }];
+    //    btn.backgroundColor = [UIColor redColor];
     
     // 添加清扫手势 全屏滑动
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureHandle:)];
@@ -127,12 +129,12 @@ CCDraggableContainerDelegate>
         make.height.mas_equalTo(100);
     }];
     
-//    [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(wself.view).offset(-20.0);
-//        make.centerY.equalTo(wself.view);
-//        make.height.equalTo(@400);
-//        make.width.equalTo(@280);
-//    }];
+    //    [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.left.equalTo(wself.view).offset(-20.0);
+    //        make.centerY.equalTo(wself.view);
+    //        make.height.equalTo(@400);
+    //        make.width.equalTo(@280);
+    //    }];
 }
 
 
@@ -180,9 +182,10 @@ CCDraggableContainerDelegate>
  }
  */
 -(void)addCircleAction:(UIButton *)button{
-    UINavigationController *nav = (UINavigationController *)self.mm_drawerController.centerViewController;
+    TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
+    UINavigationController *selectVC = mainTab.selectedViewController;
     TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
-    [nav pushViewController:settingVC animated:NO];
+    [selectVC pushViewController:settingVC animated:NO];
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         
     }];
@@ -206,12 +209,12 @@ CCDraggableContainerDelegate>
     {
         [self.container reloadDataWithLoadIndex:item animated:YES];
     }
-
+    
     
     self.lastSelectItem = item;
     
-//    TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
-//    [self.navigationController pushViewController:settingVC animated:YES];
+    //    TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
+    //    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 #pragma mark - getter and setter
@@ -219,8 +222,8 @@ CCDraggableContainerDelegate>
     if (!_addCircleBtn) {
         _addCircleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_addCircleBtn setImage:[UIImage imageNamed:@"circle-add"] forState:UIControlStateNormal];
-//        [_addCircleBtn setBackgroundImage:[UIImage imageNamed:@"group-detail-createmeetingIcon"] forState:UIControlStateNormal];
-//        [_addCircleBtn setBackgroundImage:[UIImage imageNamed:@"group-detail-createmeetingIcon"] forState:UIControlStateHighlighted];
+        //        [_addCircleBtn setBackgroundImage:[UIImage imageNamed:@"group-detail-createmeetingIcon"] forState:UIControlStateNormal];
+        //        [_addCircleBtn setBackgroundImage:[UIImage imageNamed:@"group-detail-createmeetingIcon"] forState:UIControlStateHighlighted];
         [_addCircleBtn addTarget:self action:@selector(addCircleAction:) forControlEvents:UIControlEventTouchUpInside];
         _addCircleBtn.backgroundColor = [UIColor clearColor];
     }
@@ -262,7 +265,7 @@ CCDraggableContainerDelegate>
         _pickerView = [[AKPickerView alloc] initWithFrame:CGRectZero];
         _pickerView.delegate = self;
         _pickerView.dataSource = self;
-
+        
         _pickerView.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20];
         _pickerView.highlightedFont = [UIFont fontWithName:@"HelveticaNeue" size:16];
         _pickerView.highlightedBackGroundColor = [UIColor clearColor];
@@ -278,7 +281,7 @@ CCDraggableContainerDelegate>
 - (CCDraggableContainer *)container {
     if (!_container) {
         _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, (Screen_Height*0.5)/2, Screen_Width * 0.60, Screen_Height*0.5) style:CCDraggableStyleUpOverlay];
-//        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 0, Screen_Width * 0.60, Screen_Height) style:CCDraggableStyleUpOverlay];
+        //        _container = [[CCDraggableContainer alloc] initWithFrame:CGRectMake(0, 0, Screen_Width * 0.60, Screen_Height) style:CCDraggableStyleUpOverlay];
         _container.delegate = self;
         _container.dataSource = self;
         [_container reloadData];
@@ -289,7 +292,7 @@ CCDraggableContainerDelegate>
 //- (NSMutableArray *)dataSources {
 //    if (!_dataSources) {
 //        _dataSources = [NSMutableArray array];
-//        
+//
 //        for (int i = 0; i < 9; i++) {
 //            NSDictionary *dict = @{@"image" : [NSString stringWithFormat:@"image_%d.jpg",i + 1],
 //                                   @"title" : [NSString stringWithFormat:@"Page %d",i + 1]};
@@ -318,23 +321,30 @@ CCDraggableContainerDelegate>
     
     [self.pickerView scrollToItem:draggableContainer.loadedIndex % _dataSources.count animated:YES];
     
-//    CGFloat scale = 1 + ((kBoundaryRatio > fabs(widthRatio) ? fabs(widthRatio) : kBoundaryRatio)) / 4;
+    //    CGFloat scale = 1 + ((kBoundaryRatio > fabs(widthRatio) ? fabs(widthRatio) : kBoundaryRatio)) / 4;
     if (draggableDirection == CCDraggableDirectionLeft) {
-//        self.disLikeButton.transform = CGAffineTransformMakeScale(scale, scale);
+        //        self.disLikeButton.transform = CGAffineTransformMakeScale(scale, scale);
     }
     if (draggableDirection == CCDraggableDirectionRight) {
-//        self.likeButton.transform = CGAffineTransformMakeScale(scale, scale);
+        //        self.likeButton.transform = CGAffineTransformMakeScale(scale, scale);
     }
 }
 
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer cardView:(CCDraggableCardView *)cardView didSelectIndex:(NSInteger)didSelectIndex {
     
     NSLog(@"点击了Tag为%ld的Card", (long)didSelectIndex);
-//        TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
-//        [self.navigationController pushViewController:settingVC animated:YES];
-    UINavigationController *nav = (UINavigationController *)self.mm_drawerController.centerViewController;
-//    HomeViewController *homeVC = (HomeViewController *)nav.topViewController;
-    [nav pushViewController:self.homeVCs[didSelectIndex] animated:NO];
+    
+    TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
+    //    HomeViewController *homeVC = (HomeViewController *)nav.topViewController;
+    
+    didSelectIndex = didSelectIndex % (self.dataSources.count);
+    
+    mainTab.selectedIndex = didSelectIndex;
+    //    if (self.homeVCs[didSelectIndex] != nav.topViewController) {
+    //        [nav popViewControllerAnimated:NO];
+    //        [nav pushViewController:self.homeVCs[didSelectIndex] animated:NO];
+    //    }
+    
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         
     }];
