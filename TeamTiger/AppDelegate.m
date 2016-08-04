@@ -88,14 +88,14 @@
     
     MMDrawerController *drawerController = [[MMDrawerController alloc]
                                             initWithCenterViewController:mainTab
-                                            leftDrawerViewController:circleVC
-                                            rightDrawerViewController:nil];
+                                            leftDrawerViewController:nil
+                                            rightDrawerViewController:circleVC];
     [drawerController setShowsShadow:YES];
     [drawerController setRestorationIdentifier:@"MMDrawer"];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
-    [drawerController setMaximumLeftDrawerWidth:Screen_Width-30];
+    [drawerController setMaximumRightDrawerWidth:Screen_Width];
     //    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
     
     //自定义手势
