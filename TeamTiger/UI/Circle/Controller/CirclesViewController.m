@@ -6,18 +6,20 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "CirclesViewController.h"
-#import "NetworkManager.h"
-#import "UIButton+HYBHelperBlockKit.h"
-#import "TTAddProjectViewController.h"
 #import "AKPickerView.h"
-#import "CCDraggableContainer.h"
 #import "CCDraggableConfig.h"
+#import "CCDraggableContainer.h"
+#import "CirclesViewController.h"
 #import "CustomCardView.h"
-#import "UIViewController+MMDrawerController.h"
 #import "HomeViewController.h"
-#import "UserInfoView.h"
+#import "NetworkManager.h"
+#import "TTAddProjectViewController.h"
+#import "TTMyProfileViewController.h"
 #import "TTTabBarViewController.h"
+#import "UIButton+HYBHelperBlockKit.h"
+#import "UIViewController+MMDrawerController.h"
+#import "UserInfoView.h"
+
 
 @interface CirclesViewController ()<AKPickerViewDataSource, AKPickerViewDelegate,CCDraggableContainerDataSource,
 CCDraggableContainerDelegate>
@@ -183,7 +185,8 @@ CCDraggableContainerDelegate>
  */
 -(void)addCircleAction:(UIButton *)button{
     TTAddProjectViewController *addProjectVC = [[TTAddProjectViewController alloc] init];
-    [Common customPushAnimationFromNavigation:self.navigationController ToViewController:addProjectVC Type:kCATransitionMoveIn SubType:kCATransitionFromTop];    
+    TTBaseNavigationController *navi = [[TTBaseNavigationController alloc] initWithRootViewController:addProjectVC];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 #pragma mark - AKPickerViewDelegate
@@ -250,7 +253,15 @@ CCDraggableContainerDelegate>
 
 - (UserInfoView *)userInfoView {
     if (!_userInfoView) {
-        _userInfoView = [UserInfoView userInfoView];
+        _userInfoView = LoadFromNib(@"UserInfoView");
+        [_userInfoView userInfoViewWithData:nil];
+        WeakSelf;
+        _userInfoView.clickBlock = ^(UserInfoView *view){
+            //
+            TTMyProfileViewController *myProfileVC = [[TTMyProfileViewController alloc] init];
+            TTBaseNavigationController *navi = [[TTBaseNavigationController alloc] initWithRootViewController:myProfileVC];
+            [wself presentViewController:navi animated:YES completion:nil];
+        };
     }
     return _userInfoView;
 }

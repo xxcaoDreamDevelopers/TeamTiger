@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -38,19 +38,32 @@
                         <constraint firstAttribute="height" constant="50" id="ld8-eK-Iv8"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEh-pg-Gvs">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                    <connections>
+                        <action selector="clickBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="m0c-yH-ncE"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="LRA-FF-Imv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="028-ug-h1o"/>
+                <constraint firstAttribute="bottom" secondItem="fEh-pg-Gvs" secondAttribute="bottom" id="872-pK-kHY"/>
+                <constraint firstItem="fEh-pg-Gvs" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="99f-pc-0sm"/>
                 <constraint firstItem="xkD-aF-J5T" firstAttribute="leading" secondItem="Ccp-1T-QB7" secondAttribute="trailing" constant="14" id="ATh-fb-Pby"/>
+                <constraint firstItem="fEh-pg-Gvs" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="G9m-xt-Y9f"/>
                 <constraint firstItem="Ccp-1T-QB7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Lwj-cE-PCK"/>
+                <constraint firstItem="fEh-pg-Gvs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S3C-Mb-clu"/>
                 <constraint firstAttribute="trailing" secondItem="LRA-FF-Imv" secondAttribute="trailing" constant="8" id="W1I-Hp-XBr"/>
+                <constraint firstAttribute="trailing" secondItem="fEh-pg-Gvs" secondAttribute="trailing" id="hUs-6U-eWG"/>
                 <constraint firstItem="Ccp-1T-QB7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="jOX-t1-RPL"/>
                 <constraint firstItem="xkD-aF-J5T" firstAttribute="top" secondItem="LRA-FF-Imv" secondAttribute="bottom" constant="2" id="pFV-1G-SeV"/>
+                <constraint firstItem="fEh-pg-Gvs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xPu-88-Jw5"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="headBtn" destination="fEh-pg-Gvs" id="LNR-qo-r2h"/>
                 <outlet property="headImgV" destination="Ccp-1T-QB7" id="8W1-MM-9AD"/>
                 <outlet property="nameLab" destination="LRA-FF-Imv" id="yhD-1h-ZA7"/>
                 <outlet property="offerLab" destination="xkD-aF-J5T" id="Jps-An-edM"/>

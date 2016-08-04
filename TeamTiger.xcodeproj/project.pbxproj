@@ -284,6 +284,8 @@
 		1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */; };
 		1DDE9E691D531B66005926FE /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E671D531B66005926FE /* TTLoginViewController.m */; };
 		1DDE9E6A1D531B66005926FE /* TTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E681D531B66005926FE /* TTLoginViewController.xib */; };
+		1DDE9E6F1D533106005926FE /* TTMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E6D1D533106005926FE /* TTMyProfileViewController.m */; };
+		1DDE9E701D533106005926FE /* TTMyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E6E1D533106005926FE /* TTMyProfileViewController.xib */; };
 		1DF0A1951D4DA51E002D91DB /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0A1941D4DA51E002D91DB /* ContactModel.m */; };
 		1DF0A1981D4DB28B002D91DB /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0A1971D4DB28B002D91DB /* NSString+Utils.m */; };
 		1DF0A1AC1D4DB898002D91DB /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF0A19A1D4DB898002D91DB /* 1.png */; };
@@ -859,6 +861,9 @@
 		1DDE9E661D531B66005926FE /* TTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewController.h; sourceTree = "<group>"; };
 		1DDE9E671D531B66005926FE /* TTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewController.m; sourceTree = "<group>"; };
 		1DDE9E681D531B66005926FE /* TTLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTLoginViewController.xib; sourceTree = "<group>"; };
+		1DDE9E6C1D533106005926FE /* TTMyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMyProfileViewController.h; sourceTree = "<group>"; };
+		1DDE9E6D1D533106005926FE /* TTMyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMyProfileViewController.m; sourceTree = "<group>"; };
+		1DDE9E6E1D533106005926FE /* TTMyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMyProfileViewController.xib; sourceTree = "<group>"; };
 		1DF0A1931D4DA51E002D91DB /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
 		1DF0A1941D4DA51E002D91DB /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
 		1DF0A1961D4DB28B002D91DB /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
@@ -2174,6 +2179,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		1DDE9E6B1D5330ED005926FE /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE9E6C1D533106005926FE /* TTMyProfileViewController.h */,
+				1DDE9E6D1D533106005926FE /* TTMyProfileViewController.m */,
+				1DDE9E6E1D533106005926FE /* TTMyProfileViewController.xib */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
 		1DF0A1921D4DA502002D91DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2227,6 +2242,7 @@
 		1DF991D41D48ADB300E7D1B8 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				1DDE9E6B1D5330ED005926FE /* MyProfile */,
 				1DDE9E5F1D52DADA005926FE /* AddProject */,
 				1D2E1AA71D4C530500C0CE0A /* AddContactor */,
 				1D55FD901D49AA8200094112 /* View */,
@@ -2392,6 +2408,7 @@
 				1D115F941D4BA043003DFBB1 /* IQKeyboardManager.bundle in Resources */,
 				0604B4731D4C5A9B00EF1703 /* downshadow.png in Resources */,
 				1DF0A1AD1D4DB898002D91DB /* 10.png in Resources */,
+				1DDE9E701D533106005926FE /* TTMyProfileViewController.xib in Resources */,
 				1DF0A1B61D4DB898002D91DB /* 2.png in Resources */,
 				2DFACA551D507B8B0099A2A3 /* DiscussViewController.xib in Resources */,
 				1DB5A5881D4B3F36009E6170 /* switchRed@2x.png in Resources */,
@@ -2700,6 +2717,7 @@
 				1D09CC621D3F29C900F85E9A /* NSNumber+YYAdd.m in Sources */,
 				1D09CC6B1D3F29C900F85E9A /* UIApplication+YYAdd.m in Sources */,
 				1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */,
+				1DDE9E6F1D533106005926FE /* TTMyProfileViewController.m in Sources */,
 				1D09CC791D3F29C900F85E9A /* YYCache.m in Sources */,
 				1D09CC911D3F29C900F85E9A /* YYTextLayout.m in Sources */,
 				1D0EA2C71D45A82C00B47108 /* LCNetworkAgent.m in Sources */,

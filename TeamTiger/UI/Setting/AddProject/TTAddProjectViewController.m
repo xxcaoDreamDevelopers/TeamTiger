@@ -10,6 +10,7 @@
 #import "SettingCell.h"
 #import "IQKeyboardManager.h"
 #import "TTAddContactorViewController.h"
+#import "UIAlertView+HYBHelperKit.h"
 @interface TTAddProjectViewController ()
 
 @end
@@ -22,7 +23,9 @@
     [Common removeExtraCellLines:self.contentTable];
     
     [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-        [Common customPopAnimationFromNavigation:self.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
+      [self dismissViewControllerAnimated:YES completion:^{
+          
+      }];
     }];
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
@@ -67,8 +70,9 @@
                 break;
             }
             case ECellTypeAccessory:{
-                TTAddContactorViewController *addContactVC = [[TTAddContactorViewController alloc] initWithNibName:@"TTAddContactorViewController" bundle:nil];
-                [self.navigationController pushViewController:addContactVC animated:YES];
+                [UIAlertView hyb_showWithTitle:@"提示" message:@"跳转微信" buttonTitles:@[@"确定"] block:^(UIAlertView *alertView, NSUInteger buttonIndex) {
+                    
+                }];
                 break;
             }
             default:

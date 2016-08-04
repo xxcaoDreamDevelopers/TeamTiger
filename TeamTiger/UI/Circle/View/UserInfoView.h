@@ -8,11 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class UserInfoView;
+
+typedef void(^ClickHeadBtnBlock)(UserInfoView *view);
+
 @interface UserInfoView : UIView
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
 @property (weak, nonatomic) IBOutlet UILabel *offerLab;
 @property (weak, nonatomic) IBOutlet UIImageView *headImgV;
-+ (instancetype)userInfoViewWithData:(id) dataSource;
+@property (weak, nonatomic) IBOutlet UIButton *headBtn;
 
-+ (instancetype)userInfoView;
+@property (copy, nonatomic) ClickHeadBtnBlock clickBlock;
+
+- (void)userInfoViewWithData:(id) dataSource;
+
 @end

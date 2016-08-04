@@ -7,30 +7,13 @@
 //
 
 #import "UserInfoView.h"
+#import "UIControl+YYAdd.h"
 
 @implementation UserInfoView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
-+ (instancetype)userInfoViewWithData:(id) dataSource
-{
-//    NSBundle *bundle = [NSBundle mainBundle];
-    // 读取xib文件(会创建xib中的描述的所有对象,并且按顺序放到数组中返回)
-//    NSArray *objs = [bundle loadNibNamed:@"UserInfoView" owner:nil options:nil];
-    UserInfoView *userInfoView =  LoadFromNib(@"UserInfoView");
+- (void)userInfoViewWithData:(id) dataSource {
 
-    return userInfoView;
-}
-
-+ (instancetype)userInfoView
-{
-    return [self userInfoViewWithData:nil];
 }
 
 - (void)awakeFromNib {
@@ -40,6 +23,12 @@
     self.headImgV.layer.cornerRadius = self.headImgV.hyb_height * 0.5;
     self.headImgV.backgroundColor = [UIColor clearColor];
     self.headImgV.image = kImageForHead;
+}
+
+- (IBAction)clickBtnAction:(id)sender {
+    if (self.clickBlock) {
+        self.clickBlock(self);
+    }
 }
 
 @end
