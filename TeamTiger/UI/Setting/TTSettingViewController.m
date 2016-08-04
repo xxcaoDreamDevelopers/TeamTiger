@@ -21,7 +21,7 @@
     self.title = @"项目设置";
     
     [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-        [self.navigationController popViewControllerAnimated:YES];
+        [Common customPopAnimationFromNavigation:self.navigationController Type:kCATransitionReveal SubType:kCATransitionFromRight];
     }];
     
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;

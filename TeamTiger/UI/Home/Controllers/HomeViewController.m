@@ -62,13 +62,13 @@
 
 - (void)handleLeftBtnAction {
     TTSettingViewController *settingVC = [[TTSettingViewController alloc] initWithNibName:@"TTSettingViewController" bundle:nil];
-    [self.navigationController pushViewController:settingVC animated:YES];
+    [Common customPushAnimationFromNavigation:self.navigationController ToViewController:settingVC Type:kCATransitionMoveIn SubType:kCATransitionFromLeft];
 }
 
 - (void)handleRightBtnAction {
     
     TTAddDiscussViewController *addDiscussVC = [[TTAddDiscussViewController alloc] initWithNibName:@"TTAddDiscussViewController" bundle:nil];
-   [self.navigationController pushViewController:addDiscussVC animated:YES];
+    [Common customPushAnimationFromNavigation:self.navigationController ToViewController:addDiscussVC Type:kCATransitionMoveIn SubType:kCATransitionFromTop];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

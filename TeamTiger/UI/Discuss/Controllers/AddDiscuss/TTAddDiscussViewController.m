@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"发起讨论";
+    [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
+        [Common customPopAnimationFromNavigation:self.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

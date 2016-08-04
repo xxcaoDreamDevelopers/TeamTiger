@@ -16,4 +16,10 @@
 //字符串为空检查
 + (BOOL)isEmptyString:(NSString *)sourceStr;
 
+
+//自定义push动画
++ (void)customPushAnimationFromNavigation:(UINavigationController *)nav ToViewController:(UIViewController *)vc Type:(NSString *)animationType SubType:(NSString *)subType;
+//自定义pop动画
++ (void)customPopAnimationFromNavigation:(UINavigationController *)nav Type:(NSString *)animationType SubType:(NSString *)subType;
+
 @end
