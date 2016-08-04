@@ -73,6 +73,8 @@
 - (UIViewController *)creatHomeVC {
     
     CirclesViewController *circleVC = [[CirclesViewController alloc] init];
+    TTBaseNavigationController *circleNav = [[TTBaseNavigationController alloc] initWithRootViewController:circleVC];
+    circleNav.navigationBarHidden = YES;
     
     NSMutableArray *homeVCs = [NSMutableArray array];
     for (NSString *title in circleVC.titles) {
@@ -86,7 +88,7 @@
     MMDrawerController *drawerController = [[MMDrawerController alloc]
                                             initWithCenterViewController:mainTab
                                             leftDrawerViewController:nil
-                                            rightDrawerViewController:circleVC];
+                                            rightDrawerViewController:circleNav];
     [drawerController setShowsShadow:YES];
     [drawerController setRestorationIdentifier:@"MMDrawer"];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];

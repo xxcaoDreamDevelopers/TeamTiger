@@ -182,13 +182,8 @@ CCDraggableContainerDelegate>
  }
  */
 -(void)addCircleAction:(UIButton *)button{
-    TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
-    UINavigationController *selectVC = mainTab.selectedViewController;
     TTAddProjectViewController *addProjectVC = [[TTAddProjectViewController alloc] init];
-    [selectVC pushViewController:addProjectVC animated:NO];
-    [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-        
-    }];
+    [Common customPushAnimationFromNavigation:self.navigationController ToViewController:addProjectVC Type:kCATransitionMoveIn SubType:kCATransitionFromTop];    
 }
 
 #pragma mark - AKPickerViewDelegate

@@ -22,9 +22,9 @@
     [Common removeExtraCellLines:self.contentTable];
     
     [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-        [self.navigationController popViewControllerAnimated:YES];
+        [Common customPopAnimationFromNavigation:self.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
     }];
-    
+
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     
     self.contentTable.estimatedRowHeight = 77;
