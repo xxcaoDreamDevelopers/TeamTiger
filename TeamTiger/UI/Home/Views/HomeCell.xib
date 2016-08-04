@@ -109,7 +109,7 @@
                             <constraint firstItem="hCZ-YT-9QQ" firstAttribute="top" secondItem="Ia3-5f-dsk" secondAttribute="bottom" constant="5" id="zcT-Xi-cj5"/>
                         </constraints>
                     </view>
-                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6se-Kj-4jt">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6se-Kj-4jt">
                         <rect key="frame" x="10" y="250" width="359" height="129"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
@@ -120,16 +120,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnu-5p-B29">
                         <rect key="frame" x="60" y="210" width="40" height="40"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbL-6s-Ljq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbL-6s-Ljq" customClass="ButtonIndexPath">
                                 <rect key="frame" x="0.0" y="17" width="40" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="CWj-Z7-V0X"/>
                                     <constraint firstAttribute="width" constant="40" id="ph7-hL-yrZ"/>
                                 </constraints>
                                 <state key="normal" image="xia"/>
-                                <connections>
-                                    <action selector="handleMoreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nXA-E5-lgC"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1019607843" green="0.14117647059999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,7 +169,7 @@
                 <outlet property="image1" destination="enk-kz-Q2S" id="bDk-qn-Cai"/>
                 <outlet property="image2" destination="h3H-sS-NIJ" id="NfL-Jh-QdC"/>
                 <outlet property="image3" destination="Ew1-64-Rqx" id="dct-Sc-Vb2"/>
-                <outlet property="moreBtn" destination="cbL-6s-Ljq" id="15B-rG-K6R"/>
+                <outlet property="moreBtn" destination="cbL-6s-Ljq" id="e2g-PB-dmM"/>
                 <outlet property="nameLB" destination="Ia3-5f-dsk" id="khE-qW-CwC"/>
                 <outlet property="tableView" destination="6se-Kj-4jt" id="3pe-UB-rru"/>
                 <outlet property="typeLB" destination="o6i-yn-xwD" id="yFR-Pg-Z2d"/>

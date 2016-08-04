@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSInteger, TypeCell) {
     TypeCellImage = 0,
     TypeCellTitle,
+    TypeCellTitleNoButton,
     TypeCellTime
 };
 
@@ -24,5 +25,6 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 @property (copy, nonatomic) NSString *secondImage;
 
 @property (assign, nonatomic) NSInteger typeCell;
+@property (assign, nonatomic) BOOL isClick;
 
 @end

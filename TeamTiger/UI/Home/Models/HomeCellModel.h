@@ -12,11 +12,11 @@
 @interface HomeCellModel : NSObject
 
 @property (strong, nonatomic) UIImageView *headImage;
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *type;
+@property (copy, nonatomic)   NSString *name;
+@property (copy, nonatomic)   NSString *type;
 @property (strong, nonatomic) UIImageView *image1;
 @property (strong, nonatomic) UIImageView *image2;
 @property (strong, nonatomic) UIImageView *image3;
 
-
+@property (assign, nonatomic) BOOL isClick;
 @end

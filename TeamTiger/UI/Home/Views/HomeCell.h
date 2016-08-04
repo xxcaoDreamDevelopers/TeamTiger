@@ -8,22 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeCellModel.h"
-
+#import "ButtonIndexPath.h"
 
 
 @interface HomeCell : UITableViewCell <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLB;
 @property (weak, nonatomic) IBOutlet UILabel *typeLB;
 @property (weak, nonatomic) IBOutlet UIImageView *image1;
 @property (weak, nonatomic) IBOutlet UIImageView *image2;
-
 @property (weak, nonatomic) IBOutlet UIImageView *image3;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIButton *moreBtn;
-@property (copy, nonatomic) ClickBlock clickBlock;
+
+@property (weak, nonatomic) IBOutlet ButtonIndexPath *moreBtn;
 @property (assign, nonatomic) BOOL isOpen;
-@property (assign, nonatomic) BOOL isFirst;
+
 
 - (void)configureCellWithModel:(HomeCellModel *)model;
 
