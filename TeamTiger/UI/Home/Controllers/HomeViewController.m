@@ -11,6 +11,7 @@
 #import "HomeCellModel.h"
 #import "TTSettingViewController.h"
 #import "DiscussViewController.h"
+#import "TTAddDiscussViewController.h"
 
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -84,7 +85,7 @@
 
 - (void)handleRightBtnAction {
     
-    DiscussViewController *addDiscussVC = [[DiscussViewController alloc] init];
+    TTAddDiscussViewController *addDiscussVC = [[TTAddDiscussViewController alloc] init];
     [Common customPushAnimationFromNavigation:self.navigationController ToViewController:addDiscussVC Type:kCATransitionMoveIn SubType:kCATransitionFromTop];
 }
 

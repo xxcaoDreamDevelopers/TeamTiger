@@ -284,6 +284,8 @@
 		1DDE9E6A1D531B66005926FE /* TTLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E681D531B66005926FE /* TTLoginViewController.xib */; };
 		1DDE9E6F1D533106005926FE /* TTMyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E6D1D533106005926FE /* TTMyProfileViewController.m */; };
 		1DDE9E701D533106005926FE /* TTMyProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E6E1D533106005926FE /* TTMyProfileViewController.xib */; };
+		1DDE9E751D535DDA005926FE /* TTAddDiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E731D535DDA005926FE /* TTAddDiscussViewController.m */; };
+		1DDE9E761D535DDA005926FE /* TTAddDiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E741D535DDA005926FE /* TTAddDiscussViewController.xib */; };
 		1DF0A1951D4DA51E002D91DB /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0A1941D4DA51E002D91DB /* ContactModel.m */; };
 		1DF0A1981D4DB28B002D91DB /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0A1971D4DB28B002D91DB /* NSString+Utils.m */; };
 		1DF0A1AC1D4DB898002D91DB /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF0A19A1D4DB898002D91DB /* 1.png */; };
@@ -325,8 +327,6 @@
 		2D9F216D1D53445700262D00 /* HomeDetailCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F215D1D53445700262D00 /* HomeDetailCell2.xib */; };
 		2D9F216E1D53445700262D00 /* HomeDetailCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F215F1D53445700262D00 /* HomeDetailCell3.m */; };
 		2D9F216F1D53445700262D00 /* HomeDetailCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21601D53445700262D00 /* HomeDetailCell3.xib */; };
-		2D9F21731D535BBB00262D00 /* TTAddDiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21711D535BBB00262D00 /* TTAddDiscussViewController.m */; };
-		2D9F21741D535BBB00262D00 /* TTAddDiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21721D535BBB00262D00 /* TTAddDiscussViewController.xib */; };
 		2DFACA541D507B8B0099A2A3 /* DiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */; };
 		2DFACA551D507B8B0099A2A3 /* DiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */; };
 		2DFACA561D507B8B0099A2A3 /* DiscussListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFACA4F1D507B8B0099A2A3 /* DiscussListCell.m */; };
@@ -865,6 +865,9 @@
 		1DDE9E6C1D533106005926FE /* TTMyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMyProfileViewController.h; sourceTree = "<group>"; };
 		1DDE9E6D1D533106005926FE /* TTMyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMyProfileViewController.m; sourceTree = "<group>"; };
 		1DDE9E6E1D533106005926FE /* TTMyProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMyProfileViewController.xib; sourceTree = "<group>"; };
+		1DDE9E721D535DDA005926FE /* TTAddDiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddDiscussViewController.h; sourceTree = "<group>"; };
+		1DDE9E731D535DDA005926FE /* TTAddDiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddDiscussViewController.m; sourceTree = "<group>"; };
+		1DDE9E741D535DDA005926FE /* TTAddDiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddDiscussViewController.xib; sourceTree = "<group>"; };
 		1DF0A1931D4DA51E002D91DB /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
 		1DF0A1941D4DA51E002D91DB /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
 		1DF0A1961D4DB28B002D91DB /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
@@ -924,9 +927,6 @@
 		2D9F215E1D53445700262D00 /* HomeDetailCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell3.h; sourceTree = "<group>"; };
 		2D9F215F1D53445700262D00 /* HomeDetailCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell3.m; sourceTree = "<group>"; };
 		2D9F21601D53445700262D00 /* HomeDetailCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell3.xib; sourceTree = "<group>"; };
-		2D9F21701D535BBB00262D00 /* TTAddDiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddDiscussViewController.h; sourceTree = "<group>"; };
-		2D9F21711D535BBB00262D00 /* TTAddDiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddDiscussViewController.m; sourceTree = "<group>"; };
-		2D9F21721D535BBB00262D00 /* TTAddDiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddDiscussViewController.xib; sourceTree = "<group>"; };
 		2DFACA491D507B8B0099A2A3 /* DiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussViewController.h; sourceTree = "<group>"; };
 		2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussViewController.m; sourceTree = "<group>"; };
 		2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscussViewController.xib; sourceTree = "<group>"; };
@@ -2190,6 +2190,17 @@
 			path = MyProfile;
 			sourceTree = "<group>";
 		};
+		1DDE9E711D535DDA005926FE /* AddDiscuss */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE9E721D535DDA005926FE /* TTAddDiscussViewController.h */,
+				1DDE9E731D535DDA005926FE /* TTAddDiscussViewController.m */,
+				1DDE9E741D535DDA005926FE /* TTAddDiscussViewController.xib */,
+			);
+			name = AddDiscuss;
+			path = Controllers/AddDiscuss;
+			sourceTree = "<group>";
+		};
 		1DF0A1921D4DA502002D91DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2302,9 +2313,7 @@
 		2DFACA471D507B8B0099A2A3 /* Discuss */ = {
 			isa = PBXGroup;
 			children = (
-				2D9F21701D535BBB00262D00 /* TTAddDiscussViewController.h */,
-				2D9F21711D535BBB00262D00 /* TTAddDiscussViewController.m */,
-				2D9F21721D535BBB00262D00 /* TTAddDiscussViewController.xib */,
+				1DDE9E711D535DDA005926FE /* AddDiscuss */,
 				2DFACA481D507B8B0099A2A3 /* Controllers */,
 				2DFACA4C1D507B8B0099A2A3 /* Models */,
 				2DFACA4D1D507B8B0099A2A3 /* Views */,
@@ -2387,7 +2396,7 @@
 				TargetAttributes = {
 					1DA71B591D3DB5A1007483D2 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9WUQR88DQL;
+						DevelopmentTeam = FAT69R69RF;
 					};
 				};
 			};
@@ -2423,6 +2432,7 @@
 				2DFACA551D507B8B0099A2A3 /* DiscussViewController.xib in Resources */,
 				1DB5A5881D4B3F36009E6170 /* switchRed@2x.png in Resources */,
 				1DF0A1B01D4DB898002D91DB /* 13.png in Resources */,
+				1DDE9E761D535DDA005926FE /* TTAddDiscussViewController.xib in Resources */,
 				1DB5A5901D4B3F36009E6170 /* round-switch-track@2x.png in Resources */,
 				1D55FD8F1D49A19900094112 /* TTSettingViewController.xib in Resources */,
 				1D2E1AAC1D4C538B00C0CE0A /* TTAddContactorViewController.xib in Resources */,
@@ -2438,7 +2448,6 @@
 				1DA71B821D3DBA67007483D2 /* LaunchScreen.storyboard in Resources */,
 				0604B4781D4C5A9B00EF1703 /* image_5.jpg in Resources */,
 				1DB5A5871D4B3F36009E6170 /* switchMask@2x.png in Resources */,
-				2D9F21741D535BBB00262D00 /* TTAddDiscussViewController.xib in Resources */,
 				1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */,
 				2DFACA571D507B8B0099A2A3 /* DiscussListCell.xib in Resources */,
 				1DB5A58C1D4B3F36009E6170 /* round-switch-overlay@2x.png in Resources */,
@@ -2526,7 +2535,6 @@
 				1D09CC771D3F29C900F85E9A /* UITextField+YYAdd.m in Sources */,
 				1D0EA2C61D45A82C00B47108 /* LCChainRequestAgent.m in Sources */,
 				1D9580B51D3E207200FD0053 /* UIView+MJExtension.m in Sources */,
-				2D9F21731D535BBB00262D00 /* TTAddDiscussViewController.m in Sources */,
 				1DA71B621D3DB5A1007483D2 /* AppDelegate.m in Sources */,
 				1D9580B31D3E207200FD0053 /* UIScrollView+MJExtension.m in Sources */,
 				2DFACA541D507B8B0099A2A3 /* DiscussViewController.m in Sources */,
@@ -2717,6 +2725,7 @@
 				1D0EA2D11D45A8AE00B47108 /* TMCache.m in Sources */,
 				1D115F871D4BA043003DFBB1 /* IQUIScrollView+Additions.m in Sources */,
 				1D9580D81D3E225200FD0053 /* NSArray+MASAdditions.m in Sources */,
+				1DDE9E751D535DDA005926FE /* TTAddDiscussViewController.m in Sources */,
 				068E96521D4F488C0074229C /* MMDrawerBarButtonItem.m in Sources */,
 				1D9580721D3E1ADD00FD0053 /* MBProgressHUD.m in Sources */,
 				1D09CC851D3F29C900F85E9A /* YYImageCache.m in Sources */,
@@ -2848,7 +2857,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -2866,7 +2875,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
