@@ -325,6 +325,8 @@
 		2D9F216D1D53445700262D00 /* HomeDetailCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F215D1D53445700262D00 /* HomeDetailCell2.xib */; };
 		2D9F216E1D53445700262D00 /* HomeDetailCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F215F1D53445700262D00 /* HomeDetailCell3.m */; };
 		2D9F216F1D53445700262D00 /* HomeDetailCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21601D53445700262D00 /* HomeDetailCell3.xib */; };
+		2D9F21731D535BBB00262D00 /* TTAddDiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21711D535BBB00262D00 /* TTAddDiscussViewController.m */; };
+		2D9F21741D535BBB00262D00 /* TTAddDiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21721D535BBB00262D00 /* TTAddDiscussViewController.xib */; };
 		2DFACA541D507B8B0099A2A3 /* DiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */; };
 		2DFACA551D507B8B0099A2A3 /* DiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */; };
 		2DFACA561D507B8B0099A2A3 /* DiscussListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFACA4F1D507B8B0099A2A3 /* DiscussListCell.m */; };
@@ -922,6 +924,9 @@
 		2D9F215E1D53445700262D00 /* HomeDetailCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell3.h; sourceTree = "<group>"; };
 		2D9F215F1D53445700262D00 /* HomeDetailCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell3.m; sourceTree = "<group>"; };
 		2D9F21601D53445700262D00 /* HomeDetailCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell3.xib; sourceTree = "<group>"; };
+		2D9F21701D535BBB00262D00 /* TTAddDiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddDiscussViewController.h; sourceTree = "<group>"; };
+		2D9F21711D535BBB00262D00 /* TTAddDiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddDiscussViewController.m; sourceTree = "<group>"; };
+		2D9F21721D535BBB00262D00 /* TTAddDiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddDiscussViewController.xib; sourceTree = "<group>"; };
 		2DFACA491D507B8B0099A2A3 /* DiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussViewController.h; sourceTree = "<group>"; };
 		2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussViewController.m; sourceTree = "<group>"; };
 		2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscussViewController.xib; sourceTree = "<group>"; };
@@ -2297,6 +2302,9 @@
 		2DFACA471D507B8B0099A2A3 /* Discuss */ = {
 			isa = PBXGroup;
 			children = (
+				2D9F21701D535BBB00262D00 /* TTAddDiscussViewController.h */,
+				2D9F21711D535BBB00262D00 /* TTAddDiscussViewController.m */,
+				2D9F21721D535BBB00262D00 /* TTAddDiscussViewController.xib */,
 				2DFACA481D507B8B0099A2A3 /* Controllers */,
 				2DFACA4C1D507B8B0099A2A3 /* Models */,
 				2DFACA4D1D507B8B0099A2A3 /* Views */,
@@ -2430,6 +2438,7 @@
 				1DA71B821D3DBA67007483D2 /* LaunchScreen.storyboard in Resources */,
 				0604B4781D4C5A9B00EF1703 /* image_5.jpg in Resources */,
 				1DB5A5871D4B3F36009E6170 /* switchMask@2x.png in Resources */,
+				2D9F21741D535BBB00262D00 /* TTAddDiscussViewController.xib in Resources */,
 				1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */,
 				2DFACA571D507B8B0099A2A3 /* DiscussListCell.xib in Resources */,
 				1DB5A58C1D4B3F36009E6170 /* round-switch-overlay@2x.png in Resources */,
@@ -2517,6 +2526,7 @@
 				1D09CC771D3F29C900F85E9A /* UITextField+YYAdd.m in Sources */,
 				1D0EA2C61D45A82C00B47108 /* LCChainRequestAgent.m in Sources */,
 				1D9580B51D3E207200FD0053 /* UIView+MJExtension.m in Sources */,
+				2D9F21731D535BBB00262D00 /* TTAddDiscussViewController.m in Sources */,
 				1DA71B621D3DB5A1007483D2 /* AppDelegate.m in Sources */,
 				1D9580B31D3E207200FD0053 /* UIScrollView+MJExtension.m in Sources */,
 				2DFACA541D507B8B0099A2A3 /* DiscussViewController.m in Sources */,
