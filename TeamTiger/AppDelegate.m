@@ -17,6 +17,7 @@
 #import "MMDrawerController.h"
 #import "MMDrawerVisualState.h"
 #import "TTTabBarViewController.h"
+#import "TTLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,9 +31,11 @@
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
     [self initialMethods];
-    [self initHomeVC];
-//    CirclesViewController *homeVc = [[CirclesViewController alloc] init];
-//    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:homeVc];
+
+    TTLoginViewController *loginVC = [[TTLoginViewController alloc] initWithNibName:@"TTLoginViewController" bundle:nil];
+    self.window.rootViewController = loginVC;
+    [self.window makeKeyAndVisible];
+
 
     //launch image
     UIImageView *screenImageView = [[UIImageView alloc] initWithImage:[UIImage ty_getLaunchImage]];
@@ -67,7 +70,7 @@
 }
 
 #pragma -mark initial methods
-- (void)initHomeVC {
+- (UIViewController *)creatHomeVC {
     
     CirclesViewController *circleVC = [[CirclesViewController alloc] init];
     
@@ -80,12 +83,6 @@
     
     TTTabBarViewController *mainTab = [[TTTabBarViewController alloc] initWithChildViewControllers:homeVCs];
     
-    //    HomeViewController *homeVC = [[HomeViewController alloc] init];
-    
-    //    TTBaseNavigationController *rootNavi = [[TTBaseNavigationController alloc] initWithRootViewController:[circleVC.homeVCs firstObject]];
-    
-    
-    
     MMDrawerController *drawerController = [[MMDrawerController alloc]
                                             initWithCenterViewController:mainTab
                                             leftDrawerViewController:nil
@@ -96,8 +93,6 @@
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
     [drawerController setMaximumRightDrawerWidth:Screen_Width];
-    //    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
-    
     //自定义手势
     [drawerController setGestureShouldRecognizeTouchBlock:^BOOL(MMDrawerController *drawerController, UIGestureRecognizer *gesture, UITouch *touch) {
         BOOL shouldRecognizeTouch = NO;
@@ -115,8 +110,7 @@
         return shouldRecognizeTouch;
     }];
     
-    self.window.rootViewController = drawerController;
-    [self.window makeKeyAndVisible];
+    return drawerController;
 }
 
 - (void)initialMethods {
