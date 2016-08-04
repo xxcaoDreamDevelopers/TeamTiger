@@ -11,6 +11,7 @@
 #import "HomeCellModel.h"
 #import "TTSettingViewController.h"
 #import "DiscussViewController.h"
+#import "TTAddDiscussViewController.h"
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -60,13 +61,14 @@
 }
 
 - (void)handleLeftBtnAction {
-    DiscussViewController *discussVC = [[DiscussViewController alloc] init];
-    [self.navigationController pushViewController:discussVC animated:YES];
+    TTSettingViewController *settingVC = [[TTSettingViewController alloc] initWithNibName:@"TTSettingViewController" bundle:nil];
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 - (void)handleRightBtnAction {
-    TTSettingViewController *settingVC = [[TTSettingViewController alloc] initWithNibName:@"TTSettingViewController" bundle:nil];
-    [self.navigationController pushViewController:settingVC animated:YES];
+    
+    TTAddDiscussViewController *addDiscussVC = [[TTAddDiscussViewController alloc] initWithNibName:@"TTAddDiscussViewController" bundle:nil];
+   [self.navigationController pushViewController:addDiscussVC animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

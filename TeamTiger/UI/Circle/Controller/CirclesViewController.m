@@ -9,7 +9,7 @@
 #import "CirclesViewController.h"
 #import "NetworkManager.h"
 #import "UIButton+HYBHelperBlockKit.h"
-#import "TTSettingViewController.h"
+#import "TTAddProjectViewController.h"
 #import "AKPickerView.h"
 #import "CCDraggableContainer.h"
 #import "CCDraggableConfig.h"
@@ -184,8 +184,8 @@ CCDraggableContainerDelegate>
 -(void)addCircleAction:(UIButton *)button{
     TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
     UINavigationController *selectVC = mainTab.selectedViewController;
-    TTSettingViewController *settingVC = [[TTSettingViewController alloc] init];
-    [selectVC pushViewController:settingVC animated:NO];
+    TTAddProjectViewController *addProjectVC = [[TTAddProjectViewController alloc] init];
+    [selectVC pushViewController:addProjectVC animated:NO];
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         
     }];

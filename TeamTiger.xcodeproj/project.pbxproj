@@ -278,6 +278,10 @@
 		1DB5A5951D4B3F36009E6170 /* square-switch-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5A5851D4B3F36009E6170 /* square-switch-track@2x.png */; };
 		1DB926171D46F4F4003676AC /* LCProcessFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB926141D46F4F4003676AC /* LCProcessFilter.m */; };
 		1DB926181D46F4F4003676AC /* LCRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB926161D46F4F4003676AC /* LCRequestAccessory.m */; };
+		1DDE9E5D1D52D953005926FE /* TTAddDiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E5B1D52D952005926FE /* TTAddDiscussViewController.m */; };
+		1DDE9E5E1D52D953005926FE /* TTAddDiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E5C1D52D953005926FE /* TTAddDiscussViewController.xib */; };
+		1DDE9E631D52DAF8005926FE /* TTAddProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */; };
+		1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */; };
 		1DF0A1951D4DA51E002D91DB /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0A1941D4DA51E002D91DB /* ContactModel.m */; };
 		1DF0A1981D4DB28B002D91DB /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0A1971D4DB28B002D91DB /* NSString+Utils.m */; };
 		1DF0A1AC1D4DB898002D91DB /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DF0A19A1D4DB898002D91DB /* 1.png */; };
@@ -844,6 +848,12 @@
 		1DB926141D46F4F4003676AC /* LCProcessFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProcessFilter.m; sourceTree = "<group>"; };
 		1DB926151D46F4F4003676AC /* LCRequestAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCRequestAccessory.h; sourceTree = "<group>"; };
 		1DB926161D46F4F4003676AC /* LCRequestAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCRequestAccessory.m; sourceTree = "<group>"; };
+		1DDE9E5A1D52D952005926FE /* TTAddDiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddDiscussViewController.h; sourceTree = "<group>"; };
+		1DDE9E5B1D52D952005926FE /* TTAddDiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddDiscussViewController.m; sourceTree = "<group>"; };
+		1DDE9E5C1D52D953005926FE /* TTAddDiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddDiscussViewController.xib; sourceTree = "<group>"; };
+		1DDE9E601D52DAF8005926FE /* TTAddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddProjectViewController.h; sourceTree = "<group>"; };
+		1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddProjectViewController.m; sourceTree = "<group>"; };
+		1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddProjectViewController.xib; sourceTree = "<group>"; };
 		1DF0A1931D4DA51E002D91DB /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
 		1DF0A1941D4DA51E002D91DB /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
 		1DF0A1961D4DB28B002D91DB /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
@@ -2128,6 +2138,26 @@
 			path = NetworkHelper;
 			sourceTree = "<group>";
 		};
+		1DDE9E591D52D918005926FE /* AddDiscuss */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE9E5A1D52D952005926FE /* TTAddDiscussViewController.h */,
+				1DDE9E5B1D52D952005926FE /* TTAddDiscussViewController.m */,
+				1DDE9E5C1D52D953005926FE /* TTAddDiscussViewController.xib */,
+			);
+			path = AddDiscuss;
+			sourceTree = "<group>";
+		};
+		1DDE9E5F1D52DADA005926FE /* AddProject */ = {
+			isa = PBXGroup;
+			children = (
+				1DDE9E601D52DAF8005926FE /* TTAddProjectViewController.h */,
+				1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */,
+				1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */,
+			);
+			path = AddProject;
+			sourceTree = "<group>";
+		};
 		1DF0A1921D4DA502002D91DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2181,6 +2211,7 @@
 		1DF991D41D48ADB300E7D1B8 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				1DDE9E5F1D52DADA005926FE /* AddProject */,
 				1D2E1AA71D4C530500C0CE0A /* AddContactor */,
 				1D55FD901D49AA8200094112 /* View */,
 				1DF991D51D48ADD900E7D1B8 /* TTSettingViewController.h */,
@@ -2203,6 +2234,7 @@
 		2DFACA481D507B8B0099A2A3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1DDE9E591D52D918005926FE /* AddDiscuss */,
 				2DFACA491D507B8B0099A2A3 /* DiscussViewController.h */,
 				2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */,
 				2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */,
@@ -2362,6 +2394,7 @@
 				1DA71B821D3DBA67007483D2 /* LaunchScreen.storyboard in Resources */,
 				0604B4781D4C5A9B00EF1703 /* image_5.jpg in Resources */,
 				1DB5A5871D4B3F36009E6170 /* switchMask@2x.png in Resources */,
+				1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */,
 				2DFACA571D507B8B0099A2A3 /* DiscussListCell.xib in Resources */,
 				1DB5A58C1D4B3F36009E6170 /* round-switch-overlay@2x.png in Resources */,
 				1D55FD951D49AAA400094112 /* SettingCell.xib in Resources */,
@@ -2390,6 +2423,7 @@
 				1DB5A58E1D4B3F36009E6170 /* round-switch-thumb@2x.png in Resources */,
 				1DF0A1B91D4DB898002D91DB /* 5.png in Resources */,
 				1DB5A5931D4B3F36009E6170 /* square-switch-thumb-highlight@2x.png in Resources */,
+				1DDE9E5E1D52D953005926FE /* TTAddDiscussViewController.xib in Resources */,
 				1DB5A5921D4B3F36009E6170 /* square-switch-overlay@2x.png in Resources */,
 				1DF0A1B41D4DB898002D91DB /* 17.png in Resources */,
 				1DB5A58B1D4B3F36009E6170 /* round-switch-mask@2x.png in Resources */,
@@ -2513,6 +2547,7 @@
 				1D9580D61D3E225200FD0053 /* MASViewAttribute.m in Sources */,
 				1D09CD5E1D3F59D500F85E9A /* SDWebImageDownloader.m in Sources */,
 				068E96551D4F488C0074229C /* UIViewController+MMDrawerController.m in Sources */,
+				1DDE9E5D1D52D953005926FE /* TTAddDiscussViewController.m in Sources */,
 				1D9408691D41BE2D009E2E11 /* MessageManager.m in Sources */,
 				1D09CCAB1D3F29C900F85E9A /* YYWeakProxy.m in Sources */,
 				1D09CD0F1D3F550300F85E9A /* HYBHelperKitBaseURLController.m in Sources */,
@@ -2550,6 +2585,7 @@
 				1D9580D21D3E225200FD0053 /* MASCompositeConstraint.m in Sources */,
 				1D09CCA61D3F29C900F85E9A /* YYSentinel.m in Sources */,
 				0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */,
+				1DDE9E631D52DAF8005926FE /* TTAddProjectViewController.m in Sources */,
 				1D09CD211D3F550300F85E9A /* UITextField+HYBMasonryKit.m in Sources */,
 				1D09CC781D3F29C900F85E9A /* UIView+YYAdd.m in Sources */,
 				1D09CD2B1D3F550300F85E9A /* UIDevice+HYBHelperKitUIKit.m in Sources */,
