@@ -53,7 +53,14 @@
         cell = [ProjectCell loadCellWithType:[dic[@"Type"] intValue]];
     }
     [cell reloadCellData:dic];
-    cell.block = ^(ProjectCell *cell){
+    cell.block = ^(ProjectCell *cell,int type){
+        if (type == EProjectSelect) {
+            NSLog(@"点击选择项目");
+        } else if (type == EProjectAddMember){
+            NSLog(@"跳转微信，增加人员");
+        } else if (type == EProjectDleteProject){
+            NSLog(@"删除并退出");
+        }
     };
     return cell;
 }
@@ -65,7 +72,7 @@
       @"Name":@"项目",
       @"Description":@"工作牛",
       @"ShowAccessory":@1,
-      @"IsEdit":@1,
+      @"IsEdit":@0,
       @"Color":kRGB(21.0, 30.0, 44.0)},
     
     @{@"Type":@1,
@@ -78,10 +85,10 @@
                    @{@"Image":@"",@"Name":@"刘鹏"},
                    @{@"Image":@"",@"Name":@"陈杰"},
                    @{@"Image":@"",@"Name":@"赵瑞"},
-                   @{@"Image":@"",@"Name":@"曹兴星"},
+                   @{@"Image":@"",@"Name":@"琳琳"},
                    @{@"Image":@"",@"Name":@"俞弦"},
                    @{@"Image":@"",@"Name":@"董宇鹏"},
-                   @{@"Image":@"",@"Name":@"曹兴星"},
+                   @{@"Image":@"",@"Name":@"齐云猛"},
                    @{@"Image":@"",@"Name":@"焦兰兰"},
                    @{@"Image":@"",@"Name":@"严必庆"},
                    @{@"Image":@"",@"Name":@"陆毅全"}]},

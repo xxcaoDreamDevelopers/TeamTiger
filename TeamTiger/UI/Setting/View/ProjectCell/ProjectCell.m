@@ -7,17 +7,14 @@
 //
 
 #import "ProjectCell.h"
+#import "UIButton+HYBHelperBlockKit.h"
+#import "ItemView.h"
 
 @implementation ProjectCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     setViewCorner(self.exitBtn, 5);    
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state
 }
 
 + (instancetype)loadCellWithType:(int)type {
@@ -27,7 +24,7 @@
             cell = LoadFromNib(@"ProjectCell1");
             break;
         case 1:
-            cell = LoadFromNib(@"ProjectCell1");
+            cell = LoadFromNib(@"ProjectCell_Member");
             break;
         default:
             cell = LoadFromNib(@"ProjectCell2");
@@ -37,6 +34,9 @@
 }
 
 + (CGFloat)loadCellHeightWithType:(int)type {
+    if (type == 1) {
+        return 300.0;
+    }
     return 76.0;
 }
 
@@ -58,12 +58,78 @@
     } else {
         self.detailTxtField.userInteractionEnabled = NO;
     }
-}
+    
+    
+    if ([dic[@"Type"] intValue] == 0) {
+        [UIButton hyb_buttonWithSuperView:self.contentView constraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.contentView.mas_top);
+            make.right.mas_equalTo(self.contentView.mas_right);
+            make.bottom.mas_equalTo(self.contentView.mas_bottom);
+            make.left.mas_equalTo(self.contentView.mas_left).offset(60);
+        } touchUp:^(UIButton *sender) {
+            if (self.block) {
+                self.block(self,EProjectSelect);//选择项目
+            }
+        }];
+    }  else if ([dic[@"Type"] intValue] == 1){
+        UIView *contentView = [[UIView alloc] init];
+        [self.scrollView addSubview:contentView];
+        [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.scrollView);
+            make.height.equalTo(self.scrollView);
+        }];
+        
+        __block UIView *lastView1 = nil;
+        __block UIView *lastView2 = nil;
+        NSArray *members = dic[@"Members"];
+        NSUInteger count = (NSUInteger)members.count;
+        for (int i = 0; i < count + 1; i++) {
+            ItemView *tmpView = nil;
+            if (i == count) {
+                tmpView = [[ItemView alloc] initWithData:nil];
+            } else {
+                tmpView = [[ItemView alloc] initWithData:members[i]];
+            }
+            WeakSelf;
+            tmpView.didSelectBlock = ^(ItemView *view){
+                if (wself.block) {
+                    wself.block(wself,EProjectAddMember);//删除并退出
+                }
+            };
 
-- (void)clickHeaderAction:(id)sender {
-    if (self.block) {
-        self.block(self);
+            [self.scrollView addSubview:tmpView];
+            [tmpView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@100);
+                make.height.equalTo(@100);
+                make.top.mas_equalTo(100 * (i % 2));
+                if (i % 2) {
+                    if (lastView1){
+                        make.left.mas_equalTo(lastView1.mas_right);
+                    } else {
+                        make.left.mas_equalTo(contentView.mas_left);
+                    }
+                    lastView1 = tmpView;
+                } else {
+                    if (lastView2){
+                        make.left.mas_equalTo(lastView2.mas_right);
+                    } else {
+                        make.left.mas_equalTo(contentView.mas_left);
+                    }
+                    lastView2 = tmpView;
+                }
+            }];
+        }
+        [contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(lastView2.mas_right);
+        }];
     }
 }
+
+- (IBAction)clickExitBtnAction:(id)sender {
+    if (self.block) {
+        self.block(self,EProjectDleteProject);//删除并退出
+    }
+}
+
 
 @end

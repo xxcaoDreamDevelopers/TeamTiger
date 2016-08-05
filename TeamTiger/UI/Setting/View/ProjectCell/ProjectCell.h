@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class ProjectCell;
 
-typedef void(^ClickHeadImgBlock)(ProjectCell *cell);
+typedef enum : NSUInteger {
+    EProjectSelect = 0,
+    EProjectAddMember,
+    EProjectDleteProject,
+} EProjectType;
+
+typedef void(^ClickActionBlock)(ProjectCell *cell, int type);
 
 @interface ProjectCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgV;
@@ -17,7 +24,8 @@ typedef void(^ClickHeadImgBlock)(ProjectCell *cell);
 @property (weak, nonatomic) IBOutlet UITextField *detailTxtField;
 @property (weak, nonatomic) IBOutlet UIImageView *accessoryImgV;
 @property (weak, nonatomic) IBOutlet UIButton *exitBtn;
-@property (copy, nonatomic) ClickHeadImgBlock block;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (copy, nonatomic) ClickActionBlock block;
 
 
 + (instancetype)loadCellWithType:(int)type;
@@ -25,5 +33,8 @@ typedef void(^ClickHeadImgBlock)(ProjectCell *cell);
 + (CGFloat)loadCellHeightWithType:(int)type;
 
 - (void)reloadCellData:(id)obj;
+
+- (IBAction)clickExitBtnAction:(id)sender;
+
 
 @end

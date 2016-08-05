@@ -259,6 +259,8 @@
 		1DA0E19F1D543F7B008CD6DF /* ProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0E19C1D543F7B008CD6DF /* ProjectCell.m */; };
 		1DA0E1A01D543F7B008CD6DF /* ProjectCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA0E19D1D543F7B008CD6DF /* ProjectCell2.xib */; };
 		1DA0E1A11D543F7B008CD6DF /* ProjectCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA0E19E1D543F7B008CD6DF /* ProjectCell1.xib */; };
+		1DA0E1A31D546CC7008CD6DF /* ProjectCell_Member.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA0E1A21D546CC7008CD6DF /* ProjectCell_Member.xib */; };
+		1DA0E1A81D54779C008CD6DF /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0E1A71D54779C008CD6DF /* ItemView.m */; };
 		1DA71B621D3DB5A1007483D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA71B611D3DB5A1007483D2 /* AppDelegate.m */; };
 		1DA71B821D3DBA67007483D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA71B7D1D3DBA67007483D2 /* LaunchScreen.storyboard */; };
 		1DA71B841D3DBA67007483D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA71B801D3DBA67007483D2 /* Assets.xcassets */; };
@@ -832,6 +834,9 @@
 		1DA0E19C1D543F7B008CD6DF /* ProjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectCell.m; sourceTree = "<group>"; };
 		1DA0E19D1D543F7B008CD6DF /* ProjectCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCell2.xib; sourceTree = "<group>"; };
 		1DA0E19E1D543F7B008CD6DF /* ProjectCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCell1.xib; sourceTree = "<group>"; };
+		1DA0E1A21D546CC7008CD6DF /* ProjectCell_Member.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCell_Member.xib; sourceTree = "<group>"; };
+		1DA0E1A61D54779C008CD6DF /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		1DA0E1A71D54779C008CD6DF /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
 		1DA71B5A1D3DB5A1007483D2 /* TeamTiger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamTiger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA71B601D3DB5A1007483D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1DA71B611D3DB5A1007483D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1711,6 +1716,7 @@
 		1D55FD901D49AA8200094112 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DA0E1A51D547778008CD6DF /* ItemView */,
 				1DA0E19A1D543F7B008CD6DF /* ProjectCell */,
 				1DA0E1901D542422008CD6DF /* ProfileCell */,
 				1D55FD911D49AAA400094112 /* SettingCell.h */,
@@ -1972,10 +1978,20 @@
 			children = (
 				1DA0E19B1D543F7B008CD6DF /* ProjectCell.h */,
 				1DA0E19C1D543F7B008CD6DF /* ProjectCell.m */,
-				1DA0E19D1D543F7B008CD6DF /* ProjectCell2.xib */,
+				1DA0E1A21D546CC7008CD6DF /* ProjectCell_Member.xib */,
 				1DA0E19E1D543F7B008CD6DF /* ProjectCell1.xib */,
+				1DA0E19D1D543F7B008CD6DF /* ProjectCell2.xib */,
 			);
 			path = ProjectCell;
+			sourceTree = "<group>";
+		};
+		1DA0E1A51D547778008CD6DF /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				1DA0E1A61D54779C008CD6DF /* ItemView.h */,
+				1DA0E1A71D54779C008CD6DF /* ItemView.m */,
+			);
+			path = ItemView;
 			sourceTree = "<group>";
 		};
 		1DA71B511D3DB5A1007483D2 = {
@@ -2480,6 +2496,7 @@
 				1D55FD8F1D49A19900094112 /* TTSettingViewController.xib in Resources */,
 				1D2E1AAC1D4C538B00C0CE0A /* TTAddContactorViewController.xib in Resources */,
 				1D9580D11D3E225200FD0053 /* Info.plist in Resources */,
+				1DA0E1A31D546CC7008CD6DF /* ProjectCell_Member.xib in Resources */,
 				1DB5A58D1D4B3F36009E6170 /* round-switch-thumb-highlight@2x.png in Resources */,
 				1DDE9E6A1D531B66005926FE /* TTLoginViewController.xib in Resources */,
 				1DF0A1B81D4DB898002D91DB /* 4.png in Resources */,
@@ -2732,6 +2749,7 @@
 				1D9580A81D3E207200FD0053 /* MJRefreshAutoNormalFooter.m in Sources */,
 				1DF991CE1D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m in Sources */,
 				1D09CD581D3F59D500F85E9A /* UIImage+GIF.m in Sources */,
+				1DA0E1A81D54779C008CD6DF /* ItemView.m in Sources */,
 				1D09CD2C1D3F550300F85E9A /* UIView+HYBHelperKitUIKit.m in Sources */,
 				1D09CC6C1D3F29C900F85E9A /* UIBarButtonItem+YYAdd.m in Sources */,
 				1D09CD1D1D3F550300F85E9A /* UIImageView+HYBMasonryKit.m in Sources */,
