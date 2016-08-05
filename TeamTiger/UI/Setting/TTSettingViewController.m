@@ -42,7 +42,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *dic = self.dataSource[indexPath.row];
-    return [ProjectCell loadCellHeightWithType:[dic[@"Type"] intValue]];
+    return [ProjectCell loadCellHeightWithData:dic];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

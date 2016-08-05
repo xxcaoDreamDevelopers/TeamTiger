@@ -17,11 +17,14 @@
         
         _headImgV = [[UIImageView alloc] init];
         _headImgV.backgroundColor = [UIColor colorWithRed:205.0 / 255.0 green:205.0 / 255.0  blue:205.0 / 255.0  alpha:1.0];
-        setViewCorner(_headImgV, 30);
+        
+        CGFloat itemSize = Screen_Width / 4.0;
+        CGFloat headSize = itemSize - 18 * 2;
+        setViewCorner(_headImgV, headSize / 2.0);
         [self addSubview:_headImgV];
         [_headImgV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.equalTo(@60);
-            make.height.equalTo(@60);
+            make.width.equalTo(@(headSize));
+            make.height.equalTo(@(headSize));
             make.centerX.mas_equalTo(self.mas_centerX);
             make.top.equalTo(@10);
         }];

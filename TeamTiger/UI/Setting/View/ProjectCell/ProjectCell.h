@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define itemSize  (Screen_Width / 4.0)
+
 @class ProjectCell;
 
 typedef enum : NSUInteger {
@@ -30,7 +32,7 @@ typedef void(^ClickActionBlock)(ProjectCell *cell, int type);
 
 + (instancetype)loadCellWithType:(int)type;
 
-+ (CGFloat)loadCellHeightWithType:(int)type;
++ (CGFloat)loadCellHeightWithData:(id)obj;
 
 - (void)reloadCellData:(id)obj;
 

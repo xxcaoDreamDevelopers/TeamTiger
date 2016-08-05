@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class ItemView;
 
 typedef void(^ClickAddBlock)(ItemView *view);

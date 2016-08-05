@@ -33,9 +33,10 @@
     return cell;
 }
 
-+ (CGFloat)loadCellHeightWithType:(int)type {
-    if (type == 1) {
-        return 300.0;
++ (CGFloat)loadCellHeightWithData:(id)obj {
+    if ([obj[@"Type"] intValue] == 1) {
+        NSArray *array = obj[@"Members"];
+        return 70.0 + itemSize * ceil((array.count + 1) / 4.0);
     }
     return 76.0;
 }
@@ -76,11 +77,10 @@
         [self.scrollView addSubview:contentView];
         [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.scrollView);
-            make.height.equalTo(self.scrollView);
+            make.width.equalTo(self.scrollView);
         }];
         
-        __block UIView *lastView1 = nil;
-        __block UIView *lastView2 = nil;
+        __block UIView *lastView1 = nil, *lastView2 = nil, *lastView3 = nil, *lastView4 = nil;
         NSArray *members = dic[@"Members"];
         NSUInteger count = (NSUInteger)members.count;
         for (int i = 0; i < count + 1; i++) {
@@ -99,28 +99,42 @@
 
             [self.scrollView addSubview:tmpView];
             [tmpView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.width.equalTo(@100);
-                make.height.equalTo(@100);
-                make.top.mas_equalTo(100 * (i % 2));
-                if (i % 2) {
+                make.width.equalTo(@(itemSize));
+                make.height.equalTo(@(itemSize));
+                make.left.mas_equalTo(itemSize * (i % 4));
+                if (i % 4 == 0) {
                     if (lastView1){
-                        make.left.mas_equalTo(lastView1.mas_right);
+                        make.top.mas_equalTo(lastView1.mas_bottom);
                     } else {
-                        make.left.mas_equalTo(contentView.mas_left);
+                        make.top.mas_equalTo(contentView.mas_top);
                     }
                     lastView1 = tmpView;
-                } else {
+                } else if (i % 4 == 1) {
                     if (lastView2){
-                        make.left.mas_equalTo(lastView2.mas_right);
+                        make.top.mas_equalTo(lastView2.mas_bottom);
                     } else {
-                        make.left.mas_equalTo(contentView.mas_left);
+                        make.top.mas_equalTo(contentView.mas_top);
                     }
                     lastView2 = tmpView;
+                } else if (i % 4 == 2) {
+                    if (lastView3){
+                        make.top.mas_equalTo(lastView3.mas_bottom);
+                    } else {
+                        make.top.mas_equalTo(contentView.mas_top);
+                    }
+                    lastView3 = tmpView;
+                } else {
+                    if (lastView4){
+                        make.top.mas_equalTo(lastView4.mas_bottom);
+                    } else {
+                        make.top.mas_equalTo(contentView.mas_top);
+                    }
+                    lastView4 = tmpView;
                 }
             }];
         }
         [contentView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(lastView2.mas_right);
+            make.bottom.equalTo(lastView1.mas_bottom);
         }];
     }
 }
