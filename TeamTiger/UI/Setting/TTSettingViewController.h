@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TTBaseViewController.h"
 
-@interface TTSettingViewController : TTBaseViewController
+@interface TTSettingViewController : TTBaseViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property(nonatomic,weak)IBOutlet UITableView *contentTable;
+
 
 @end

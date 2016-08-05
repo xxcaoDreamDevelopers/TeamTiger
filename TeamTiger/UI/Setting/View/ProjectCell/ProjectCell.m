@@ -6,20 +6,13 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "ProfileCell.h"
+#import "ProjectCell.h"
 
-@implementation ProfileCell
+@implementation ProjectCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    setViewCorner(self.exitBtn, 5);
-    setViewCorner(self.headImgV, self.headImgV.frame.size.width / 2.0);
-    
-    if (self.headImgV) {
-        self.headImgV.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickHeaderAction:)];
-        [self.headImgV addGestureRecognizer:tapGR];
-    }
+    setViewCorner(self.exitBtn, 5);    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -28,25 +21,22 @@
 }
 
 + (instancetype)loadCellWithType:(int)type {
-    ProfileCell *cell = nil;
+    ProjectCell *cell = nil;
     switch (type) {
         case 0:
-            cell = LoadFromNib(@"ProfileCell_Header");
+            cell = LoadFromNib(@"ProjectCell1");
             break;
         case 1:
-            cell = LoadFromNib(@"ProfileCell");
+            cell = LoadFromNib(@"ProjectCell1");
             break;
         default:
-            cell = LoadFromNib(@"ProfileCell_Footer");
+            cell = LoadFromNib(@"ProjectCell2");
             break;
     }
     return cell;
 }
 
 + (CGFloat)loadCellHeightWithType:(int)type {
-    if (type == 0) {
-        return 100.0;
-    }
     return 76.0;
 }
 
@@ -72,13 +62,7 @@
 
 - (void)clickHeaderAction:(id)sender {
     if (self.block) {
-        self.block(self,1);
-    }
-}
-
-- (IBAction)clickExitBtnAction:(id)sender {
-    if (self.block) {
-        self.block(self,2);
+        self.block(self);
     }
 }
 

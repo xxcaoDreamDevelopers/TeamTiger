@@ -45,9 +45,13 @@
         cell = [ProfileCell loadCellWithType:[dic[@"Type"] intValue]];
     }
     [cell reloadCellData:dic];
-    cell.block = ^(ProfileCell *cell){
+    cell.block = ^(ProfileCell *cell,int type){
         //微信头像 无法修改
-        NSLog(@"微信头像，无法修改");
+        if (type == 1) {
+            NSLog(@"微信头像，无法修改");
+        } else {
+            NSLog(@"退出登录");
+        }
     };
     return cell;
 }

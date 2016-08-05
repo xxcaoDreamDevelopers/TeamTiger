@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTSettingViewController">
             <connections>
+                <outlet property="contentTable" destination="xHf-3V-b5Z" id="9PJ-xv-Ihg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ADP-OM-5cL"/>
             </connections>
         </placeholder>
@@ -14,7 +15,24 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xHf-3V-b5Z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LYe-h5-Day"/>
+                        <outlet property="delegate" destination="-1" id="d24-gP-Mjv"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xHf-3V-b5Z" secondAttribute="bottom" id="41q-ZO-EI6"/>
+                <constraint firstItem="xHf-3V-b5Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f0c-6l-5jd"/>
+                <constraint firstItem="xHf-3V-b5Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iz6-8K-BBu"/>
+                <constraint firstAttribute="trailing" secondItem="xHf-3V-b5Z" secondAttribute="trailing" id="rwb-Q2-uuG"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="388.5" y="186.5"/>
         </view>

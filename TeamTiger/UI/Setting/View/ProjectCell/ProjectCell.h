@@ -7,18 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-@class ProfileCell;
+@class ProjectCell;
 
-typedef void(^ClickActionBlock)(ProfileCell *cell,int type);
+typedef void(^ClickHeadImgBlock)(ProjectCell *cell);
 
-@interface ProfileCell : UITableViewCell
+@interface ProjectCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgV;
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
 @property (weak, nonatomic) IBOutlet UITextField *detailTxtField;
 @property (weak, nonatomic) IBOutlet UIImageView *accessoryImgV;
 @property (weak, nonatomic) IBOutlet UIButton *exitBtn;
-@property (weak, nonatomic) IBOutlet UIImageView *headImgV;
-@property (copy, nonatomic) ClickActionBlock block;
+@property (copy, nonatomic) ClickHeadImgBlock block;
 
 
 + (instancetype)loadCellWithType:(int)type;
@@ -26,7 +25,5 @@ typedef void(^ClickActionBlock)(ProfileCell *cell,int type);
 + (CGFloat)loadCellHeightWithType:(int)type;
 
 - (void)reloadCellData:(id)obj;
-
-- (IBAction)clickExitBtnAction:(id)sender;
 
 @end
