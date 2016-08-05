@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ProfileCell;
+
+typedef void(^ClickHeadImgBlock)(ProfileCell *cell);
 
 @interface ProfileCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgV;
@@ -14,8 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *detailTxtField;
 @property (weak, nonatomic) IBOutlet UIImageView *accessoryImgV;
 @property (weak, nonatomic) IBOutlet UIButton *exitBtn;
-
 @property (weak, nonatomic) IBOutlet UIImageView *headImgV;
+@property (copy, nonatomic) ClickHeadImgBlock block;
+
 
 + (instancetype)loadCellWithType:(int)type;
 

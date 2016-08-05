@@ -8,6 +8,7 @@
 
 #import "TTMyProfileViewController.h"
 #import "ProfileCell.h"
+#import "IQKeyboardManager.h"
 
 @interface TTMyProfileViewController ()
 
@@ -24,6 +25,7 @@
         [self dismissViewControllerAnimated:YES completion:^{
         }];
     }];
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -43,6 +45,10 @@
         cell = [ProfileCell loadCellWithType:[dic[@"Type"] intValue]];
     }
     [cell reloadCellData:dic];
+    cell.block = ^(ProfileCell *cell){
+        //微信头像 无法修改
+        NSLog(@"微信头像，无法修改");
+    };
     return cell;
 }
 

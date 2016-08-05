@@ -14,11 +14,16 @@
     [super awakeFromNib];
     setViewCorner(self.exitBtn, 5);
     setViewCorner(self.headImgV, self.headImgV.frame.size.width / 2.0);
+    
+    if (self.headImgV) {
+        self.headImgV.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickHeaderAction:)];
+        [self.headImgV addGestureRecognizer:tapGR];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
@@ -42,7 +47,7 @@
     if (type == 0) {
         return 100.0;
     }
-    return 76;
+    return 76.0;
 }
 
 - (void)reloadCellData:(id)obj{
@@ -62,6 +67,12 @@
         self.detailTxtField.userInteractionEnabled = YES;
     } else {
         self.detailTxtField.userInteractionEnabled = NO;
+    }
+}
+
+- (void)clickHeaderAction:(id)sender {
+    if (self.block) {
+        self.block(self);
     }
 }
 
