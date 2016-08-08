@@ -22,4 +22,6 @@
 //自定义pop动画
 + (void)customPopAnimationFromNavigation:(UINavigationController *)nav Type:(NSString *)animationType SubType:(NSString *)subType;
 
+//根据16进制显示颜色
++ (UIColor *)colorFromHexRGB:(NSString *)inColorString;
 @end

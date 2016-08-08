@@ -21,4 +21,5 @@
 #import "Common.h"
 #import "HYBHelperKit.h"
 #import "TTBaseNavigationController.h"
+#import "GlobalDefine.h"
 #endif /* TeamTiger_Prefix_pch */

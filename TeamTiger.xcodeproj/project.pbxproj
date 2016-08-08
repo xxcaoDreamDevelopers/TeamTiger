@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06008F151D58162300A5B3DB /* TTCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F131D58162300A5B3DB /* TTCommonCell.m */; };
+		06008F161D58162300A5B3DB /* TTCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06008F141D58162300A5B3DB /* TTCommonCell.xib */; };
+		06008F241D58163100A5B3DB /* TTCommonArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F191D58163100A5B3DB /* TTCommonArrowItem.m */; };
+		06008F251D58163100A5B3DB /* TTCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F1B1D58163100A5B3DB /* TTCommonGroup.m */; };
+		06008F261D58163100A5B3DB /* TTCommonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F1D1D58163100A5B3DB /* TTCommonItem.m */; };
+		06008F271D58163100A5B3DB /* TTCommonLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F1F1D58163100A5B3DB /* TTCommonLabelItem.m */; };
+		06008F281D58163100A5B3DB /* TTCommonSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F211D58163100A5B3DB /* TTCommonSwitchItem.m */; };
+		06008F291D58163100A5B3DB /* TTCommonTextViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F231D58163100A5B3DB /* TTCommonTextViewItem.m */; };
 		0604B4641D4C5A5B00EF1703 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B45D1D4C5A5B00EF1703 /* AKPickerView.m */; };
 		0604B4651D4C5A5B00EF1703 /* CCDraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4601D4C5A5B00EF1703 /* CCDraggableCardView.m */; };
 		0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4631D4C5A5B00EF1703 /* CCDraggableContainer.m */; };
@@ -346,6 +354,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06008F121D58162300A5B3DB /* TTCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonCell.h; sourceTree = "<group>"; };
+		06008F131D58162300A5B3DB /* TTCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonCell.m; sourceTree = "<group>"; };
+		06008F141D58162300A5B3DB /* TTCommonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTCommonCell.xib; sourceTree = "<group>"; };
+		06008F181D58163100A5B3DB /* TTCommonArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonArrowItem.h; sourceTree = "<group>"; };
+		06008F191D58163100A5B3DB /* TTCommonArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonArrowItem.m; sourceTree = "<group>"; };
+		06008F1A1D58163100A5B3DB /* TTCommonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonGroup.h; sourceTree = "<group>"; };
+		06008F1B1D58163100A5B3DB /* TTCommonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonGroup.m; sourceTree = "<group>"; };
+		06008F1C1D58163100A5B3DB /* TTCommonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonItem.h; sourceTree = "<group>"; };
+		06008F1D1D58163100A5B3DB /* TTCommonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonItem.m; sourceTree = "<group>"; };
+		06008F1E1D58163100A5B3DB /* TTCommonLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonLabelItem.h; sourceTree = "<group>"; };
+		06008F1F1D58163100A5B3DB /* TTCommonLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonLabelItem.m; sourceTree = "<group>"; };
+		06008F201D58163100A5B3DB /* TTCommonSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonSwitchItem.h; sourceTree = "<group>"; };
+		06008F211D58163100A5B3DB /* TTCommonSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonSwitchItem.m; sourceTree = "<group>"; };
+		06008F221D58163100A5B3DB /* TTCommonTextViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCommonTextViewItem.h; sourceTree = "<group>"; };
+		06008F231D58163100A5B3DB /* TTCommonTextViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCommonTextViewItem.m; sourceTree = "<group>"; };
 		0604B45C1D4C5A5B00EF1703 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		0604B45D1D4C5A5B00EF1703 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		0604B45F1D4C5A5B00EF1703 /* CCDraggableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDraggableCardView.h; sourceTree = "<group>"; };
@@ -986,6 +1009,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06008F111D58162300A5B3DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06008F121D58162300A5B3DB /* TTCommonCell.h */,
+				06008F131D58162300A5B3DB /* TTCommonCell.m */,
+				06008F141D58162300A5B3DB /* TTCommonCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06008F171D58163100A5B3DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06008F181D58163100A5B3DB /* TTCommonArrowItem.h */,
+				06008F191D58163100A5B3DB /* TTCommonArrowItem.m */,
+				06008F1A1D58163100A5B3DB /* TTCommonGroup.h */,
+				06008F1B1D58163100A5B3DB /* TTCommonGroup.m */,
+				06008F1C1D58163100A5B3DB /* TTCommonItem.h */,
+				06008F1D1D58163100A5B3DB /* TTCommonItem.m */,
+				06008F1E1D58163100A5B3DB /* TTCommonLabelItem.h */,
+				06008F1F1D58163100A5B3DB /* TTCommonLabelItem.m */,
+				06008F201D58163100A5B3DB /* TTCommonSwitchItem.h */,
+				06008F211D58163100A5B3DB /* TTCommonSwitchItem.m */,
+				06008F221D58163100A5B3DB /* TTCommonTextViewItem.h */,
+				06008F231D58163100A5B3DB /* TTCommonTextViewItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0604B45B1D4C5A5B00EF1703 /* AKPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2138,6 +2190,8 @@
 		1DA71B8C1D3DCBE6007483D2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				06008F171D58163100A5B3DB /* Model */,
+				06008F111D58162300A5B3DB /* View */,
 				1DA71B8D1D3DCC3D007483D2 /* TTBaseViewController.h */,
 				1DA71B8E1D3DCC3D007483D2 /* TTBaseViewController.m */,
 				1DA71B901D3DCC9D007483D2 /* TTBaseNavigationController.h */,
@@ -2496,6 +2550,7 @@
 				1D55FD8F1D49A19900094112 /* TTSettingViewController.xib in Resources */,
 				1D2E1AAC1D4C538B00C0CE0A /* TTAddContactorViewController.xib in Resources */,
 				1D9580D11D3E225200FD0053 /* Info.plist in Resources */,
+				06008F161D58162300A5B3DB /* TTCommonCell.xib in Resources */,
 				1DA0E1A31D546CC7008CD6DF /* ProjectCell_Member.xib in Resources */,
 				1DB5A58D1D4B3F36009E6170 /* round-switch-thumb-highlight@2x.png in Resources */,
 				1DDE9E6A1D531B66005926FE /* TTLoginViewController.xib in Resources */,
@@ -2651,6 +2706,7 @@
 				1D09CD141D3F550300F85E9A /* NSFileManager+HYBHelperKit.m in Sources */,
 				1D09CD1F1D3F550300F85E9A /* UIScrollView+HYBMasonryKit.m in Sources */,
 				1D09CD1C1D3F550300F85E9A /* UICollectionView+HYBMaonsryKit.m in Sources */,
+				06008F271D58163100A5B3DB /* TTCommonLabelItem.m in Sources */,
 				1D9580D41D3E225200FD0053 /* MASConstraintMaker.m in Sources */,
 				1D09CC5B1D3F29C900F85E9A /* NSArray+YYAdd.m in Sources */,
 				1D09CC631D3F29C900F85E9A /* NSObject+YYAdd.m in Sources */,
@@ -2674,6 +2730,7 @@
 				1D09CD5F1D3F59D500F85E9A /* SDWebImageDownloaderOperation.m in Sources */,
 				1D09CC691D3F29C900F85E9A /* CALayer+YYAdd.m in Sources */,
 				2D9F216A1D53445700262D00 /* HomeDetailCell1.m in Sources */,
+				06008F261D58163100A5B3DB /* TTCommonItem.m in Sources */,
 				1D09CC891D3F29C900F85E9A /* YYWebImageOperation.m in Sources */,
 				1D09CC9D1D3F29C900F85E9A /* YYTextUtilities.m in Sources */,
 				1D09CC751D3F29C900F85E9A /* UIScrollView+YYAdd.m in Sources */,
@@ -2706,6 +2763,7 @@
 				0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */,
 				1DDE9E631D52DAF8005926FE /* TTAddProjectViewController.m in Sources */,
 				1D09CD211D3F550300F85E9A /* UITextField+HYBMasonryKit.m in Sources */,
+				06008F291D58163100A5B3DB /* TTCommonTextViewItem.m in Sources */,
 				1D09CC781D3F29C900F85E9A /* UIView+YYAdd.m in Sources */,
 				1D09CD2B1D3F550300F85E9A /* UIDevice+HYBHelperKitUIKit.m in Sources */,
 				1D09CC8C1D3F29C900F85E9A /* YYTextContainerView.m in Sources */,
@@ -2731,6 +2789,7 @@
 				1D9580381D3E123800FD0053 /* AFSecurityPolicy.m in Sources */,
 				1D9580361D3E123800FD0053 /* AFHTTPSessionManager.m in Sources */,
 				1D0EA2C41D45A82C00B47108 /* LCBatchRequestAgent.m in Sources */,
+				06008F151D58162300A5B3DB /* TTCommonCell.m in Sources */,
 				1DF0A1981D4DB28B002D91DB /* NSString+Utils.m in Sources */,
 				1D09CC8B1D3F29C900F85E9A /* YYClassInfo.m in Sources */,
 				1D9580AD1D3E207200FD0053 /* MJRefreshGifHeader.m in Sources */,
@@ -2780,6 +2839,7 @@
 				1D09CCA41D3F29C900F85E9A /* YYKeychain.m in Sources */,
 				1D09CC8A1D3F29C900F85E9A /* NSObject+YYModel.m in Sources */,
 				1D09CC7D1D3F29C900F85E9A /* _YYWebImageSetter.m in Sources */,
+				06008F241D58163100A5B3DB /* TTCommonArrowItem.m in Sources */,
 				1D115F8B1D4BA043003DFBB1 /* IQUIWindow+Hierarchy.m in Sources */,
 				1D09CD5B1D3F59D500F85E9A /* UIImageView+HighlightedWebCache.m in Sources */,
 				1D09CC871D3F29C900F85E9A /* YYSpriteSheetImage.m in Sources */,
@@ -2793,6 +2853,7 @@
 				1DDE9E751D535DDA005926FE /* TTAddDiscussViewController.m in Sources */,
 				068E96521D4F488C0074229C /* MMDrawerBarButtonItem.m in Sources */,
 				1D9580721D3E1ADD00FD0053 /* MBProgressHUD.m in Sources */,
+				06008F281D58163100A5B3DB /* TTCommonSwitchItem.m in Sources */,
 				1D09CC851D3F29C900F85E9A /* YYImageCache.m in Sources */,
 				1D09CD171D3F550300F85E9A /* NSNumber+HYBHelperKit.m in Sources */,
 				1DA0E19F1D543F7B008CD6DF /* ProjectCell.m in Sources */,
@@ -2801,6 +2862,7 @@
 				1D9580AE1D3E207200FD0053 /* MJRefreshNormalHeader.m in Sources */,
 				06E026621D50439D00B9743B /* UserInfoView.m in Sources */,
 				1D09CD1B1D3F550300F85E9A /* NSUserDefaults+HYBHelperKit.m in Sources */,
+				06008F251D58163100A5B3DB /* TTCommonGroup.m in Sources */,
 				1D2E1AAB1D4C538B00C0CE0A /* TTAddContactorViewController.m in Sources */,
 				1D09CC621D3F29C900F85E9A /* NSNumber+YYAdd.m in Sources */,
 				2D9F21611D53445700262D00 /* HomeViewController.m in Sources */,
