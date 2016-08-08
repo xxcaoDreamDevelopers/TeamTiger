@@ -146,6 +146,8 @@
             [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
                 _selectedPhotos = [NSMutableArray arrayWithArray:photos];
                 _selectedAssets = [NSMutableArray arrayWithArray:assets];
+                [[SelectPhotosManger sharedInstance] setSelectPhotoes:[NSMutableArray arrayWithArray:photos]];
+                [[SelectPhotosManger sharedInstance] setSelectAssets:[NSMutableArray arrayWithArray:assets]];
                 _isSelectOriginalPhoto = isSelectOriginalPhoto;
                 _layout.itemCount = _selectedPhotos.count;
                 [_collectionView reloadData];
@@ -285,6 +287,8 @@
 - (void)deleteBtnClik:(UIButton *)sender {
     [_selectedPhotos removeObjectAtIndex:sender.tag];
     [_selectedAssets removeObjectAtIndex:sender.tag];
+    [[SelectPhotosManger sharedInstance] deleteAssetWithIndex:sender.tag];
+    [[SelectPhotosManger sharedInstance] deletePhotoeWithIndex:sender.tag];
     _layout.itemCount = _selectedPhotos.count;
     
     [_collectionView performBatchUpdates:^{

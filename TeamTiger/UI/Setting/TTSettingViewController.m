@@ -22,9 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"项目设置";
-    
+    WeakSelf;
     [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-        [Common customPopAnimationFromNavigation:self.navigationController Type:kCATransitionReveal SubType:kCATransitionFromRight];
+        [Common customPopAnimationFromNavigation:wself.navigationController Type:kCATransitionReveal SubType:kCATransitionFromRight];
     }];
     
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;

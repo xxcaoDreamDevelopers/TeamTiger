@@ -394,7 +394,7 @@ CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
 {
     if ([keyPath isEqualToString:@stringify(collectionView)]) {
         if (self.collectionView) {
-            [self addGestureRecognizers];
+//            [self addGestureRecognizers];
         }
         else {
             [self removeGestureRecognizers];

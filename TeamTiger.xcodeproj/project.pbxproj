@@ -2620,7 +2620,7 @@
 				TargetAttributes = {
 					1DA71B591D3DB5A1007483D2 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = FAT69R69RF;
+						DevelopmentTeam = 9WUQR88DQL;
 					};
 				};
 			};
@@ -3113,7 +3113,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -3131,7 +3131,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

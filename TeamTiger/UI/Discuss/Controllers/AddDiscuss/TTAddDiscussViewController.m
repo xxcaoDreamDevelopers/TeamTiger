@@ -309,6 +309,10 @@
                     }
                     [[SelectPhotosManger sharedInstance] addAsset:assetModel.asset];
                     [[SelectPhotosManger sharedInstance] addImage:image];
+                    [self.data removeAllObjects];
+                    [self setupGroup0];
+                    [self setupGroup1];
+                    [self.tableView reloadData];
 //                    [_selectedAssets addObject:assetModel.asset];
 //                    [_selectedPhotos addObject:image];
 //                    [_collectionView reloadData];

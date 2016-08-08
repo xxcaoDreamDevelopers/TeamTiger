@@ -35,6 +35,9 @@ static SelectPhotosManger *singleton = nil;
 
 - (void)addImage:(id)image {
     NSMutableArray *photoes = [[[TMCache sharedCache] memoryCache] objectForKey:SelectPhotoes_Cache_Key];
+    if (photoes == nil) {
+        photoes = [NSMutableArray array];
+    }
     [photoes addObject:image];
     [[[TMCache sharedCache] memoryCache] setObject:photoes forKey:SelectPhotoes_Cache_Key];
 }
@@ -61,6 +64,9 @@ static SelectPhotosManger *singleton = nil;
 
 - (void)addAsset:(id)asset{
     NSMutableArray *assets = [[[TMCache sharedCache] memoryCache] objectForKey:SelectAssets_Cache_Key];
+    if (assets == nil) {
+        assets = [NSMutableArray array];
+    }
     [assets addObject:asset];
     [[[TMCache sharedCache] memoryCache] setObject:assets forKey:SelectAssets_Cache_Key];
 }
