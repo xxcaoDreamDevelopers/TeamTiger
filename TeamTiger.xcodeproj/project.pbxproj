@@ -28,6 +28,7 @@
 		06008F4D1D582FA500A5B3DB /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F4A1D582FA500A5B3DB /* LxGridViewFlowLayout.m */; };
 		06008F4E1D582FA500A5B3DB /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F4C1D582FA500A5B3DB /* TZTestCell.m */; };
 		06008F511D582FD300A5B3DB /* AddImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F501D582FD300A5B3DB /* AddImageViewController.m */; };
+		06008F571D585C9500A5B3DB /* SelectPhotosManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 06008F561D585C9500A5B3DB /* SelectPhotosManger.m */; };
 		0604B4641D4C5A5B00EF1703 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B45D1D4C5A5B00EF1703 /* AKPickerView.m */; };
 		0604B4651D4C5A5B00EF1703 /* CCDraggableCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4601D4C5A5B00EF1703 /* CCDraggableCardView.m */; };
 		0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0604B4631D4C5A5B00EF1703 /* CCDraggableContainer.m */; };
@@ -408,6 +409,8 @@
 		06008F4C1D582FA500A5B3DB /* TZTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestCell.m; sourceTree = "<group>"; };
 		06008F4F1D582FD300A5B3DB /* AddImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageViewController.h; sourceTree = "<group>"; };
 		06008F501D582FD300A5B3DB /* AddImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageViewController.m; sourceTree = "<group>"; };
+		06008F551D585C9500A5B3DB /* SelectPhotosManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhotosManger.h; sourceTree = "<group>"; };
+		06008F561D585C9500A5B3DB /* SelectPhotosManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhotosManger.m; sourceTree = "<group>"; };
 		0604B45C1D4C5A5B00EF1703 /* AKPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPickerView.h; sourceTree = "<group>"; };
 		0604B45D1D4C5A5B00EF1703 /* AKPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPickerView.m; sourceTree = "<group>"; };
 		0604B45F1D4C5A5B00EF1703 /* CCDraggableCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDraggableCardView.h; sourceTree = "<group>"; };
@@ -1116,6 +1119,22 @@
 				06008F501D582FD300A5B3DB /* AddImageViewController.m */,
 			);
 			path = AddImage;
+			sourceTree = "<group>";
+		};
+		06008F531D585C0E00A5B3DB /* CirclesManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CirclesManager;
+			sourceTree = "<group>";
+		};
+		06008F541D585C0E00A5B3DB /* SelectPhotosManger */ = {
+			isa = PBXGroup;
+			children = (
+				06008F551D585C9500A5B3DB /* SelectPhotosManger.h */,
+				06008F561D585C9500A5B3DB /* SelectPhotosManger.m */,
+			);
+			path = SelectPhotosManger;
 			sourceTree = "<group>";
 		};
 		0604B45B1D4C5A5B00EF1703 /* AKPickerView */ = {
@@ -2178,6 +2197,8 @@
 		1DA71B741D3DB618007483D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				06008F531D585C0E00A5B3DB /* CirclesManager */,
+				06008F541D585C0E00A5B3DB /* SelectPhotosManger */,
 				1D5D5FF01D4EE703007123EB /* CacheManager */,
 				1D9408661D41BE19009E2E11 /* MessageManager */,
 				1D9408621D41B9C0009E2E11 /* NetworkManager */,
@@ -2719,6 +2740,7 @@
 				1D09CD631D3F59D500F85E9A /* SDWebImagePrefetcher.m in Sources */,
 				1D09CD281D3F550300F85E9A /* UIActionSheet+HYBHelperKit.m in Sources */,
 				1D09CD161D3F550300F85E9A /* NSMutableDictionary+HYBHelperKit.m in Sources */,
+				06008F571D585C9500A5B3DB /* SelectPhotosManger.m in Sources */,
 				064C0C181D51E0F400D8E639 /* TTTabBarViewController.m in Sources */,
 				1DB5A5701D4B3EF1009E6170 /* TTFadeSwitch.m in Sources */,
 				1D115F891D4BA043003DFBB1 /* IQUIView+Hierarchy.m in Sources */,

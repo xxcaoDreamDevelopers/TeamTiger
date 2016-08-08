@@ -86,6 +86,7 @@
 - (void)handleRightBtnAction {
     
     TTAddDiscussViewController *addDiscussVC = [[TTAddDiscussViewController alloc] init];
+//    [self.navigationController pushViewController:addDiscussVC animated:YES];
     [Common customPushAnimationFromNavigation:self.navigationController ToViewController:addDiscussVC Type:kCATransitionMoveIn SubType:kCATransitionFromTop];
 }
 

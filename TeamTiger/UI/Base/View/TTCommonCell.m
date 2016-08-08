@@ -13,6 +13,15 @@
 #import "TTCommonLabelItem.h"
 #import "TTCommonTextViewItem.h"
 #import "UITextView+PlaceHolder.h"
+
+typedef enum : NSUInteger {
+    TTCommonCellLabel = 0,
+    TTCommonCellArrow,
+    TTCommonCellSwitch,
+    TTCommonCellTextView,
+    TTCommonCellDefual,
+} TTCommonCellType;
+
 @interface TTCommonCell()<UITextViewDelegate>
 
 /**
@@ -39,6 +48,7 @@
 
 @property (nonatomic, weak) UIView *divider;
 
+@property (nonatomic, assign)TTCommonCellType cellType;
 @end
 
 @implementation TTCommonCell
@@ -62,7 +72,7 @@
         _textView.font = [UIFont systemFontOfSize:15];
         _textView.backgroundColor = [UIColor clearColor];
         _textView.tintColor = [UIColor whiteColor];
-        self.textView.maxLength = 200;//最大字数
+        _textView.maxLength = 200;//最大字数
     }
     return _textView;
 
@@ -104,6 +114,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // 初始化操作
+        self.cellType = TTCommonCellLabel;
         [self.contentView addSubview:self.labelView];
         // 1.初始化背景
         [self setupBg];
@@ -188,6 +199,9 @@
     return cell;
 }
 
+- (void)dealloc {
+//    self.textView.delegate = nil;
+}
 /**
  *  拦截frame的设置
  */
@@ -211,7 +225,7 @@
         make.width.mas_equalTo(40);
     }];
     
-    if (self.textView.superview) {
+    if (self.cellType == TTCommonCellTextView) {
         [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.centerY.equalTo(self.contentView);
             make.left.equalTo(self.labelView.mas_right).offset(kDistanceToHSide*0.5);
@@ -221,7 +235,7 @@
         }];
     }
     
-    if (self.arrowView.superview) {
+    if (self.cellType == TTCommonCellArrow) {
         [self.arrowView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(self.contentView);
             make.width.mas_equalTo(8);
@@ -293,9 +307,11 @@
 - (void)setupRightContent
 {
     if ([self.item isKindOfClass:[TTCommonArrowItem class]]) { // 箭头
+        self.cellType = TTCommonCellArrow;
         [self.contentView addSubview:self.arrowView];
         self.selectionStyle = UITableViewCellSelectionStyleDefault;
     } else if ([self.item isKindOfClass:[TTCommonSwitchItem class]]) { // 开关
+        self.cellType = TTCommonCellSwitch;
         [self.contentView addSubview:self.switchView];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
 
@@ -303,15 +319,16 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         self.switchView.on = [defaults boolForKey:self.item.title];
     } else if ([self.item isKindOfClass:[TTCommonLabelItem class]]) { // 标签
-
+        self.cellType = TTCommonCellLabel;
     } else if ([self.item isKindOfClass:[TTCommonTextViewItem class]]){
-
+        self.cellType = TTCommonCellTextView;
         [self.contentView addSubview:self.textView];
         TTCommonTextViewItem *item = (TTCommonTextViewItem *)self.item;
         self.textView.placeholder = item.placeholder;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
     } else {
+        self.cellType = TTCommonCellDefual;
         self.accessoryView = nil;
         self.selectionStyle = UITableViewCellSelectionStyleDefault;
     }

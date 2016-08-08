@@ -19,13 +19,14 @@
 #import "TZImageManager.h"
 #import "TZVideoPlayerController.h"
 #import "AddImageViewController.h"
+#import "SelectPhotosManger.h"
 
 @interface TTAddDiscussViewController ()<TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *data;
 
-@property (nonatomic, strong) NSMutableArray *selectedPhotos;
-@property (nonatomic, strong) NSMutableArray *selectedAssets;
+//@property (nonatomic, strong) NSMutableArray *selectedPhotos;
+//@property (nonatomic, strong) NSMutableArray *selectedAssets;
 @property (nonatomic, assign) BOOL isSelectOriginalPhoto;
 
 @property (nonatomic, strong) UIImagePickerController *imagePickerVc;
@@ -38,8 +39,9 @@
     self.title = @"发起讨论";
     self.isSelectOriginalPhoto = YES;
     [Common removeExtraCellLines:self.tableView];
+    WeakSelf;
     [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-        [Common customPopAnimationFromNavigation:self.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
+        [Common customPopAnimationFromNavigation:wself.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
     }];
     
     
@@ -47,9 +49,16 @@
     self.tableView.estimatedRowHeight = 77;
     //    self.tableView.rowHeight = 77;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    // 2.添加数据
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.data removeAllObjects];
+    // 0.添加数据
     [self setupGroup0];
     [self setupGroup1];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +66,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [[SelectPhotosManger sharedInstance] cleanSelectAssets];
+    [[SelectPhotosManger sharedInstance] cleanSelectPhotoes];
+}
 /**
  *  第0组数据
  */
@@ -75,10 +88,12 @@
 - (void)setupGroup1
 {
     TTCommonItem *tag = [TTCommonArrowItem itemWithTitle:@"标签" subtitle:@"工作牛" destVcClass:nil];
-    TTCommonItem *attachment = [TTCommonArrowItem itemWithTitle:@"附件" subtitle:@"0" destVcClass:nil];
+    NSString *attachmentSub = [NSString stringWithFormat:@"%ld", [[[SelectPhotosManger sharedInstance] getAssets] count]];
+    TTCommonItem *attachment = [TTCommonArrowItem itemWithTitle:@"附件" subtitle:attachmentSub destVcClass:nil];
     WeakSelf;
     attachment.option = ^{
-        if (wself.selectedPhotos.count == 0) {
+        NSMutableArray *selectAssets = [[SelectPhotosManger sharedInstance] getAssets];
+        if (selectAssets == nil || selectAssets.count == 0) {
             UIActionSheet *sheet = [UIActionSheet hyb_showInView:wself.view title:nil cancelTitle:@"取消" destructiveTitle:nil otherTitles:@[@"拍照",@"去相册选择"] callback:^(UIActionSheet *actionSheet, NSUInteger buttonIndex) {
                 if (buttonIndex == 0) { // take photo / 去拍照
                     [wself takePhoto];
@@ -89,8 +104,6 @@
             sheet.actionSheetStyle = UIActionSheetStyleDefault;
         } else {
             AddImageViewController *addImageVC = [[AddImageViewController alloc] init];
-            addImageVC.selectedPhotos = self.selectedPhotos;
-            addImageVC.selectedAssets = self.selectedAssets;
             [wself.navigationController pushViewController:addImageVC animated:YES];
         }
     };
@@ -109,19 +122,19 @@
     return _data;
 }
 
-- (NSMutableArray *)selectedPhotos {
-    if (_selectedPhotos == nil) {
-        _selectedPhotos = [NSMutableArray array];
-    }
-    return _selectedPhotos;
-}
-
-- (NSMutableArray *)selectedAssets {
-    if (_selectedAssets == nil) {
-        _selectedAssets = [NSMutableArray array];
-    }
-    return _selectedAssets;
-}
+//- (NSMutableArray *)selectedPhotos {
+//    if (_selectedPhotos == nil) {
+//        _selectedPhotos = [NSMutableArray array];
+//    }
+//    return _selectedPhotos;
+//}
+//
+//- (NSMutableArray *)selectedAssets {
+//    if (_selectedAssets == nil) {
+//        _selectedAssets = [NSMutableArray array];
+//    }
+//    return _selectedAssets;
+//}
 
 - (UIImagePickerController *)imagePickerVc {
     if (_imagePickerVc == nil) {
@@ -226,7 +239,8 @@
     imagePickerVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
     
     // 1.如果你需要将拍照按钮放在外面，不要传这个参数
-    imagePickerVc.selectedAssets = _selectedAssets; // optional, 可选的
+//    imagePickerVc.selectedAssets = _selectedAssets; // optional, 可选的
+    imagePickerVc.selectedAssets = [[SelectPhotosManger sharedInstance] getAssets]; // optional, 可选的
 //    imagePickerVc.allowTakePicture = self.showTakePhotoBtnSwitch.isOn; // 在内部显示拍照按钮
     
     // 2. Set the appearance
@@ -293,8 +307,10 @@
                     if (tzImagePickerVc.sortAscendingByModificationDate) {
                         assetModel = [models lastObject];
                     }
-                    [_selectedAssets addObject:assetModel.asset];
-                    [_selectedPhotos addObject:image];
+                    [[SelectPhotosManger sharedInstance] addAsset:assetModel.asset];
+                    [[SelectPhotosManger sharedInstance] addImage:image];
+//                    [_selectedAssets addObject:assetModel.asset];
+//                    [_selectedPhotos addObject:image];
 //                    [_collectionView reloadData];
                 }];
             }];
@@ -323,8 +339,10 @@
 // 你可以通过一个asset获得原图，通过这个方法：[[TZImageManager manager] getOriginalPhotoWithAsset:completion:]
 // photos数组里的UIImage对象，默认是828像素宽，你可以通过设置photoWidth属性的值来改变它
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto {
-    _selectedPhotos = [NSMutableArray arrayWithArray:photos];
-    _selectedAssets = [NSMutableArray arrayWithArray:assets];
+    [[SelectPhotosManger sharedInstance] setSelectPhotoes:[NSMutableArray arrayWithArray:photos]];
+    [[SelectPhotosManger sharedInstance] setSelectAssets:[NSMutableArray arrayWithArray:assets]];
+//    _selectedPhotos = [NSMutableArray arrayWithArray:photos];
+//    _selectedAssets = [NSMutableArray arrayWithArray:assets];
     _isSelectOriginalPhoto = isSelectOriginalPhoto;
     // _collectionView.contentSize = CGSizeMake(0, ((_selectedPhotos.count + 2) / 3 ) * (_margin + _itemWH));
 }
@@ -334,8 +352,8 @@
 // 如果用户选择了一个视频，下面的handle会被执行
 // 如果系统版本大于iOS8，asset是PHAsset类的对象，否则是ALAsset类的对象
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingVideo:(UIImage *)coverImage sourceAssets:(id)asset {
-    _selectedPhotos = [NSMutableArray arrayWithArray:@[coverImage]];
-    _selectedAssets = [NSMutableArray arrayWithArray:@[asset]];
+//    _selectedPhotos = [NSMutableArray arrayWithArray:@[coverImage]];
+//    _selectedAssets = [NSMutableArray arrayWithArray:@[asset]];
     // open this code to send video / 打开这段代码发送视频
     // [[TZImageManager manager] getVideoOutputPathWithAsset:asset completion:^(NSString *outputPath) {
     // NSLog(@"视频导出到本地完成,沙盒路径为:%@",outputPath);
