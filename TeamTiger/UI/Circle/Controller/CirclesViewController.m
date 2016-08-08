@@ -339,18 +339,21 @@ CCDraggableContainerDelegate>
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer cardView:(CCDraggableCardView *)cardView didSelectIndex:(NSInteger)didSelectIndex {
     
     NSLog(@"点击了Tag为%ld的Card", (long)didSelectIndex);
-    
-    TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
-    //    HomeViewController *homeVC = (HomeViewController *)nav.topViewController;
-    
     didSelectIndex = didSelectIndex % (self.dataSources.count);
     
-    mainTab.selectedIndex = didSelectIndex;
+    
+//    TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
+//
+//    mainTab.selectedIndex = didSelectIndex;
     //    if (self.homeVCs[didSelectIndex] != nav.topViewController) {
     //        [nav popViewControllerAnimated:NO];
     //        [nav pushViewController:self.homeVCs[didSelectIndex] animated:NO];
     //    }
     
+    TTBaseNavigationController *mainNav = (TTBaseNavigationController *)self.mm_drawerController.centerViewController;
+    HomeViewController *homeVC = (HomeViewController *)mainNav.topViewController;
+    //刷新数据
+    homeVC.title = self.titles[didSelectIndex];
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         
     }];

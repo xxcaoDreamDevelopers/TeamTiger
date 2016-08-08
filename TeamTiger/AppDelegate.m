@@ -74,17 +74,20 @@
     
     CirclesViewController *circleVC = [[CirclesViewController alloc] init];
     
-    NSMutableArray *homeVCs = [NSMutableArray array];
-    for (NSString *title in circleVC.titles) {
-        HomeViewController *homeVC = [[HomeViewController alloc] init];
-        homeVC.title = title;
-        [homeVCs addObject:homeVC];
-    }
+//    NSMutableArray *homeVCs = [NSMutableArray array];
+//    for (NSString *title in circleVC.titles) {
+//        HomeViewController *homeVC = [[HomeViewController alloc] init];
+//        homeVC.title = title;
+//        [homeVCs addObject:homeVC];
+//    }
     
-    TTTabBarViewController *mainTab = [[TTTabBarViewController alloc] initWithChildViewControllers:homeVCs];
+//    TTTabBarViewController *mainTab = [[TTTabBarViewController alloc] initWithChildViewControllers:homeVCs];
     
+    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    
+    TTBaseNavigationController *mainNav = [[TTBaseNavigationController alloc] initWithRootViewController:homeVC];
     MMDrawerController *drawerController = [[MMDrawerController alloc]
-                                            initWithCenterViewController:mainTab
+                                            initWithCenterViewController:mainNav
                                             leftDrawerViewController:nil
                                             rightDrawerViewController:circleVC];
     [drawerController setShowsShadow:YES];
@@ -98,10 +101,11 @@
         BOOL shouldRecognizeTouch = NO;
         if(drawerController.openSide == MMDrawerSideNone &&
            [gesture isKindOfClass:[UIPanGestureRecognizer class]]){
-            TTTabBarViewController *mainTab = (TTTabBarViewController *)drawerController.centerViewController;
-            UINavigationController *nav = (UINavigationController *)mainTab.selectedViewController;
+//            TTTabBarViewController *mainTab = (TTTabBarViewController *)drawerController.centerViewController;
+            TTBaseNavigationController *mainNav = (TTBaseNavigationController *)drawerController.centerViewController;
+//            UINavigationController *nav = (UINavigationController *)mainTab.selectedViewController;
             //判断哪个控制器可以滑到抽屉
-            if([nav.topViewController isKindOfClass:[HomeViewController class]]
+            if([mainNav.topViewController isKindOfClass:[HomeViewController class]]
                )
             {
                 shouldRecognizeTouch = YES;//返回yes表示可以滑动到左右侧抽屉
