@@ -10,6 +10,7 @@
 #import "ProjectCell.h"
 #import "IQKeyboardManager.h"
 #import "TTAddContactorViewController.h"
+#import "TTPickerView.h"
 @interface TTSettingViewController ()
 
 @property(nonatomic,strong)NSMutableArray *dataSource;
@@ -55,7 +56,36 @@
     [cell reloadCellData:dic];
     cell.block = ^(ProjectCell *cell,int type){
         if (type == EProjectSelect) {
-            NSLog(@"点击选择项目");
+            TTPickerView *picker = [[TTPickerView alloc] initWithDatas:@[@"工作牛",@"易会",@"MPP",@"电动汽车"] SelectBlock:^(TTPickerView *view, id selObj) {
+                NSLog(@"%@",selObj);
+                NSMutableDictionary *mDic = [NSMutableDictionary dictionaryWithDictionary:self.dataSource.firstObject];
+                mDic[@"Description"] = selObj;
+                [self.dataSource replaceObjectAtIndex:0 withObject:mDic];
+                [self.contentTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+            } TapBlock:^(TTPickerView *view) {
+                [UIView animateWithDuration:0.3 animations:^{
+                    [view mas_updateConstraints:^(MASConstraintMaker *make) {
+                        make.top.mas_equalTo(self.view.mas_top).offset(200);
+                    }];
+                    [self.view layoutIfNeeded];
+                } completion:^(BOOL finished) {
+                    [view removeFromSuperview];
+                }];
+            }];
+            [self.view addSubview:picker];
+            [picker mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.mas_equalTo(self.view.mas_left);
+                make.top.mas_equalTo(self.view.mas_top).offset(200);
+                make.height.equalTo(self.view.mas_height);
+                make.width.equalTo(self.view.mas_width);
+            }];
+            [self.view layoutIfNeeded];
+            [UIView animateWithDuration:0.3 animations:^{
+                [picker mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(self.view.mas_top);
+                }];
+                [self.view layoutIfNeeded];
+            }];
         } else if (type == EProjectAddMember){
             NSLog(@"跳转微信，增加人员");
         } else if (type == EProjectDleteProject){

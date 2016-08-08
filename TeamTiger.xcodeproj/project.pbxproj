@@ -228,6 +228,7 @@
 		1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF21D4EE72E007123EB /* CacheManager.m */; };
 		1D5D5FF61D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF51D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m */; };
 		1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5D5FF71D4EFADD007123EB /* AddressBook.framework */; };
+		1D6D02CB1D58139F00EE0C2E /* TTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */; };
 		1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408641D41BA47009E2E11 /* NetworkManager.m */; };
 		1D9408691D41BE2D009E2E11 /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408681D41BE2D009E2E11 /* MessageManager.m */; };
 		1D9580361D3E123800FD0053 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95802A1D3E123800FD0053 /* AFHTTPSessionManager.m */; };
@@ -793,6 +794,8 @@
 		1D5D5FF41D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTAddContactorViewController+AddressBook.h"; sourceTree = "<group>"; };
 		1D5D5FF51D4EF9EF007123EB /* TTAddContactorViewController+AddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTAddContactorViewController+AddressBook.m"; sourceTree = "<group>"; };
 		1D5D5FF71D4EFADD007123EB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		1D6D02C91D58139E00EE0C2E /* TTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPickerView.h; sourceTree = "<group>"; };
+		1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPickerView.m; sourceTree = "<group>"; };
 		1D9408631D41BA47009E2E11 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		1D9408641D41BA47009E2E11 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		1D9408671D41BE2D009E2E11 /* MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
@@ -1845,6 +1848,7 @@
 		1D55FD901D49AA8200094112 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D6D02C81D58137500EE0C2E /* TTPickerView */,
 				1DA0E1A51D547778008CD6DF /* ItemView */,
 				1DA0E19A1D543F7B008CD6DF /* ProjectCell */,
 				1DA0E1901D542422008CD6DF /* ProfileCell */,
@@ -1871,6 +1875,15 @@
 				1D5D5FF21D4EE72E007123EB /* CacheManager.m */,
 			);
 			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		1D6D02C81D58137500EE0C2E /* TTPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				1D6D02C91D58139E00EE0C2E /* TTPickerView.h */,
+				1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */,
+			);
+			path = TTPickerView;
 			sourceTree = "<group>";
 		};
 		1D9408621D41B9C0009E2E11 /* NetworkManager */ = {
@@ -2750,6 +2763,7 @@
 				1D09CC651D3F29C900F85E9A /* NSObject+YYAddForKVO.m in Sources */,
 				1D9580D31D3E225200FD0053 /* MASConstraint.m in Sources */,
 				1D09CD551D3F59D500F85E9A /* MKAnnotationView+WebCache.m in Sources */,
+				1D6D02CB1D58139F00EE0C2E /* TTPickerView.m in Sources */,
 				1D115F8A1D4BA043003DFBB1 /* IQUIViewController+Additions.m in Sources */,
 				1D09CCA51D3F29C900F85E9A /* YYReachability.m in Sources */,
 				1D09CC8E1D3F29C900F85E9A /* YYTextEffectWindow.m in Sources */,
