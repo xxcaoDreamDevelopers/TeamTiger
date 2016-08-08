@@ -49,10 +49,23 @@
     return self.dataSources.count;
 }
 
-- (nullable NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    NSString *srcStr = self.dataSources[row];
-    NSAttributedString *attributedStr = [[NSAttributedString alloc] initWithString:srcStr attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    return attributedStr;
+- (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return self.dataSources[row];
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel *pickerLabel = (UILabel*)view;
+    if (!pickerLabel){
+        pickerLabel = [[UILabel alloc] init];
+        pickerLabel.minimumScaleFactor = 8.0;
+        pickerLabel.adjustsFontSizeToFitWidth = YES;
+        pickerLabel.textAlignment = NSTextAlignmentCenter;
+        pickerLabel.backgroundColor = [UIColor clearColor];
+        pickerLabel.font = [UIFont boldSystemFontOfSize:18.0];
+        pickerLabel.textColor = [UIColor whiteColor];
+    }
+    pickerLabel.text = [self pickerView:pickerView titleForRow:row forComponent:component];
+    return pickerLabel;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {

@@ -15,6 +15,8 @@
 
 @property(nonatomic,strong)NSMutableArray *dataSource;
 
+@property(nonatomic,strong)TTPickerView *ttPicker;
+
 @end
 
 @implementation TTSettingViewController
@@ -30,12 +32,6 @@
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 3;
@@ -56,36 +52,7 @@
     [cell reloadCellData:dic];
     cell.block = ^(ProjectCell *cell,int type){
         if (type == EProjectSelect) {
-            TTPickerView *picker = [[TTPickerView alloc] initWithDatas:@[@"工作牛",@"易会",@"MPP",@"电动汽车"] SelectBlock:^(TTPickerView *view, id selObj) {
-                NSLog(@"%@",selObj);
-                NSMutableDictionary *mDic = [NSMutableDictionary dictionaryWithDictionary:self.dataSource.firstObject];
-                mDic[@"Description"] = selObj;
-                [self.dataSource replaceObjectAtIndex:0 withObject:mDic];
-                [self.contentTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
-            } TapBlock:^(TTPickerView *view) {
-                [UIView animateWithDuration:0.3 animations:^{
-                    [view mas_updateConstraints:^(MASConstraintMaker *make) {
-                        make.top.mas_equalTo(self.view.mas_top).offset(200);
-                    }];
-                    [self.view layoutIfNeeded];
-                } completion:^(BOOL finished) {
-                    [view removeFromSuperview];
-                }];
-            }];
-            [self.view addSubview:picker];
-            [picker mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.mas_equalTo(self.view.mas_left);
-                make.top.mas_equalTo(self.view.mas_top).offset(200);
-                make.height.equalTo(self.view.mas_height);
-                make.width.equalTo(self.view.mas_width);
-            }];
-            [self.view layoutIfNeeded];
-            [UIView animateWithDuration:0.3 animations:^{
-                [picker mas_updateConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(self.view.mas_top);
-                }];
-                [self.view layoutIfNeeded];
-            }];
+            [self ttPicker];
         } else if (type == EProjectAddMember){
             NSLog(@"跳转微信，增加人员");
         } else if (type == EProjectDleteProject){
@@ -131,6 +98,45 @@
       @"Color":[UIColor clearColor]}].mutableCopy;
     }
     return  _dataSource;
+}
+
+
+- (TTPickerView *)ttPicker {
+    if (!_ttPicker) {
+        WeakSelf;
+        _ttPicker = [[TTPickerView alloc] initWithDatas:@[@"工作牛",@"易会",@"MPP",@"电动汽车"] SelectBlock:^(TTPickerView *view, id selObj) {
+            NSLog(@"%@",selObj);
+            NSMutableDictionary *mDic = [NSMutableDictionary dictionaryWithDictionary:wself.dataSource.firstObject];
+            mDic[@"Description"] = selObj;
+            [wself.dataSource replaceObjectAtIndex:0 withObject:mDic];
+            [wself.contentTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+        } TapBlock:^(TTPickerView *view) {
+            [UIView animateWithDuration:0.3 animations:^{
+                [view mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.top.mas_equalTo(wself.view.mas_top).offset(200);
+                }];
+                [wself.view layoutIfNeeded];
+            } completion:^(BOOL finished) {
+                [view removeFromSuperview];
+                _ttPicker = nil;
+            }];
+        }];
+        [wself.view addSubview:_ttPicker];
+        [_ttPicker mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(wself.view.mas_left);
+            make.top.mas_equalTo(wself.view.mas_top).offset(200);
+            make.height.equalTo(wself.view.mas_height);
+            make.width.equalTo(wself.view.mas_width);
+        }];
+        [wself.view layoutIfNeeded];
+        [UIView animateWithDuration:0.3 animations:^{
+            [wself.ttPicker mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(wself.view.mas_top);
+            }];
+            [wself.view layoutIfNeeded];
+        }];
+    }
+    return _ttPicker;
 }
 
 @end
