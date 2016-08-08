@@ -100,9 +100,13 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TZTestCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TZTestCell" forIndexPath:indexPath];
     cell.videoImageView.hidden = YES;
+    cell.hidden = NO;
     if (indexPath.row == _selectedPhotos.count) {
         cell.imageView.image = [UIImage imageNamed:@"AlbumAddBtn.png"];
         cell.deleteBtn.hidden = YES;
+        if (_selectedAssets.count == kMaxImagesCount) {
+            cell.hidden = YES;
+        }
     } else {
         cell.imageView.image = _selectedPhotos[indexPath.row];
         cell.asset = _selectedAssets[indexPath.row];
@@ -144,10 +148,10 @@
 //            imagePickerVc.allowPickingOriginalPhoto = self.allowPickingOriginalPhotoSwitch.isOn;
             imagePickerVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
             [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
-                _selectedPhotos = [NSMutableArray arrayWithArray:photos];
-                _selectedAssets = [NSMutableArray arrayWithArray:assets];
                 [[SelectPhotosManger sharedInstance] setSelectPhotoes:[NSMutableArray arrayWithArray:photos]];
                 [[SelectPhotosManger sharedInstance] setSelectAssets:[NSMutableArray arrayWithArray:assets]];
+                _selectedPhotos = [[SelectPhotosManger sharedInstance] getPhotoes];
+                _selectedAssets = [[SelectPhotosManger sharedInstance] getAssets];
                 _isSelectOriginalPhoto = isSelectOriginalPhoto;
                 _layout.itemCount = _selectedPhotos.count;
                 [_collectionView reloadData];
@@ -158,15 +162,15 @@
     }
 }
 
-- (void)collectionView:(UICollectionView *)collectionView itemAtIndexPath:(NSIndexPath *)sourceIndexPath didMoveToIndexPath:(NSIndexPath *)destinationIndexPath {
-    if (sourceIndexPath.item >= _selectedPhotos.count || destinationIndexPath.item >= _selectedPhotos.count) return;
-    UIImage *image = _selectedPhotos[sourceIndexPath.item];
-    if (image) {
-        [_selectedPhotos exchangeObjectAtIndex:sourceIndexPath.item withObjectAtIndex:destinationIndexPath.item];
-        [_selectedAssets exchangeObjectAtIndex:sourceIndexPath.item withObjectAtIndex:destinationIndexPath.item];
-        [_collectionView reloadData];
-    }
-}
+//- (void)collectionView:(UICollectionView *)collectionView itemAtIndexPath:(NSIndexPath *)sourceIndexPath didMoveToIndexPath:(NSIndexPath *)destinationIndexPath {
+//    if (sourceIndexPath.item >= _selectedPhotos.count || destinationIndexPath.item >= _selectedPhotos.count) return;
+//    UIImage *image = _selectedPhotos[sourceIndexPath.item];
+//    if (image) {
+//        [_selectedPhotos exchangeObjectAtIndex:sourceIndexPath.item withObjectAtIndex:destinationIndexPath.item];
+//        [_selectedAssets exchangeObjectAtIndex:sourceIndexPath.item withObjectAtIndex:destinationIndexPath.item];
+//        [_collectionView reloadData];
+//    }
+//}
 
 #pragma mark - TZImagePickerController
 
@@ -177,7 +181,7 @@
     imagePickerVc.isSelectOriginalPhoto = _isSelectOriginalPhoto;
     
     // 1.如果你需要将拍照按钮放在外面，不要传这个参数
-    imagePickerVc.selectedAssets = _selectedAssets; // optional, 可选的
+    imagePickerVc.selectedAssets = [[SelectPhotosManger sharedInstance] getAssets]; // optional, 可选的
     imagePickerVc.allowTakePicture = YES; // 在内部显示拍照按钮
     
     // 2. Set the appearance
@@ -242,8 +246,12 @@
                     if (tzImagePickerVc.sortAscendingByModificationDate) {
                         assetModel = [models lastObject];
                     }
-                    [_selectedAssets addObject:assetModel.asset];
-                    [_selectedPhotos addObject:image];
+//                    [_selectedAssets addObject:assetModel.asset];
+//                    [_selectedPhotos addObject:image];
+                    [[SelectPhotosManger sharedInstance] addAsset:assetModel.asset];
+                    [[SelectPhotosManger sharedInstance] addImage:image];
+                    _selectedPhotos = [[SelectPhotosManger sharedInstance] getPhotoes];
+                    _selectedAssets = [[SelectPhotosManger sharedInstance] getAssets];
                     [_collectionView reloadData];
                 }];
             }];
@@ -274,8 +282,10 @@
 - (void)imagePickerController:(TZImagePickerController *)picker didFinishPickingPhotos:(NSArray *)photos sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto {
     [[SelectPhotosManger sharedInstance] setSelectPhotoes:[NSMutableArray arrayWithArray:photos]];
     [[SelectPhotosManger sharedInstance] setSelectAssets:[NSMutableArray arrayWithArray:assets]];
-    _selectedPhotos = [NSMutableArray arrayWithArray:photos];
-    _selectedAssets = [NSMutableArray arrayWithArray:assets];
+    _selectedPhotos = [[SelectPhotosManger sharedInstance] getPhotoes];
+    _selectedAssets = [[SelectPhotosManger sharedInstance] getAssets];
+//    _selectedPhotos = [NSMutableArray arrayWithArray:photos];
+//    _selectedAssets = [NSMutableArray arrayWithArray:assets];
     _isSelectOriginalPhoto = isSelectOriginalPhoto;
     _layout.itemCount = _selectedPhotos.count;
     [_collectionView reloadData];
@@ -285,10 +295,12 @@
 #pragma mark Click Event
 
 - (void)deleteBtnClik:(UIButton *)sender {
-    [_selectedPhotos removeObjectAtIndex:sender.tag];
-    [_selectedAssets removeObjectAtIndex:sender.tag];
+//    [_selectedPhotos removeObjectAtIndex:sender.tag];
+//    [_selectedAssets removeObjectAtIndex:sender.tag];
     [[SelectPhotosManger sharedInstance] deleteAssetWithIndex:sender.tag];
     [[SelectPhotosManger sharedInstance] deletePhotoeWithIndex:sender.tag];
+    _selectedPhotos = [[SelectPhotosManger sharedInstance] getPhotoes];
+    _selectedAssets = [[SelectPhotosManger sharedInstance] getAssets];
     _layout.itemCount = _selectedPhotos.count;
     
     [_collectionView performBatchUpdates:^{
