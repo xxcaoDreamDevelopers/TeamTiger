@@ -34,5 +34,6 @@ typedef NS_ENUM(NSInteger, ProjectType) {
 @property (assign, nonatomic) BOOL isClick;
 
 @property (assign, nonatomic) NSInteger projectType;
+@property (strong, nonatomic) NSMutableArray *comment;
 
 @end

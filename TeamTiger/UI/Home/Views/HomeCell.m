@@ -60,19 +60,19 @@
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    HomeDetailCellModel *model = self.manager.dataSource[self.manager.index];
-    if (tableView.tag == 1000) {
-        if (model.isClick) {
-            return self.manager.dataSource.count;
-        }else {
-            return 3;
-        }
+    HomeCellModel *cellModel = self.manager.dataSource[0];
+    HomeDetailCellModel *model = cellModel.comment[self.manager.index];
+    if (model.isClick) {
+        return cellModel.comment.count;
+    }else {
+        return 3;
     }
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeDetailCellModel *model = self.manager.dataSource[indexPath.row];
+    HomeCellModel *cellModel = self.manager.dataSource[0];
+    HomeDetailCellModel *model = cellModel.comment[indexPath.row];
     if (model.typeCell == TypeCellImage) {
         HomeDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier"];
         [cell configureCellWithModel:model];
@@ -81,15 +81,10 @@
         HomeDetailCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier1"];
         cell.moreBtn.indexPath = indexPath;
         cell.clickMoreBtn = ^() {
-#warning 未完待续.....
-            if (tableView.tag == 1000) {
-                model.isClick = !model.isClick;
-                self.manager.index = indexPath.row;
-                model.typeCell = TypeCellTitleNoButton;
-                [self.manager.dataSource removeObject:model];
-                [self.manager.dataSource insertObject:model atIndex:indexPath.row];
-                [tableView reloadData];
-            }
+            self.manager.index = indexPath.row;
+            model.isClick = !model.isClick;
+            model.typeCell = TypeCellTitleNoButton;
+            [tableView reloadData];
             CGFloat height = self.tableView.contentSize.height;
             [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@(height)];
         };
@@ -101,7 +96,7 @@
         return cell;
     }else if (model.typeCell == TypeCellTitleNoButton) {
         HomeDetailCell3 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier3"];
-        if (indexPath.row == self.manager.dataSource.count - 1) {
+        if (indexPath.row == cellModel.comment.count - 1) {
             cell.lineView2.hidden = YES;
         }
         [cell configureCellWithModel:model];
@@ -112,7 +107,8 @@
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HomeDetailCellModel *model = self.manager.dataSource[indexPath.row];
+    HomeCellModel *cellModel = self.manager.dataSource[indexPath.section];
+    HomeDetailCellModel *model = cellModel.comment[indexPath.row];
     switch (model.typeCell) {
         case TypeCellImage:
             return 160;

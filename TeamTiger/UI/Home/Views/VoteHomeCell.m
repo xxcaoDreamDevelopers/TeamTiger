@@ -8,11 +8,28 @@
 
 #import "VoteHomeCell.h"
 
+@interface VoteHomeCell ()
+
+@property (strong, nonatomic) DataManager *manager;
+@end
+
 @implementation VoteHomeCell
+
+- (DataManager *)manager {
+    if (_manager == nil) {
+        _manager = [DataManager mainSingleton];
+    }
+    return _manager;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [Common removeExtraCellLines:self.tableView];
+    [self.tableView registerNib:[UINib nibWithNibName:@"HomeDetailCell4" bundle:nil] forCellReuseIdentifier:@"cellIdentifier4"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"HomeDetailCell5" bundle:nil] forCellReuseIdentifier:@"cellIdentifier5"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -20,6 +37,37 @@
 
     // Configure the view for the selected state
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    HomeCellModel *cellModel = self.manager.dataSource[1];
+    return cellModel.comment.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeCellModel *cellModel = self.manager.dataSource[1];
+    HomeDetailCellModel *model = cellModel.comment[indexPath.row];
+    if (model.typeCell == TypeCellTimeAndTitle) {
+        HomeDetailCell4 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier4"];
+        return cell;
+    }else if (model.typeCell == TypeCellName){
+        HomeDetailCell5 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier5"];
+        return cell;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HomeCellModel *cellModel = self.manager.dataSource[1];
+    HomeDetailCellModel *model = cellModel.comment[indexPath.row];
+    if (model.typeCell == TypeCellTimeAndTitle) {
+        return 40;
+    }else if (model.typeCell == TypeCellName){
+        return 80;
+    }
+    return 0;
+}
+
 - (IBAction)handleBtnAction:(UIButton *)sender {
     if (self.clickBtn) {
         self.clickBtn(sender);

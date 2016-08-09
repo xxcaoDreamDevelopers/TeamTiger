@@ -26,18 +26,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgN-bl-2kV" userLabel="View1">
-                        <rect key="frame" x="68" y="0.0" width="5" height="25"/>
+                        <rect key="frame" x="68" y="0.0" width="4" height="25"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="C3S-rI-psw"/>
-                            <constraint firstAttribute="width" constant="5" id="kTa-NW-OCK"/>
+                            <constraint firstAttribute="width" constant="4" id="kTa-NW-OCK"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-Wc-Mnf" userLabel="View2">
-                        <rect key="frame" x="68" y="25" width="5" height="48"/>
+                        <rect key="frame" x="68" y="25" width="4" height="48"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="Ua0-D3-GP0"/>
+                            <constraint firstAttribute="width" constant="4" id="Ua0-D3-GP0"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐小旭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-Z8-uVQ">
@@ -57,7 +57,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type something..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkS-G3-q8B">
-                        <rect key="frame" x="81" y="42" width="241" height="20"/>
+                        <rect key="frame" x="80" y="42" width="242" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="mvx-Iw-Hsn"/>
                         </constraints>
@@ -65,7 +65,7 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dian" translatesAutoresizingMaskIntoConstraints="NO" id="jSq-sV-Gti">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_point" translatesAutoresizingMaskIntoConstraints="NO" id="jSq-sV-Gti">
                         <rect key="frame" x="63" y="25" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="1fS-nv-p6p"/>
@@ -110,6 +110,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dian" width="32" height="32"/>
+        <image name="icon_point" width="14" height="14"/>
     </resources>
 </document>

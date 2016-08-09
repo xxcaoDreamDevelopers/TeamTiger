@@ -12,6 +12,8 @@
 
 + (DataManager *)mainSingleton;
 @property (strong, nonatomic) NSMutableArray *dataSource;
+
+@property (strong, nonatomic) NSIndexPath *indexPath;
 @property (assign, nonatomic) NSInteger index;
 @property (assign, nonatomic) CGFloat height;
 

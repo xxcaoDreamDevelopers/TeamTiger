@@ -14,5 +14,11 @@
     
 }
 
+- (void)setValue:(id)value forKey:(NSString *)key {
+    [super setValue:value forKey:key];
+    if ([key isEqualToString:[NSString stringWithFormat:@"%d", self.isClick]]) {
+        self.isClick = [value boolValue];
+    }
+}
 
 @end

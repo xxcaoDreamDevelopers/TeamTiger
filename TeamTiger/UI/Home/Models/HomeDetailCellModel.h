@@ -12,7 +12,9 @@ typedef NS_ENUM(NSInteger, TypeCell) {
     TypeCellImage = 0,
     TypeCellTitle,
     TypeCellTitleNoButton,
-    TypeCellTime
+    TypeCellTime,
+    TypeCellTimeAndTitle,
+    TypeCellName
 };
 
 @interface HomeDetailCellModel : NSObject

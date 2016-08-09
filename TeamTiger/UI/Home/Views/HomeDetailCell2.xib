@@ -26,10 +26,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z77-Cp-znr" userLabel="View2">
-                        <rect key="frame" x="68" y="15" width="5" height="33"/>
+                        <rect key="frame" x="68" y="15" width="4" height="33"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="Iv0-92-43H"/>
+                            <constraint firstAttribute="width" constant="4" id="Iv0-92-43H"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐小旭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uky-cC-hPU">
@@ -42,7 +42,7 @@
                         <color key="textColor" red="0.30980392159999998" green="0.34901960780000002" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dian" translatesAutoresizingMaskIntoConstraints="NO" id="whg-aV-E8c">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_point" translatesAutoresizingMaskIntoConstraints="NO" id="whg-aV-E8c">
                         <rect key="frame" x="63" y="15" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="NU7-8c-heQ"/>
@@ -50,11 +50,11 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ei-bm-rag">
-                        <rect key="frame" x="68" y="0.0" width="5" height="15"/>
+                        <rect key="frame" x="68" y="0.0" width="4" height="15"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="WqS-dN-7vR"/>
-                            <constraint firstAttribute="width" constant="5" id="quM-SD-68t"/>
+                            <constraint firstAttribute="width" constant="4" id="quM-SD-68t"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -88,6 +88,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dian" width="32" height="32"/>
+        <image name="icon_point" width="14" height="14"/>
     </resources>
 </document>

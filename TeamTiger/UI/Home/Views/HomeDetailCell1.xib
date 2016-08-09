@@ -26,18 +26,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-w9-9WG" userLabel="View1">
-                        <rect key="frame" x="68" y="0.0" width="5" height="25"/>
+                        <rect key="frame" x="68" y="0.0" width="4" height="25"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="S0E-10-LGm"/>
-                            <constraint firstAttribute="width" constant="5" id="hiY-gn-uuj"/>
+                            <constraint firstAttribute="width" constant="4" id="hiY-gn-uuj"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7o-Px-kF2" userLabel="View2">
-                        <rect key="frame" x="68" y="25" width="5" height="62"/>
+                        <rect key="frame" x="68" y="25" width="4" height="62"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="JVK-H0-YIM"/>
+                            <constraint firstAttribute="width" constant="4" id="JVK-H0-YIM"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐小旭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZN-0T-J8u">
@@ -57,7 +57,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type something..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbz-w5-vPX">
-                        <rect key="frame" x="81" y="42" width="241" height="20"/>
+                        <rect key="frame" x="80" y="42" width="242" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="lSQ-Y7-lGi"/>
                         </constraints>
@@ -66,17 +66,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-GO-yqP" customClass="ButtonIndexPath">
-                        <rect key="frame" x="62" y="67" width="20" height="20"/>
+                        <rect key="frame" x="60" y="67" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="lsE-GH-zFO"/>
                             <constraint firstAttribute="height" constant="20" id="zvm-dB-uVx"/>
                         </constraints>
-                        <state key="normal" backgroundImage="更多"/>
+                        <state key="normal" backgroundImage="icon_more"/>
                         <connections>
                             <action selector="handleBtnAction:" destination="Be9-Kf-udx" eventType="touchUpInside" id="cDk-dt-C0b"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dian" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-wK-Yfd">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_point" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-wK-Yfd">
                         <rect key="frame" x="63" y="25" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="6lu-4l-xFZ"/>
@@ -100,7 +100,7 @@
                     <constraint firstItem="Emj-wK-Yfd" firstAttribute="top" secondItem="8eG-JU-WpM" secondAttribute="top" constant="25" id="i38-zJ-rg4"/>
                     <constraint firstItem="JHv-GO-yqP" firstAttribute="bottom" secondItem="A7o-Px-kF2" secondAttribute="bottom" id="l86-h4-Ubo"/>
                     <constraint firstAttribute="bottom" secondItem="JHv-GO-yqP" secondAttribute="bottom" constant="2" id="myC-fy-zrI"/>
-                    <constraint firstItem="JHv-GO-yqP" firstAttribute="leading" secondItem="8eG-JU-WpM" secondAttribute="leading" constant="62" id="uaE-Be-Id8"/>
+                    <constraint firstItem="JHv-GO-yqP" firstAttribute="leading" secondItem="8eG-JU-WpM" secondAttribute="leading" constant="60" id="uaE-Be-Id8"/>
                     <constraint firstAttribute="trailing" secondItem="gbz-w5-vPX" secondAttribute="trailing" constant="10" id="uau-0R-Gd5"/>
                     <constraint firstItem="L8E-oX-LpO" firstAttribute="leading" secondItem="8eG-JU-WpM" secondAttribute="leadingMargin" constant="5" id="ycc-FU-Eiq"/>
                     <constraint firstItem="Emj-wK-Yfd" firstAttribute="leading" secondItem="L8E-oX-LpO" secondAttribute="trailing" id="z8D-4u-vNJ"/>
@@ -126,7 +126,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dian" width="32" height="32"/>
-        <image name="更多" width="32" height="32"/>
+        <image name="icon_more" width="19" height="19"/>
+        <image name="icon_point" width="14" height="14"/>
     </resources>
 </document>

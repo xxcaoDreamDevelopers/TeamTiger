@@ -16,18 +16,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-R4-SH4">
-                        <rect key="frame" x="68" y="0.0" width="5" height="33"/>
+                        <rect key="frame" x="68" y="0.0" width="4" height="33"/>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.23529411764705882" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="33" id="cdv-ec-cDR"/>
-                            <constraint firstAttribute="width" constant="5" id="kgo-Tb-pFz"/>
+                            <constraint firstAttribute="width" constant="4" id="kgo-Tb-pFz"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZk-91-Snq">
-                        <rect key="frame" x="68" y="33" width="5" height="146"/>
+                        <rect key="frame" x="68" y="33" width="4" height="146"/>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.23529411764705882" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="4tN-fD-MDx"/>
+                            <constraint firstAttribute="width" constant="4" id="4tN-fD-MDx"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐小旭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgy-Eo-VjG">
@@ -47,7 +47,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type something..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yq0-hP-8jw">
-                        <rect key="frame" x="81" y="42" width="252" height="20"/>
+                        <rect key="frame" x="80" y="42" width="253" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="skg-tS-OE4"/>
                         </constraints>
@@ -56,20 +56,20 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeImage" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-Vm-yrP">
-                        <rect key="frame" x="81" y="65" width="100" height="100"/>
+                        <rect key="frame" x="80" y="65" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="Gp7-BK-BlO"/>
                             <constraint firstAttribute="height" constant="100" id="lqk-tl-4Td"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeImage" translatesAutoresizingMaskIntoConstraints="NO" id="sHL-p3-ywJ">
-                        <rect key="frame" x="191" y="65" width="100" height="100"/>
+                        <rect key="frame" x="190" y="65" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="5iG-bU-bcl"/>
                             <constraint firstAttribute="width" constant="100" id="7Bf-14-GLI"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dian" translatesAutoresizingMaskIntoConstraints="NO" id="A23-w4-l46">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_point" translatesAutoresizingMaskIntoConstraints="NO" id="A23-w4-l46">
                         <rect key="frame" x="63" y="25" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="PF1-Vq-2zM"/>
@@ -129,7 +129,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dian" width="32" height="32"/>
+        <image name="icon_point" width="14" height="14"/>
         <image name="placeImage" width="129" height="128"/>
     </resources>
 </document>

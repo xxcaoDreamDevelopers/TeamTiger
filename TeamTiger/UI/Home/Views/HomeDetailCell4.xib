@@ -26,18 +26,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIL-qR-Mt9" userLabel="View1">
-                        <rect key="frame" x="68" y="0.0" width="5" height="25"/>
+                        <rect key="frame" x="68" y="0.0" width="4" height="25"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="GCh-Ia-dsi"/>
+                            <constraint firstAttribute="width" constant="4" id="GCh-Ia-dsi"/>
                             <constraint firstAttribute="height" constant="25" id="OFH-nJ-PTJ"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-Jr-xKZ" userLabel="View2">
-                        <rect key="frame" x="68" y="25" width="5" height="26"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-Jr-xKZ" userLabel="View2">
+                        <rect key="frame" x="68" y="25" width="4" height="26"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="3Al-Sm-rW2"/>
+                            <constraint firstAttribute="width" constant="4" id="3Al-Sm-rW2"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卞克" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0L-cc-kJ7">
@@ -50,7 +50,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dian" translatesAutoresizingMaskIntoConstraints="NO" id="w2f-fE-arT">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_point" translatesAutoresizingMaskIntoConstraints="NO" id="w2f-fE-arT">
                         <rect key="frame" x="63" y="25" width="15" height="15"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="15" id="Hbl-Ut-tYm"/>
@@ -92,7 +92,7 @@
                     <constraint firstItem="r0L-cc-kJ7" firstAttribute="leading" secondItem="w2f-fE-arT" secondAttribute="trailing" constant="3" id="1cg-jH-SdD"/>
                     <constraint firstItem="w2f-fE-arT" firstAttribute="leading" secondItem="dJQ-3l-FdZ" secondAttribute="trailing" id="3W5-sQ-e4c"/>
                     <constraint firstItem="Sx2-uh-6sN" firstAttribute="top" secondItem="Eji-9M-sfn" secondAttribute="top" constant="20" id="3ee-qM-NAJ"/>
-                    <constraint firstAttribute="bottom" secondItem="AL9-Jr-xKZ" secondAttribute="bottom" constant="2" id="47X-9Z-hF6"/>
+                    <constraint firstAttribute="bottom" secondItem="AL9-Jr-xKZ" secondAttribute="bottom" id="47X-9Z-hF6"/>
                     <constraint firstItem="Sx2-uh-6sN" firstAttribute="leading" secondItem="lb8-l9-bYS" secondAttribute="trailing" constant="2" id="73u-JL-vz1"/>
                     <constraint firstItem="dJQ-3l-FdZ" firstAttribute="top" secondItem="Eji-9M-sfn" secondAttribute="topMargin" constant="15" id="B9q-Iz-pgj"/>
                     <constraint firstItem="AL9-Jr-xKZ" firstAttribute="leading" secondItem="dJQ-3l-FdZ" secondAttribute="trailing" constant="5" id="DXJ-96-qDW"/>
@@ -115,10 +115,10 @@
                 </variation>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-            <point key="canvasLocation" x="494" y="193"/>
+            <point key="canvasLocation" x="329" y="188"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="dian" width="32" height="32"/>
+        <image name="icon_point" width="14" height="14"/>
     </resources>
 </document>

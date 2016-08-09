@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeCellModel.h"
+#import "HomeDetailCellModel.h"
 #import "ButtonIndexPath.h"
+#import "HomeDetailCell4.h"
+#import "HomeDetailCell5.h"
+#import "DataManager.h"
 
 typedef void(^ClickBtn)(UIButton *button);
-@interface VoteHomeCell : UITableViewCell
+
+@interface VoteHomeCell : UITableViewCell<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLB;
@@ -35,11 +40,11 @@ typedef void(^ClickBtn)(UIButton *button);
 @property (weak, nonatomic) IBOutlet UILabel *cTicketLB;
 @property (weak, nonatomic) IBOutlet UILabel *cPerLB;
 
-
-@property (copy, nonatomic) ClickBtn clickBtn;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet ButtonIndexPath *moreBtn;
 
+@property (copy, nonatomic) ClickBtn clickBtn;
 - (void)configureCellWithModel:(HomeCellModel *)model;
 
 @end
