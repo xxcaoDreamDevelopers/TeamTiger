@@ -56,6 +56,9 @@
             _headImgV.userInteractionEnabled = YES;
             UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
             [_headImgV addGestureRecognizer:tapGR];
+            _headImgV.image = [UIImage imageNamed:@"icon_add_member"];
+            _headImgV.backgroundColor = [UIColor clearColor];
+            _headImgV.contentMode = UIViewContentModeCenter;
         }
     }
     return self;
