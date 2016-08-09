@@ -14,7 +14,7 @@
 #define TIPSLABEL_TAG 10086
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
-#define BUFFER_SIZE 1024 * 100
+#define BUFFER_SIZES 1024 * 100
 
 static const int kHeadViewHeight = 135;
 static const int kSceneViewHeight = 100;

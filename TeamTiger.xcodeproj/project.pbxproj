@@ -925,7 +925,7 @@
 		1DA71B811D3DBA67007483D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1DA71B861D3DBDDB007483D2 /* TeamTiger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamTiger-Prefix.pch"; sourceTree = "<group>"; };
 		1DA71B871D3DC117007483D2 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
-		1DA71B881D3DC133007483D2 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		1DA71B881D3DC133007483D2 /* AppConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		1DA71B891D3DC14C007483D2 /* GlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		1DA71B8D1D3DCC3D007483D2 /* TTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseViewController.h; sourceTree = "<group>"; };
 		1DA71B8E1D3DCC3D007483D2 /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
@@ -2281,7 +2281,7 @@
 				1DA71B8B1D3DCB3A007483D2 /* Category */,
 				1DA71B8A1D3DCAB0007483D2 /* Common */,
 				1DA71B871D3DC117007483D2 /* Macros.h */,
-				1DA71B881D3DC133007483D2 /* Constant.h */,
+				1DA71B881D3DC133007483D2 /* AppConstant.h */,
 				1DA71B891D3DC14C007483D2 /* GlobalDefine.h */,
 			);
 			path = Utility;
