@@ -338,6 +338,7 @@ CCDraggableContainerDelegate>
 
 - (void)draggableContainer:(CCDraggableContainer *)draggableContainer cardView:(CCDraggableCardView *)cardView didSelectIndex:(NSInteger)didSelectIndex {
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ClickCard" object:@(didSelectIndex)];
     NSLog(@"点击了Tag为%ld的Card", (long)didSelectIndex);
     didSelectIndex = didSelectIndex % (self.dataSources.count);
     

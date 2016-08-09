@@ -343,22 +343,29 @@
 		1DF991CE1D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991C91D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m */; };
 		1DF991CF1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991CB1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m */; };
 		1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991D61D48ADD900E7D1B8 /* TTSettingViewController.m */; };
-		2D9F21451D53441600262D00 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21441D53441600262D00 /* DataManager.m */; };
-		2D9F21611D53445700262D00 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21481D53445700262D00 /* HomeViewController.m */; };
-		2D9F21621D53445700262D00 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21491D53445700262D00 /* HomeViewController.xib */; };
-		2D9F21631D53445700262D00 /* HomeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F214C1D53445700262D00 /* HomeCellModel.m */; };
-		2D9F21641D53445700262D00 /* HomeDetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F214E1D53445700262D00 /* HomeDetailCellModel.m */; };
-		2D9F21651D53445700262D00 /* ButtonIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21511D53445700262D00 /* ButtonIndexPath.m */; };
-		2D9F21661D53445700262D00 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21531D53445700262D00 /* HomeCell.m */; };
-		2D9F21671D53445700262D00 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21541D53445700262D00 /* HomeCell.xib */; };
-		2D9F21681D53445700262D00 /* HomeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21561D53445700262D00 /* HomeDetailCell.m */; };
-		2D9F21691D53445700262D00 /* HomeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21571D53445700262D00 /* HomeDetailCell.xib */; };
-		2D9F216A1D53445700262D00 /* HomeDetailCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F21591D53445700262D00 /* HomeDetailCell1.m */; };
-		2D9F216B1D53445700262D00 /* HomeDetailCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F215A1D53445700262D00 /* HomeDetailCell1.xib */; };
-		2D9F216C1D53445700262D00 /* HomeDetailCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F215C1D53445700262D00 /* HomeDetailCell2.m */; };
-		2D9F216D1D53445700262D00 /* HomeDetailCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F215D1D53445700262D00 /* HomeDetailCell2.xib */; };
-		2D9F216E1D53445700262D00 /* HomeDetailCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F215F1D53445700262D00 /* HomeDetailCell3.m */; };
-		2D9F216F1D53445700262D00 /* HomeDetailCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9F21601D53445700262D00 /* HomeDetailCell3.xib */; };
+		2DC21B6B1D5886B9004F7C2B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B4D1D5886B9004F7C2B /* HomeViewController.m */; };
+		2DC21B6C1D5886B9004F7C2B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B4E1D5886B9004F7C2B /* HomeViewController.xib */; };
+		2DC21B6D1D5886B9004F7C2B /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B501D5886B9004F7C2B /* DataManager.m */; };
+		2DC21B6E1D5886B9004F7C2B /* HomeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B531D5886B9004F7C2B /* HomeCellModel.m */; };
+		2DC21B6F1D5886B9004F7C2B /* HomeDetailCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B551D5886B9004F7C2B /* HomeDetailCellModel.m */; };
+		2DC21B701D5886B9004F7C2B /* ButtonIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B581D5886B9004F7C2B /* ButtonIndexPath.m */; };
+		2DC21B711D5886B9004F7C2B /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B5A1D5886B9004F7C2B /* HomeCell.m */; };
+		2DC21B721D5886B9004F7C2B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B5B1D5886B9004F7C2B /* HomeCell.xib */; };
+		2DC21B731D5886B9004F7C2B /* HomeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B5D1D5886B9004F7C2B /* HomeDetailCell.m */; };
+		2DC21B741D5886B9004F7C2B /* HomeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B5E1D5886B9004F7C2B /* HomeDetailCell.xib */; };
+		2DC21B751D5886B9004F7C2B /* HomeDetailCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B601D5886B9004F7C2B /* HomeDetailCell1.m */; };
+		2DC21B761D5886B9004F7C2B /* HomeDetailCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B611D5886B9004F7C2B /* HomeDetailCell1.xib */; };
+		2DC21B771D5886B9004F7C2B /* HomeDetailCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B631D5886B9004F7C2B /* HomeDetailCell2.m */; };
+		2DC21B781D5886B9004F7C2B /* HomeDetailCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B641D5886B9004F7C2B /* HomeDetailCell2.xib */; };
+		2DC21B791D5886B9004F7C2B /* HomeDetailCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B661D5886B9004F7C2B /* HomeDetailCell3.m */; };
+		2DC21B7A1D5886B9004F7C2B /* HomeDetailCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B671D5886B9004F7C2B /* HomeDetailCell3.xib */; };
+		2DC21B7B1D5886B9004F7C2B /* VoteHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B691D5886B9004F7C2B /* VoteHomeCell.m */; };
+		2DC21B7F1D58873D004F7C2B /* CALayer+BorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B7E1D58873D004F7C2B /* CALayer+BorderColor.m */; };
+		2DC21B811D588846004F7C2B /* VoteHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B801D588846004F7C2B /* VoteHomeCell.xib */; };
+		2DC21B8A1D58B057004F7C2B /* HomeDetailCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B881D58B057004F7C2B /* HomeDetailCell4.m */; };
+		2DC21B8B1D58B057004F7C2B /* HomeDetailCell4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B891D58B057004F7C2B /* HomeDetailCell4.xib */; };
+		2DC21B8F1D58B234004F7C2B /* HomeDetailCell5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B8D1D58B234004F7C2B /* HomeDetailCell5.m */; };
+		2DC21B901D58B234004F7C2B /* HomeDetailCell5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC21B8E1D58B234004F7C2B /* HomeDetailCell5.xib */; };
 		2DFACA541D507B8B0099A2A3 /* DiscussViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */; };
 		2DFACA551D507B8B0099A2A3 /* DiscussViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */; };
 		2DFACA561D507B8B0099A2A3 /* DiscussListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFACA4F1D507B8B0099A2A3 /* DiscussListCell.m */; };
@@ -989,32 +996,43 @@
 		1DF991CB1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYLaunchAnimation.m"; sourceTree = "<group>"; };
 		1DF991D51D48ADD900E7D1B8 /* TTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSettingViewController.h; sourceTree = "<group>"; };
 		1DF991D61D48ADD900E7D1B8 /* TTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSettingViewController.m; sourceTree = "<group>"; };
-		2D9F21431D53441600262D00 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		2D9F21441D53441600262D00 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		2D9F21471D53445700262D00 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		2D9F21481D53445700262D00 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		2D9F21491D53445700262D00 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		2D9F214B1D53445700262D00 /* HomeCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellModel.h; sourceTree = "<group>"; };
-		2D9F214C1D53445700262D00 /* HomeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellModel.m; sourceTree = "<group>"; };
-		2D9F214D1D53445700262D00 /* HomeDetailCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCellModel.h; sourceTree = "<group>"; };
-		2D9F214E1D53445700262D00 /* HomeDetailCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCellModel.m; sourceTree = "<group>"; };
-		2D9F21501D53445700262D00 /* ButtonIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonIndexPath.h; sourceTree = "<group>"; };
-		2D9F21511D53445700262D00 /* ButtonIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonIndexPath.m; sourceTree = "<group>"; };
-		2D9F21521D53445700262D00 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		2D9F21531D53445700262D00 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
-		2D9F21541D53445700262D00 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		2D9F21551D53445700262D00 /* HomeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell.h; sourceTree = "<group>"; };
-		2D9F21561D53445700262D00 /* HomeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell.m; sourceTree = "<group>"; };
-		2D9F21571D53445700262D00 /* HomeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell.xib; sourceTree = "<group>"; };
-		2D9F21581D53445700262D00 /* HomeDetailCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell1.h; sourceTree = "<group>"; };
-		2D9F21591D53445700262D00 /* HomeDetailCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell1.m; sourceTree = "<group>"; };
-		2D9F215A1D53445700262D00 /* HomeDetailCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell1.xib; sourceTree = "<group>"; };
-		2D9F215B1D53445700262D00 /* HomeDetailCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell2.h; sourceTree = "<group>"; };
-		2D9F215C1D53445700262D00 /* HomeDetailCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell2.m; sourceTree = "<group>"; };
-		2D9F215D1D53445700262D00 /* HomeDetailCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell2.xib; sourceTree = "<group>"; };
-		2D9F215E1D53445700262D00 /* HomeDetailCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell3.h; sourceTree = "<group>"; };
-		2D9F215F1D53445700262D00 /* HomeDetailCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell3.m; sourceTree = "<group>"; };
-		2D9F21601D53445700262D00 /* HomeDetailCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell3.xib; sourceTree = "<group>"; };
+		2DC21B4C1D5886B9004F7C2B /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2DC21B4D1D5886B9004F7C2B /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2DC21B4E1D5886B9004F7C2B /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2DC21B4F1D5886B9004F7C2B /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		2DC21B501D5886B9004F7C2B /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		2DC21B521D5886B9004F7C2B /* HomeCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellModel.h; sourceTree = "<group>"; };
+		2DC21B531D5886B9004F7C2B /* HomeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellModel.m; sourceTree = "<group>"; };
+		2DC21B541D5886B9004F7C2B /* HomeDetailCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCellModel.h; sourceTree = "<group>"; };
+		2DC21B551D5886B9004F7C2B /* HomeDetailCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCellModel.m; sourceTree = "<group>"; };
+		2DC21B571D5886B9004F7C2B /* ButtonIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonIndexPath.h; sourceTree = "<group>"; };
+		2DC21B581D5886B9004F7C2B /* ButtonIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonIndexPath.m; sourceTree = "<group>"; };
+		2DC21B591D5886B9004F7C2B /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		2DC21B5A1D5886B9004F7C2B /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		2DC21B5B1D5886B9004F7C2B /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		2DC21B5C1D5886B9004F7C2B /* HomeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell.h; sourceTree = "<group>"; };
+		2DC21B5D1D5886B9004F7C2B /* HomeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell.m; sourceTree = "<group>"; };
+		2DC21B5E1D5886B9004F7C2B /* HomeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell.xib; sourceTree = "<group>"; };
+		2DC21B5F1D5886B9004F7C2B /* HomeDetailCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell1.h; sourceTree = "<group>"; };
+		2DC21B601D5886B9004F7C2B /* HomeDetailCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell1.m; sourceTree = "<group>"; };
+		2DC21B611D5886B9004F7C2B /* HomeDetailCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell1.xib; sourceTree = "<group>"; };
+		2DC21B621D5886B9004F7C2B /* HomeDetailCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell2.h; sourceTree = "<group>"; };
+		2DC21B631D5886B9004F7C2B /* HomeDetailCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell2.m; sourceTree = "<group>"; };
+		2DC21B641D5886B9004F7C2B /* HomeDetailCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell2.xib; sourceTree = "<group>"; };
+		2DC21B651D5886B9004F7C2B /* HomeDetailCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell3.h; sourceTree = "<group>"; };
+		2DC21B661D5886B9004F7C2B /* HomeDetailCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell3.m; sourceTree = "<group>"; };
+		2DC21B671D5886B9004F7C2B /* HomeDetailCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell3.xib; sourceTree = "<group>"; };
+		2DC21B681D5886B9004F7C2B /* VoteHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteHomeCell.h; sourceTree = "<group>"; };
+		2DC21B691D5886B9004F7C2B /* VoteHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteHomeCell.m; sourceTree = "<group>"; };
+		2DC21B7D1D58873D004F7C2B /* CALayer+BorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+BorderColor.h"; sourceTree = "<group>"; };
+		2DC21B7E1D58873D004F7C2B /* CALayer+BorderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BorderColor.m"; sourceTree = "<group>"; };
+		2DC21B801D588846004F7C2B /* VoteHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteHomeCell.xib; sourceTree = "<group>"; };
+		2DC21B871D58B057004F7C2B /* HomeDetailCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell4.h; sourceTree = "<group>"; };
+		2DC21B881D58B057004F7C2B /* HomeDetailCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell4.m; sourceTree = "<group>"; };
+		2DC21B891D58B057004F7C2B /* HomeDetailCell4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell4.xib; sourceTree = "<group>"; };
+		2DC21B8C1D58B234004F7C2B /* HomeDetailCell5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailCell5.h; sourceTree = "<group>"; };
+		2DC21B8D1D58B234004F7C2B /* HomeDetailCell5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailCell5.m; sourceTree = "<group>"; };
+		2DC21B8E1D58B234004F7C2B /* HomeDetailCell5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailCell5.xib; sourceTree = "<group>"; };
 		2DFACA491D507B8B0099A2A3 /* DiscussViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussViewController.h; sourceTree = "<group>"; };
 		2DFACA4A1D507B8B0099A2A3 /* DiscussViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussViewController.m; sourceTree = "<group>"; };
 		2DFACA4B1D507B8B0099A2A3 /* DiscussViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscussViewController.xib; sourceTree = "<group>"; };
@@ -2234,9 +2252,9 @@
 		1DA71B761D3DB618007483D2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2DC21B4A1D5886B9004F7C2B /* Home */,
 				1DDE9E651D531B54005926FE /* Login */,
 				064C0C121D51E0F400D8E639 /* Main */,
-				2DFACA5A1D507B9D0099A2A3 /* Home */,
 				2DFACA471D507B8B0099A2A3 /* Discuss */,
 				068E96561D4F499E0074229C /* Circle */,
 				1DF991D41D48ADB300E7D1B8 /* Setting */,
@@ -2291,6 +2309,8 @@
 		1DA71B8B1D3DCB3A007483D2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2DC21B7D1D58873D004F7C2B /* CALayer+BorderColor.h */,
+				2DC21B7E1D58873D004F7C2B /* CALayer+BorderColor.m */,
 				1DF0A1961D4DB28B002D91DB /* NSString+Utils.h */,
 				1DF0A1971D4DB28B002D91DB /* NSString+Utils.m */,
 				1D115F2C1D4B9560003DFBB1 /* UITextView+PlaceHolder.h */,
@@ -2489,47 +2509,68 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		2D9F21461D53445700262D00 /* Controllers */ = {
+		2DC21B4A1D5886B9004F7C2B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2D9F21471D53445700262D00 /* HomeViewController.h */,
-				2D9F21481D53445700262D00 /* HomeViewController.m */,
-				2D9F21491D53445700262D00 /* HomeViewController.xib */,
+				2DC21B4F1D5886B9004F7C2B /* DataManager.h */,
+				2DC21B501D5886B9004F7C2B /* DataManager.m */,
+				2DC21B4B1D5886B9004F7C2B /* Controllers */,
+				2DC21B511D5886B9004F7C2B /* Models */,
+				2DC21B561D5886B9004F7C2B /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DC21B4B1D5886B9004F7C2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DC21B4C1D5886B9004F7C2B /* HomeViewController.h */,
+				2DC21B4D1D5886B9004F7C2B /* HomeViewController.m */,
+				2DC21B4E1D5886B9004F7C2B /* HomeViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		2D9F214A1D53445700262D00 /* Models */ = {
+		2DC21B511D5886B9004F7C2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2D9F214B1D53445700262D00 /* HomeCellModel.h */,
-				2D9F214C1D53445700262D00 /* HomeCellModel.m */,
-				2D9F214D1D53445700262D00 /* HomeDetailCellModel.h */,
-				2D9F214E1D53445700262D00 /* HomeDetailCellModel.m */,
+				2DC21B521D5886B9004F7C2B /* HomeCellModel.h */,
+				2DC21B531D5886B9004F7C2B /* HomeCellModel.m */,
+				2DC21B541D5886B9004F7C2B /* HomeDetailCellModel.h */,
+				2DC21B551D5886B9004F7C2B /* HomeDetailCellModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2D9F214F1D53445700262D00 /* Views */ = {
+		2DC21B561D5886B9004F7C2B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2D9F21501D53445700262D00 /* ButtonIndexPath.h */,
-				2D9F21511D53445700262D00 /* ButtonIndexPath.m */,
-				2D9F21521D53445700262D00 /* HomeCell.h */,
-				2D9F21531D53445700262D00 /* HomeCell.m */,
-				2D9F21541D53445700262D00 /* HomeCell.xib */,
-				2D9F21551D53445700262D00 /* HomeDetailCell.h */,
-				2D9F21561D53445700262D00 /* HomeDetailCell.m */,
-				2D9F21571D53445700262D00 /* HomeDetailCell.xib */,
-				2D9F21581D53445700262D00 /* HomeDetailCell1.h */,
-				2D9F21591D53445700262D00 /* HomeDetailCell1.m */,
-				2D9F215A1D53445700262D00 /* HomeDetailCell1.xib */,
-				2D9F215B1D53445700262D00 /* HomeDetailCell2.h */,
-				2D9F215C1D53445700262D00 /* HomeDetailCell2.m */,
-				2D9F215D1D53445700262D00 /* HomeDetailCell2.xib */,
-				2D9F215E1D53445700262D00 /* HomeDetailCell3.h */,
-				2D9F215F1D53445700262D00 /* HomeDetailCell3.m */,
-				2D9F21601D53445700262D00 /* HomeDetailCell3.xib */,
+				2DC21B571D5886B9004F7C2B /* ButtonIndexPath.h */,
+				2DC21B581D5886B9004F7C2B /* ButtonIndexPath.m */,
+				2DC21B591D5886B9004F7C2B /* HomeCell.h */,
+				2DC21B5A1D5886B9004F7C2B /* HomeCell.m */,
+				2DC21B5B1D5886B9004F7C2B /* HomeCell.xib */,
+				2DC21B5C1D5886B9004F7C2B /* HomeDetailCell.h */,
+				2DC21B5D1D5886B9004F7C2B /* HomeDetailCell.m */,
+				2DC21B5E1D5886B9004F7C2B /* HomeDetailCell.xib */,
+				2DC21B5F1D5886B9004F7C2B /* HomeDetailCell1.h */,
+				2DC21B601D5886B9004F7C2B /* HomeDetailCell1.m */,
+				2DC21B611D5886B9004F7C2B /* HomeDetailCell1.xib */,
+				2DC21B621D5886B9004F7C2B /* HomeDetailCell2.h */,
+				2DC21B631D5886B9004F7C2B /* HomeDetailCell2.m */,
+				2DC21B641D5886B9004F7C2B /* HomeDetailCell2.xib */,
+				2DC21B651D5886B9004F7C2B /* HomeDetailCell3.h */,
+				2DC21B661D5886B9004F7C2B /* HomeDetailCell3.m */,
+				2DC21B671D5886B9004F7C2B /* HomeDetailCell3.xib */,
+				2DC21B871D58B057004F7C2B /* HomeDetailCell4.h */,
+				2DC21B881D58B057004F7C2B /* HomeDetailCell4.m */,
+				2DC21B891D58B057004F7C2B /* HomeDetailCell4.xib */,
+				2DC21B8C1D58B234004F7C2B /* HomeDetailCell5.h */,
+				2DC21B8D1D58B234004F7C2B /* HomeDetailCell5.m */,
+				2DC21B8E1D58B234004F7C2B /* HomeDetailCell5.xib */,
+				2DC21B681D5886B9004F7C2B /* VoteHomeCell.h */,
+				2DC21B691D5886B9004F7C2B /* VoteHomeCell.m */,
+				2DC21B801D588846004F7C2B /* VoteHomeCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2575,18 +2616,6 @@
 				2DFACA531D507B8B0099A2A3 /* DiscussListCell1.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2DFACA5A1D507B9D0099A2A3 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				2D9F21431D53441600262D00 /* DataManager.h */,
-				2D9F21441D53441600262D00 /* DataManager.m */,
-				2D9F21461D53445700262D00 /* Controllers */,
-				2D9F214A1D53445700262D00 /* Models */,
-				2D9F214F1D53445700262D00 /* Views */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2651,8 +2680,10 @@
 				1D115F941D4BA043003DFBB1 /* IQKeyboardManager.bundle in Resources */,
 				1DA0E1991D542FE4008CD6DF /* ProfileCell_Header.xib in Resources */,
 				0604B4731D4C5A9B00EF1703 /* downshadow.png in Resources */,
+				2DC21B811D588846004F7C2B /* VoteHomeCell.xib in Resources */,
 				1DF0A1AD1D4DB898002D91DB /* 10.png in Resources */,
 				1DDE9E701D533106005926FE /* TTMyProfileViewController.xib in Resources */,
+				2DC21B721D5886B9004F7C2B /* HomeCell.xib in Resources */,
 				1DA0E1A01D543F7B008CD6DF /* ProjectCell2.xib in Resources */,
 				1DF0A1B61D4DB898002D91DB /* 2.png in Resources */,
 				2DFACA551D507B8B0099A2A3 /* DiscussViewController.xib in Resources */,
@@ -2660,15 +2691,19 @@
 				1DF0A1B01D4DB898002D91DB /* 13.png in Resources */,
 				1DDE9E761D535DDA005926FE /* TTAddDiscussViewController.xib in Resources */,
 				1DB5A5901D4B3F36009E6170 /* round-switch-track@2x.png in Resources */,
+				2DC21B781D5886B9004F7C2B /* HomeDetailCell2.xib in Resources */,
 				1D55FD8F1D49A19900094112 /* TTSettingViewController.xib in Resources */,
+				2DC21B741D5886B9004F7C2B /* HomeDetailCell.xib in Resources */,
 				1D2E1AAC1D4C538B00C0CE0A /* TTAddContactorViewController.xib in Resources */,
 				1D9580D11D3E225200FD0053 /* Info.plist in Resources */,
 				06008F161D58162300A5B3DB /* TTCommonCell.xib in Resources */,
+				2DC21B761D5886B9004F7C2B /* HomeDetailCell1.xib in Resources */,
 				1DA0E1A31D546CC7008CD6DF /* ProjectCell_Member.xib in Resources */,
 				1DB5A58D1D4B3F36009E6170 /* round-switch-thumb-highlight@2x.png in Resources */,
 				1DDE9E6A1D531B66005926FE /* TTLoginViewController.xib in Resources */,
 				1DF0A1B81D4DB898002D91DB /* 4.png in Resources */,
 				1DA71B841D3DBA67007483D2 /* Assets.xcassets in Resources */,
+				2DC21B8B1D58B057004F7C2B /* HomeDetailCell4.xib in Resources */,
 				1DF0A1AC1D4DB898002D91DB /* 1.png in Resources */,
 				0604B47C1D4C5A9B00EF1703 /* image_9.jpg in Resources */,
 				0604B4771D4C5A9B00EF1703 /* image_4.jpg in Resources */,
@@ -2682,10 +2717,9 @@
 				1DB5A58C1D4B3F36009E6170 /* round-switch-overlay@2x.png in Resources */,
 				1D55FD951D49AAA400094112 /* SettingCell.xib in Resources */,
 				1DA0E1951D54243F008CD6DF /* ProfileCell.xib in Resources */,
-				2D9F21671D53445700262D00 /* HomeCell.xib in Resources */,
+				2DC21B901D58B234004F7C2B /* HomeDetailCell5.xib in Resources */,
 				1DB5A5941D4B3F36009E6170 /* square-switch-thumb@2x.png in Resources */,
 				1DF0A1BB1D4DB898002D91DB /* 7.png in Resources */,
-				2D9F21691D53445700262D00 /* HomeDetailCell.xib in Resources */,
 				1DF0A1B21D4DB898002D91DB /* 15.png in Resources */,
 				1DB5A58F1D4B3F36009E6170 /* round-switch-track-no-text@2x.png in Resources */,
 				1DB5A5911D4B3F36009E6170 /* square-switch-mask@2x.png in Resources */,
@@ -2694,9 +2728,9 @@
 				0604B4751D4C5A9B00EF1703 /* image_2.jpg in Resources */,
 				0604B4741D4C5A9B00EF1703 /* image_1.jpg in Resources */,
 				0604B4761D4C5A9B00EF1703 /* image_3.jpg in Resources */,
-				2D9F216B1D53445700262D00 /* HomeDetailCell1.xib in Resources */,
 				1DF0A1B71D4DB898002D91DB /* 3.png in Resources */,
 				1DF0A1B11D4DB898002D91DB /* 14.png in Resources */,
+				2DC21B6C1D5886B9004F7C2B /* HomeViewController.xib in Resources */,
 				1DF0A1BD1D4DB898002D91DB /* 9.png in Resources */,
 				1DF0A1B31D4DB898002D91DB /* 16.png in Resources */,
 				06E026641D50440300B9743B /* UserInfoView.xib in Resources */,
@@ -2708,17 +2742,15 @@
 				1DF0A1B91D4DB898002D91DB /* 5.png in Resources */,
 				1DB5A5931D4B3F36009E6170 /* square-switch-thumb-highlight@2x.png in Resources */,
 				1DB5A5921D4B3F36009E6170 /* square-switch-overlay@2x.png in Resources */,
-				2D9F21621D53445700262D00 /* HomeViewController.xib in Resources */,
 				1DF0A1B41D4DB898002D91DB /* 17.png in Resources */,
 				1DB5A58B1D4B3F36009E6170 /* round-switch-mask@2x.png in Resources */,
 				1DF0A1BA1D4DB898002D91DB /* 6.png in Resources */,
 				1DB5A5891D4B3F36009E6170 /* switchToggle@2x.png in Resources */,
 				0604B4791D4C5A9B00EF1703 /* image_6.jpg in Resources */,
+				2DC21B7A1D5886B9004F7C2B /* HomeDetailCell3.xib in Resources */,
 				1DF0A1BC1D4DB898002D91DB /* 8.png in Resources */,
-				2D9F216F1D53445700262D00 /* HomeDetailCell3.xib in Resources */,
 				1DA0E1A11D543F7B008CD6DF /* ProjectCell1.xib in Resources */,
 				2DFACA591D507B8B0099A2A3 /* DiscussListCell1.xib in Resources */,
-				2D9F216D1D53445700262D00 /* HomeDetailCell2.xib in Resources */,
 				1D9580B01D3E207200FD0053 /* MJRefresh.bundle in Resources */,
 				0604B47D1D4C5A9B00EF1703 /* upshadow.png in Resources */,
 				0604B47B1D4C5A9B00EF1703 /* image_8.jpg in Resources */,
@@ -2732,7 +2764,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D9F21451D53441600262D00 /* DataManager.m in Sources */,
 				1D115F8C1D4BA043003DFBB1 /* IQKeyboardManager.m in Sources */,
 				1D09CC641D3F29C900F85E9A /* NSObject+YYAddForARC.m in Sources */,
 				1D09CC6D1D3F29C900F85E9A /* UIBezierPath+YYAdd.m in Sources */,
@@ -2772,17 +2803,18 @@
 				1DA71B621D3DB5A1007483D2 /* AppDelegate.m in Sources */,
 				1D9580B31D3E207200FD0053 /* UIScrollView+MJExtension.m in Sources */,
 				2DFACA541D507B8B0099A2A3 /* DiscussViewController.m in Sources */,
-				2D9F21681D53445700262D00 /* HomeDetailCell.m in Sources */,
 				1D09CC661D3F29C900F85E9A /* NSString+YYAdd.m in Sources */,
 				1D09CC7A1D3F29C900F85E9A /* YYDiskCache.m in Sources */,
 				1D09CC931D3F29C900F85E9A /* YYTextMagnifier.m in Sources */,
 				1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */,
 				1D09CCA81D3F29C900F85E9A /* YYThreadSafeDictionary.m in Sources */,
 				1D09CC981D3F29C900F85E9A /* YYTextArchiver.m in Sources */,
+				2DC21B7B1D5886B9004F7C2B /* VoteHomeCell.m in Sources */,
 				1D9580A91D3E207200FD0053 /* MJRefreshAutoStateFooter.m in Sources */,
 				1D0EA2C21D45A82C00B47108 /* LCBaseRequest.m in Sources */,
 				1DB926171D46F4F4003676AC /* LCProcessFilter.m in Sources */,
 				1D09CC651D3F29C900F85E9A /* NSObject+YYAddForKVO.m in Sources */,
+				2DC21B771D5886B9004F7C2B /* HomeDetailCell2.m in Sources */,
 				1D9580D31D3E225200FD0053 /* MASConstraint.m in Sources */,
 				1D09CD551D3F59D500F85E9A /* MKAnnotationView+WebCache.m in Sources */,
 				1D6D02CB1D58139F00EE0C2E /* TTPickerView.m in Sources */,
@@ -2802,6 +2834,7 @@
 				1D09CD251D3F550300F85E9A /* UIControl+HYBHelperBlockKit.m in Sources */,
 				1D09CC7C1D3F29C900F85E9A /* YYMemoryCache.m in Sources */,
 				1D09CC841D3F29C900F85E9A /* YYImage.m in Sources */,
+				2DC21B711D5886B9004F7C2B /* HomeCell.m in Sources */,
 				1D09CD191D3F550300F85E9A /* NSString+HYBHelperKit.m in Sources */,
 				1D09CD181D3F550300F85E9A /* NSObject+HYBHelperKit.m in Sources */,
 				1D09CD291D3F550300F85E9A /* UIAlertView+HYBHelperKit.m in Sources */,
@@ -2830,11 +2863,10 @@
 				1D09CC631D3F29C900F85E9A /* NSObject+YYAdd.m in Sources */,
 				1D09CD241D3F550300F85E9A /* UIButton+HYBHelperBlockKit.m in Sources */,
 				06008F441D58249300A5B3DB /* TZPhotoPreviewCell.m in Sources */,
-				2D9F216C1D53445700262D00 /* HomeDetailCell2.m in Sources */,
 				1D09CD601D3F59D500F85E9A /* SDWebImageCompat.m in Sources */,
 				1D09CC711D3F29C900F85E9A /* UIFont+YYAdd.m in Sources */,
 				1D09CC941D3F29C900F85E9A /* YYTextSelectionView.m in Sources */,
-				2D9F21641D53445700262D00 /* HomeDetailCellModel.m in Sources */,
+				2DC21B6D1D5886B9004F7C2B /* DataManager.m in Sources */,
 				1D09CC9A1D3F29C900F85E9A /* YYTextParser.m in Sources */,
 				0604B4641D4C5A5B00EF1703 /* AKPickerView.m in Sources */,
 				1D95803A1D3E123800FD0053 /* AFURLResponseSerialization.m in Sources */,
@@ -2848,17 +2880,18 @@
 				2DFACA821D50808D0099A2A3 /* DiscussListModel.m in Sources */,
 				1D09CD5F1D3F59D500F85E9A /* SDWebImageDownloaderOperation.m in Sources */,
 				1D09CC691D3F29C900F85E9A /* CALayer+YYAdd.m in Sources */,
-				2D9F216A1D53445700262D00 /* HomeDetailCell1.m in Sources */,
 				06008F261D58163100A5B3DB /* TTCommonItem.m in Sources */,
 				1D09CC891D3F29C900F85E9A /* YYWebImageOperation.m in Sources */,
 				1D09CC9D1D3F29C900F85E9A /* YYTextUtilities.m in Sources */,
 				1D09CC751D3F29C900F85E9A /* UIScrollView+YYAdd.m in Sources */,
+				2DC21B6F1D5886B9004F7C2B /* HomeDetailCellModel.m in Sources */,
 				1D115F911D4BA043003DFBB1 /* IQTitleBarButtonItem.m in Sources */,
 				1D09CC861D3F29C900F85E9A /* YYImageCoder.m in Sources */,
 				1D09CD1E1D3F550300F85E9A /* UILabel+HYBMasonryKit.m in Sources */,
 				1D115F881D4BA043003DFBB1 /* IQUITextFieldView+Additions.m in Sources */,
 				1D09CD2A1D3F550300F85E9A /* UIColor+HYBHelperKitUIKit.m in Sources */,
 				1D09CD221D3F550300F85E9A /* UIView+HYBMasonryKit.m in Sources */,
+				2DC21B6B1D5886B9004F7C2B /* HomeViewController.m in Sources */,
 				1D09CC721D3F29C900F85E9A /* UIGestureRecognizer+YYAdd.m in Sources */,
 				1DF991CD1D488C0F00E7D1B8 /* TYLaunchFadeScaleAnimation.m in Sources */,
 				1D09CCAA1D3F29C900F85E9A /* YYTransaction.m in Sources */,
@@ -2868,6 +2901,7 @@
 				068E96531D4F488C0074229C /* MMDrawerController.m in Sources */,
 				1D9580DB1D3E225200FD0053 /* ViewController+MASAdditions.m in Sources */,
 				1D9580371D3E123800FD0053 /* AFNetworkReachabilityManager.m in Sources */,
+				2DC21B7F1D58873D004F7C2B /* CALayer+BorderColor.m in Sources */,
 				1D9580D51D3E225200FD0053 /* MASLayoutConstraint.m in Sources */,
 				1D9580AB1D3E207200FD0053 /* MJRefreshBackNormalFooter.m in Sources */,
 				1D115F901D4BA043003DFBB1 /* IQPreviousNextView.m in Sources */,
@@ -2875,11 +2909,13 @@
 				1D09CD0D1D3F550300F85E9A /* HYBCommonKit.m in Sources */,
 				1D09CD0E1D3F550300F85E9A /* HYBHelperKitBaseController.m in Sources */,
 				0604B4651D4C5A5B00EF1703 /* CCDraggableCardView.m in Sources */,
+				2DC21B6E1D5886B9004F7C2B /* HomeCellModel.m in Sources */,
 				06008F3F1D58249300A5B3DB /* TZAssetModel.m in Sources */,
 				06008F421D58249300A5B3DB /* TZImagePickerController.m in Sources */,
 				1D09CC9B1D3F29C900F85E9A /* YYTextRubyAnnotation.m in Sources */,
 				1D9580D91D3E225200FD0053 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				1D9580D21D3E225200FD0053 /* MASCompositeConstraint.m in Sources */,
+				2DC21B8F1D58B234004F7C2B /* HomeDetailCell5.m in Sources */,
 				1D09CCA61D3F29C900F85E9A /* YYSentinel.m in Sources */,
 				0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */,
 				1DDE9E631D52DAF8005926FE /* TTAddProjectViewController.m in Sources */,
@@ -2902,9 +2938,7 @@
 				1D09CC601D3F29C900F85E9A /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				1D09CC611D3F29C900F85E9A /* NSNotificationCenter+YYAdd.m in Sources */,
 				1D59130D1D4DDE9E00A188A0 /* GDIIndexBar.m in Sources */,
-				2D9F21661D53445700262D00 /* HomeCell.m in Sources */,
 				1D09CD621D3F59D500F85E9A /* SDWebImageManager.m in Sources */,
-				2D9F21651D53445700262D00 /* ButtonIndexPath.m in Sources */,
 				1D0EA2D21D45A8AE00B47108 /* TMDiskCache.m in Sources */,
 				1D09CD611D3F59D500F85E9A /* SDWebImageDecoder.m in Sources */,
 				1DF991CF1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m in Sources */,
@@ -2918,14 +2952,12 @@
 				1D09CC881D3F29C900F85E9A /* YYWebImageManager.m in Sources */,
 				1D9580E71D3E23E100FD0053 /* APP_USERS.m in Sources */,
 				1D09CC991D3F29C900F85E9A /* YYTextAttribute.m in Sources */,
-				2D9F21631D53445700262D00 /* HomeCellModel.m in Sources */,
 				1DDE9E691D531B66005926FE /* TTLoginViewController.m in Sources */,
 				1D09CC9E1D3F29C900F85E9A /* YYLabel.m in Sources */,
 				1D09CC5E1D3F29C900F85E9A /* NSDate+YYAdd.m in Sources */,
 				1D115F2E1D4B9560003DFBB1 /* UITextView+PlaceHolder.m in Sources */,
 				1D09CC8F1D3F29C900F85E9A /* YYTextInput.m in Sources */,
 				1DF991CC1D488C0F00E7D1B8 /* TYLaunchBaseAnimation.m in Sources */,
-				2D9F216E1D53445700262D00 /* HomeDetailCell3.m in Sources */,
 				06008F4E1D582FA500A5B3DB /* TZTestCell.m in Sources */,
 				1D09CC8D1D3F29C900F85E9A /* YYTextDebugOption.m in Sources */,
 				1D9580A81D3E207200FD0053 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -2950,6 +2982,7 @@
 				1DA71B851D3DBA67007483D2 /* main.m in Sources */,
 				1D09CCA01D3F29C900F85E9A /* YYAsyncLayer.m in Sources */,
 				1D0EA2C51D45A82C00B47108 /* LCChainRequest.m in Sources */,
+				2DC21B701D5886B9004F7C2B /* ButtonIndexPath.m in Sources */,
 				068E965E1D4F499E0074229C /* CirclesViewController.m in Sources */,
 				06008F401D58249300A5B3DB /* TZImageManager.m in Sources */,
 				1DA71B8F1D3DCC3D007483D2 /* TTBaseViewController.m in Sources */,
@@ -2957,8 +2990,10 @@
 				1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */,
 				1D09CC811D3F29C900F85E9A /* UIImageView+YYWebImage.m in Sources */,
 				2DFACA561D507B8B0099A2A3 /* DiscussListCell.m in Sources */,
+				2DC21B791D5886B9004F7C2B /* HomeDetailCell3.m in Sources */,
 				1D09CCA91D3F29C900F85E9A /* YYTimer.m in Sources */,
 				06008F431D58249300A5B3DB /* TZPhotoPickerController.m in Sources */,
+				2DC21B731D5886B9004F7C2B /* HomeDetailCell.m in Sources */,
 				1D09CD5A1D3F59D500F85E9A /* UIImage+WebP.m in Sources */,
 				1D09CD1A1D3F550300F85E9A /* NSTimer+HYBHelperKit.m in Sources */,
 				1D09CD231D3F550300F85E9A /* UIWebView+HYBMasonryKit.m in Sources */,
@@ -2983,6 +3018,7 @@
 				1D9580721D3E1ADD00FD0053 /* MBProgressHUD.m in Sources */,
 				06008F281D58163100A5B3DB /* TTCommonSwitchItem.m in Sources */,
 				1D09CC851D3F29C900F85E9A /* YYImageCache.m in Sources */,
+				2DC21B751D5886B9004F7C2B /* HomeDetailCell1.m in Sources */,
 				1D09CD171D3F550300F85E9A /* NSNumber+HYBHelperKit.m in Sources */,
 				1DA0E19F1D543F7B008CD6DF /* ProjectCell.m in Sources */,
 				1D09CC9C1D3F29C900F85E9A /* YYTextRunDelegate.m in Sources */,
@@ -2993,7 +3029,6 @@
 				06008F251D58163100A5B3DB /* TTCommonGroup.m in Sources */,
 				1D2E1AAB1D4C538B00C0CE0A /* TTAddContactorViewController.m in Sources */,
 				1D09CC621D3F29C900F85E9A /* NSNumber+YYAdd.m in Sources */,
-				2D9F21611D53445700262D00 /* HomeViewController.m in Sources */,
 				1D09CC6B1D3F29C900F85E9A /* UIApplication+YYAdd.m in Sources */,
 				1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */,
 				1DDE9E6F1D533106005926FE /* TTMyProfileViewController.m in Sources */,
@@ -3001,6 +3036,7 @@
 				1D09CC911D3F29C900F85E9A /* YYTextLayout.m in Sources */,
 				1D0EA2C71D45A82C00B47108 /* LCNetworkAgent.m in Sources */,
 				1D09CD101D3F550300F85E9A /* HYBHelperKitTestEntranceController.m in Sources */,
+				2DC21B8A1D58B057004F7C2B /* HomeDetailCell4.m in Sources */,
 				1D9580A41D3E207200FD0053 /* MJRefreshComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

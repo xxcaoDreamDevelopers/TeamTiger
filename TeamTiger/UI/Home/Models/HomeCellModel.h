@@ -7,16 +7,32 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSInteger, ProjectType) {
+    ProjectTypeAll = 0 ,
+    ProjectTypeCattle = 1, //工作牛
+    ProjectTypeEMeeting, //易会
+    ProjectTypeMPP, //MPP
+    ProjectTypeMarket, //营配
+};
 
 @interface HomeCellModel : NSObject
 
-@property (strong, nonatomic) UIImageView *headImage;
-@property (copy, nonatomic)   NSString *name;
-@property (copy, nonatomic)   NSString *type;
-@property (strong, nonatomic) UIImageView *image1;
-@property (strong, nonatomic) UIImageView *image2;
-@property (strong, nonatomic) UIImageView *image3;
+@property (copy, nonatomic) NSString *headImage;
+@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic) NSString *type;
+@property (copy, nonatomic) NSString *image1;
+@property (copy, nonatomic) NSString *image2;
+@property (copy, nonatomic) NSString *image3;
 
+@property (copy, nonatomic) NSString *aDes;
+@property (copy, nonatomic) NSString *bDes;
+@property (copy, nonatomic) NSString *cDes;
+@property (copy, nonatomic) NSString *aTicket;
+@property (copy, nonatomic) NSString *bTicket;
+@property (copy, nonatomic) NSString *cTicket;
 @property (assign, nonatomic) BOOL isClick;
+
+@property (assign, nonatomic) NSInteger projectType;
+
 @end

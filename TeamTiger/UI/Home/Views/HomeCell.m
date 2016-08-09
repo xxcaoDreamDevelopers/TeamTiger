@@ -50,18 +50,26 @@
 }
 
 - (void)configureCellWithModel:(HomeCellModel *)model {
+    self.headImage.image = kImage(model.headImage);
     self.nameLB.text = model.name;
     self.typeLB.text = model.type;
+    self.image1.image = kImage(model.image1);
+    self.image2.image = kImage(model.image2);
+    self.image3.image = kImage(model.image3);
 }
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     HomeDetailCellModel *model = self.manager.dataSource[self.manager.index];
-    if (model.isClick) {
-        return self.manager.dataSource.count;
-    }else {
-        return 3;
+//测试 假的
+    if (tableView.tag == 1000) {
+        if (model.isClick) {
+            return self.manager.dataSource.count;
+        }else {
+            return 3;
+        }
     }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,9 +87,12 @@
                 model.isClick = !model.isClick;
                 self.manager.index = indexPath.row;
                 model.typeCell = TypeCellTitleNoButton;
+                [self.manager.dataSource removeObject:model];
+                [self.manager.dataSource insertObject:model atIndex:indexPath.row];
                 [tableView reloadData];
             }
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:self.tableView];
+            CGFloat height = self.tableView.contentSize.height;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@(height)];
         };
         [cell configureCellWithModel:model];
         return cell;

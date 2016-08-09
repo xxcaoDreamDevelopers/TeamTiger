@@ -34,7 +34,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7o-Px-kF2" userLabel="View2">
-                        <rect key="frame" x="68" y="25" width="5" height="64"/>
+                        <rect key="frame" x="68" y="25" width="5" height="62"/>
                         <color key="backgroundColor" red="0.19215686269999999" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="5" id="JVK-H0-YIM"/>
@@ -66,7 +66,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-GO-yqP" customClass="ButtonIndexPath">
-                        <rect key="frame" x="62" y="69" width="20" height="20"/>
+                        <rect key="frame" x="62" y="67" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="lsE-GH-zFO"/>
                             <constraint firstAttribute="height" constant="20" id="zvm-dB-uVx"/>
@@ -93,12 +93,13 @@
                     <constraint firstItem="Xel-w9-9WG" firstAttribute="leading" secondItem="L8E-oX-LpO" secondAttribute="trailing" constant="5" id="GKp-lS-RvB"/>
                     <constraint firstItem="xWx-UP-xRx" firstAttribute="top" secondItem="3ZN-0T-J8u" secondAttribute="top" id="HKq-cp-aBr"/>
                     <constraint firstItem="3ZN-0T-J8u" firstAttribute="top" secondItem="8eG-JU-WpM" secondAttribute="top" constant="20" id="Qio-uZ-0F9"/>
-                    <constraint firstAttribute="bottom" secondItem="A7o-Px-kF2" secondAttribute="bottom" id="YYn-hb-ZG9"/>
+                    <constraint firstAttribute="bottom" secondItem="A7o-Px-kF2" secondAttribute="bottom" constant="2" id="YYn-hb-ZG9"/>
                     <constraint firstItem="A7o-Px-kF2" firstAttribute="leading" secondItem="L8E-oX-LpO" secondAttribute="trailing" constant="5" id="a4v-Vr-JSn"/>
                     <constraint firstItem="gbz-w5-vPX" firstAttribute="leading" secondItem="A7o-Px-kF2" secondAttribute="trailing" constant="8" id="bC2-dD-lHY"/>
                     <constraint firstItem="xWx-UP-xRx" firstAttribute="leading" secondItem="3ZN-0T-J8u" secondAttribute="trailing" constant="-1" id="bRL-ed-dMP"/>
                     <constraint firstItem="Emj-wK-Yfd" firstAttribute="top" secondItem="8eG-JU-WpM" secondAttribute="top" constant="25" id="i38-zJ-rg4"/>
                     <constraint firstItem="JHv-GO-yqP" firstAttribute="bottom" secondItem="A7o-Px-kF2" secondAttribute="bottom" id="l86-h4-Ubo"/>
+                    <constraint firstAttribute="bottom" secondItem="JHv-GO-yqP" secondAttribute="bottom" constant="2" id="myC-fy-zrI"/>
                     <constraint firstItem="JHv-GO-yqP" firstAttribute="leading" secondItem="8eG-JU-WpM" secondAttribute="leading" constant="62" id="uaE-Be-Id8"/>
                     <constraint firstAttribute="trailing" secondItem="gbz-w5-vPX" secondAttribute="trailing" constant="10" id="uau-0R-Gd5"/>
                     <constraint firstItem="L8E-oX-LpO" firstAttribute="leading" secondItem="8eG-JU-WpM" secondAttribute="leadingMargin" constant="5" id="ycc-FU-Eiq"/>
@@ -108,6 +109,7 @@
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="Bei-8P-m7l"/>
+                        <exclude reference="l86-h4-Ubo"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
@@ -120,7 +122,7 @@
                 <outlet property="secondNameLB" destination="xWx-UP-xRx" id="dfu-Ma-yfE"/>
                 <outlet property="timeLB" destination="L8E-oX-LpO" id="Ia3-nV-8aL"/>
             </connections>
-            <point key="canvasLocation" x="495" y="326.5"/>
+            <point key="canvasLocation" x="656" y="320"/>
         </tableViewCell>
     </objects>
     <resources>

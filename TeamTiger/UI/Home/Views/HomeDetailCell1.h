@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HomeDetailCellModel.h"
 #import "ButtonIndexPath.h"
+
 @interface HomeDetailCell1 : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLB;
