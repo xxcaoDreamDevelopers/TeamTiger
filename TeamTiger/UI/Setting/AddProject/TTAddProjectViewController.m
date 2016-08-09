@@ -22,10 +22,8 @@
     self.title = @"创建项目";
     [Common removeExtraCellLines:self.contentTable];
     
-    [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-      [self dismissViewControllerAnimated:YES completion:^{
-          
-      }];
+    [self hyb_setNavLeftImage:[UIImage imageNamed:@"icon_back"] block:^(UIButton *sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;

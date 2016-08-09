@@ -26,7 +26,7 @@
     [super viewDidLoad];
     self.title = @"项目设置";
     WeakSelf;
-    [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
+    [self hyb_setNavLeftImage:[UIImage imageNamed:@"icon_back"] block:^(UIButton *sender) {
         [Common customPopAnimationFromNavigation:wself.navigationController Type:kCATransitionReveal SubType:kCATransitionFromRight];
     }];
     

@@ -41,10 +41,9 @@
     self.isSelectOriginalPhoto = YES;
     [Common removeExtraCellLines:self.tableView];
     WeakSelf;
-    [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
+    [self hyb_setNavLeftImage:[UIImage imageNamed:@"icon_back"] block:^(UIButton *sender) {
         [Common customPopAnimationFromNavigation:wself.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
     }];
-    
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 77;

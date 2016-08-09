@@ -21,10 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"个人设置";
-    [self hyb_setNavLeftButtonTitle:@"返回" onCliked:^(UIButton *sender) {
-        [self dismissViewControllerAnimated:YES completion:^{
-        }];
+    
+    [self hyb_setNavLeftImage:[UIImage imageNamed:@"icon_back"] block:^(UIButton *sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
+
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 }
 
