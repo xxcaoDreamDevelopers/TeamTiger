@@ -63,7 +63,8 @@
             // Fade mode
             self.tSwitch = [[TTFadeSwitch alloc] init];
             self.tSwitch.thumbImage = [UIImage imageNamed:@"toggle_handle_on"];
-            self.tSwitch.thumbHighlightImage = [UIImage imageNamed:@"toggle_handle_off"];
+            self.tSwitch.thumbOffImage = [UIImage imageNamed:@"toggle_handle_off"];
+            self.tSwitch.thumbHighlightImage = [UIImage imageNamed:@"toggle_handle_on"];
             self.tSwitch.trackMaskImage = [UIImage imageNamed:@"toggle_background_off"];
             self.tSwitch.trackImageOn = [UIImage imageNamed:@"toggle_background_on"];
             self.tSwitch.trackImageOff = [UIImage imageNamed:@"toggle_background_off"];
@@ -87,7 +88,8 @@
 
         case ECellTypeAccessory:{
             self.accessoryImgV = [[UIImageView alloc] init];
-            self.accessoryImgV.backgroundColor = [UIColor redColor];
+            self.accessoryImgV.image = [UIImage imageNamed:@"icon_enter"];
+            self.accessoryImgV.contentMode = UIViewContentModeCenter;
             [self.contentView addSubview:self.accessoryImgV];
             [self.accessoryImgV mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.right.mas_equalTo(self.contentView.mas_right).offset(-20);

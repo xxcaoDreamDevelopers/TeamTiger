@@ -318,7 +318,11 @@ static const CGFloat kTTSwitchAnimationDuration = 0.25;
     if (highlighted && self.thumbHighlightImage) {
         self.thumbImageView.image = self.thumbHighlightImage;
     } else {
-        self.thumbImageView.image = self.thumbImage;
+        if (_on) {
+            self.thumbImageView.image = self.thumbImage;
+        } else {
+            self.thumbImageView.image = self.thumbOffImage;
+        }
     }
 }
 
