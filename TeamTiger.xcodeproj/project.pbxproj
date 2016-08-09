@@ -314,6 +314,15 @@
 		1DD2E3241D596EAA005D45A9 /* toggle_handle_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31C1D596EAA005D45A9 /* toggle_handle_off@3x.png */; };
 		1DD2E3251D596EAA005D45A9 /* toggle_handle_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31D1D596EAA005D45A9 /* toggle_handle_on@2x.png */; };
 		1DD2E3261D596EAA005D45A9 /* toggle_handle_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31E1D596EAA005D45A9 /* toggle_handle_on@3x.png */; };
+		1DD2E32D1D59B30F005D45A9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD2E3281D59B30F005D45A9 /* libWeChatSDK.a */; };
+		1DD2E32E1D59B30F005D45A9 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E3291D59B30F005D45A9 /* README.txt */; };
+		1DD2E3301D59B3DB005D45A9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD2E32F1D59B3DB005D45A9 /* libc++.tbd */; };
+		1DD2E3391D59B871005D45A9 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2E3341D59B871005D45A9 /* WXApiManager.m */; };
+		1DD2E33A1D59B871005D45A9 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2E3361D59B871005D45A9 /* WXApiRequestHandler.m */; };
+		1DD2E33B1D59B871005D45A9 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2E3381D59B871005D45A9 /* WXApiResponseHandler.m */; };
+		1DD2E3441D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2E33F1D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
+		1DD2E3451D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2E3411D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
+		1DD2E3461D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2E3431D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.m */; };
 		1DDE9E631D52DAF8005926FE /* TTAddProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */; };
 		1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */; };
 		1DDE9E691D531B66005926FE /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E671D531B66005926FE /* TTLoginViewController.m */; };
@@ -955,6 +964,25 @@
 		1DD2E31C1D596EAA005D45A9 /* toggle_handle_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_off@3x.png"; sourceTree = "<group>"; };
 		1DD2E31D1D596EAA005D45A9 /* toggle_handle_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_on@2x.png"; sourceTree = "<group>"; };
 		1DD2E31E1D596EAA005D45A9 /* toggle_handle_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_on@3x.png"; sourceTree = "<group>"; };
+		1DD2E3281D59B30F005D45A9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		1DD2E3291D59B30F005D45A9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		1DD2E32A1D59B30F005D45A9 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		1DD2E32B1D59B30F005D45A9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		1DD2E32C1D59B30F005D45A9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		1DD2E32F1D59B3DB005D45A9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		1DD2E3331D59B871005D45A9 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		1DD2E3341D59B871005D45A9 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		1DD2E3351D59B871005D45A9 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
+		1DD2E3361D59B871005D45A9 /* WXApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiRequestHandler.m; sourceTree = "<group>"; };
+		1DD2E3371D59B871005D45A9 /* WXApiResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiResponseHandler.h; sourceTree = "<group>"; };
+		1DD2E3381D59B871005D45A9 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
+		1DD2E33D1D59B8E0005D45A9 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		1DD2E33E1D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		1DD2E33F1D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		1DD2E3401D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		1DD2E3411D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		1DD2E3421D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXMediaMessage+messageConstruct.h"; sourceTree = "<group>"; };
+		1DD2E3431D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
 		1DDE9E601D52DAF8005926FE /* TTAddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddProjectViewController.h; sourceTree = "<group>"; };
 		1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddProjectViewController.m; sourceTree = "<group>"; };
 		1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddProjectViewController.xib; sourceTree = "<group>"; };
@@ -1053,6 +1081,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD2E3301D59B3DB005D45A9 /* libc++.tbd in Frameworks */,
 				1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */,
 				1D09CCC11D3F2B0E00F85E9A /* libz.tbd in Frameworks */,
 				1D09CCBF1D3F2B0600F85E9A /* SystemConfiguration.framework in Frameworks */,
@@ -1067,6 +1096,7 @@
 				1D09CCAD1D3F2AAF00F85E9A /* CoreFoundation.framework in Frameworks */,
 				1D9580ED1D3E26F800FD0053 /* libsqlite3.0.tbd in Frameworks */,
 				1D9580EB1D3E26CE00FD0053 /* libsqlite3.tbd in Frameworks */,
+				1DD2E32D1D59B30F005D45A9 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2101,6 +2131,7 @@
 		1D9580EE1D3E270400FD0053 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				1DD2E32F1D59B3DB005D45A9 /* libc++.tbd */,
 				1D5D5FF71D4EFADD007123EB /* AddressBook.framework */,
 				1D09CCBA1D3F2AF300F85E9A /* Accelerate.framework */,
 				1D09CCB81D3F2AE800F85E9A /* AssetsLibrary.framework */,
@@ -2194,6 +2225,7 @@
 		1DA71B741D3DB618007483D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1DD2E3311D59B871005D45A9 /* WeChatManager */,
 				06008F531D585C0E00A5B3DB /* CirclesManager */,
 				06008F541D585C0E00A5B3DB /* SelectPhotosManger */,
 				1D5D5FF01D4EE703007123EB /* CacheManager */,
@@ -2207,6 +2239,7 @@
 		1DA71B751D3DB618007483D2 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				1DD2E3271D59B30F005D45A9 /* OpenSDK */,
 				06008F2A1D58249300A5B3DB /* TZImagePickerController */,
 				068E96481D4F488C0074229C /* MMDrawerController */,
 				1D59130A1D4DDE9E00A188A0 /* GDIIndexBar */,
@@ -2396,6 +2429,54 @@
 				1DD2E31E1D596EAA005D45A9 /* toggle_handle_on@3x.png */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		1DD2E3271D59B30F005D45A9 /* OpenSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2E3281D59B30F005D45A9 /* libWeChatSDK.a */,
+				1DD2E3291D59B30F005D45A9 /* README.txt */,
+				1DD2E32A1D59B30F005D45A9 /* WechatAuthSDK.h */,
+				1DD2E32B1D59B30F005D45A9 /* WXApi.h */,
+				1DD2E32C1D59B30F005D45A9 /* WXApiObject.h */,
+			);
+			path = OpenSDK;
+			sourceTree = "<group>";
+		};
+		1DD2E3311D59B871005D45A9 /* WeChatManager */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2E33C1D59B8E0005D45A9 /* Helper */,
+				1DD2E3321D59B871005D45A9 /* Control */,
+			);
+			path = WeChatManager;
+			sourceTree = "<group>";
+		};
+		1DD2E3321D59B871005D45A9 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2E3331D59B871005D45A9 /* WXApiManager.h */,
+				1DD2E3341D59B871005D45A9 /* WXApiManager.m */,
+				1DD2E3351D59B871005D45A9 /* WXApiRequestHandler.h */,
+				1DD2E3361D59B871005D45A9 /* WXApiRequestHandler.m */,
+				1DD2E3371D59B871005D45A9 /* WXApiResponseHandler.h */,
+				1DD2E3381D59B871005D45A9 /* WXApiResponseHandler.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		1DD2E33C1D59B8E0005D45A9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2E33D1D59B8E0005D45A9 /* Constant.h */,
+				1DD2E33E1D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */,
+				1DD2E33F1D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */,
+				1DD2E3401D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */,
+				1DD2E3411D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */,
+				1DD2E3421D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.h */,
+				1DD2E3431D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		1DDE9E5F1D52DADA005926FE /* AddProject */ = {
@@ -2634,7 +2715,7 @@
 				TargetAttributes = {
 					1DA71B591D3DB5A1007483D2 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9WUQR88DQL;
+						DevelopmentTeam = FAT69R69RF;
 					};
 				};
 			};
@@ -2723,6 +2804,7 @@
 				2DC21B6C1D5886B9004F7C2B /* HomeViewController.xib in Resources */,
 				1DF0A1BD1D4DB898002D91DB /* 9.png in Resources */,
 				1DF0A1B31D4DB898002D91DB /* 16.png in Resources */,
+				1DD2E32E1D59B30F005D45A9 /* README.txt in Resources */,
 				06E026641D50440300B9743B /* UserInfoView.xib in Resources */,
 				1DB5A58A1D4B3F36009E6170 /* switchToggleHigh@2x.png in Resources */,
 				1DF0A1AE1D4DB898002D91DB /* 11.png in Resources */,
@@ -2760,6 +2842,7 @@
 				1D09CC641D3F29C900F85E9A /* NSObject+YYAddForARC.m in Sources */,
 				1D09CC6D1D3F29C900F85E9A /* UIBezierPath+YYAdd.m in Sources */,
 				1D9580E61D3E23E100FD0053 /* APP_SETTINGS.m in Sources */,
+				1DD2E3391D59B871005D45A9 /* WXApiManager.m in Sources */,
 				1D09CD631D3F59D500F85E9A /* SDWebImagePrefetcher.m in Sources */,
 				1D09CD281D3F550300F85E9A /* UIActionSheet+HYBHelperKit.m in Sources */,
 				1D09CD161D3F550300F85E9A /* NSMutableDictionary+HYBHelperKit.m in Sources */,
@@ -2782,6 +2865,7 @@
 				1D09CC801D3F29C900F85E9A /* UIButton+YYWebImage.m in Sources */,
 				1D09CC741D3F29C900F85E9A /* UIScreen+YYAdd.m in Sources */,
 				1D09CCA21D3F29C900F85E9A /* YYFileHash.m in Sources */,
+				1DD2E3461D59B8E0005D45A9 /* WXMediaMessage+messageConstruct.m in Sources */,
 				1D9580A21D3E207200FD0053 /* MJRefreshAutoFooter.m in Sources */,
 				1D115F8E1D4BA043003DFBB1 /* IQTextView.m in Sources */,
 				1D09CC951D3F29C900F85E9A /* NSAttributedString+YYText.m in Sources */,
@@ -2798,6 +2882,7 @@
 				1D09CC931D3F29C900F85E9A /* YYTextMagnifier.m in Sources */,
 				1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */,
 				1D09CCA81D3F29C900F85E9A /* YYThreadSafeDictionary.m in Sources */,
+				1DD2E33B1D59B871005D45A9 /* WXApiResponseHandler.m in Sources */,
 				1D09CC981D3F29C900F85E9A /* YYTextArchiver.m in Sources */,
 				2DC21B7B1D5886B9004F7C2B /* VoteHomeCell.m in Sources */,
 				1D9580A91D3E207200FD0053 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -2853,6 +2938,7 @@
 				1D09CC631D3F29C900F85E9A /* NSObject+YYAdd.m in Sources */,
 				1D09CD241D3F550300F85E9A /* UIButton+HYBHelperBlockKit.m in Sources */,
 				06008F441D58249300A5B3DB /* TZPhotoPreviewCell.m in Sources */,
+				1DD2E3441D59B8E0005D45A9 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				1D09CD601D3F59D500F85E9A /* SDWebImageCompat.m in Sources */,
 				1D09CC711D3F29C900F85E9A /* UIFont+YYAdd.m in Sources */,
 				1D09CC941D3F29C900F85E9A /* YYTextSelectionView.m in Sources */,
@@ -2966,6 +3052,7 @@
 				1D55FD981D49ABAC00094112 /* Common.m in Sources */,
 				1D09CC6E1D3F29C900F85E9A /* UIColor+YYAdd.m in Sources */,
 				1D09CC681D3F29C900F85E9A /* NSTimer+YYAdd.m in Sources */,
+				1DD2E3451D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				1D09CD571D3F59D500F85E9A /* UIButton+WebCache.m in Sources */,
 				1D09CD201D3F550300F85E9A /* UITableView+HYBMasonryKit.m in Sources */,
 				1DA71B851D3DBA67007483D2 /* main.m in Sources */,
@@ -3011,6 +3098,7 @@
 				1D09CD171D3F550300F85E9A /* NSNumber+HYBHelperKit.m in Sources */,
 				1DA0E19F1D543F7B008CD6DF /* ProjectCell.m in Sources */,
 				1D09CC9C1D3F29C900F85E9A /* YYTextRunDelegate.m in Sources */,
+				1DD2E33A1D59B871005D45A9 /* WXApiRequestHandler.m in Sources */,
 				1D115F861D4BA043003DFBB1 /* IQNSArray+Sort.m in Sources */,
 				1D9580AE1D3E207200FD0053 /* MJRefreshNormalHeader.m in Sources */,
 				06E026621D50439D00B9743B /* UserInfoView.m in Sources */,
@@ -3137,7 +3225,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TeamTiger/Third/OpenSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -3155,7 +3247,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/TeamTiger/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger.Demo;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TeamTiger/Third/OpenSDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dream.teamTiger.TeamTiger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

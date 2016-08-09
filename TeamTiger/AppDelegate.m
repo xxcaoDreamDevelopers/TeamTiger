@@ -8,16 +8,17 @@
 
 #import "AppDelegate.h"
 #import "CirclesViewController.h"
-#import "UIImage+TYLaunchImage.h"
-#import "UIView+TYLaunchAnimation.h"
-#import "TYLaunchFadeScaleAnimation.h"
-#import "TTBaseNavigationController.h"
-#import "IQKeyboardManager.h"
 #import "HomeViewController.h"
+#import "IQKeyboardManager.h"
 #import "MMDrawerController.h"
 #import "MMDrawerVisualState.h"
-#import "TTTabBarViewController.h"
+#import "TTBaseNavigationController.h"
 #import "TTLoginViewController.h"
+#import "TTTabBarViewController.h"
+#import "TYLaunchFadeScaleAnimation.h"
+#import "UIImage+TYLaunchImage.h"
+#import "UIView+TYLaunchAnimation.h"
+#import "WXApiManager.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +36,6 @@
     TTLoginViewController *loginVC = [[TTLoginViewController alloc] initWithNibName:@"TTLoginViewController" bundle:nil];
     self.window.rootViewController = loginVC;
     [self.window makeKeyAndVisible];
-
 
     //launch image
     UIImageView *screenImageView = [[UIImageView alloc] initWithImage:[UIImage ty_getLaunchImage]];
@@ -67,6 +67,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
 #pragma -mark initial methods
@@ -125,6 +133,14 @@
     //IQKeyboardManager
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    
+    
+    //向微信注册
+    [WXApi registerApp:@"wxd930ea5d5a258f4f" withDescription:@"demo 2.0"];
+    //向微信注册支持的文件类型
+    UInt64 typeFlag = MMAPP_SUPPORT_TEXT | MMAPP_SUPPORT_PICTURE | MMAPP_SUPPORT_LOCATION | MMAPP_SUPPORT_VIDEO |MMAPP_SUPPORT_AUDIO | MMAPP_SUPPORT_WEBPAGE | MMAPP_SUPPORT_DOC | MMAPP_SUPPORT_DOCX | MMAPP_SUPPORT_PPT | MMAPP_SUPPORT_PPTX | MMAPP_SUPPORT_XLS | MMAPP_SUPPORT_XLSX | MMAPP_SUPPORT_PDF;
+    
+    [WXApi registerAppSupportContentFlag:typeFlag];
 }
 
 @end
