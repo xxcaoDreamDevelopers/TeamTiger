@@ -6,11 +6,13 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "TTSettingViewController.h"
-#import "ProjectCell.h"
 #import "IQKeyboardManager.h"
+#import "ProjectCell.h"
 #import "TTAddContactorViewController.h"
 #import "TTPickerView.h"
+#import "TTSettingViewController.h"
+#import "UIAlertView+HYBHelperKit.h"
+
 @interface TTSettingViewController ()
 
 @property(nonatomic,strong)NSMutableArray *dataSource;
@@ -55,6 +57,9 @@
             [self ttPicker];
         } else if (type == EProjectAddMember){
             NSLog(@"跳转微信，增加人员");
+            [UIAlertView hyb_showWithTitle:@"提示" message:@"跳转微信，拉好友" buttonTitles:@[@"确定"] block:^(UIAlertView *alertView, NSUInteger buttonIndex) {
+                
+            }];
         } else if (type == EProjectDleteProject){
             NSLog(@"删除并退出");
         }
