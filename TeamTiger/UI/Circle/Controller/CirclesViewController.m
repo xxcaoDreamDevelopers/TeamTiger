@@ -342,7 +342,7 @@ CCDraggableContainerDelegate>
     NSLog(@"点击了Tag为%ld的Card", (long)didSelectIndex);
     didSelectIndex = didSelectIndex % (self.dataSources.count);
     
-    
+    [CirclesManager sharedInstance].selectIndex = didSelectIndex;
 //    TTTabBarViewController *mainTab = (TTTabBarViewController *)self.mm_drawerController.centerViewController;
 //
 //    mainTab.selectedIndex = didSelectIndex;
@@ -354,7 +354,7 @@ CCDraggableContainerDelegate>
     TTBaseNavigationController *mainNav = (TTBaseNavigationController *)self.mm_drawerController.centerViewController;
     HomeViewController *homeVC = (HomeViewController *)mainNav.topViewController;
     //刷新数据
-    homeVC.title = self.titles[didSelectIndex];
+    [homeVC reloadWithData:[CirclesManager sharedInstance].selectCircle];
     [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
         
     }];

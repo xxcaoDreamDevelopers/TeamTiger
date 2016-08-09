@@ -44,6 +44,8 @@
 		0604B47C1D4C5A9B00EF1703 /* image_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0604B4711D4C5A9B00EF1703 /* image_9.jpg */; };
 		0604B47D1D4C5A9B00EF1703 /* upshadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0604B4721D4C5A9B00EF1703 /* upshadow.png */; };
 		064C0C181D51E0F400D8E639 /* TTTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C0C151D51E0F400D8E639 /* TTTabBarViewController.m */; };
+		06893CFD1D59F0FE00921900 /* CirclesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06893CFC1D59F0FE00921900 /* CirclesManager.m */; };
+		06893D011D59F16A00921900 /* SelectCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06893D001D59F16A00921900 /* SelectCircleViewController.m */; };
 		068E96521D4F488C0074229C /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E964A1D4F488C0074229C /* MMDrawerBarButtonItem.m */; };
 		068E96531D4F488C0074229C /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E964D1D4F488C0074229C /* MMDrawerController.m */; };
 		068E96541D4F488C0074229C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E964F1D4F488C0074229C /* MMDrawerVisualState.m */; };
@@ -451,6 +453,10 @@
 		0604B4721D4C5A9B00EF1703 /* upshadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upshadow.png; sourceTree = "<group>"; };
 		064C0C141D51E0F400D8E639 /* TTTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTabBarViewController.h; sourceTree = "<group>"; };
 		064C0C151D51E0F400D8E639 /* TTTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTabBarViewController.m; sourceTree = "<group>"; };
+		06893CFB1D59F0FE00921900 /* CirclesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesManager.h; sourceTree = "<group>"; };
+		06893CFC1D59F0FE00921900 /* CirclesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesManager.m; sourceTree = "<group>"; };
+		06893CFF1D59F16A00921900 /* SelectCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCircleViewController.h; sourceTree = "<group>"; };
+		06893D001D59F16A00921900 /* SelectCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCircleViewController.m; sourceTree = "<group>"; };
 		068E96491D4F488C0074229C /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
 		068E964A1D4F488C0074229C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
 		068E964B1D4F488C0074229C /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
@@ -1173,13 +1179,6 @@
 			path = AddImage;
 			sourceTree = "<group>";
 		};
-		06008F531D585C0E00A5B3DB /* CirclesManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CirclesManager;
-			sourceTree = "<group>";
-		};
 		06008F541D585C0E00A5B3DB /* SelectPhotosManger */ = {
 			isa = PBXGroup;
 			children = (
@@ -1259,6 +1258,24 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		06893CFA1D59F0FE00921900 /* CirclesManager */ = {
+			isa = PBXGroup;
+			children = (
+				06893CFB1D59F0FE00921900 /* CirclesManager.h */,
+				06893CFC1D59F0FE00921900 /* CirclesManager.m */,
+			);
+			path = CirclesManager;
+			sourceTree = "<group>";
+		};
+		06893CFE1D59F16A00921900 /* SelectCircle */ = {
+			isa = PBXGroup;
+			children = (
+				06893CFF1D59F16A00921900 /* SelectCircleViewController.h */,
+				06893D001D59F16A00921900 /* SelectCircleViewController.m */,
+			);
+			path = SelectCircle;
 			sourceTree = "<group>";
 		};
 		068E96481D4F488C0074229C /* MMDrawerController */ = {
@@ -2227,8 +2244,8 @@
 		1DA71B741D3DB618007483D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				06893CFA1D59F0FE00921900 /* CirclesManager */,
 				1DD2E3311D59B871005D45A9 /* WeChatManager */,
-				06008F531D585C0E00A5B3DB /* CirclesManager */,
 				06008F541D585C0E00A5B3DB /* SelectPhotosManger */,
 				1D5D5FF01D4EE703007123EB /* CacheManager */,
 				1D9408661D41BE19009E2E11 /* MessageManager */,
@@ -2515,6 +2532,7 @@
 		1DDE9E711D535DDA005926FE /* AddDiscuss */ = {
 			isa = PBXGroup;
 			children = (
+				06893CFE1D59F16A00921900 /* SelectCircle */,
 				06008F481D582FA500A5B3DB /* AddImage */,
 				1DDE9E721D535DDA005926FE /* TTAddDiscussViewController.h */,
 				1DDE9E731D535DDA005926FE /* TTAddDiscussViewController.m */,
@@ -2718,7 +2736,7 @@
 				TargetAttributes = {
 					1DA71B591D3DB5A1007483D2 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = FAT69R69RF;
+						DevelopmentTeam = 9WUQR88DQL;
 					};
 				};
 			};
@@ -2875,6 +2893,7 @@
 				1D9580A21D3E207200FD0053 /* MJRefreshAutoFooter.m in Sources */,
 				1D115F8E1D4BA043003DFBB1 /* IQTextView.m in Sources */,
 				1D09CC951D3F29C900F85E9A /* NSAttributedString+YYText.m in Sources */,
+				06893CFD1D59F0FE00921900 /* CirclesManager.m in Sources */,
 				1D09CC7F1D3F29C900F85E9A /* MKAnnotationView+YYWebImage.m in Sources */,
 				1D115F8F1D4BA043003DFBB1 /* IQBarButtonItem.m in Sources */,
 				1D09CC771D3F29C900F85E9A /* UITextField+YYAdd.m in Sources */,
@@ -3025,6 +3044,7 @@
 				06008F151D58162300A5B3DB /* TTCommonCell.m in Sources */,
 				1DF0A1981D4DB28B002D91DB /* NSString+Utils.m in Sources */,
 				1D09CC8B1D3F29C900F85E9A /* YYClassInfo.m in Sources */,
+				06893D011D59F16A00921900 /* SelectCircleViewController.m in Sources */,
 				1D9580AD1D3E207200FD0053 /* MJRefreshGifHeader.m in Sources */,
 				1D09CC881D3F29C900F85E9A /* YYWebImageManager.m in Sources */,
 				1D9580E71D3E23E100FD0053 /* APP_USERS.m in Sources */,

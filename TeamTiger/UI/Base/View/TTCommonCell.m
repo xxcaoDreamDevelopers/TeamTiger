@@ -222,7 +222,7 @@ typedef enum : NSUInteger {
 //                make.bottom.equalTo(self.contentView).offset(-kDistanceToVSide);
         make.left.equalTo(self.contentView.mas_left).offset(kDistanceToHSide);
         make.height.mas_equalTo(kLabelHeight);
-        make.width.mas_equalTo(40);
+        make.width.mas_greaterThanOrEqualTo(40);
     }];
     
     if (self.cellType == TTCommonCellTextView) {

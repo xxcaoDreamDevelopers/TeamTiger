@@ -10,6 +10,6 @@
 
 @interface HomeViewController : TTBaseViewController
 
-
+- (void)reloadWithData:(id)data;
 @end
 

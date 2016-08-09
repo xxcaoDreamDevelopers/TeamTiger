@@ -33,6 +33,11 @@
     }
     return _manager;
 }
+
+- (void)reloadWithData:(id)data {
+    self.title = data;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureNavigationItem];
@@ -71,7 +76,7 @@
 
 - (void)handleLeftBtnAction {
     TTSettingViewController *settingVC = [[TTSettingViewController alloc] initWithNibName:@"TTSettingViewController" bundle:nil];
-    [Common customPushAnimationFromNavigation:self.navigationController ToViewController:settingVC Type:kCATransitionMoveIn SubType:kCATransitionFromLeft];
+    [Common customPushAnimationFromNavigation:self.navigationController ToViewController:settingVC Type:kCATransitionPush SubType:kCATransitionFromLeft];
 }
 
 - (void)handleRightBtnAction {

@@ -23,7 +23,7 @@
 #import "TTBaseNavigationController.h"
 #import "GlobalDefine.h"
 #import "TMCache.h"
-
+#import "CirclesManager.h"
 
 
 #endif /* TeamTiger_Prefix_pch */

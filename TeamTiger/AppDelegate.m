@@ -32,7 +32,7 @@
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     }
     [self initialMethods];
-
+    [self initialGlobalData];
     TTLoginViewController *loginVC = [[TTLoginViewController alloc] initWithNibName:@"TTLoginViewController" bundle:nil];
     self.window.rootViewController = loginVC;
     [self.window makeKeyAndVisible];
@@ -141,6 +141,14 @@
     UInt64 typeFlag = MMAPP_SUPPORT_TEXT | MMAPP_SUPPORT_PICTURE | MMAPP_SUPPORT_LOCATION | MMAPP_SUPPORT_VIDEO |MMAPP_SUPPORT_AUDIO | MMAPP_SUPPORT_WEBPAGE | MMAPP_SUPPORT_DOC | MMAPP_SUPPORT_DOCX | MMAPP_SUPPORT_PPT | MMAPP_SUPPORT_PPTX | MMAPP_SUPPORT_XLS | MMAPP_SUPPORT_XLSX | MMAPP_SUPPORT_PDF;
     
     [WXApi registerAppSupportContentFlag:typeFlag];
+}
+
+- (void)initialGlobalData {
+    //    NSMutableArray *circles = [NSMutableArray arrayWithArray:@[@"所有项目",@"工作牛",@"易会",@"MPP",@"营配"]];
+    //    [CacheManager sharedInstance].cacheType = ECacheTypeMemory;
+    //    [[CacheManager sharedInstance] setObject:circles ForKey:TTCircle_Cache_Key];
+    
+    [[CirclesManager sharedInstance] loadingGlobalCirclesInfo];
 }
 
 @end

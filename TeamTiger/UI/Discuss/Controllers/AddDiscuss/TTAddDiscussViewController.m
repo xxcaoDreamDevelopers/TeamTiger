@@ -20,6 +20,7 @@
 #import "TZVideoPlayerController.h"
 #import "AddImageViewController.h"
 #import "SelectPhotosManger.h"
+#import "SelectCircleViewController.h"
 
 @interface TTAddDiscussViewController ()<TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -87,7 +88,7 @@
  */
 - (void)setupGroup1
 {
-    TTCommonItem *tag = [TTCommonArrowItem itemWithTitle:@"标签" subtitle:@"工作牛" destVcClass:nil];
+    TTCommonItem *tag = [TTCommonArrowItem itemWithTitle:@"标签" subtitle:[[CirclesManager sharedInstance] selectCircle] destVcClass:[SelectCircleViewController class]];
     NSString *attachmentSub = [NSString stringWithFormat:@"%ld", [[[SelectPhotosManger sharedInstance] getAssets] count]];
     TTCommonItem *attachment = [TTCommonArrowItem itemWithTitle:@"附件" subtitle:attachmentSub destVcClass:nil];
     WeakSelf;
