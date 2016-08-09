@@ -310,6 +310,14 @@
 		1DB5A5951D4B3F36009E6170 /* square-switch-track@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5A5851D4B3F36009E6170 /* square-switch-track@2x.png */; };
 		1DB926171D46F4F4003676AC /* LCProcessFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB926141D46F4F4003676AC /* LCProcessFilter.m */; };
 		1DB926181D46F4F4003676AC /* LCRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB926161D46F4F4003676AC /* LCRequestAccessory.m */; };
+		1DD2E31F1D596EAA005D45A9 /* toggle_background_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E3171D596EAA005D45A9 /* toggle_background_off@2x.png */; };
+		1DD2E3201D596EAA005D45A9 /* toggle_background_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E3181D596EAA005D45A9 /* toggle_background_off@3x.png */; };
+		1DD2E3211D596EAA005D45A9 /* toggle_background_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E3191D596EAA005D45A9 /* toggle_background_on@2x.png */; };
+		1DD2E3221D596EAA005D45A9 /* toggle_background_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31A1D596EAA005D45A9 /* toggle_background_on@3x.png */; };
+		1DD2E3231D596EAA005D45A9 /* toggle_handle_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31B1D596EAA005D45A9 /* toggle_handle_off@2x.png */; };
+		1DD2E3241D596EAA005D45A9 /* toggle_handle_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31C1D596EAA005D45A9 /* toggle_handle_off@3x.png */; };
+		1DD2E3251D596EAA005D45A9 /* toggle_handle_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31D1D596EAA005D45A9 /* toggle_handle_on@2x.png */; };
+		1DD2E3261D596EAA005D45A9 /* toggle_handle_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DD2E31E1D596EAA005D45A9 /* toggle_handle_on@3x.png */; };
 		1DDE9E631D52DAF8005926FE /* TTAddProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */; };
 		1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */; };
 		1DDE9E691D531B66005926FE /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDE9E671D531B66005926FE /* TTLoginViewController.m */; };
@@ -951,6 +959,14 @@
 		1DB926141D46F4F4003676AC /* LCProcessFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCProcessFilter.m; sourceTree = "<group>"; };
 		1DB926151D46F4F4003676AC /* LCRequestAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCRequestAccessory.h; sourceTree = "<group>"; };
 		1DB926161D46F4F4003676AC /* LCRequestAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCRequestAccessory.m; sourceTree = "<group>"; };
+		1DD2E3171D596EAA005D45A9 /* toggle_background_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_background_off@2x.png"; sourceTree = "<group>"; };
+		1DD2E3181D596EAA005D45A9 /* toggle_background_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_background_off@3x.png"; sourceTree = "<group>"; };
+		1DD2E3191D596EAA005D45A9 /* toggle_background_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_background_on@2x.png"; sourceTree = "<group>"; };
+		1DD2E31A1D596EAA005D45A9 /* toggle_background_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_background_on@3x.png"; sourceTree = "<group>"; };
+		1DD2E31B1D596EAA005D45A9 /* toggle_handle_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_off@2x.png"; sourceTree = "<group>"; };
+		1DD2E31C1D596EAA005D45A9 /* toggle_handle_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_off@3x.png"; sourceTree = "<group>"; };
+		1DD2E31D1D596EAA005D45A9 /* toggle_handle_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_on@2x.png"; sourceTree = "<group>"; };
+		1DD2E31E1D596EAA005D45A9 /* toggle_handle_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toggle_handle_on@3x.png"; sourceTree = "<group>"; };
 		1DDE9E601D52DAF8005926FE /* TTAddProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAddProjectViewController.h; sourceTree = "<group>"; };
 		1DDE9E611D52DAF8005926FE /* TTAddProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAddProjectViewController.m; sourceTree = "<group>"; };
 		1DDE9E621D52DAF8005926FE /* TTAddProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTAddProjectViewController.xib; sourceTree = "<group>"; };
@@ -2348,6 +2364,7 @@
 		1DB5A5721D4B3F36009E6170 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1DD2E3161D596EAA005D45A9 /* Other */,
 				1DB5A5731D4B3F36009E6170 /* Fade */,
 				1DB5A5791D4B3F36009E6170 /* Round */,
 				1DB5A5801D4B3F36009E6170 /* Square */,
@@ -2401,6 +2418,21 @@
 				1DB926161D46F4F4003676AC /* LCRequestAccessory.m */,
 			);
 			path = NetworkHelper;
+			sourceTree = "<group>";
+		};
+		1DD2E3161D596EAA005D45A9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1DD2E3171D596EAA005D45A9 /* toggle_background_off@2x.png */,
+				1DD2E3181D596EAA005D45A9 /* toggle_background_off@3x.png */,
+				1DD2E3191D596EAA005D45A9 /* toggle_background_on@2x.png */,
+				1DD2E31A1D596EAA005D45A9 /* toggle_background_on@3x.png */,
+				1DD2E31B1D596EAA005D45A9 /* toggle_handle_off@2x.png */,
+				1DD2E31C1D596EAA005D45A9 /* toggle_handle_off@3x.png */,
+				1DD2E31D1D596EAA005D45A9 /* toggle_handle_on@2x.png */,
+				1DD2E31E1D596EAA005D45A9 /* toggle_handle_on@3x.png */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		1DDE9E5F1D52DADA005926FE /* AddProject */ = {
@@ -2704,15 +2736,19 @@
 				1DF0A1B81D4DB898002D91DB /* 4.png in Resources */,
 				1DA71B841D3DBA67007483D2 /* Assets.xcassets in Resources */,
 				2DC21B8B1D58B057004F7C2B /* HomeDetailCell4.xib in Resources */,
+				1DD2E31F1D596EAA005D45A9 /* toggle_background_off@2x.png in Resources */,
 				1DF0A1AC1D4DB898002D91DB /* 1.png in Resources */,
 				0604B47C1D4C5A9B00EF1703 /* image_9.jpg in Resources */,
 				0604B4771D4C5A9B00EF1703 /* image_4.jpg in Resources */,
 				1DA0E1981D542FE4008CD6DF /* ProfileCell_Footer.xib in Resources */,
 				1DF0A1B51D4DB898002D91DB /* 18.png in Resources */,
 				1DA71B821D3DBA67007483D2 /* LaunchScreen.storyboard in Resources */,
+				1DD2E3251D596EAA005D45A9 /* toggle_handle_on@2x.png in Resources */,
 				0604B4781D4C5A9B00EF1703 /* image_5.jpg in Resources */,
 				1DB5A5871D4B3F36009E6170 /* switchMask@2x.png in Resources */,
+				1DD2E3201D596EAA005D45A9 /* toggle_background_off@3x.png in Resources */,
 				1DDE9E641D52DAF8005926FE /* TTAddProjectViewController.xib in Resources */,
+				1DD2E3231D596EAA005D45A9 /* toggle_handle_off@2x.png in Resources */,
 				2DFACA571D507B8B0099A2A3 /* DiscussListCell.xib in Resources */,
 				1DB5A58C1D4B3F36009E6170 /* round-switch-overlay@2x.png in Resources */,
 				1D55FD951D49AAA400094112 /* SettingCell.xib in Resources */,
@@ -2726,7 +2762,9 @@
 				1DB5A5861D4B3F36009E6170 /* switchGreen@2x.png in Resources */,
 				0604B47A1D4C5A9B00EF1703 /* image_7.jpg in Resources */,
 				0604B4751D4C5A9B00EF1703 /* image_2.jpg in Resources */,
+				1DD2E3261D596EAA005D45A9 /* toggle_handle_on@3x.png in Resources */,
 				0604B4741D4C5A9B00EF1703 /* image_1.jpg in Resources */,
+				1DD2E3211D596EAA005D45A9 /* toggle_background_on@2x.png in Resources */,
 				0604B4761D4C5A9B00EF1703 /* image_3.jpg in Resources */,
 				1DF0A1B71D4DB898002D91DB /* 3.png in Resources */,
 				1DF0A1B11D4DB898002D91DB /* 14.png in Resources */,
@@ -2741,6 +2779,7 @@
 				06008F411D58249300A5B3DB /* TZImagePickerController.bundle in Resources */,
 				1DF0A1B91D4DB898002D91DB /* 5.png in Resources */,
 				1DB5A5931D4B3F36009E6170 /* square-switch-thumb-highlight@2x.png in Resources */,
+				1DD2E3221D596EAA005D45A9 /* toggle_background_on@3x.png in Resources */,
 				1DB5A5921D4B3F36009E6170 /* square-switch-overlay@2x.png in Resources */,
 				1DF0A1B41D4DB898002D91DB /* 17.png in Resources */,
 				1DB5A58B1D4B3F36009E6170 /* round-switch-mask@2x.png in Resources */,
@@ -2748,6 +2787,7 @@
 				1DB5A5891D4B3F36009E6170 /* switchToggle@2x.png in Resources */,
 				0604B4791D4C5A9B00EF1703 /* image_6.jpg in Resources */,
 				2DC21B7A1D5886B9004F7C2B /* HomeDetailCell3.xib in Resources */,
+				1DD2E3241D596EAA005D45A9 /* toggle_handle_off@3x.png in Resources */,
 				1DF0A1BC1D4DB898002D91DB /* 8.png in Resources */,
 				1DA0E1A11D543F7B008CD6DF /* ProjectCell1.xib in Resources */,
 				2DFACA591D507B8B0099A2A3 /* DiscussListCell1.xib in Resources */,

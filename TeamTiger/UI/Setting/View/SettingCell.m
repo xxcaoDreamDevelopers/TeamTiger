@@ -62,18 +62,18 @@
         case ECellTypeSwitch:{
             // Fade mode
             self.tSwitch = [[TTFadeSwitch alloc] init];
-            self.tSwitch.thumbImage = [UIImage imageNamed:@"switchToggle"];
-            self.tSwitch.thumbHighlightImage = [UIImage imageNamed:@"switchToggleHigh"];
-            self.tSwitch.trackMaskImage = [UIImage imageNamed:@"switchMask"];
-            self.tSwitch.trackImageOn = [UIImage imageNamed:@"switchGreen"];
-            self.tSwitch.trackImageOff = [UIImage imageNamed:@"switchRed"];
+            self.tSwitch.thumbImage = [UIImage imageNamed:@"toggle_handle_on"];
+            self.tSwitch.thumbHighlightImage = [UIImage imageNamed:@"toggle_handle_off"];
+            self.tSwitch.trackMaskImage = [UIImage imageNamed:@"toggle_background_off"];
+            self.tSwitch.trackImageOn = [UIImage imageNamed:@"toggle_background_on"];
+            self.tSwitch.trackImageOff = [UIImage imageNamed:@"toggle_background_off"];
             self.tSwitch.thumbInsetX = -3.0;
             self.tSwitch.thumbOffsetY = 0.0;
             [self.contentView addSubview:self.tSwitch];
             [self.tSwitch mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.right.mas_equalTo(self.contentView.mas_right).offset(-20);
-                make.width.equalTo(@70);
-                make.height.equalTo(@24);
+                make.width.equalTo(@51.5);
+                make.height.equalTo(@31);
                 make.centerY.equalTo(self.contentView.mas_centerY);
             }];
             __weak __typeof(self)wself = self;
