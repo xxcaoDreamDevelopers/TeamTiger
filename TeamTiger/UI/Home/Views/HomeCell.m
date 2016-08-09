@@ -61,7 +61,6 @@
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     HomeDetailCellModel *model = self.manager.dataSource[self.manager.index];
-//测试 假的
     if (tableView.tag == 1000) {
         if (model.isClick) {
             return self.manager.dataSource.count;
