@@ -359,6 +359,8 @@
 		1DF991CE1D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991C91D488C0F00E7D1B8 /* UIImage+TYLaunchImage.m */; };
 		1DF991CF1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991CB1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m */; };
 		1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF991D61D48ADD900E7D1B8 /* TTSettingViewController.m */; };
+		2D149F071D5AC2130080FA02 /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D149F061D5AC2130080FA02 /* HeadView.m */; };
+		2D149F091D5AC2260080FA02 /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D149F081D5AC2260080FA02 /* HeadView.xib */; };
 		2DC21B7F1D58873D004F7C2B /* CALayer+BorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC21B7E1D58873D004F7C2B /* CALayer+BorderColor.m */; };
 		2DF325B11D59D88800DA8BFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3258D1D59D88700DA8BFD /* HomeViewController.m */; };
 		2DF325B21D59D88800DA8BFD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3258E1D59D88700DA8BFD /* HomeViewController.xib */; };
@@ -1037,6 +1039,9 @@
 		1DF991CB1D488C0F00E7D1B8 /* UIView+TYLaunchAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TYLaunchAnimation.m"; sourceTree = "<group>"; };
 		1DF991D51D48ADD900E7D1B8 /* TTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSettingViewController.h; sourceTree = "<group>"; };
 		1DF991D61D48ADD900E7D1B8 /* TTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSettingViewController.m; sourceTree = "<group>"; };
+		2D149F051D5AC2130080FA02 /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
+		2D149F061D5AC2130080FA02 /* HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
+		2D149F081D5AC2260080FA02 /* HeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadView.xib; sourceTree = "<group>"; };
 		2DC21B7D1D58873D004F7C2B /* CALayer+BorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+BorderColor.h"; sourceTree = "<group>"; };
 		2DC21B7E1D58873D004F7C2B /* CALayer+BorderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BorderColor.m"; sourceTree = "<group>"; };
 		2DF3258C1D59D88700DA8BFD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -2671,6 +2676,9 @@
 				2DF325AE1D59D88800DA8BFD /* VoteHomeCell.h */,
 				2DF325AF1D59D88800DA8BFD /* VoteHomeCell.m */,
 				2DF325B01D59D88800DA8BFD /* VoteHomeCell.xib */,
+				2D149F051D5AC2130080FA02 /* HeadView.h */,
+				2D149F061D5AC2130080FA02 /* HeadView.m */,
+				2D149F081D5AC2260080FA02 /* HeadView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2842,6 +2850,7 @@
 				1DB5A58A1D4B3F36009E6170 /* switchToggleHigh@2x.png in Resources */,
 				1DF0A1AE1D4DB898002D91DB /* 11.png in Resources */,
 				1DB5A5951D4B3F36009E6170 /* square-switch-track@2x.png in Resources */,
+				2D149F091D5AC2260080FA02 /* HeadView.xib in Resources */,
 				1DB5A58E1D4B3F36009E6170 /* round-switch-thumb@2x.png in Resources */,
 				06008F411D58249300A5B3DB /* TZImagePickerController.bundle in Resources */,
 				1DF0A1B91D4DB898002D91DB /* 5.png in Resources */,
@@ -3011,6 +3020,7 @@
 				068E96531D4F488C0074229C /* MMDrawerController.m in Sources */,
 				1D9580DB1D3E225200FD0053 /* ViewController+MASAdditions.m in Sources */,
 				1D9580371D3E123800FD0053 /* AFNetworkReachabilityManager.m in Sources */,
+				2D149F071D5AC2130080FA02 /* HeadView.m in Sources */,
 				2DC21B7F1D58873D004F7C2B /* CALayer+BorderColor.m in Sources */,
 				1D9580D51D3E225200FD0053 /* MASLayoutConstraint.m in Sources */,
 				1D9580AB1D3E207200FD0053 /* MJRefreshBackNormalFooter.m in Sources */,

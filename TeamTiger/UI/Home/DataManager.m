@@ -61,6 +61,11 @@
         HomeDetailCellModel *model7 = [[HomeDetailCellModel alloc] init];
         [model7 setValuesForKeysWithDictionary:dic7];
         [arr2 addObject:model7];
+        
+        NSMutableDictionary *dic8 = [@{@"time":@"9:55", @"firstName":@"唐小旭", @"secondName":@"B", @"typeCell":@(TypeCellTimeAndTitle), @"isClick":@(NO)} mutableCopy];
+        HomeDetailCellModel *model8 = [[HomeDetailCellModel alloc] init];
+        [model8 setValuesForKeysWithDictionary:dic8];
+        [arr2 addObject:model8];
 
         NSMutableDictionary *mDic1 = [@{@"headImage":@"touxiang", @"name":@"唐小旭", @"type":@"工作牛", @"image1":@"placeImage", @"image2":@"placeImage", @"image3":@"placeImage", @"isClick":@(NO), @"comment":arr1} mutableCopy];
         HomeCellModel *cellModel1 = [[HomeCellModel alloc] init];

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ButtonIndexPath.h"
 
 @interface HomeDetailCell5 : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet ButtonIndexPath *moreBtn;
+
+@property (nonatomic, copy) ClickBlock clickBlock;
 
 @end

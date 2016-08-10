@@ -20,5 +20,10 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)handleClickAction:(UIButton *)sender {
+    if (self.clickBlock) {
+        self.clickBlock();
+    }
+}
 
 @end

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeDetailCell4 : UITableViewCell
+@class HomeDetailCellModel;
 
+@interface HomeDetailCell4 : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *timeLB;
+@property (weak, nonatomic) IBOutlet UILabel *nameLB;
+@property (weak, nonatomic) IBOutlet UILabel *typeLB;
+@property (weak, nonatomic) IBOutlet UIView *lineView2;
+
+- (void)configureCellWithModel:(HomeDetailCellModel *)model;
 @end

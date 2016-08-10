@@ -11,17 +11,19 @@
 #import "HomeCell.h"
 #import "VoteHomeCell.h"
 #import "HomeCellModel.h"
+#import "HeadView.h"
 #import "TTSettingViewController.h"
 #import "TTAddDiscussViewController.h"
+#import "DiscussViewController.h"
 
-
-@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource, HeadViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (assign, nonatomic) NSInteger projectType;
 @property (strong, nonatomic) DataManager *manager;
 
 @property (assign, nonatomic) CGFloat height;
+@property (assign, nonatomic) BOOL isShowHeaderView;
 
 @end
 
@@ -50,6 +52,7 @@
 
 - (void)handleRefresh:(NSNotification *)notification {
     self.height = ((NSNumber *)notification.object).floatValue;
+    self.manager.height = ((NSNumber *)notification.object).floatValue;
     [self.tableView reloadData];
 }
 
@@ -130,13 +133,13 @@
                 cell.clickBtn = ^ (UIButton *btn){
                     btn.selected = !btn.selected;
                     if (btn.selected) {
-                        [btn setBackgroundImage:kImage(@"xin1") forState:UIControlStateNormal];
+                        [btn setBackgroundImage:kImage(@"icon_vote") forState:UIControlStateNormal];
                     }else {
-                        [btn setBackgroundImage:kImage(@"xin") forState:UIControlStateNormal];
+                        [btn setBackgroundImage:kImage(@"icon_vote_normal") forState:UIControlStateNormal];
                     }
                     switch (btn.tag) {
                         case 100:{
-                           
+                            
                         }
                             break;
                         case 101:{
@@ -215,6 +218,7 @@
                 }
             }else {
                 if (model.isClick) {
+                    NSLog(@"%f", self.manager.height);
                     return 431 + self.manager.height + 5;
                 }else {
                     return 431;
@@ -244,5 +248,29 @@
     return 0;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (self.isShowHeaderView) {
+        HeadView *headerView = [HeadView headerViewWithTableView:tableView];
+        headerView.delegate = self;
+        return headerView;
+    }else {
+        return nil;
+    }
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (self.isShowHeaderView) {
+        return 60;
+    }else {
+        return 0;
+    }
+}
+
+#pragma mark HeadViewDelegate
+- (void)headViewDidClickWithHeadView:(HeadView *)headView {
+    DiscussViewController *discussVC = [[DiscussViewController alloc] init];
+    [self.navigationController pushViewController:discussVC animated:YES];
+}
 
 @end

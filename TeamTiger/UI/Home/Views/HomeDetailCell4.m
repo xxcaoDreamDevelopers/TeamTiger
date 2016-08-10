@@ -7,6 +7,7 @@
 //
 
 #import "HomeDetailCell4.h"
+#import "HomeDetailCellModel.h"
 
 @implementation HomeDetailCell4
 
@@ -19,6 +20,12 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)configureCellWithModel:(HomeDetailCellModel *)model {
+    self.timeLB.text = model.time;
+    self.nameLB.text = model.firstName;
+    self.typeLB.text = model.secondName;
 }
 
 @end

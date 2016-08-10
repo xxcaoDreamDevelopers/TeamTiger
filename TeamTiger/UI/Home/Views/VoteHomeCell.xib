@@ -133,8 +133,6 @@
                                             <constraint firstAttribute="height" constant="18" id="yt5-g8-ASP"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="icon_vote_normal"/>
-                                        <state key="selected" backgroundImage="xin1"/>
-                                        <state key="highlighted" backgroundImage="xin1"/>
                                         <connections>
                                             <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="eXR-FM-TeI"/>
                                         </connections>
@@ -489,7 +487,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIg-X5-02q">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIg-X5-02q">
                         <rect key="frame" x="5" y="431" width="365" height="151"/>
                         <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                     </tableView>
@@ -544,6 +542,5 @@
         <image name="icon_xia" width="18" height="11"/>
         <image name="placeImage" width="129" height="128"/>
         <image name="touxiang" width="32" height="32"/>
-        <image name="xin1" width="32" height="32"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@
 @interface VoteHomeCell ()
 
 @property (strong, nonatomic) DataManager *manager;
+
 @end
 
 @implementation VoteHomeCell
@@ -40,8 +41,12 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    HomeCellModel *cellModel = self.manager.dataSource[1];
-    return cellModel.comment.count;
+    HomeCellModel *cellModel = self.manager.dataSource[self.manager.indexPath.row];
+    HomeDetailCellModel *model = cellModel.comment[self.manager.index];
+    if (model.isClick) {
+        return cellModel.comment.count;
+    }
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,9 +54,23 @@
     HomeDetailCellModel *model = cellModel.comment[indexPath.row];
     if (model.typeCell == TypeCellTimeAndTitle) {
         HomeDetailCell4 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier4"];
+        [cell configureCellWithModel:model];
+        if (indexPath.row == cellModel.comment.count - 1) {
+            cell.lineView2.hidden = YES;
+        }
+        
         return cell;
     }else if (model.typeCell == TypeCellName){
         HomeDetailCell5 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier5"];
+        kWeakObject(cell);
+        cell.clickBlock = ^() {
+            self.manager.index = indexPath.row;
+            weakObject.moreBtn.hidden = YES;
+            model.isClick = !model.isClick;
+            [tableView reloadData];
+            CGFloat height = self.tableView.contentSize.height;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@(height)];
+        };
         return cell;
     }
     return nil;
@@ -63,6 +82,9 @@
     if (model.typeCell == TypeCellTimeAndTitle) {
         return 40;
     }else if (model.typeCell == TypeCellName){
+        if (model.isClick) {
+            return 40;
+        }
         return 80;
     }
     return 0;
@@ -75,6 +97,7 @@
 }
 
 - (void)configureCellWithModel:(HomeCellModel *)model {
+   
     self.headImage.image = kImage(model.headImage);
     self.nameLB.text = model.name;
     self.typeLB.text = model.type;
