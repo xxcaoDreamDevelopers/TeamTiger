@@ -24,7 +24,6 @@ typedef NS_ENUM(NSInteger, ProjectType) {
 @property (copy, nonatomic) NSString *image1;
 @property (copy, nonatomic) NSString *image2;
 @property (copy, nonatomic) NSString *image3;
-
 @property (copy, nonatomic) NSString *aDes;
 @property (copy, nonatomic) NSString *bDes;
 @property (copy, nonatomic) NSString *cDes;
@@ -35,5 +34,8 @@ typedef NS_ENUM(NSInteger, ProjectType) {
 
 @property (assign, nonatomic) NSInteger projectType;
 @property (strong, nonatomic) NSMutableArray *comment;
+
+- (instancetype)initWithDic:(NSDictionary *)dic;
++ (instancetype)modelWithDic:(NSDictionary *)dic;
 
 @end

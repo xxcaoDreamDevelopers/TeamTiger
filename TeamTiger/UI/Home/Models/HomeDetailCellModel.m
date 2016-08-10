@@ -14,13 +14,14 @@
     
 }
 
-- (void)setValue:(id)value forKey:(NSString *)key {
-    [super setValue:value forKey:key];
-    if ([key isEqualToString:[NSString stringWithFormat:@"%ld", self.typeCell]]) {
-        self.typeCell = [value integerValue];
-    }else if ([key isEqualToString:[NSString stringWithFormat:@"%d", self.isClick]]) {
-        self.isClick = [value boolValue];
+- (instancetype)initWithDic:(NSDictionary *)dic {
+    if (self = [super init]) {
+        [self setValuesForKeysWithDictionary:dic];
     }
+    return self;
+}
++ (instancetype)modelWithDic:(NSDictionary *)dic {
+    return [[HomeDetailCellModel alloc] initWithDic:dic];
 }
 
 @end

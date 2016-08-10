@@ -7,6 +7,7 @@
 //
 
 #import "HomeCellModel.h"
+#import "HomeDetailCellModel.h"
 
 @implementation HomeCellModel
 
@@ -14,11 +15,22 @@
     
 }
 
-- (void)setValue:(id)value forKey:(NSString *)key {
-    [super setValue:value forKey:key];
-    if ([key isEqualToString:[NSString stringWithFormat:@"%d", self.isClick]]) {
-        self.isClick = [value boolValue];
+
+- (instancetype)initWithDic:(NSDictionary *)dic {
+    if (self = [super init]) {
+        [self setValuesForKeysWithDictionary:dic];
+        NSMutableArray *arr = [NSMutableArray array];
+        for (NSDictionary *dict in self.comment) {
+            HomeDetailCellModel *model = [HomeDetailCellModel modelWithDic:dict];
+            [arr addObject:model];
+        }
+        self.comment = arr;
     }
+    return self;
+}
+
++ (instancetype)modelWithDic:(NSDictionary *)dic {
+    return [[HomeCellModel alloc] initWithDic:dic];
 }
 
 @end

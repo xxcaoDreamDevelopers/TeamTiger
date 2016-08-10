@@ -29,4 +29,7 @@ typedef NS_ENUM(NSInteger, TypeCell) {
 @property (assign, nonatomic) NSInteger typeCell;
 @property (assign, nonatomic) BOOL isClick;
 
+- (instancetype)initWithDic:(NSDictionary *)dic;
++ (instancetype)modelWithDic:(NSDictionary *)dic;
+
 @end

@@ -218,7 +218,6 @@
                 }
             }else {
                 if (model.isClick) {
-                    NSLog(@"%f", self.manager.height);
                     return 431 + self.manager.height + 5;
                 }else {
                     return 431;
