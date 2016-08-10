@@ -93,7 +93,7 @@ typedef enum : NSUInteger {
         _labelView = [[UILabel alloc] init];
         _labelView.font = [UIFont systemFontOfSize:17];
         _labelView.textColor = [UIColor whiteColor];
-        _labelView.backgroundColor = [UIColor clearColor];
+//        _labelView.backgroundColor = [UIColor redColor];
     }
     return _labelView;
 }
@@ -216,6 +216,8 @@ typedef enum : NSUInteger {
 //}
 
 - (void)customLayoutSubviews {
+
+    
     [self.labelView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView);
 //                make.top.equalTo(self.contentView).offset(kDistanceToVSide);
@@ -227,8 +229,8 @@ typedef enum : NSUInteger {
     
     if (self.cellType == TTCommonCellTextView) {
         [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.centerY.equalTo(self.contentView);
-            make.left.equalTo(self.labelView.mas_right).offset(kDistanceToHSide*0.5);
+            //            make.centerY.equalTo(self.contentView);
+            make.left.equalTo(self.contentView).offset(kDistanceToHSide*3.5);
             make.right.equalTo(self.contentView.mas_right).offset(-kDistanceToHSide);
             make.top.equalTo(self.contentView.mas_top).offset(kDistanceToVSide);
             make.bottom.equalTo(self.contentView.mas_bottom).offset(-kDistanceToVSide);
@@ -240,8 +242,8 @@ typedef enum : NSUInteger {
             make.centerY.equalTo(self.contentView);
             make.width.mas_equalTo(8);
             make.height.mas_equalTo(12);
-            make.top.equalTo(self.contentView.mas_top).offset(33);
-            make.bottom.equalTo(self.contentView.mas_bottom).offset(-33);
+//            make.top.equalTo(self.contentView.mas_top).offset(33);
+//            make.bottom.equalTo(self.contentView.mas_bottom).offset(-33);
             make.right.equalTo(self.contentView.mas_right).offset(-kDistanceToHSide);
         }];
     }
@@ -259,6 +261,9 @@ typedef enum : NSUInteger {
         make.left.equalTo(self.contentView);
         make.right.equalTo(self.contentView);
         make.height.mas_equalTo(1);
+        if (self.cellType != TTCommonCellTextView) {
+            make.top.equalTo(self.contentView).offset(73);
+        }
         make.bottom.equalTo(self.contentView).offset(-1);
     }];
 
@@ -270,7 +275,7 @@ typedef enum : NSUInteger {
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [self customLayoutSubviews];
+//    [self customLayoutSubviews];
    //    if (iOS7) return;
 //    
 //    // 设置分割线的frame

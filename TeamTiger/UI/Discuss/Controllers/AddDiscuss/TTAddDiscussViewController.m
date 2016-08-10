@@ -21,7 +21,7 @@
 #import "AddImageViewController.h"
 #import "SelectPhotosManger.h"
 #import "SelectCircleViewController.h"
-
+#import "IQKeyboardManager.h"
 @interface TTAddDiscussViewController ()<TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *data;
@@ -45,17 +45,18 @@
         [Common customPopAnimationFromNavigation:wself.navigationController Type:kCATransitionReveal SubType:kCATransitionFromBottom];
     }];
     
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 77;
     //    self.tableView.rowHeight = 77;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.data removeAllObjects];
     // 0.添加数据
+    
     [self setupGroup0];
     [self setupGroup1];
     [self.tableView reloadData];
