@@ -228,6 +228,7 @@
 		1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF21D4EE72E007123EB /* CacheManager.m */; };
 		1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5D5FF71D4EFADD007123EB /* AddressBook.framework */; };
 		1D6D02CB1D58139F00EE0C2E /* TTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */; };
+		1D8C334E1D5AC37B00AA4E1A /* MockDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C334D1D5AC37B00AA4E1A /* MockDatas.m */; };
 		1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408641D41BA47009E2E11 /* NetworkManager.m */; };
 		1D9408691D41BE2D009E2E11 /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408681D41BE2D009E2E11 /* MessageManager.m */; };
 		1D9580361D3E123800FD0053 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D95802A1D3E123800FD0053 /* AFHTTPSessionManager.m */; };
@@ -818,6 +819,8 @@
 		1D5D5FF71D4EFADD007123EB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		1D6D02C91D58139E00EE0C2E /* TTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPickerView.h; sourceTree = "<group>"; };
 		1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPickerView.m; sourceTree = "<group>"; };
+		1D8C334C1D5AC37B00AA4E1A /* MockDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockDatas.h; sourceTree = "<group>"; };
+		1D8C334D1D5AC37B00AA4E1A /* MockDatas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockDatas.m; sourceTree = "<group>"; };
 		1D9408631D41BA47009E2E11 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		1D9408641D41BA47009E2E11 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		1D9408671D41BE2D009E2E11 /* MessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageManager.h; sourceTree = "<group>"; };
@@ -1951,6 +1954,15 @@
 			path = TTPickerView;
 			sourceTree = "<group>";
 		};
+		1D8C334B1D5AC34C00AA4E1A /* MockDatas */ = {
+			isa = PBXGroup;
+			children = (
+				1D8C334C1D5AC37B00AA4E1A /* MockDatas.h */,
+				1D8C334D1D5AC37B00AA4E1A /* MockDatas.m */,
+			);
+			path = MockDatas;
+			sourceTree = "<group>";
+		};
 		1D9408621D41B9C0009E2E11 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -2244,6 +2256,7 @@
 		1DA71B741D3DB618007483D2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1D8C334B1D5AC34C00AA4E1A /* MockDatas */,
 				06893CFA1D59F0FE00921900 /* CirclesManager */,
 				1DD2E3311D59B871005D45A9 /* WeChatManager */,
 				06008F541D585C0E00A5B3DB /* SelectPhotosManger */,
@@ -3107,6 +3120,7 @@
 				1D0EA2C81D45A82C00B47108 /* LCNetworkConfig.m in Sources */,
 				1D0EA2D11D45A8AE00B47108 /* TMCache.m in Sources */,
 				2DF325BB1D59D88800DA8BFD /* HomeDetailCell1.m in Sources */,
+				1D8C334E1D5AC37B00AA4E1A /* MockDatas.m in Sources */,
 				1D115F871D4BA043003DFBB1 /* IQUIScrollView+Additions.m in Sources */,
 				1D9580D81D3E225200FD0053 /* NSArray+MASAdditions.m in Sources */,
 				1DDE9E751D535DDA005926FE /* TTAddDiscussViewController.m in Sources */,

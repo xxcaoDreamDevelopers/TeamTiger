@@ -68,6 +68,10 @@
     } else {
         self.detailTxtField.userInteractionEnabled = NO;
     }
+    
+    if (![Common isEmptyString:dic[@"HeadImage"]]) {
+        self.headImgV.image = [UIImage imageNamed:dic[@"HeadImage"]];
+    }
 }
 
 - (void)clickHeaderAction:(id)sender {

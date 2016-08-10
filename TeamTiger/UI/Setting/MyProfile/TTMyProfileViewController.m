@@ -9,6 +9,7 @@
 #import "TTMyProfileViewController.h"
 #import "ProfileCell.h"
 #import "IQKeyboardManager.h"
+#import "MockDatas.h"
 
 @interface TTMyProfileViewController ()
 
@@ -59,10 +60,11 @@
 
 - (NSMutableArray *)dataSource {
     if (!_dataSource) {
+        NSDictionary *dic = [MockDatas testerInfo];
         _dataSource = @[
-  @{@"Type":@0,@"Name":@"",@"Description":@"",@"ShowAccessory":@0,@"IsEdit":@0,@"Color":kRGB(21.0, 30.0, 44.0)},
-  @{@"Type":@1,@"Name":@"名字",@"Description":@"唐晓旭",@"ShowAccessory":@1,@"IsEdit":@1,@"Color":kRGB(25.0, 34.0, 49.0)},
-  @{@"Type":@1,@"Name":@"账号",@"Description":@"微信账号",@"ShowAccessory":@0,@"IsEdit":@0,@"Color":kRGB(26.0, 38.0, 55.0)},
+  @{@"Type":@0,@"Name":@"",@"Description":@"",@"ShowAccessory":@0,@"IsEdit":@0,@"Color":kRGB(21.0, 30.0, 44.0),@"HeadImage":dic[@"HeadImage"]},
+  @{@"Type":@1,@"Name":@"名字",@"Description":dic[@"Name"],@"ShowAccessory":@1,@"IsEdit":@1,@"Color":kRGB(25.0, 34.0, 49.0)},
+  @{@"Type":@1,@"Name":@"账号",@"Description":dic[@"Account"],@"ShowAccessory":@0,@"IsEdit":@0,@"Color":kRGB(26.0, 38.0, 55.0)},
   @{@"Type":@1,@"Name":@"新消息通知",@"Description":@"",@"ShowAccessory":@1,@"IsEdit":@0,@"Color":kRGB(31.0, 42.0, 63.0)},
   @{@"Type":@2,@"Name":@"",@"Description":@"",@"ShowAccessory":@0,@"IsEdit":@0,@"Color":[UIColor clearColor]}].mutableCopy;
     }

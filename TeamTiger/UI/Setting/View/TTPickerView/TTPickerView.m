@@ -50,7 +50,7 @@
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return self.dataSources[row];
+    return self.dataSources[row][@"Name"];
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
@@ -70,7 +70,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (self.pickerBlock) {
-        self.pickerBlock(self,self.dataSources[row]);
+        self.pickerBlock(self, self.dataSources[row]);
     }
 }
 

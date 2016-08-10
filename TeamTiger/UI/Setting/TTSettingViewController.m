@@ -11,6 +11,7 @@
 #import "TTPickerView.h"
 #import "TTSettingViewController.h"
 #import "UIAlertView+HYBHelperKit.h"
+#import "MockDatas.h"
 
 @interface TTSettingViewController ()
 
@@ -66,12 +67,48 @@
     return cell;
 }
 
+#pragma -mark Customer Methods
+- (void)loadProjectDataById:(id)projectId {
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id  _Nonnull evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        return [evaluatedObject[@"Id"] isEqualToString:projectId];
+    }];
+    NSArray *resArray = [[MockDatas projects] filteredArrayUsingPredicate:predicate];
+    if (resArray && resArray.count > 0) {
+        [self.dataSource removeAllObjects];
+        self.dataSource = @[
+                        @{@"Type":@0,
+                          @"Name":@"项目",
+                          @"Description":resArray.firstObject[@"Name"],
+                          @"ShowAccessory":@1,
+                          @"IsEdit":@0,
+                          @"Color":kRGB(21.0, 30.0, 44.0)},
+                        
+                        @{@"Type":@1,
+                          @"Name":@"项目成员",
+                          @"Description":@"",
+                          @"ShowAccessory":@0,
+                          @"IsEdit":@0,
+                          @"Color":kRGB(25.0, 34.0, 49.0),
+                          @"Members":[MockDatas membersOfproject:projectId]},
+                        
+                        @{@"Type":@2,
+                          @"Name":@"",
+                          @"Description":@"",
+                          @"ShowAccessory":@0,
+                          @"IsEdit":@0,
+                          @"Color":[UIColor clearColor]}].mutableCopy;
+        
+        [self.contentTable reloadData];
+    }
+}
+
+#pragma -mark getter
 - (NSMutableArray *)dataSource {
     if (!_dataSource) {
         _dataSource = @[
     @{@"Type":@0,
       @"Name":@"项目",
-      @"Description":@"工作牛",
+      @"Description":[MockDatas projects][0][@"Name"],
       @"ShowAccessory":@1,
       @"IsEdit":@0,
       @"Color":kRGB(21.0, 30.0, 44.0)},
@@ -82,17 +119,7 @@
       @"ShowAccessory":@0,
       @"IsEdit":@0,
       @"Color":kRGB(25.0, 34.0, 49.0),
-      @"Members":@[@{@"Image":@"1.png",@"Name":@"曹兴星"},
-                   @{@"Image":@"3.png",@"Name":@"刘鹏"},
-                   @{@"Image":@"5.png",@"Name":@"陈杰"},
-                   @{@"Image":@"7.png",@"Name":@"赵瑞"},
-                   @{@"Image":@"9.png",@"Name":@"琳琳"},
-                   @{@"Image":@"11.png",@"Name":@"俞弦"},
-                   @{@"Image":@"13.png",@"Name":@"董宇鹏"},
-                   @{@"Image":@"15.png",@"Name":@"齐云猛"},
-                   @{@"Image":@"17.png",@"Name":@"焦兰兰"},
-                   @{@"Image":@"2.png",@"Name":@"严必庆"},
-                   @{@"Image":@"4.png",@"Name":@"陆毅全"}]},
+      @"Members":[MockDatas membersOfproject:[MockDatas projects][0][@"Id"]]},
     
     @{@"Type":@2,
       @"Name":@"",
@@ -108,12 +135,9 @@
 - (TTPickerView *)ttPicker {
     if (!_ttPicker) {
         WeakSelf;
-        _ttPicker = [[TTPickerView alloc] initWithDatas:@[@"工作牛",@"易会",@"MPP",@"电动汽车"] SelectBlock:^(TTPickerView *view, id selObj) {
+        _ttPicker = [[TTPickerView alloc] initWithDatas:[MockDatas projects] SelectBlock:^(TTPickerView *view, id selObj) {
             NSLog(@"%@",selObj);
-            NSMutableDictionary *mDic = [NSMutableDictionary dictionaryWithDictionary:wself.dataSource.firstObject];
-            mDic[@"Description"] = selObj;
-            [wself.dataSource replaceObjectAtIndex:0 withObject:mDic];
-            [wself.contentTable reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+            [wself loadProjectDataById:selObj[@"Id"]];
         } TapBlock:^(TTPickerView *view) {
             [UIView animateWithDuration:0.3 animations:^{
                 [view mas_updateConstraints:^(MASConstraintMaker *make) {

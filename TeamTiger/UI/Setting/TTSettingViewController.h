@@ -13,5 +13,6 @@
 
 @property(nonatomic,weak)IBOutlet UITableView *contentTable;
 
+- (void)loadProjectDataById:(id)projectId;
 
 @end
