@@ -6,12 +6,15 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
-#import "TTAddProjectViewController.h"
-#import "SettingCell.h"
+#import "Constant.h"
 #import "IQKeyboardManager.h"
+#import "SettingCell.h"
+#import "TTAddProjectViewController.h"
 #import "UIAlertView+HYBHelperKit.h"
+#import "WXApiManager.h"
+#import "WXApiRequestHandler.h"
 
-@interface TTAddProjectViewController ()
+@interface TTAddProjectViewController ()<WXApiManagerDelegate>
 
 @end
 
@@ -27,7 +30,8 @@
     }];
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
-    
+    [WXApiManager sharedManager].delegate = self;
+
     self.contentTable.estimatedRowHeight = 77;
     self.contentTable.rowHeight = UITableViewAutomaticDimension;
 }
@@ -68,9 +72,14 @@
                 break;
             }
             case ECellTypeAccessory:{
-                [UIAlertView hyb_showWithTitle:@"提示" message:@"跳转微信" buttonTitles:@[@"确定"] block:^(UIAlertView *alertView, NSUInteger buttonIndex) {
-                    
-                }];
+                NSLog(@"跳转微信，增加人员");
+                UIImage *thumbImage = [UIImage imageNamed:@"2.png"];
+                [WXApiRequestHandler sendLinkURL:kLinkURL
+                                         TagName:kLinkTagName
+                                           Title:kLinkTitle
+                                     Description:kLinkDescription
+                                      ThumbImage:thumbImage
+                                         InScene:WXSceneSession];
                 break;
             }
             default:
@@ -90,7 +99,6 @@
     return headerView;
 }
 
-#pragma -mark UITextView Delegate
 #pragma -mark getters
 - (NSMutableArray *)datas {
     if (!_datas) {
@@ -101,6 +109,27 @@
                   @{@"NAME":@"个体户头昏眼花与银行业和银行业和银行业测试",@"TITLE":@"添加成员",@"TYPE":@"3"},nil];
     }
     return _datas;
+}
+
+#pragma -mark WXApiManagerDelegate
+- (void)managerDidRecvGetMessageReq:(GetMessageFromWXReq *)request {
+    
+}
+
+- (void)managerDidRecvShowMessageReq:(ShowMessageFromWXReq *)request {
+    
+}
+
+- (void)managerDidRecvLaunchFromWXReq:(LaunchFromWXReq *)request {
+    
+}
+
+- (void)managerDidRecvMessageResponse:(SendMessageToWXResp *)response {
+    //    返回应用时，收到消息回调
+}
+
+- (void)managerDidRecvAuthResponse:(SendAuthResp *)response {
+    
 }
 
 @end

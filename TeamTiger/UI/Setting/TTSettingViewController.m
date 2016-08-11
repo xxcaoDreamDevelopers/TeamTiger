@@ -6,14 +6,17 @@
 //  Copyright © 2016年 MobileArtisan. All rights reserved.
 //
 
+#import "Constant.h"
 #import "IQKeyboardManager.h"
+#import "MockDatas.h"
 #import "ProjectCell.h"
 #import "TTPickerView.h"
 #import "TTSettingViewController.h"
 #import "UIAlertView+HYBHelperKit.h"
-#import "MockDatas.h"
+#import "WXApiManager.h"
+#import "WXApiRequestHandler.h"
 
-@interface TTSettingViewController ()
+@interface TTSettingViewController ()<WXApiManagerDelegate>
 
 @property(nonatomic,strong)NSMutableArray *dataSource;
 
@@ -32,7 +35,7 @@
     }];
     
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
-    
+    [WXApiManager sharedManager].delegate = self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -57,9 +60,13 @@
             [self ttPicker];
         } else if (type == EProjectAddMember){
             NSLog(@"跳转微信，增加人员");
-            [UIAlertView hyb_showWithTitle:@"提示" message:@"跳转微信，拉好友" buttonTitles:@[@"确定"] block:^(UIAlertView *alertView, NSUInteger buttonIndex) {
-                
-            }];
+            UIImage *thumbImage = [UIImage imageNamed:@"2.png"];
+            [WXApiRequestHandler sendLinkURL:kLinkURL
+                                     TagName:kLinkTagName
+                                       Title:kLinkTitle
+                                 Description:kLinkDescription
+                                  ThumbImage:thumbImage
+                                     InScene:WXSceneSession];
         } else if (type == EProjectDleteProject){
             NSLog(@"删除并退出");
         }
@@ -165,6 +172,28 @@
         }];
     }
     return _ttPicker;
+}
+
+
+#pragma -mark WXApiManagerDelegate
+- (void)managerDidRecvGetMessageReq:(GetMessageFromWXReq *)request {
+    
+}
+
+- (void)managerDidRecvShowMessageReq:(ShowMessageFromWXReq *)request {
+    
+}
+
+- (void)managerDidRecvLaunchFromWXReq:(LaunchFromWXReq *)request {
+    
+}
+
+- (void)managerDidRecvMessageResponse:(SendMessageToWXResp *)response {
+    //    返回应用时，收到消息回调
+}
+
+- (void)managerDidRecvAuthResponse:(SendAuthResp *)response {
+    
 }
 
 @end
