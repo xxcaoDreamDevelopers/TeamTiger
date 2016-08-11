@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSIndexPath *indexPath;
 @property (assign, nonatomic) NSInteger index;
+@property (assign, nonatomic) NSInteger index1;
 @property (assign, nonatomic) CGFloat height;
 
 

@@ -10,10 +10,6 @@
 
 @implementation HomeDetailCellModel
 
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    
-}
-
 - (instancetype)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
         [self setValuesForKeysWithDictionary:dic];

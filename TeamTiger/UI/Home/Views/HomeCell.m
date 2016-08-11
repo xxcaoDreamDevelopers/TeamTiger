@@ -17,6 +17,7 @@
 @interface HomeCell ()
 
 @property (strong, nonatomic) DataManager *manager;
+@property (assign, nonatomic) NSInteger index;
 
 @end
 
@@ -82,11 +83,12 @@
         cell.moreBtn.indexPath = indexPath;
         cell.clickMoreBtn = ^() {
             self.manager.index = indexPath.row;
-            model.isClick = !model.isClick;
+            model.isClick = YES;
             model.typeCell = TypeCellTitleNoButton;
             [tableView reloadData];
             CGFloat height = self.tableView.contentSize.height;
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@(height)];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@{@"height":@(height), @"type":@"0"}];
+            
         };
         [cell configureCellWithModel:model];
         return cell;

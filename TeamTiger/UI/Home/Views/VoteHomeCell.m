@@ -11,7 +11,7 @@
 @interface VoteHomeCell ()
 
 @property (strong, nonatomic) DataManager *manager;
-
+@property (assign, nonatomic) NSInteger index;
 @end
 
 @implementation VoteHomeCell
@@ -41,8 +41,8 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    HomeCellModel *cellModel = self.manager.dataSource[self.manager.indexPath.row];
-    HomeDetailCellModel *model = cellModel.comment[self.manager.index];
+    HomeCellModel *cellModel = self.manager.dataSource[1];
+    HomeDetailCellModel *model = cellModel.comment[self.manager.index1];
     if (model.isClick) {
         return cellModel.comment.count;
     }
@@ -63,13 +63,16 @@
     }else if (model.typeCell == TypeCellName){
         HomeDetailCell5 *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier5"];
         kWeakObject(cell);
+        if (!model.isClick) {
+            cell.moreBtn.hidden = NO;
+        }
         cell.clickBlock = ^() {
-            self.manager.index = indexPath.row;
+            self.manager.index1 = indexPath.row;
             weakObject.moreBtn.hidden = YES;
-            model.isClick = !model.isClick;
+            model.isClick = YES;
             [tableView reloadData];
             CGFloat height = self.tableView.contentSize.height;
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@(height)];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"isClick" object:@{@"height":@(height), @"type":@"1"}];
         };
         return cell;
     }

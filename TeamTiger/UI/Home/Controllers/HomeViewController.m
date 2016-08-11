@@ -8,10 +8,12 @@
 
 #import "HomeViewController.h"
 #import "DataManager.h"
+#import "HeadView.h"
 #import "HomeCell.h"
 #import "VoteHomeCell.h"
+#import "HomeDetailCell5.h"
 #import "HomeCellModel.h"
-#import "HeadView.h"
+#import "HomeDetailCellModel.h"
 #import "TTSettingViewController.h"
 #import "TTAddDiscussViewController.h"
 #import "DiscussViewController.h"
@@ -51,8 +53,12 @@
 }
 
 - (void)handleRefresh:(NSNotification *)notification {
-    self.height = ((NSNumber *)notification.object).floatValue;
-    self.manager.height = ((NSNumber *)notification.object).floatValue;
+    NSDictionary *dic = notification.object;
+    if ([dic[@"type"] isEqualToString:@"0"]) {
+        self.height = ((NSNumber *)(dic[@"height"])).floatValue;
+    }else {
+        self.manager.height = ((NSNumber *)(dic[@"height"])).floatValue;
+    }
     [self.tableView reloadData];
 }
 
@@ -121,13 +127,22 @@
             if (indexPath.row == 0) {
                 HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell"];
                 [cell configureCellWithModel:model];
+                if (model.isClick) {
+                    [cell.moreBtn setImage:kImage(@"icon_shang") forState:UIControlStateNormal];
+                }else {
+                    [cell.moreBtn setImage:kImage(@"icon_xia") forState:UIControlStateNormal];
+                }
                 cell.moreBtn.indexPath = indexPath;
                 [cell.moreBtn addTarget:self action:@selector(handleClickAction:) forControlEvents:UIControlEventTouchUpInside];
                 return cell;
             }else {
-                self.manager.indexPath = indexPath;
                 VoteHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VoteHomeCell"];
                 [cell configureCellWithModel:model];
+                if (model.isClick) {
+                    [cell.moreBtn setImage:kImage(@"icon_shang") forState:UIControlStateNormal];
+                }else {
+                    [cell.moreBtn setImage:kImage(@"icon_xia") forState:UIControlStateNormal];
+                }
                 cell.moreBtn.indexPath = indexPath;
                 [cell.moreBtn addTarget:self action:@selector(handleAction:) forControlEvents:UIControlEventTouchUpInside];
                 cell.clickBtn = ^ (UIButton *btn){
@@ -176,33 +191,36 @@
 
 - (void)handleClickAction:(ButtonIndexPath *)button {
     HomeCellModel *model = self.manager.dataSource[button.indexPath.row];
+    HomeDetailCellModel *detailModel = model.comment[self.manager.index];
     model.isClick = !model.isClick;
     HomeCell *cell = (HomeCell *)button.superview.superview.superview;
     if (model.isClick) {
         [cell.tableView reloadData];
         self.height = cell.tableView.contentSize.height;
-        [self.tableView reloadRowsAtIndexPaths:@[button.indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        [button setImage:kImage(@"icon_xia") forState:UIControlStateNormal];
     }else {
-        [self.tableView reloadRowsAtIndexPaths:@[button.indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        [button setImage:kImage(@"icon_shang") forState:UIControlStateNormal];
+        if (self.manager.index != 0) {
+            detailModel.isClick = NO;
+            detailModel.typeCell = TypeCellTitle;
+        }
+        [cell.tableView reloadData];
     }
+    [self.tableView reloadRowsAtIndexPaths:@[button.indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)handleAction:(ButtonIndexPath *)button {
     HomeCellModel *model = self.manager.dataSource[button.indexPath.row];
+    HomeDetailCellModel *detailModel = model.comment[self.manager.index1];
     model.isClick = !model.isClick;
-    HomeCell *cell = (HomeCell *)button.superview.superview.superview;
+    VoteHomeCell *cell = (VoteHomeCell *)button.superview.superview.superview;
     if (model.isClick) {
         [cell.tableView reloadData];
         self.manager.height = cell.tableView.contentSize.height;
-        [button setImage:kImage(@"icon_shang") forState:UIControlStateNormal];
-        [self.tableView reloadRowsAtIndexPaths:@[button.indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }else {
-        [button setImage:kImage(@"icon_xia") forState:UIControlStateNormal];
-        [self.tableView reloadRowsAtIndexPaths:@[button.indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        
+        detailModel.isClick = NO;
+        [cell.tableView reloadData];
     }
+    [self.tableView reloadRowsAtIndexPaths:@[button.indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView scrollToRowAtIndexPath:button.indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark UITableViewDelegate
