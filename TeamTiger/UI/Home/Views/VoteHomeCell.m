@@ -7,6 +7,13 @@
 //
 
 #import "VoteHomeCell.h"
+#import "HomeCellModel.h"
+#import "HomeDetailCellModel.h"
+#import "HomeDetailCell4.h"
+#import "HomeDetailCell5.h"
+#import "ButtonIndexPath.h"
+#import "DataManager.h"
+#import "JJPhotoManeger.h"
 
 @interface VoteHomeCell ()
 
@@ -97,6 +104,26 @@
     if (self.clickBtn) {
         self.clickBtn(sender);
     }
+}
+
+- (IBAction)handleClickImageAction:(UIButton *)sender {
+    UIImageView *image = nil;
+    switch (sender.tag) {
+        case 200:
+            image = self.image1;
+            break;
+        case 201:
+            image = self.image2;
+            break;
+        case 202:
+            image = self.image3;
+            break;
+        default:
+            break;
+    }
+    JJPhotoManeger *mg = [JJPhotoManeger maneger];
+    [mg showNetworkPhotoViewer:@[self.image1, self.image2, self.image3] urlStrArr:nil selecView:image];
+    
 }
 
 - (void)configureCellWithModel:(HomeCellModel *)model {

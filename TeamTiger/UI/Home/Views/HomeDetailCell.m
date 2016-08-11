@@ -7,6 +7,8 @@
 //
 
 #import "HomeDetailCell.h"
+#import "HomeDetailCellModel.h"
+#import "JJPhotoManeger.h"
 
 @implementation HomeDetailCell
 
@@ -19,6 +21,23 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (IBAction)handleClickImageAction:(UIButton *)sender {
+    UIImageView *image = nil;
+    switch (sender.tag) {
+        case 300:
+            image = self.image1;
+            break;
+        case 301:
+            image = self.image2;
+            break;
+        default:
+            break;
+    }
+    JJPhotoManeger *mg = [JJPhotoManeger maneger];
+    [mg showNetworkPhotoViewer:@[self.image1, self.image2] urlStrArr:nil selecView:image];
+    
 }
 
 - (void)configureCellWithModel:(HomeDetailCellModel *)model {

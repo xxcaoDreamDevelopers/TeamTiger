@@ -13,6 +13,7 @@
 #import "HomeDetailCell3.h"
 #import "HomeDetailCellModel.h"
 #import "DataManager.h"
+#import "JJPhotoManeger.h"
 
 @interface HomeCell ()
 
@@ -131,6 +132,27 @@
 }
 
 - (IBAction)hanldeCommentAction:(UIButton *)sender {
+    
+}
+
+- (IBAction)handleClickImageAction:(UIButton *)sender {
+    UIImageView *image = nil;
+    switch (sender.tag) {
+        case 100:
+            image = self.image1;
+            break;
+        case 101:
+            image = self.image2;
+            break;
+        case 102:
+            image = self.image3;
+            break;
+        default:
+            break;
+    }
+    JJPhotoManeger *photoManager = [JJPhotoManeger maneger];
+    [photoManager showNetworkPhotoViewer:@[self.image1, self.image2, self.image3] urlStrArr:nil selecView:image];
+
 }
 
 

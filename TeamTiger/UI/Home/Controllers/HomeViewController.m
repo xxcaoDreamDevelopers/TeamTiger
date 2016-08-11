@@ -64,6 +64,7 @@
 
 - (void)handleClickCard:(NSNotification *)notification {
     self.projectType = ((NSNumber *)(notification.object)).integerValue;
+    NSLog(@"%ld", self.projectType);
     [self.tableView reloadData];
 }
 

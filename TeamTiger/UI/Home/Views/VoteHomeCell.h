@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeCellModel.h"
-#import "HomeDetailCellModel.h"
-#import "ButtonIndexPath.h"
-#import "HomeDetailCell4.h"
-#import "HomeDetailCell5.h"
-#import "DataManager.h"
 
+
+@class HomeCellModel, ButtonIndexPath;
 typedef void(^ClickBtn)(UIButton *button);
 
 @interface VoteHomeCell : UITableViewCell<UITableViewDelegate, UITableViewDataSource>
