@@ -227,6 +227,7 @@
 		1D59130D1D4DDE9E00A188A0 /* GDIIndexBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59130C1D4DDE9E00A188A0 /* GDIIndexBar.m */; };
 		1D5D5FF31D4EE72E007123EB /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D5FF21D4EE72E007123EB /* CacheManager.m */; };
 		1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5D5FF71D4EFADD007123EB /* AddressBook.framework */; };
+		1D677F161D5C1D48001D099E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D677F151D5C1D48001D099E /* CoreTelephony.framework */; };
 		1D6D02CB1D58139F00EE0C2E /* TTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */; };
 		1D8C334E1D5AC37B00AA4E1A /* MockDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8C334D1D5AC37B00AA4E1A /* MockDatas.m */; };
 		1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9408641D41BA47009E2E11 /* NetworkManager.m */; };
@@ -819,6 +820,7 @@
 		1D5D5FF11D4EE72E007123EB /* CacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
 		1D5D5FF21D4EE72E007123EB /* CacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
 		1D5D5FF71D4EFADD007123EB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		1D677F151D5C1D48001D099E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		1D6D02C91D58139E00EE0C2E /* TTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPickerView.h; sourceTree = "<group>"; };
 		1D6D02CA1D58139F00EE0C2E /* TTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPickerView.m; sourceTree = "<group>"; };
 		1D8C334C1D5AC37B00AA4E1A /* MockDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockDatas.h; sourceTree = "<group>"; };
@@ -1097,6 +1099,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D677F161D5C1D48001D099E /* CoreTelephony.framework in Frameworks */,
 				1DD2E3301D59B3DB005D45A9 /* libc++.tbd in Frameworks */,
 				1D5D5FF81D4EFADD007123EB /* AddressBook.framework in Frameworks */,
 				1D09CCC11D3F2B0E00F85E9A /* libz.tbd in Frameworks */,
@@ -2167,18 +2170,19 @@
 		1D9580EE1D3E270400FD0053 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				1DD2E32F1D59B3DB005D45A9 /* libc++.tbd */,
-				1D5D5FF71D4EFADD007123EB /* AddressBook.framework */,
 				1D09CCBA1D3F2AF300F85E9A /* Accelerate.framework */,
+				1D5D5FF71D4EFADD007123EB /* AddressBook.framework */,
 				1D09CCB81D3F2AE800F85E9A /* AssetsLibrary.framework */,
 				1D09CCAC1D3F2AAF00F85E9A /* CoreFoundation.framework */,
 				1D09CCB01D3F2AC200F85E9A /* CoreGraphics.framework */,
 				1D09CCB21D3F2ACB00F85E9A /* CoreImage.framework */,
+				1D677F151D5C1D48001D099E /* CoreTelephony.framework */,
 				1D09CCAE1D3F2AB900F85E9A /* CoreText.framework */,
 				1D09CCB61D3F2ADF00F85E9A /* ImageIO.framework */,
 				1D09CCBC1D3F2AFC00F85E9A /* MobileCoreServices.framework */,
 				1D09CCB41D3F2AD500F85E9A /* QuartzCore.framework */,
 				1D09CCBE1D3F2B0600F85E9A /* SystemConfiguration.framework */,
+				1DD2E32F1D59B3DB005D45A9 /* libc++.tbd */,
 				1D9580EC1D3E26F800FD0053 /* libsqlite3.0.tbd */,
 				1D9580EA1D3E26CE00FD0053 /* libsqlite3.tbd */,
 				1D09CCC01D3F2B0E00F85E9A /* libz.tbd */,
@@ -2757,7 +2761,7 @@
 				TargetAttributes = {
 					1DA71B591D3DB5A1007483D2 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9WUQR88DQL;
+						DevelopmentTeam = FAT69R69RF;
 					};
 				};
 			};
