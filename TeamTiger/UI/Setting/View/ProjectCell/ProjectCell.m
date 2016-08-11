@@ -14,7 +14,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    setViewCorner(self.exitBtn, 5);    
+    setViewCorner(self.exitBtn, 5);
 }
 
 + (instancetype)loadCellWithType:(int)type {
