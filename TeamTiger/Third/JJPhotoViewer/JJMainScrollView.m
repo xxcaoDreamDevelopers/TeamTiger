@@ -140,7 +140,7 @@
     NSInteger gapEnd =  mainW - gapHead;
     
     //接近30个点 边距的时候会调用 用0的话有的时候不触发
-    if(fabs(gapHead) <= 20.0 ||fabs(gapEnd) <= 20.0  )
+    if(fabs(gapHead) <= 20.0 ||fabs(gapEnd) <= 20.0)
     {
         //当前观看的这个是第几个oneSc
         NSInteger  nowLookIndex =( scrollView.contentOffset.x + (scrollView.bounds.size.width/2)) /scrollView.bounds.size.width  ;
