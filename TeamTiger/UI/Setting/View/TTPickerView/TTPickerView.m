@@ -65,6 +65,11 @@
         pickerLabel.textColor = [UIColor whiteColor];
     }
     pickerLabel.text = [self pickerView:pickerView titleForRow:row forComponent:component];
+    
+    //在该代理方法里添加以下两行代码删掉上下的黑线
+    [pickerView.subviews[1] setHidden:YES];
+    [pickerView.subviews[2] setHidden:YES];
+    
     return pickerLabel;
 }
 
