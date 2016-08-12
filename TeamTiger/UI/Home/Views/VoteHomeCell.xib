@@ -144,24 +144,31 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FM-Z5-eAq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FM-Z5-eAq">
                                         <rect key="frame" x="15" y="6" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="gHh-ec-kMz"/>
                                             <constraint firstAttribute="height" constant="18" id="yt5-g8-ASP"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="icon_vote_normal"/>
+                                    </button>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0o-Dy-EeE">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                         <connections>
-                                            <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="eXR-FM-TeI"/>
+                                            <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="5gZ-13-WSl"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gko-BW-eGx"/>
+                                    <constraint firstItem="f0o-Dy-EeE" firstAttribute="width" secondItem="wyz-DX-NZG" secondAttribute="width" id="HYM-Ip-Ltp"/>
                                     <constraint firstItem="3FM-Z5-eAq" firstAttribute="centerY" secondItem="wyz-DX-NZG" secondAttribute="centerY" id="NWH-3A-MmV"/>
+                                    <constraint firstItem="f0o-Dy-EeE" firstAttribute="height" secondItem="wyz-DX-NZG" secondAttribute="height" id="Pll-x7-5XA"/>
                                     <constraint firstItem="HyG-S9-Cdi" firstAttribute="centerY" secondItem="wyz-DX-NZG" secondAttribute="centerY" id="RgA-ka-H7v"/>
                                     <constraint firstAttribute="trailing" secondItem="HyG-S9-Cdi" secondAttribute="trailing" constant="15" id="VRN-zc-y3J"/>
                                     <constraint firstItem="3FM-Z5-eAq" firstAttribute="leading" secondItem="wyz-DX-NZG" secondAttribute="leading" constant="15" id="Y67-MR-4sH"/>
+                                    <constraint firstItem="f0o-Dy-EeE" firstAttribute="top" secondItem="wyz-DX-NZG" secondAttribute="top" id="YIC-Z2-Vb6"/>
+                                    <constraint firstItem="f0o-Dy-EeE" firstAttribute="leading" secondItem="wyz-DX-NZG" secondAttribute="leading" id="dLm-4I-x2k"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
@@ -185,24 +192,31 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxy-5u-EzM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxy-5u-EzM">
                                         <rect key="frame" x="15" y="6" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="BdJ-CW-Kbw"/>
                                             <constraint firstAttribute="height" constant="18" id="Rtk-ru-eN9"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="icon_vote_normal"/>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwT-ns-rYv">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
                                         <connections>
-                                            <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="Wsy-Cf-ieL"/>
+                                            <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="H9T-5B-67c"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="OwT-ns-rYv" firstAttribute="width" secondItem="BXf-tD-VO3" secondAttribute="width" id="AY1-e6-oBj"/>
+                                    <constraint firstItem="OwT-ns-rYv" firstAttribute="leading" secondItem="BXf-tD-VO3" secondAttribute="leading" id="FDt-Yv-0SE"/>
                                     <constraint firstItem="V5W-hq-nX4" firstAttribute="centerY" secondItem="BXf-tD-VO3" secondAttribute="centerY" id="OIV-7q-a9o"/>
                                     <constraint firstItem="uxy-5u-EzM" firstAttribute="leading" secondItem="BXf-tD-VO3" secondAttribute="leading" constant="15" id="OQP-tv-5xa"/>
+                                    <constraint firstItem="OwT-ns-rYv" firstAttribute="height" secondItem="BXf-tD-VO3" secondAttribute="height" id="Tek-CB-61I"/>
                                     <constraint firstAttribute="height" constant="30" id="Yum-AP-kP6"/>
                                     <constraint firstItem="uxy-5u-EzM" firstAttribute="centerY" secondItem="BXf-tD-VO3" secondAttribute="centerY" id="jsJ-NP-VBG"/>
                                     <constraint firstItem="V5W-hq-nX4" firstAttribute="top" secondItem="BXf-tD-VO3" secondAttribute="top" constant="5" id="leP-Dh-pM7"/>
+                                    <constraint firstItem="OwT-ns-rYv" firstAttribute="top" secondItem="BXf-tD-VO3" secondAttribute="top" id="mpb-oV-vkw"/>
                                     <constraint firstAttribute="trailing" secondItem="V5W-hq-nX4" secondAttribute="trailing" constant="15" id="qOI-kG-J5R"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -232,23 +246,30 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf6-mt-hnl">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf6-mt-hnl">
                                         <rect key="frame" x="15" y="6" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="4Fc-nn-DGA"/>
                                             <constraint firstAttribute="height" constant="18" id="Fku-XS-dqI"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="icon_vote_normal"/>
+                                    </button>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-VN-ATd">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
                                         <connections>
-                                            <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="6iw-uB-Tr2"/>
+                                            <action selector="handleBtnAction:" destination="IRM-1p-eHw" eventType="touchUpInside" id="bZT-nf-s7I"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="sf6-mt-hnl" firstAttribute="leading" secondItem="HiL-DE-kso" secondAttribute="leading" constant="15" id="1PF-02-znu"/>
                                     <constraint firstItem="RRH-0a-erk" firstAttribute="centerY" secondItem="HiL-DE-kso" secondAttribute="centerY" id="8bg-Ai-nxt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Raf-VN-ATd" secondAttribute="trailing" id="9fj-mj-rfs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Raf-VN-ATd" secondAttribute="bottom" id="DpP-YJ-yqh"/>
                                     <constraint firstItem="sf6-mt-hnl" firstAttribute="centerY" secondItem="HiL-DE-kso" secondAttribute="centerY" id="NOf-JX-u4b"/>
                                     <constraint firstItem="sf6-mt-hnl" firstAttribute="top" secondItem="HiL-DE-kso" secondAttribute="top" constant="4" id="Wrj-js-gKn"/>
+                                    <constraint firstItem="Raf-VN-ATd" firstAttribute="top" secondItem="HiL-DE-kso" secondAttribute="top" id="YKh-vb-RM8"/>
+                                    <constraint firstItem="Raf-VN-ATd" firstAttribute="leading" secondItem="HiL-DE-kso" secondAttribute="leading" id="aeQ-cq-u54"/>
                                     <constraint firstAttribute="height" constant="30" id="h1x-8T-NVS"/>
                                     <constraint firstAttribute="trailing" secondItem="RRH-0a-erk" secondAttribute="trailing" constant="15" id="ugs-wU-f9p"/>
                                     <constraint firstItem="RRH-0a-erk" firstAttribute="top" secondItem="HiL-DE-kso" secondAttribute="top" constant="5" id="xzp-28-xRS"/>

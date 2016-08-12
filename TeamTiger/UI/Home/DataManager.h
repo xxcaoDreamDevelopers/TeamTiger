@@ -11,6 +11,7 @@
 @interface DataManager : NSObject
 
 + (DataManager *)mainSingleton;
+@property (strong, nonatomic) NSMutableArray *dataArr;
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
 @property (strong, nonatomic) NSIndexPath *indexPath;

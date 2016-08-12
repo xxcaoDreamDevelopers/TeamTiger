@@ -24,6 +24,6 @@
 #import "GlobalDefine.h"
 #import "TMCache.h"
 #import "CirclesManager.h"
-
+#import "MJRefresh.h" 
 
 #endif /* TeamTiger_Prefix_pch */

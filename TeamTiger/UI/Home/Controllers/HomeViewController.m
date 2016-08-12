@@ -45,11 +45,74 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureNavigationItem];
+    [self handleRefreshAction];
     [Common removeExtraCellLines:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"VoteHomeCell" bundle:nil] forCellReuseIdentifier:@"VoteHomeCell"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleRefresh:) name:@"isClick" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleClickCard:) name:@"ClickCard" object:nil];
+}
+
+- (void)handleRefreshAction {
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView reloadData];
+    }];;
+    self.tableView.mj_header = header;
+    
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self addDataToDataArr];
+        if (self.manager.dataSource.count > 4) {
+            [self.tableView.mj_footer endRefreshing];
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }else {
+            [self.tableView reloadData];
+            [self.tableView.mj_footer endRefreshing];
+        }
+    }];
+    self.tableView.mj_footer = footer;
+    
+}
+
+- (void)addDataToDataArr {
+    NSDictionary *dic = @{@"headImage":@"touxiang",
+                            @"name":@"卞克",
+                            @"type":@"BBS",
+                            @"image1":@"image",
+                            @"image2":@"image",
+                            @"image3":@"image",
+                            @"aDes":@"tape something",
+                            @"bDes":@"tape something",
+                            @"cDes":@"tape something",
+                            @"aTicket":@"0.7",
+                            @"bTicket":@"0.4",
+                            @"cTicket":@"0.1",
+                            @"comment":@[
+                                    @{@"time":@"19:50",
+                                      @"firstName":@"卞克",
+                                      @"secondName":@"A",
+                                      @"des":@"卞克",
+                                      @"firstImage":@"image",
+                                      @"secondImage":@"image",
+                                      @"typeCell":@(TypeCellTimeAndTitle)
+                                      },
+                                    @{@"time":@"13:55",
+                                      @"firstName":@"卞克",
+                                      @"secondName":@"A",
+                                      @"typeCell":@(TypeCellName)
+                                      },
+                                    @{@"time":@"9:55",
+                                      @"firstName":@"唐小旭",
+                                      @"secondName":@"B",
+                                      @"typeCell":@(TypeCellTimeAndTitle)
+                                      }].mutableCopy
+                            };
+    [self.manager.dataArr addObject:dic];
+    [self.manager.dataSource removeAllObjects];
+    for (NSDictionary *dic in self.manager.dataArr) {
+        HomeCellModel *model = [HomeCellModel modelWithDic:dic];
+        [self.manager.dataSource addObject:model];
+    };
 }
 
 - (void)handleRefresh:(NSNotification *)notification {
@@ -64,7 +127,6 @@
 
 - (void)handleClickCard:(NSNotification *)notification {
     self.projectType = ((NSNumber *)(notification.object)).integerValue;
-    NSLog(@"%ld", self.projectType);
     [self.tableView reloadData];
 }
 
@@ -152,22 +214,6 @@
                         [btn setBackgroundImage:kImage(@"icon_vote") forState:UIControlStateNormal];
                     }else {
                         [btn setBackgroundImage:kImage(@"icon_vote_normal") forState:UIControlStateNormal];
-                    }
-                    switch (btn.tag) {
-                        case 100:{
-                            
-                        }
-                            break;
-                        case 101:{
-                            
-                        }
-                            break;
-                        case 102:{
-                            
-                        }
-                            break;
-                        default:
-                            break;
                     }
                 };
                 return cell;

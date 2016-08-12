@@ -101,8 +101,22 @@
 }
 
 - (IBAction)handleBtnAction:(UIButton *)sender {
+    UIButton *btn = nil;
+    switch (sender.tag) {
+        case 100:
+            btn = self.aBtn;
+            break;
+        case 101:
+            btn = self.bBtn;
+            break;
+        case 102:
+            btn = self.cBtn;
+            break;
+        default:
+            break;
+    }
     if (self.clickBtn) {
-        self.clickBtn(sender);
+        self.clickBtn(btn);
     }
 }
 

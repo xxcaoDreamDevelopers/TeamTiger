@@ -10,11 +10,6 @@
 #import "HomeCellModel.h"
 #import "HomeDetailCellModel.h"
 
-@interface DataManager ()
-
-@property (strong, nonatomic) NSArray *dataArr;
-
-@end
 
 @implementation DataManager
 
@@ -38,10 +33,11 @@
     return _dataSource;
 }
 
-- (NSArray *)dataArr {
+- (NSMutableArray *)dataArr {
     if (_dataArr == nil) {
         _dataArr = @[
-                     @{@"headImage":@"touxiang",
+                     @{//@"typeCell":@(1),
+                       @"headImage":@"touxiang",
                        @"name":@"唐小旭",
                        @"type":@"工作牛",
                        @"image1":@"image",
