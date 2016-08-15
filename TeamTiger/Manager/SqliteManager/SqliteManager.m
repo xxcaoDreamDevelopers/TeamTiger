@@ -361,18 +361,99 @@ hasKDbIdColumnInNewTable:(BOOL)hasKDbIdColumnInNewTable
 -(BOOL)onUpgradeVersion:(sqlite3*)database isForUser:(BOOL)isUser
 {
     if (isUser) {
-        //T_APP_USERS
+//        TABLE_TT_User
         [self checkTable:database
-               tableName:@"APP_USERS"
-               allFields:@[@"name",@"age",@"title"].mutableCopy
-           allFieldTypes:@[@"NVARCHAR",@"INT",@"NVARCHAR"].mutableCopy
+               tableName:TABLE_TT_User
+           allFields:@[@"user_id",@"password",@"name",@"nick_name",@"wx_account",@"phone",@"head_img_url",@"os_type",@"os_description",@"device_identify",@"create_date",@"create_user_id",@"last_edit_date",@"last_edit_user_id"].mutableCopy
+       allFieldTypes:@[@"varchar",@"varchar",@"varchar",@"varchar",@"varchar",@"varchar",@"varchar",@"varchar",@"varchar",@"varchar",@"timestamp",@"varchar",@"timestamp",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+        
+        
+//        TABLE_TT_Project_Members
+        [self checkTable:database
+               tableName:TABLE_TT_Project_Members
+               allFields:@[@"project_members_id",@"project_id",@"user_id"].mutableCopy
+           allFieldTypes:@[@"varchar",@"varchar",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+        
+        
+//        TABLE_TT_Project
+        [self checkTable:database
+               tableName:TABLE_TT_Project
+           allFields:@[@"project_id",@"name",@"description",@"is_private",@"current_state",@"is_allow_delete",@"create_date",@"create_user_id",@"last_edit_date",@"last_edit_user_id"].mutableCopy
+       allFieldTypes:@[@"varchar",@"varchar",@"varchar",@"boolean",@"integer",@"boolean",@"timestamp",@"varchar",@"timestamp",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+        
+        
+//        TABLE_TT_Notification
+        [self checkTable:database
+               tableName:TABLE_TT_Notification
+           allFields:@[@"notifiction_id",@"is_read",@"content",@"type",@"is_removed",@"create_date",@"create_user_id",@"last_edit_date",@"last_edit_user_id"].mutableCopy
+       allFieldTypes:@[@"varchar",@"boolean",@"varchar",@"integer",@"boolean",@"timestamp",@"varchar",@"timestamp",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+
+    
+//        TABLE_TT_Discuss_Result
+        [self checkTable:database
+               tableName:TABLE_TT_Discuss_Result
+           allFields:@[@"discuss_result_id",@"discuss_id",@"discuss_result",@"discuss_result_description",].mutableCopy
+           allFieldTypes:@[@"varchar",@"varchar",@"varchar",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+        
+        
+//        TABLE_TT_Discuss
+        [self checkTable:database
+               tableName:TABLE_TT_Discuss
+           allFields:@[@"discuss_id",@"project_id",@"discuss_type",@"image_url",@"content",@"current_state",@"is_allow_comment",@"is_allow_delete",@"create_date",@"create_user_id",@"last_edit_date",@"last_edit_user_id"].mutableCopy
+       allFieldTypes:@[@"varchar",@"varchar",@"integer",@"varchar",@"varchar",@"integer",@"boolean",@"boolean",@"timestamp",@"varchar",@"timestamp",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+        
+        
+//      TABLE_TT_Comment
+        [self checkTable:database
+               tableName:TABLE_TT_Comment
+           allFields:@[@"comment_id",@"discuss_id",@"content",@"image_url",@"is_allow_delete",@"create_date",@"create_user_id",@"last_edit_date",@"last_edit_user_id"].mutableCopy
+       allFieldTypes:@[@"varchar",@"varchar",@"varchar",@"varchar",@"boolean",@"timestamp",@"varchar",@"timestamp",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+        
+        
+//        TABLE_TT_Attachment
+        [self checkTable:database
+               tableName:TABLE_TT_Attachment
+               allFields:@[@"attachment_id",@"current_item_id",@"attachment_url",@"attachment_content"].mutableCopy
+           allFieldTypes:@[@"varchar",@"varchar",@"varchar",@"varchar"].mutableCopy
+             primaryKeys:nil
+      isFieldTypeChanged:NO
+         ];
+
+       
+        
+//        TABLE_TT_At_Members
+        [self checkTable:database
+               tableName:TABLE_TT_At_Members
+               allFields:@[@"at_members_id",@"current_item_id",@"user_id"].mutableCopy
+           allFieldTypes:@[@"varchar",@"varchar",@"varchar"].mutableCopy
              primaryKeys:nil
       isFieldTypeChanged:NO
          ];
     } else {
         //T_APP_SETTINGS
         [self checkTable:database
-               tableName:@"APP_SETTINGS"
+               tableName:TABLE_APP_SETTINGS
            allFields:@[@"current_app_version",@"current_iPhone_OS",@"current_iPhone_type",@"current_server_address",@"current_server_port",@"last_login_user_id",@"last_login_date",@"last_login_user_name",@"last_login_user_pwd",@"current_login_user_id",@"current_login_date",@"current_login_user_name",@"current_login_user_pwd"].mutableCopy
         allFieldTypes:@[@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR",@"NVARCHAR"].mutableCopy
              primaryKeys:nil

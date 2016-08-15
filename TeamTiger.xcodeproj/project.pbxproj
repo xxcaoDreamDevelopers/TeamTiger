@@ -275,7 +275,6 @@
 		1D9580DA1D3E225200FD0053 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9580CD1D3E225200FD0053 /* View+MASAdditions.m */; };
 		1D9580DB1D3E225200FD0053 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9580D01D3E225200FD0053 /* ViewController+MASAdditions.m */; };
 		1D9580E61D3E23E100FD0053 /* APP_SETTINGS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9580DF1D3E23E100FD0053 /* APP_SETTINGS.m */; };
-		1D9580E71D3E23E100FD0053 /* APP_USERS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9580E11D3E23E100FD0053 /* APP_USERS.m */; };
 		1D9580E91D3E23E100FD0053 /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9580E51D3E23E100FD0053 /* SqliteManager.m */; };
 		1D9580EB1D3E26CE00FD0053 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9580EA1D3E26CE00FD0053 /* libsqlite3.tbd */; };
 		1D9580ED1D3E26F800FD0053 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9580EC1D3E26F800FD0053 /* libsqlite3.0.tbd */; };
@@ -930,8 +929,6 @@
 		1D9580D01D3E225200FD0053 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		1D9580DE1D3E23E100FD0053 /* APP_SETTINGS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APP_SETTINGS.h; sourceTree = "<group>"; };
 		1D9580DF1D3E23E100FD0053 /* APP_SETTINGS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APP_SETTINGS.m; sourceTree = "<group>"; };
-		1D9580E01D3E23E100FD0053 /* APP_USERS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APP_USERS.h; sourceTree = "<group>"; };
-		1D9580E11D3E23E100FD0053 /* APP_USERS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APP_USERS.m; sourceTree = "<group>"; };
 		1D9580E41D3E23E100FD0053 /* SqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
 		1D9580E51D3E23E100FD0053 /* SqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
 		1D9580EA1D3E26CE00FD0053 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -2212,8 +2209,6 @@
 			children = (
 				1D9580DE1D3E23E100FD0053 /* APP_SETTINGS.h */,
 				1D9580DF1D3E23E100FD0053 /* APP_SETTINGS.m */,
-				1D9580E01D3E23E100FD0053 /* APP_USERS.h */,
-				1D9580E11D3E23E100FD0053 /* APP_USERS.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3153,7 +3148,6 @@
 				06893D011D59F16A00921900 /* SelectCircleViewController.m in Sources */,
 				1D9580AD1D3E207200FD0053 /* MJRefreshGifHeader.m in Sources */,
 				1D09CC881D3F29C900F85E9A /* YYWebImageManager.m in Sources */,
-				1D9580E71D3E23E100FD0053 /* APP_USERS.m in Sources */,
 				1D09CC991D3F29C900F85E9A /* YYTextAttribute.m in Sources */,
 				1DDE9E691D531B66005926FE /* TTLoginViewController.m in Sources */,
 				1D09CC9E1D3F29C900F85E9A /* YYLabel.m in Sources */,
