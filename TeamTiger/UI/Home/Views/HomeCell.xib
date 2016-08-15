@@ -24,7 +24,7 @@
                         <color key="textColor" red="0.6705882353" green="0.67843137249999996" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-Fs-cqw">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-Fs-cqw" userLabel="bgView">
                         <rect key="frame" x="10" y="30" width="359" height="200"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touxiang" translatesAutoresizingMaskIntoConstraints="NO" id="pl0-N0-bkQ">
@@ -197,6 +197,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.08235294118" green="0.1058823529" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="bgView" destination="kQi-Fs-cqw" id="B9u-0i-5e9"/>
                 <outlet property="headImage" destination="pl0-N0-bkQ" id="v18-g4-MKh"/>
                 <outlet property="image1" destination="enk-kz-Q2S" id="bDk-qn-Cai"/>
                 <outlet property="image2" destination="h3H-sS-NIJ" id="NfL-Jh-QdC"/>
@@ -213,7 +214,7 @@
         <image name="icon_discussion" width="15" height="14"/>
         <image name="icon_tag" width="11" height="11"/>
         <image name="icon_xia" width="18" height="11"/>
-        <image name="image" width="630" height="360"/>
+        <image name="image" width="414" height="414"/>
         <image name="placeImage" width="129" height="128"/>
         <image name="touxiang" width="32" height="32"/>
     </resources>

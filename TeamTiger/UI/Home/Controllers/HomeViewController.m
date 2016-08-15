@@ -60,53 +60,47 @@
     }];;
     self.tableView.mj_header = header;
     
-    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [self addDataToDataArr];
-        if (self.manager.dataSource.count > 4) {
-            [self.tableView.mj_footer endRefreshing];
-            [self.tableView.mj_footer endRefreshingWithNoMoreData];
-        }else {
-            [self.tableView reloadData];
-            [self.tableView.mj_footer endRefreshing];
-        }
-    }];
-    self.tableView.mj_footer = footer;
+//    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//        [self.tableView reloadData];
+//        [self.tableView.mj_footer endRefreshing];
+//    }];
+//    self.tableView.mj_footer = footer;
     
 }
 
 - (void)addDataToDataArr {
     NSDictionary *dic = @{@"headImage":@"touxiang",
-                            @"name":@"卞克",
-                            @"type":@"BBS",
-                            @"image1":@"image",
-                            @"image2":@"image",
-                            @"image3":@"image",
-                            @"aDes":@"tape something",
-                            @"bDes":@"tape something",
-                            @"cDes":@"tape something",
-                            @"aTicket":@"0.7",
-                            @"bTicket":@"0.4",
-                            @"cTicket":@"0.1",
-                            @"comment":@[
-                                    @{@"time":@"19:50",
-                                      @"firstName":@"卞克",
-                                      @"secondName":@"A",
-                                      @"des":@"卞克",
-                                      @"firstImage":@"image",
-                                      @"secondImage":@"image",
-                                      @"typeCell":@(TypeCellTimeAndTitle)
-                                      },
-                                    @{@"time":@"13:55",
-                                      @"firstName":@"卞克",
-                                      @"secondName":@"A",
-                                      @"typeCell":@(TypeCellName)
-                                      },
-                                    @{@"time":@"9:55",
-                                      @"firstName":@"唐小旭",
-                                      @"secondName":@"B",
-                                      @"typeCell":@(TypeCellTimeAndTitle)
-                                      }].mutableCopy
-                            };
+                          @"name":@"卞克",
+                          @"type":@"BBS",
+                          @"image1":@"image",
+                          @"image2":@"image",
+                          @"image3":@"image",
+                          @"aDes":@"tape something",
+                          @"bDes":@"tape something",
+                          @"cDes":@"tape something",
+                          @"aTicket":@"0.7",
+                          @"bTicket":@"0.4",
+                          @"cTicket":@"0.1",
+                          @"comment":@[
+                                  @{@"time":@"19:50",
+                                    @"firstName":@"卞克",
+                                    @"secondName":@"A",
+                                    @"des":@"卞克",
+                                    @"firstImage":@"image",
+                                    @"secondImage":@"image",
+                                    @"typeCell":@(TypeCellTimeAndTitle)
+                                    },
+                                  @{@"time":@"13:55",
+                                    @"firstName":@"卞克",
+                                    @"secondName":@"A",
+                                    @"typeCell":@(TypeCellName)
+                                    },
+                                  @{@"time":@"9:55",
+                                    @"firstName":@"唐小旭",
+                                    @"secondName":@"B",
+                                    @"typeCell":@(TypeCellTimeAndTitle)
+                                    }].mutableCopy
+                          };
     [self.manager.dataArr addObject:dic];
     [self.manager.dataSource removeAllObjects];
     for (NSDictionary *dic in self.manager.dataArr) {

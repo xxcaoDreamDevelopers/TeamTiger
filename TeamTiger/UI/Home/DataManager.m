@@ -40,7 +40,7 @@
                        @"headImage":@"touxiang",
                        @"name":@"唐小旭",
                        @"type":@"工作牛",
-                       @"image1":@"image",
+                       @"image1":@"placeImage",
                        @"image2":@"image",
                        @"image3":@"image",
                        @"comment":@[

@@ -132,7 +132,7 @@
 }
 
 - (IBAction)hanldeCommentAction:(UIButton *)sender {
-    
+    NSLog(@"评论");
 }
 
 - (IBAction)handleClickImageAction:(UIButton *)sender {
@@ -150,10 +150,9 @@
         default:
             break;
     }
-    JJPhotoManeger *photoManager = [JJPhotoManeger maneger];
-    [photoManager showNetworkPhotoViewer:@[self.image1, self.image2, self.image3] urlStrArr:nil selecView:image];
+    JJPhotoManeger *mg = [JJPhotoManeger maneger];
+    [mg showNetworkPhotoViewer:@[self.image1, self.image2, self.image3] urlStrArr:nil selecView:image];
 
 }
-
 
 @end
