@@ -52,6 +52,13 @@
 		068E96551D4F488C0074229C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E96511D4F488C0074229C /* UIViewController+MMDrawerController.m */; };
 		068E965E1D4F499E0074229C /* CirclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E96591D4F499E0074229C /* CirclesViewController.m */; };
 		068E965F1D4F499E0074229C /* CustomCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 068E965D1D4F499E0074229C /* CustomCardView.m */; };
+		06B464A01D62A48B00DBC806 /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464931D62A48B00DBC806 /* _JZNavigationInteractiveTransition.m */; };
+		06B464A11D62A48B00DBC806 /* _JZValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464951D62A48B00DBC806 /* _JZValue.m */; };
+		06B464A21D62A48B00DBC806 /* NSNumber+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464971D62A48B00DBC806 /* NSNumber+JZExtension.m */; };
+		06B464A31D62A48B00DBC806 /* UINavigationBar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464991D62A48B00DBC806 /* UINavigationBar+JZExtension.m */; };
+		06B464A41D62A48B00DBC806 /* UIToolbar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4649B1D62A48B00DBC806 /* UIToolbar+JZExtension.m */; };
+		06B464A51D62A48B00DBC806 /* UINavigationController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4649D1D62A48B00DBC806 /* UINavigationController+JZExtension.m */; };
+		06B464A61D62A48B00DBC806 /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4649F1D62A48B00DBC806 /* UIViewController+JZExtension.m */; };
 		06E026621D50439D00B9743B /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E026611D50439D00B9743B /* UserInfoView.m */; };
 		06E026641D50440300B9743B /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06E026631D50440300B9743B /* UserInfoView.xib */; };
 		1D09CC5B1D3F29C900F85E9A /* NSArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBAE1D3F29C900F85E9A /* NSArray+YYAdd.m */; };
@@ -482,6 +489,22 @@
 		068E96591D4F499E0074229C /* CirclesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesViewController.m; sourceTree = "<group>"; };
 		068E965C1D4F499E0074229C /* CustomCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCardView.h; sourceTree = "<group>"; };
 		068E965D1D4F499E0074229C /* CustomCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCardView.m; sourceTree = "<group>"; };
+		06B4648F1D62A48B00DBC806 /* JZNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationExtension.h; sourceTree = "<group>"; };
+		06B464911D62A48B00DBC806 /* _JZ-objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_JZ-objc-internal.h"; sourceTree = "<group>"; };
+		06B464921D62A48B00DBC806 /* _JZNavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZNavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		06B464931D62A48B00DBC806 /* _JZNavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZNavigationInteractiveTransition.m; sourceTree = "<group>"; };
+		06B464941D62A48B00DBC806 /* _JZValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZValue.h; sourceTree = "<group>"; };
+		06B464951D62A48B00DBC806 /* _JZValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZValue.m; sourceTree = "<group>"; };
+		06B464961D62A48B00DBC806 /* NSNumber+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JZExtension.h"; sourceTree = "<group>"; };
+		06B464971D62A48B00DBC806 /* NSNumber+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JZExtension.m"; sourceTree = "<group>"; };
+		06B464981D62A48B00DBC806 /* UINavigationBar+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JZExtension.h"; sourceTree = "<group>"; };
+		06B464991D62A48B00DBC806 /* UINavigationBar+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JZExtension.m"; sourceTree = "<group>"; };
+		06B4649A1D62A48B00DBC806 /* UIToolbar+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+JZExtension.h"; sourceTree = "<group>"; };
+		06B4649B1D62A48B00DBC806 /* UIToolbar+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+JZExtension.m"; sourceTree = "<group>"; };
+		06B4649C1D62A48B00DBC806 /* UINavigationController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JZExtension.h"; sourceTree = "<group>"; };
+		06B4649D1D62A48B00DBC806 /* UINavigationController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JZExtension.m"; sourceTree = "<group>"; };
+		06B4649E1D62A48B00DBC806 /* UIViewController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JZExtension.h"; sourceTree = "<group>"; };
+		06B4649F1D62A48B00DBC806 /* UIViewController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JZExtension.m"; sourceTree = "<group>"; };
 		06E026601D50439D00B9743B /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		06E026611D50439D00B9743B /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
 		06E026631D50440300B9743B /* UserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
@@ -1365,6 +1388,37 @@
 				06E026631D50440300B9743B /* UserInfoView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		06B4648E1D62A48B00DBC806 /* JZNavigationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				06B4648F1D62A48B00DBC806 /* JZNavigationExtension.h */,
+				06B464901D62A48B00DBC806 /* Private */,
+				06B4649C1D62A48B00DBC806 /* UINavigationController+JZExtension.h */,
+				06B4649D1D62A48B00DBC806 /* UINavigationController+JZExtension.m */,
+				06B4649E1D62A48B00DBC806 /* UIViewController+JZExtension.h */,
+				06B4649F1D62A48B00DBC806 /* UIViewController+JZExtension.m */,
+			);
+			path = JZNavigationExtension;
+			sourceTree = "<group>";
+		};
+		06B464901D62A48B00DBC806 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				06B464911D62A48B00DBC806 /* _JZ-objc-internal.h */,
+				06B464921D62A48B00DBC806 /* _JZNavigationInteractiveTransition.h */,
+				06B464931D62A48B00DBC806 /* _JZNavigationInteractiveTransition.m */,
+				06B464941D62A48B00DBC806 /* _JZValue.h */,
+				06B464951D62A48B00DBC806 /* _JZValue.m */,
+				06B464961D62A48B00DBC806 /* NSNumber+JZExtension.h */,
+				06B464971D62A48B00DBC806 /* NSNumber+JZExtension.m */,
+				06B464981D62A48B00DBC806 /* UINavigationBar+JZExtension.h */,
+				06B464991D62A48B00DBC806 /* UINavigationBar+JZExtension.m */,
+				06B4649A1D62A48B00DBC806 /* UIToolbar+JZExtension.h */,
+				06B4649B1D62A48B00DBC806 /* UIToolbar+JZExtension.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		1D09CBAA1D3F29C900F85E9A /* YYKit */ = {
@@ -2327,6 +2381,7 @@
 		1DA71B751D3DB618007483D2 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				06B4648E1D62A48B00DBC806 /* JZNavigationExtension */,
 				2D79450A1D5C648E003B5A6E /* JJPhotoViewer */,
 				1DD2E3271D59B30F005D45A9 /* OpenSDK */,
 				06008F2A1D58249300A5B3DB /* TZImagePickerController */,
@@ -3090,6 +3145,7 @@
 				1DF991CD1D488C0F00E7D1B8 /* TYLaunchFadeScaleAnimation.m in Sources */,
 				1D09CCAA1D3F29C900F85E9A /* YYTransaction.m in Sources */,
 				1D09CD131D3F550300F85E9A /* NSDictionary+HYBHelperKit.m in Sources */,
+				06B464A01D62A48B00DBC806 /* _JZNavigationInteractiveTransition.m in Sources */,
 				1D09CC9F1D3F29C900F85E9A /* YYTextView.m in Sources */,
 				1D09CC5F1D3F29C900F85E9A /* NSDictionary+YYAdd.m in Sources */,
 				2D7945141D5C648E003B5A6E /* JJMainScrollView.m in Sources */,
@@ -3108,6 +3164,7 @@
 				06008F421D58249300A5B3DB /* TZImagePickerController.m in Sources */,
 				1D09CC9B1D3F29C900F85E9A /* YYTextRubyAnnotation.m in Sources */,
 				1D9580D91D3E225200FD0053 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				06B464A61D62A48B00DBC806 /* UIViewController+JZExtension.m in Sources */,
 				1D9580D21D3E225200FD0053 /* MASCompositeConstraint.m in Sources */,
 				1D09CCA61D3F29C900F85E9A /* YYSentinel.m in Sources */,
 				0604B4661D4C5A5B00EF1703 /* CCDraggableContainer.m in Sources */,
@@ -3153,6 +3210,7 @@
 				1D09CC9E1D3F29C900F85E9A /* YYLabel.m in Sources */,
 				1D3E23691D61635C0024A5CA /* ModelsManager.m in Sources */,
 				1D09CC5E1D3F29C900F85E9A /* NSDate+YYAdd.m in Sources */,
+				06B464A21D62A48B00DBC806 /* NSNumber+JZExtension.m in Sources */,
 				1D115F2E1D4B9560003DFBB1 /* UITextView+PlaceHolder.m in Sources */,
 				1D09CC8F1D3F29C900F85E9A /* YYTextInput.m in Sources */,
 				1DF991CC1D488C0F00E7D1B8 /* TYLaunchBaseAnimation.m in Sources */,
@@ -3172,8 +3230,10 @@
 				1D09CC961D3F29C900F85E9A /* NSParagraphStyle+YYText.m in Sources */,
 				1D09CCA31D3F29C900F85E9A /* YYGestureRecognizer.m in Sources */,
 				1D9580AA1D3E207200FD0053 /* MJRefreshBackGifFooter.m in Sources */,
+				06B464A41D62A48B00DBC806 /* UIToolbar+JZExtension.m in Sources */,
 				1D55FD981D49ABAC00094112 /* Common.m in Sources */,
 				1D09CC6E1D3F29C900F85E9A /* UIColor+YYAdd.m in Sources */,
+				06B464A11D62A48B00DBC806 /* _JZValue.m in Sources */,
 				1D09CC681D3F29C900F85E9A /* NSTimer+YYAdd.m in Sources */,
 				1DD2E3451D59B8E0005D45A9 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				1D09CD571D3F59D500F85E9A /* UIButton+WebCache.m in Sources */,
@@ -3184,6 +3244,7 @@
 				068E965E1D4F499E0074229C /* CirclesViewController.m in Sources */,
 				06008F401D58249300A5B3DB /* TZImageManager.m in Sources */,
 				1DA71B8F1D3DCC3D007483D2 /* TTBaseViewController.m in Sources */,
+				06B464A31D62A48B00DBC806 /* UINavigationBar+JZExtension.m in Sources */,
 				1D9580AF1D3E207200FD0053 /* MJRefreshStateHeader.m in Sources */,
 				1D9408651D41BA47009E2E11 /* NetworkManager.m in Sources */,
 				1D09CC811D3F29C900F85E9A /* UIImageView+YYWebImage.m in Sources */,
@@ -3198,6 +3259,7 @@
 				2D01BACC1D5C69D800E10721 /* HomeCellModel.m in Sources */,
 				1D09CC8A1D3F29C900F85E9A /* NSObject+YYModel.m in Sources */,
 				1D09CC7D1D3F29C900F85E9A /* _YYWebImageSetter.m in Sources */,
+				06B464A51D62A48B00DBC806 /* UINavigationController+JZExtension.m in Sources */,
 				06008F471D58249300A5B3DB /* UIView+Layout.m in Sources */,
 				06008F241D58163100A5B3DB /* TTCommonArrowItem.m in Sources */,
 				1D115F8B1D4BA043003DFBB1 /* IQUIWindow+Hierarchy.m in Sources */,
