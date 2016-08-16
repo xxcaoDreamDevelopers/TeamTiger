@@ -10,10 +10,8 @@
 #import "JZNavigationExtension.h"
 #import "UserInfoView.h"
 #import "TTMyProfileViewController.h"
-#import "TTCommonCell.h"
-#import "TTCommonItem.h"
-#import "TTCommonGroup.h"
-#import "TTCommonArrowItem.h"
+#import "CirclesItemModel.h"
+#import "CirclesItemCell.h"
 // Controllers
 
 // Model
@@ -47,7 +45,7 @@
     [self.view addSubview:self.headImgV];
     [self.headImgV addSubview:self.userInfoView];
     [self.view addSubview:self.tableView];
-//    [self setupGroups];
+    [self setupModels];
     [self layoutSubViews];
     // Do any additional setup after loading the view.
 }
@@ -87,18 +85,18 @@
     }];
 }
 
-//- (void)setupGroups {
-//    self.circles = [CirclesManager sharedInstance].circles;
-//    TTCommonGroup *group = [[TTCommonGroup alloc] init];
-//    group.items = [NSMutableArray array];
-//    for (NSString *title in self.circles) {
-////        TTCommonItem *item = [TTCommonArrowItem itemWithTitle:title subtitle:nil destVcClass:nil];
-//        NSString *colorStr = [NSString stringWithUTF8String:kColorAr[arc4random_uniform(6)]];
-//        TTCommonItem *item = [TTCommonArrowItem itemWithPointColor:colorStr title:title subtitle:nil destVcClass:nil];
-//        [group.items addObject:item];
-//    }
-//    [self.data addObject:group];
-//}
+- (void)setupModels {
+    self.circles = [CirclesManager sharedInstance].circles;
+    for (NSString *title in self.circles) {
+
+        NSString *colorStr = [NSString stringWithUTF8String:kColorAr[arc4random_uniform(6)]];
+        CirclesItemModel *item = [[CirclesItemModel alloc] init];
+        item.title = title;
+        item.pointColor = colorStr;
+
+        [self.data addObject:item];
+    }
+}
 
 #pragma mark - Target Methods
 
@@ -110,26 +108,19 @@
 
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.data.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    TTCommonGroup *group = self.data[section];
-    return group.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 1.创建cell
-    TTCommonCell *cell = [TTCommonCell cellWithTableView:tableView];
+    CirclesItemCell *cell = [CirclesItemCell cellWithTableView:tableView];
     
     // 2.给cell传递模型数据
-    TTCommonGroup *group = self.data[indexPath.section];
-    cell.item = group.items[indexPath.row];
-    cell.lastRowInSection =  (group.items.count - 1 == indexPath.row);
+    CirclesItemModel *item = self.data[indexPath.row];
+    [cell setData:item];
+    cell.lastRowInSection =  (self.data.count - 1 == indexPath.row);
     
     // 3.返回cell
     return cell;
@@ -140,29 +131,29 @@
     // 1.取消选中这行
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    // 2.模型数据
-    TTCommonGroup *group = self.data[indexPath.section];
-    TTCommonItem *item = group.items[indexPath.row];
-    
-    //    if (self.selectCircleVCBlock) {
-    //        self.selectCircleVCBlock(self.circles[indexPath.section], self);
-    //    }
-    //    [[CacheManager sharedInstance] setObject:item.title ForKey:TTSelectCircle_Cache_Key];
-//    [CirclesManager sharedInstance].selectIndex = indexPath.section;
-//    [self.navigationController popViewControllerAnimated:YES];
-    
-    if (item.option) { // block有值(点击这个cell,.有特定的操作需要执行)
-        item.option();
-    } else if ([item isKindOfClass:[TTCommonArrowItem class]]) { // 箭头
-        TTCommonArrowItem *arrowItem = (TTCommonArrowItem *)item;
-        
-        // 如果没有需要跳转的控制器
-        if (arrowItem.destVcClass == nil) return;
-        
-        UIViewController *vc = [[arrowItem.destVcClass alloc] init];
-        vc.title = arrowItem.title;
-        [self.navigationController pushViewController:vc  animated:YES];
-    }
+//    // 2.模型数据
+//    TTCommonGroup *group = self.data[indexPath.section];
+//    TTCommonItem *item = group.items[indexPath.row];
+//    
+//    //    if (self.selectCircleVCBlock) {
+//    //        self.selectCircleVCBlock(self.circles[indexPath.section], self);
+//    //    }
+//    //    [[CacheManager sharedInstance] setObject:item.title ForKey:TTSelectCircle_Cache_Key];
+////    [CirclesManager sharedInstance].selectIndex = indexPath.section;
+////    [self.navigationController popViewControllerAnimated:YES];
+//    
+//    if (item.option) { // block有值(点击这个cell,.有特定的操作需要执行)
+//        item.option();
+//    } else if ([item isKindOfClass:[TTCommonArrowItem class]]) { // 箭头
+//        TTCommonArrowItem *arrowItem = (TTCommonArrowItem *)item;
+//        
+//        // 如果没有需要跳转的控制器
+//        if (arrowItem.destVcClass == nil) return;
+//        
+//        UIViewController *vc = [[arrowItem.destVcClass alloc] init];
+//        vc.title = arrowItem.title;
+//        [self.navigationController pushViewController:vc  animated:YES];
+//    }
 }
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

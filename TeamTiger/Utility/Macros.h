@@ -9,6 +9,10 @@
 #ifndef Macros_h
 #define Macros_h
 
+//Application单例
+#define SingletonApplication         [UIApplication sharedApplication]
+#define SingletonApplicationDelegate (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
 //检测是否retina屏
 #define isRetina   ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640.0, 960.0), [[UIScreen mainScreen] currentMode].size) : NO)
 

@@ -61,6 +61,9 @@
 		06B464A61D62A48B00DBC806 /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B4649F1D62A48B00DBC806 /* UIViewController+JZExtension.m */; };
 		06B464A91D62A4F800DBC806 /* CirclesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464A81D62A4F800DBC806 /* CirclesVC.m */; };
 		06B464AB1D62A69E00DBC806 /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B464AA1D62A69E00DBC806 /* UserInfoView.xib */; };
+		06B464AF1D62AA0100DBC806 /* CirclesItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464AE1D62AA0100DBC806 /* CirclesItemModel.m */; };
+		06B464B21D62AA6700DBC806 /* CirclesItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B464B11D62AA6700DBC806 /* CirclesItemCell.m */; };
+		06B464B41D62AA7800DBC806 /* CirclesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06B464B31D62AA7800DBC806 /* CirclesItemCell.xib */; };
 		06E026621D50439D00B9743B /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E026611D50439D00B9743B /* UserInfoView.m */; };
 		1D09CC5B1D3F29C900F85E9A /* NSArray+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBAE1D3F29C900F85E9A /* NSArray+YYAdd.m */; };
 		1D09CC5C1D3F29C900F85E9A /* NSBundle+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D09CBB01D3F29C900F85E9A /* NSBundle+YYAdd.m */; };
@@ -509,6 +512,11 @@
 		06B464A71D62A4F800DBC806 /* CirclesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesVC.h; sourceTree = "<group>"; };
 		06B464A81D62A4F800DBC806 /* CirclesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesVC.m; sourceTree = "<group>"; };
 		06B464AA1D62A69E00DBC806 /* UserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
+		06B464AD1D62AA0100DBC806 /* CirclesItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CirclesItemModel.h; path = TeamTiger/Utility/Category/CirclesItemModel.h; sourceTree = SOURCE_ROOT; };
+		06B464AE1D62AA0100DBC806 /* CirclesItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CirclesItemModel.m; path = TeamTiger/Utility/Category/CirclesItemModel.m; sourceTree = SOURCE_ROOT; };
+		06B464B01D62AA6700DBC806 /* CirclesItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesItemCell.h; sourceTree = "<group>"; };
+		06B464B11D62AA6700DBC806 /* CirclesItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesItemCell.m; sourceTree = "<group>"; };
+		06B464B31D62AA7800DBC806 /* CirclesItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CirclesItemCell.xib; sourceTree = "<group>"; };
 		06E026601D50439D00B9743B /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		06E026611D50439D00B9743B /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
 		1D09CBAD1D3F29C900F85E9A /* NSArray+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YYAdd.h"; sourceTree = "<group>"; };
@@ -1379,6 +1387,8 @@
 		068E965A1D4F499E0074229C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06B464AD1D62AA0100DBC806 /* CirclesItemModel.h */,
+				06B464AE1D62AA0100DBC806 /* CirclesItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1391,6 +1401,9 @@
 				06E026601D50439D00B9743B /* UserInfoView.h */,
 				06E026611D50439D00B9743B /* UserInfoView.m */,
 				06B464AA1D62A69E00DBC806 /* UserInfoView.xib */,
+				06B464B01D62AA6700DBC806 /* CirclesItemCell.h */,
+				06B464B11D62AA6700DBC806 /* CirclesItemCell.m */,
+				06B464B31D62AA7800DBC806 /* CirclesItemCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2982,6 +2995,7 @@
 				2D01BADC1D5C69D800E10721 /* HomeDetailCell4.xib in Resources */,
 				1DF0A1B91D4DB898002D91DB /* 5.png in Resources */,
 				2D01BAD61D5C69D800E10721 /* HomeDetailCell1.xib in Resources */,
+				06B464B41D62AA7800DBC806 /* CirclesItemCell.xib in Resources */,
 				1DB5A5931D4B3F36009E6170 /* square-switch-thumb-highlight@2x.png in Resources */,
 				1DD2E3221D596EAA005D45A9 /* toggle_background_on@3x.png in Resources */,
 				1DB5A5921D4B3F36009E6170 /* square-switch-overlay@2x.png in Resources */,
@@ -3133,6 +3147,7 @@
 				1D09CD0F1D3F550300F85E9A /* HYBHelperKitBaseURLController.m in Sources */,
 				1D09CC731D3F29C900F85E9A /* UIImage+YYAdd.m in Sources */,
 				2DFACA821D50808D0099A2A3 /* DiscussListModel.m in Sources */,
+				06B464AF1D62AA0100DBC806 /* CirclesItemModel.m in Sources */,
 				1D09CD5F1D3F59D500F85E9A /* SDWebImageDownloaderOperation.m in Sources */,
 				1D09CC691D3F29C900F85E9A /* CALayer+YYAdd.m in Sources */,
 				06008F261D58163100A5B3DB /* TTCommonItem.m in Sources */,
@@ -3301,6 +3316,7 @@
 				1D09CC6B1D3F29C900F85E9A /* UIApplication+YYAdd.m in Sources */,
 				1DF991D71D48ADD900E7D1B8 /* TTSettingViewController.m in Sources */,
 				1DDE9E6F1D533106005926FE /* TTMyProfileViewController.m in Sources */,
+				06B464B21D62AA6700DBC806 /* CirclesItemCell.m in Sources */,
 				1D09CC791D3F29C900F85E9A /* YYCache.m in Sources */,
 				1D09CC911D3F29C900F85E9A /* YYTextLayout.m in Sources */,
 				1D0EA2C71D45A82C00B47108 /* LCNetworkAgent.m in Sources */,

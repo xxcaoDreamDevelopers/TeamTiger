@@ -24,4 +24,28 @@
 
 //根据16进制显示颜色
 + (UIColor *)colorFromHexRGB:(NSString *)inColorString;
+
+//scale图片
++ (UIImage *)scaleImage:(UIImage*)image
+                 toSize:(CGSize)newSize;
+
++ (UIImage*)imageByScalingAndCroppingForSize:(UIImage*)anImage toSize:(CGSize)targetSize;
+
+//等比压缩图片
++ (UIImage *)scaleImage:(UIImage *)image
+                toScale:(CGFloat)scaleSize;
+
+//截屏成UImageView
++ (UIImageView *)cutScreenImage;
+
+//通过长宽和最小长度获取改变后的长宽
++ (CGSize)sizeWith:(CGSize)oldSize withMin:(CGFloat)minLen;
+
+//绘制圆形图片
++ (UIImage *)circleImage:(UIImage*)image withParam:(CGFloat)inset;
+
+//生成绘制图片
++ (UIImage *)drawImageSize:(CGSize)size
+                     Color:(UIColor *)color;
+
 @end
