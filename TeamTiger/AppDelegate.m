@@ -19,6 +19,7 @@
 #import "UIImage+TYLaunchImage.h"
 #import "UIView+TYLaunchAnimation.h"
 #import "WXApiManager.h"
+#import "CirclesVC.h"
 
 @interface AppDelegate ()
 
@@ -80,8 +81,11 @@
 #pragma -mark initial methods
 - (UIViewController *)creatHomeVC {
     
-    CirclesViewController *circleVC = [[CirclesViewController alloc] init];
+//    CirclesViewController *circleVC = [[CirclesViewController alloc] init];
     
+    CirclesVC *circleVC = [[CirclesVC alloc] init];
+    
+    TTBaseNavigationController *leftNav = [[TTBaseNavigationController alloc] initWithRootViewController:circleVC];
 //    NSMutableArray *homeVCs = [NSMutableArray array];
 //    for (NSString *title in circleVC.titles) {
 //        HomeViewController *homeVC = [[HomeViewController alloc] init];
@@ -97,7 +101,7 @@
     MMDrawerController *drawerController = [[MMDrawerController alloc]
                                             initWithCenterViewController:mainNav
                                             leftDrawerViewController:nil
-                                            rightDrawerViewController:circleVC];
+                                            rightDrawerViewController:leftNav];
     [drawerController setShowsShadow:YES];
     [drawerController setRestorationIdentifier:@"MMDrawer"];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeCustom];

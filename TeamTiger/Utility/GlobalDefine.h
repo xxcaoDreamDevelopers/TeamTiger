@@ -13,9 +13,15 @@
 #define kColorForCommonCellBackgroud [Common colorFromHexRGB:@"333949"]
 #define kColorForCommonCellSelectedBackgroud [Common colorFromHexRGB:@"272d39"]
 
-#define kCommonCellHeight 77.0f
-#define kDistanceToHSide  16.0f
-#define kDistanceToVSide  20.0f
-#define kLabelHeight   21.0f
+static const double default_NavigationHeight = 64.0;
+static const double kDistanceToHSide = 16.0f;
+static const double kDistanceToVSide = 20.0f;
+static const double kLabelHeight = 21.0f;
+static const double kCommonCellHeight = 77.0f;
+static const double kPointd = 8.0F;
+
+static const int STR_COLOR_MAX = 6;
+static const char* kColorAr[STR_COLOR_MAX] = {
+    "DCAD62", "669AFF", "DA4042", "91BF42", "E8C61E","41C4F0"};
 
 #endif /* GlobalDefine_h */
